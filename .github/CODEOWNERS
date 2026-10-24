@@ -1,0 +1,7 @@
+packages/engine/ @TEAM-A
+packages/ai/ @TEAM-B
+apps/api/ @TEAM-B
+apps/web/ @TEAM-C
+packages/knowledge/ @TEAM-D
+tools/ @TEAM-D
+packages/contracts/ @TEAM-A @TEAM-B @TEAM-C @TEAM-D
