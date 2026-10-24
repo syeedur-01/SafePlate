@@ -49,6 +49,28 @@ Key decisions:
 | `data/messages.json`           | `messageKey` to `{en, bn}` text                                                    | D                                  |
 | `data/proposals/*.json`        | Matches or rules proposed by scripts, awaiting a human                             | Generated                          |
 
+### Raw data directory (gitignored — never commit)
+
+Downloaded by `pnpm --filter @sp/tools fetch-raw` (card P0-D01):
+
+```
+data/
+└── raw/
+    ├── fctb-2013.pdf                          ← FCTB 2013 PDF source
+    └── usda/
+        ├── foundation-foods/                  ← Foundation Foods (April 2026)
+        │   ├── FoodData_Central_foundation_food_csv_2026-04-30.zip
+        │   └── (24 extracted CSV files)
+        └── sr-legacy/                         ← SR Legacy (April 2018, final release)
+            ├── FoodData_Central_sr_legacy_food_csv_2018-04.zip
+            └── (17 extracted CSV files)
+```
+
+Official USDA download page: `https://fdc.nal.usda.gov/download-datasets/`
+
+> USDA releases change over time. Always verify URLs against the download page before updating.
+> P1-D02 reads `data/raw/fctb-2013.pdf`. P1-D03 reads CSV files from `data/raw/usda/`.
+
 ### Data status on Oct 23 (measured, not assumed)
 
 - 30 dishes, 56 ingredients. Every dish ingredient id exists. No unused ingredients.

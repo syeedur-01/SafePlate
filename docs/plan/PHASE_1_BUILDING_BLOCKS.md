@@ -1605,7 +1605,7 @@ describe('normalizeDish', () => {
 
 ## P1-D02 FCTB match proposals
 
-**Depends on:** P1-D01, P0-D01 (the FCTB PDF in `data/raw/`) · **Branch:** `d/P1-D02-fctb-proposals`
+**Depends on:** P1-D01, P0-D01 (the FCTB PDF at `data/raw/fctb-2013.pdf` — run `pnpm --filter @sp/tools fetch-raw` first and confirm exit 0) · **Branch:** `d/P1-D02-fctb-proposals`
 
 **Goal:** for ingredients with missing values, find candidate rows in the Food Composition Table for Bangladesh and write **proposals** for a human to approve. The agent never applies them.
 
@@ -1689,7 +1689,7 @@ describe('fctb-lib', () => {
 
 ## P1-D03 USDA gap proposals
 
-**Depends on:** P1-D01, P0-D01 (USDA CSVs in `data/raw/usda/`) · **Branch:** `d/P1-D03-usda-proposals`
+**Depends on:** P1-D01, P0-D01 (USDA CSVs extracted by P0-D01 fetch-raw: Foundation Foods at `data/raw/usda/foundation-foods/`, SR Legacy at `data/raw/usda/sr-legacy/`) · **Branch:** `d/P1-D03-usda-proposals`
 
 **Goal:** propose USDA FoodData Central values **only for fields still null** (saturated fat, sugars, sodium, and ingredients with no FCTB match), flagged as proxy matches.
 
@@ -1729,7 +1729,7 @@ export function searchFoods(
 export function fillablePatch(ing: Ingredient, food: UsdaFood): Partial<NutrientValues>;
 ```
 
-`parseUsda` verifies that nutrient number `208` has a name containing "energy", `307` "sodium", `606` "saturated", `269` "sugars", `291` "fiber"; otherwise it throws (the column or number mapping changed, so stop and report). Use the **SR Legacy** and/or **Foundation Foods** CSVs found in `data/raw/usda/`.
+`parseUsda` verifies that nutrient number `208` has a name containing "energy", `307` "sodium", `606` "saturated", `269` "sugars", `291` "fiber"; otherwise it throws (the column or number mapping changed, so stop and report). Use the **SR Legacy** CSVs from `data/raw/usda/sr-legacy/` and/or **Foundation Foods** CSVs from `data/raw/usda/foundation-foods/`.
 
 `usda-match.ts` writes, for each ingredient with any null nutrient, `{ ingredientId, candidates: [{ fdcId, description, patch, score }] (top 5, or empty), matchQuality: 'proxy', approvedFdcId: null }`. Ingredients with no sensible candidate get an empty list (for example a local fish): do not force a match.
 

@@ -1150,78 +1150,89 @@ describe('mock scan fixtures', () => {
 
 **Track:** D (any track may run it) · **Depends on:** P0-X01 · **Blocks:** P1-D02, P1-D03 · **Branch:** `d/P0-D01-fetch-raw`
 
-**Goal:** try to download the Food Composition Table for Bangladesh PDF and the USDA FoodData Central CSV files into `data/raw/`. If the agent cannot (no network, blocked, link changed), it **stops and prints exact steps** for a human. It must never fabricate files.
+**Goal:** download the Food Composition Table for Bangladesh PDF and the USDA FoodData Central CSV archives into `data/raw/`. Validate file content (not just filename or size). Extract ZIP archives into dataset-specific directories. If any step fails, print exact manual steps for a human and exit with code 2. Never fabricate files.
 
 **Read:** `docs/TECH_DESIGN.md` section 3. The FCTB url is in `ingredients.json` under `metadata.allowed_sources[0].url`.
 
 **Files:**
 
 - create `tools/src/fetch-raw.ts`, `tools/src/fetch-raw-lib.ts`, `tools/test/fetch-raw-lib.test.ts`
-- edit `tools/package.json` (add script `"fetch-raw": "tsx src/fetch-raw.ts"`)
+- edit `tools/package.json` (add script `"fetch-raw": "tsx src/fetch-raw.ts"`; add dependency `adm-zip` pinned, devDependency `@types/adm-zip` pinned)
+
+**Raw data destination layout:**
+
+```
+data/
+└── raw/
+    ├── fctb-2013.pdf
+    └── usda/
+        ├── foundation-foods/
+        │   ├── FoodData_Central_foundation_food_csv_2026-04-30.zip
+        │   └── (extracted CSV files)
+        └── sr-legacy/
+            ├── FoodData_Central_sr_legacy_food_csv_2018-04.zip
+            └── (extracted CSV files)
+```
+
+`data/raw/` is gitignored. Never commit downloaded files.
+
+**Official USDA sources (verify against the download page before updating):**
+
+- Download page: `https://fdc.nal.usda.gov/download-datasets/`
+- Foundation Foods (April 2026): `https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-04-30.zip`
+- SR Legacy (April 2018, final): `https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip`
+
+> **Note:** USDA releases change over time. Always verify the above URLs against the official download page before updating to a newer release. Do not guess filenames.
 
 **Spec** (`fetch-raw-lib.ts`, pure and testable):
 
 ```ts
 export interface RawTarget {
   id: string;
-  url: string | null;
+  url: string | null; // null = discovered by the script at runtime
   dest: string;
   manualHint: string;
 }
-/** Returns the list of files to fetch. url is null where the agent must find the current official link itself. */
+export interface UsdaRelease {
+  name: string;
+  url: string;
+  dest: string; // relative dir under data/raw/usda/
+}
+export const USDA_DOWNLOAD_PAGE: string;
+export const USDA_RELEASES: UsdaRelease[];
+/** Returns two targets: fctb and usda. */
 export function planTargets(fctbUrl: string): RawTarget[];
 /** Returns a human-readable instruction block for targets that could not be fetched. */
 export function humanInstructions(failed: RawTarget[]): string;
-/** Returns true if the file name looks like a PDF by extension and non-empty size. */
-export function looksValid(name: string, bytes: number): boolean;
+/** Validates a buffer as a real PDF (magic bytes, not HTML/JSON, minimum size). */
+export function validatePdf(buf: Buffer): { ok: true } | { ok: false; reason: string };
+/** Validates a buffer as a real ZIP (magic bytes, not HTML/JSON, minimum size). */
+export function validateZip(buf: Buffer): { ok: true } | { ok: false; reason: string };
 ```
 
-- `planTargets` returns two targets: `fctb` (url = argument, dest `data/raw/fctb-2013.pdf`) and `usda` (url `null`, dest `data/raw/usda/`, manualHint: open the official FoodData Central download page and download the CSV datasets for the SR Legacy and Foundation Foods releases; unzip into `data/raw/usda/`).
-- `fetch-raw.ts`: for each target with a URL, try `fetch`; save only if `looksValid`. For the USDA target: **find the current link on the official FoodData Central download page** (fetch that page and read the links). Do **not** guess file names. Any failure leads to `process.exitCode = 2` and printing `humanInstructions(failed)`. Success prints the saved paths and sizes.
+`fetch-raw.ts`:
 
-**Tests (write first)** `tools/test/fetch-raw-lib.test.ts`:
+- Reads FCTB url from `ingredients.json` `metadata.allowed_sources[0].url`.
+- For the `fctb` target: fetches the PDF, validates with `validatePdf`, saves to `data/raw/fctb-2013.pdf`.
+- For the `usda` target: iterates `USDA_RELEASES`; for each release fetches the ZIP, validates with `validateZip`, saves the archive, extracts using `adm-zip` (pure-JS, no native deps), guards against path traversal, verifies ≥1 CSV file extracted.
+- Skips a release if it already has extracted CSV content.
+- On any failure: `process.exitCode = 2` and prints `humanInstructions(failed)`.
+- On success: prints saved paths, archive sizes, and CSV counts.
 
-```ts
-import { describe, it, expect } from 'vitest';
-import { planTargets, humanInstructions, looksValid } from '../src/fetch-raw-lib';
+**Tests (write first)** `tools/test/fetch-raw-lib.test.ts` — cover at minimum:
 
-describe('planTargets', () => {
-  const t = planTargets('https://example.org/fctb.pdf');
-  it('plans two targets', () => {
-    expect(t.map((x) => x.id)).toEqual(['fctb', 'usda']);
-  });
-  it('puts raw files under data/raw', () => {
-    expect(t.every((x) => x.dest.startsWith('data/raw/'))).toBe(true);
-  });
-  it('leaves the USDA url for the agent to find', () => {
-    expect(t[1]?.url).toBeNull();
-  });
-});
-describe('humanInstructions', () => {
-  it('names each failed target and its destination', () => {
-    const txt = humanInstructions(planTargets('https://example.org/fctb.pdf'));
-    expect(txt).toContain('data/raw/fctb-2013.pdf');
-    expect(txt).toContain('data/raw/usda/');
-  });
-  it('is empty when nothing failed', () => {
-    expect(humanInstructions([])).toBe('');
-  });
-});
-describe('looksValid', () => {
-  it('accepts a non-empty pdf', () => {
-    expect(looksValid('a.pdf', 5000)).toBe(true);
-  });
-  it('rejects an empty file', () => {
-    expect(looksValid('a.pdf', 0)).toBe(false);
-  });
-  it('rejects an html error page saved as pdf name', () => {
-    expect(looksValid('a.html', 5000)).toBe(false);
-  });
-});
-```
+- `planTargets`: two targets, correct ids, FCTB dest, USDA dest under `data/raw/usda/`, USDA url null, deterministic.
+- `USDA_RELEASES`: Foundation Foods and SR Legacy present, separate dests, no obsolete `/download-foods` URL, correct `/download-datasets/` page.
+- `humanInstructions`: empty on no failures, contains paths on failure.
+- `validatePdf`: accepts PDF magic, rejects empty/tiny/HTML/JSON/wrong-magic buffers.
+- `validateZip`: accepts ZIP magic, rejects empty/tiny/HTML/JSON/wrong-magic buffers.
+- Use in-memory buffers (PDF and ZIP magic bytes + padding); no network calls.
 
-**Done when:** `pnpm --filter @sp/tools test` and `pnpm check` green. Then run `pnpm --filter @sp/tools fetch-raw` and **paste the output in the report**. If exit code is 2, a human follows the printed steps (P0-H02).
+**Done when:** `pnpm --filter @sp/tools test` and `pnpm check` green. Then run `pnpm --filter @sp/tools fetch-raw` and **paste the full output and exit code in the report**.
+
+- If exit code 0: FCTB and both USDA datasets downloaded and extracted successfully.
+- If exit code 2: paste the printed manual steps. A human follows them (P0-H02) before P1-D02/D03 can run.
 
 **Commit:** `feat(tools): fetch raw FCTB and USDA sources or print manual steps`
 
-**Pitfalls:** Check each site's terms of use; do not scrape beyond downloading the published files. `data/raw/` is gitignored; never commit the downloaded files.
+**Pitfalls:** Check each site's terms of use; do not scrape beyond downloading the published files. `data/raw/` is gitignored; never commit the downloaded files. The FCTB PDF and USDA archives can be large (tens of MB each); allow adequate timeout.
