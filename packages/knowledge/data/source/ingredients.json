@@ -139,154 +139,97 @@
           "id": "white-rice-polished-raw",
           "name_en": "White rice, polished, raw (FCTB rice entry)",
           "name_bn": "সাদা পালিশ করা চাল, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "lentil-red-dried-raw",
           "name_en": "Lentil, dried, raw (FCTB generic lentil entry)",
           "name_bn": "মসুর ডাল, শুকনা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "bengal-gram-split-dried-raw",
           "name_en": "Bengal gram, split, dried, raw",
           "name_bn": "ছোলার ডাল, শুকনা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "potato-diamond-raw",
           "name_en": "Potato, Diamond variety, raw",
           "name_bn": "ডায়মন্ড আলু, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "eggplant-raw",
           "name_en": "Eggplant, purple long, raw",
           "name_bn": "বেগুন, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "onion-raw",
           "name_en": "Onion, raw",
           "name_bn": "পেঁয়াজ, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "garlic-raw",
           "name_en": "Garlic, raw",
           "name_bn": "রসুন, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "bottle-gourd-raw",
           "name_en": "Bottle gourd, raw",
           "name_bn": "লাউ, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "tomato-red-ripe-raw",
           "name_en": "Tomato, red ripe, raw",
           "name_bn": "পাকা লাল টমেটো, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "beef-lean-boneless-raw",
           "name_en": "Beef, lean, boneless, raw",
           "name_bn": "গরুর মাংস, চর্বিহীন, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "beef-15-20-fat-boneless-raw",
           "name_en": "Beef, boneless, 15–20% fat, raw",
           "name_bn": "গরুর মাংস, ১৫–২০% চর্বিযুক্ত, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "chicken-leg-skinless-raw",
           "name_en": "Chicken leg, without skin, raw",
           "name_bn": "মুরগির রান, চামড়া ছাড়া, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "mutton-moderately-fat-raw",
           "name_en": "Mutton, moderately fatty, raw",
           "name_bn": "খাসির মাংস, মাঝারি চর্বিযুক্ত, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "egg-chicken-farmed-raw",
           "name_en": "Egg, chicken, farmed, raw",
           "name_bn": "মুরগির ডিম, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "carbs_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "carbs_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "cow-milk-whole-pasteurized",
           "name_en": "Milk, cow, whole fat, pasteurized/UTH",
           "name_bn": "গরুর পূর্ণ-চর্বিযুক্ত দুধ",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "coconut-milk",
           "name_en": "Coconut milk",
           "name_bn": "নারকেলের দুধ",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "coconut-kernel-mature-raw",
@@ -306,87 +249,55 @@
           "id": "mustard-seed-dried",
           "name_en": "Mustard seed, dried",
           "name_bn": "সরিষা, শুকনা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "cashew-raw",
           "name_en": "Cashew nut, raw",
           "name_bn": "কাজুবাদাম, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "cardamom-dried",
           "name_en": "Cardamom, dried",
           "name_bn": "এলাচ, শুকনা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "dried-red-chilli",
           "name_en": "Red chilli, dried",
           "name_bn": "শুকনা লাল মরিচ",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "cinnamon-dried",
           "name_en": "Cinnamon, dried",
           "name_bn": "দারুচিনি, শুকনা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "bay-leaf-dried",
           "name_en": "Bay leaf, dried",
           "name_bn": "তেজপাতা, শুকনা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "coriander-leaves-raw",
           "name_en": "Coriander leaves, raw",
           "name_bn": "ধনেপাতা, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "mustard-oil",
           "name_en": "Mustard oil",
           "name_bn": "সরিষার তেল",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         },
         {
           "id": "ghee-cow",
           "name_en": "Ghee, cow",
           "name_bn": "গরুর ঘি",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "green-chilli-raw",
@@ -406,41 +317,25 @@
           "id": "white-sugar",
           "name_en": "Sugar, white",
           "name_bn": "সাদা চিনি",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "date-palm-jaggery",
           "name_en": "Jaggery/panela, date palm",
           "name_bn": "খেজুরের গুড়",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "salt",
           "name_en": "Salt",
           "name_bn": "লবণ",
-          "null_nutrients": [
-            "protein_g",
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["protein_g", "sat_fat_g", "sugars_g"]
         },
         {
           "id": "water",
           "name_en": "Water, drinking",
           "name_bn": "পানীয় জল",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "wheat-flour-white-refined",
@@ -460,30 +355,19 @@
           "id": "rohu-river-raw",
           "name_en": "Rohu, river, raw",
           "name_bn": "রুই মাছ, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "speckled-shrimp-raw",
           "name_en": "Shrimp, speckled, raw",
           "name_bn": "চিংড়ি, কাঁচা (FCTB speckled shrimp entry)",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g",
-            "sodium_mg"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g", "sodium_mg"]
         },
         {
           "id": "semolina-wheat-raw",
           "name_en": "Semolina wheat, raw",
           "name_bn": "সুজি, কাঁচা",
-          "null_nutrients": [
-            "sat_fat_g",
-            "sugars_g"
-          ]
+          "null_nutrients": ["sat_fat_g", "sugars_g"]
         }
       ],
       "general_missing_nutrients": {

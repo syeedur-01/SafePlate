@@ -4,15 +4,15 @@ Four people, each driving a free coding agent, build **SafePlate** for the Inter
 
 ## What is in the box
 
-| Path | What it is |
-|---|---|
-| `AGENTS.md` | Rules every agent reads before every task. Stays at the repo root |
-| `docs/TECH_DESIGN.md` | How the app works: data, engine, AI layer, API, web, privacy. Wins over any card |
-| `docs/plan/00_INDEX_AND_WORKFLOW.md` | How to run a card, schedule, status board, cut order, human-only tasks |
-| `docs/plan/PHASE_0` to `PHASE_4` | The task cards (tests first, exact files, commit message) |
-| `docs/plan/PHASE_5_OUTLINE.md` | After the MVP: accounts, community, final version (outline only) |
-| `docs/TEAM.md` | Template to fill in today |
-| `packages/knowledge/data/source/` | Your two data files, unchanged. Never edit them |
+| Path                                 | What it is                                                                       |
+| ------------------------------------ | -------------------------------------------------------------------------------- |
+| `AGENTS.md`                          | Rules every agent reads before every task. Stays at the repo root                |
+| `docs/TECH_DESIGN.md`                | How the app works: data, engine, AI layer, API, web, privacy. Wins over any card |
+| `docs/plan/00_INDEX_AND_WORKFLOW.md` | How to run a card, schedule, status board, cut order, human-only tasks           |
+| `docs/plan/PHASE_0` to `PHASE_4`     | The task cards (tests first, exact files, commit message)                        |
+| `docs/plan/PHASE_5_OUTLINE.md`       | After the MVP: accounts, community, final version (outline only)                 |
+| `docs/TEAM.md`                       | Template to fill in today                                                        |
+| `packages/knowledge/data/source/`    | Your two data files, unchanged. Never edit them                                  |
 
 ## Your first hour (today, Fri Oct 23)
 
@@ -32,14 +32,14 @@ When you finish, reply with the report from AGENTS.md section 9.
 
 ## Dates
 
-| Phase | Dates |
-|---|---|
-| 0 Setup and contracts | Fri Oct 23 |
-| 1 Building blocks | Sat Oct 24 to Sun Oct 25 |
-| 2 Feature completion | Mon Oct 26 to Tue Oct 27 |
-| 3 Integration and deploy (freeze Thu night) | Wed Oct 28 to Thu Oct 29 |
-| 4 Hardening, tag `mvp-demo` | Fri Oct 30 |
-| Buffer, submit | Sat Oct 31 (confirm the exact cutoff and time zone with the organizers) |
+| Phase                                       | Dates                                                                   |
+| ------------------------------------------- | ----------------------------------------------------------------------- |
+| 0 Setup and contracts                       | Fri Oct 23                                                              |
+| 1 Building blocks                           | Sat Oct 24 to Sun Oct 25                                                |
+| 2 Feature completion                        | Mon Oct 26 to Tue Oct 27                                                |
+| 3 Integration and deploy (freeze Thu night) | Wed Oct 28 to Thu Oct 29                                                |
+| 4 Hardening, tag `mvp-demo`                 | Fri Oct 30                                                              |
+| Buffer, submit                              | Sat Oct 31 (confirm the exact cutoff and time zone with the organizers) |
 
 ## Honest notes about this kit
 

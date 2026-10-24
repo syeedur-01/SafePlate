@@ -48,16 +48,16 @@ Deadline: MVP video due **Oct 31, 2026** (exact cutoff to be confirmed by the te
 
 ## 4. Repo map and ownership
 
-| Path | Owner track | Notes |
-|---|---|---|
-| `packages/contracts/` | shared | Zod schemas, types, test builders. Changes only by `contract-change` PR |
-| `packages/engine/` | A | Pure functions: nutrition, safety, suitability, swaps, shopping, label analysis |
-| `packages/ai/` | B | Vision providers, prompts, JSON parsing and validation, cache |
-| `apps/api/` | B | Hono API (Cloudflare Workers entry plus Node entry) |
-| `apps/web/` | C | Vite + React + Tailwind web app |
-| `packages/knowledge/` | D | Data, rules, messages, loaders |
-| `tools/` | D | Data scripts (fetch, match, coverage, validate) |
-| `docs/`, root configs, `.github/` | shared | Only by cards that list them |
+| Path                              | Owner track | Notes                                                                           |
+| --------------------------------- | ----------- | ------------------------------------------------------------------------------- |
+| `packages/contracts/`             | shared      | Zod schemas, types, test builders. Changes only by `contract-change` PR         |
+| `packages/engine/`                | A           | Pure functions: nutrition, safety, suitability, swaps, shopping, label analysis |
+| `packages/ai/`                    | B           | Vision providers, prompts, JSON parsing and validation, cache                   |
+| `apps/api/`                       | B           | Hono API (Cloudflare Workers entry plus Node entry)                             |
+| `apps/web/`                       | C           | Vite + React + Tailwind web app                                                 |
+| `packages/knowledge/`             | D           | Data, rules, messages, loaders                                                  |
+| `tools/`                          | D           | Data scripts (fetch, match, coverage, validate)                                 |
+| `docs/`, root configs, `.github/` | shared      | Only by cards that list them                                                    |
 
 Each package has `src/` and `test/`. Internal packages are consumed as TypeScript source (`"main": "src/index.ts"`), with no build step.
 
