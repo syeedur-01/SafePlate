@@ -6,12 +6,12 @@
 
 **Rule for this phase:** the web cards (C) are **presentational**. They take `AnalysisResult` and friends as props and are built against fixtures. The engine is wired into the app in **P3-X02**. This keeps track C from waiting on track A.
 
-| Track | Order                                                                          |
-| ----- | ------------------------------------------------------------------------------ |
-| A     | A01 and A02 and A03 in parallel (A01 needs P1-A04) → A04 (needs A01, A02, A03) |
-| B     | B01 → B02 and B03 in parallel → B04                                            |
-| C     | C01 and C02 and C03 and C04 in parallel (fixtures) → C05 → C06                 |
-| D     | D01 → D02 and D03 and D04 and D05 and D07 in parallel → DH01 (human) → D06     |
+| Track | Order                                                                                                                                        |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| A     | A01 and A02 and A03 in parallel (A01 needs P1-A04) → A04 (needs A01, A02, A03)                                                               |
+| B     | B01 → B02 and B03 in parallel → B04                                                                                                          |
+| C     | C01 and C02 and C03 and C04 in parallel (fixtures) → C05 → C06                                                                               |
+| D     | D01 → D02 and D03 (parallel) → D04 and D07 (parallel) → D06 first run (all rules stay draft) → DH01 (human) → D06 re-run. D05 is independent |
 
 ---
 
@@ -372,7 +372,7 @@ Write this as real code with `describe.each`/loops over `getDishes()`.
 
 ## P2-B01 `POST /api/scan` for dishes
 
-**Depends on:** P1-B01, P1-B02, P1-B03 · **Blocks:** B02, B03, P3-X01 · **Branch:** `b/P2-B01-scan-route`
+**Depends on:** P1-B01, P1-B02, P1-B03, P1-D01 (the API loads the dish list from the knowledge package) · **Blocks:** B02, B03, P3-X01 · **Branch:** `b/P2-B01-scan-route`
 
 **Goal:** the scan endpoint, wired to a provider chosen by environment.
 
@@ -658,7 +658,7 @@ All C cards use fixtures in `apps/web/src/fixtures/` (create them in P2-C02): `a
 
 ## P2-C01 Confirm-dish screen
 
-**Depends on:** P1-C03, P1-C01 · **Branch:** `c/P2-C01-confirm`
+**Depends on:** P1-C03, P1-C01, P1-D01 (the dish list comes from the knowledge package) · **Branch:** `c/P2-C01-confirm`
 
 **Files:** create `apps/web/src/lib/filter-dishes.ts`, `src/pages/Confirm.tsx`, `apps/web/test/filter-dishes.test.ts`, `confirm-page.test.tsx`; edit `App.tsx` (route `/confirm`).
 
@@ -819,7 +819,7 @@ export class HistoryStore {
 
 ## P2-C06 Bangla UI, messages wiring and About
 
-**Depends on:** P2-D04 (messages file) and P2-D01 (sources) for the real data; may start with fixtures · **Branch:** `c/P2-C06-bangla-about`
+**Depends on:** P2-D01, P2-D04 (the loaders `getSources()` and `getMessages()` come from these) · **Branch:** `c/P2-C06-bangla-about`
 
 **Files:** create `apps/web/src/pages/About.tsx` (replace placeholder), `apps/web/test/i18n-keys.test.ts`; edit `src/main.tsx` (call `registerMessages(getMessages())` at startup), `src/i18n/ui-strings.ts`, `src/App.tsx` (persist language in the profile store).
 
@@ -1157,7 +1157,7 @@ describe('labelMetrics', () => {
 
 ## P2-D07 Review pack export (CSV for the expert)
 
-**Depends on:** P1-D04 · **Branch:** `d/P2-D07-review-pack`
+**Depends on:** P2-D02, P2-D03 (the rules review file needs the rule proposals) · **Branch:** `d/P2-D07-review-pack`
 
 **Goal:** CSV files a nutritionist can open in Excel: dishes with quantities, draft rules, cooking classes, allergens.
 
@@ -1194,14 +1194,14 @@ describe('toCsv', () => {
 
 - [ ] Give the nutritionist or doctor `data/review/dishes-review.csv` and `rules-review.csv`. Ask them to mark **keep / change / remove** for: ingredient gram quantities (start with the demo dishes), serving weights, cooking classes, allergen lists per dish, and every draft rule (does the cited section really say that? is the wording safe?).
 - [ ] A native Bangla speaker reads `messages.json` and fixes the `bn` text; another checks `allergen-keywords.json` for missing common words.
-- [ ] Record decisions by editing the proposal files (set `status` to `approved` for accepted rules, delete rejected ones) and the data files where numbers changed. Commit on `d/P2-DH01-review`.
+- [ ] Record decisions by editing the proposal files (set `status` to `approved` for accepted rules, delete rejected ones) and the data files where numbers changed. Then re-run the P2-D06 scripts (`merge-rules`, `demo-gate`) and commit everything on `d/P2-DH01-review`.
 - [ ] If the expert is not available before the deadline: keep everything `draft` and let the app show the draft and estimated badges (it already does). Say so in the video.
 
 ---
 
 ## P2-D06 Apply approvals and decide the coverage gate
 
-**Depends on:** P2-DH01, P1-D04 · **Branch:** `d/P2-D06-merge-gate`
+**Depends on:** P2-D04, P1-D04 (first run, all rules stay `draft`). **Re-run after P2-DH01** (the scripts are idempotent, so both runs are safe) · **Branch:** `d/P2-D06-merge-gate`
 
 **Goal:** turn proposals into the live rules files and decide which dishes show numbers.
 
