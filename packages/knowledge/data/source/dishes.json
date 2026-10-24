@@ -300,10 +300,7 @@
       "id": "kacchi-biryani",
       "name_en": "Kacchi Biryani",
       "name_bn": "কাচ্চি বিরিয়ানি",
-      "aliases": [
-        "Kacchi",
-        "Kachchi biryani"
-      ],
+      "aliases": ["Kacchi", "Kachchi biryani"],
       "category": "Rice & festive specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 420,
@@ -376,13 +373,8 @@
         }
       ],
       "cooking_method": "layered and slow-cooked (dum)",
-      "allergens": [
-        "dairy",
-        "milk"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["dairy", "milk"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -410,10 +402,7 @@
       "id": "bhuna-khichuri",
       "name_en": "Bhuna Khichuri",
       "name_bn": "ভুনা খিচুড়ি",
-      "aliases": [
-        "Bhuna khichuri",
-        "Bhuna khichuri with moong dal"
-      ],
+      "aliases": ["Bhuna khichuri", "Bhuna khichuri with moong dal"],
       "category": "Rice & festive specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 350,
@@ -471,9 +460,7 @@
         }
       ],
       "cooking_method": "roasted, sautéed and simmered",
-      "allergens": [
-        "mustard"
-      ],
+      "allergens": ["mustard"],
       "safety_tags": [],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
@@ -502,10 +489,7 @@
       "id": "beef-tehari",
       "name_en": "Beef Tehari",
       "name_bn": "গরুর মাংসের তেহারি",
-      "aliases": [
-        "Tehari",
-        "Beef tehari"
-      ],
+      "aliases": ["Tehari", "Beef tehari"],
       "category": "Rice & festive specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 400,
@@ -568,14 +552,8 @@
         }
       ],
       "cooking_method": "braised and simmered in one pot",
-      "allergens": [
-        "dairy",
-        "milk",
-        "mustard"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["dairy", "milk", "mustard"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -603,10 +581,7 @@
       "id": "morog-polao",
       "name_en": "Morog Polao",
       "name_bn": "মোরগ পোলাও",
-      "aliases": [
-        "Murg pulao",
-        "Chicken pulao"
-      ],
+      "aliases": ["Murg pulao", "Chicken pulao"],
       "category": "Rice & festive specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 420,
@@ -679,14 +654,8 @@
         }
       ],
       "cooking_method": "braised chicken with ghee-cooked aromatic rice",
-      "allergens": [
-        "dairy",
-        "milk",
-        "tree_nuts"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["dairy", "milk", "tree_nuts"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -714,9 +683,7 @@
       "id": "panta-ilish",
       "name_en": "Panta Ilish",
       "name_bn": "পান্তা ইলিশ",
-      "aliases": [
-        "Panta bhat with hilsa"
-      ],
+      "aliases": ["Panta bhat with hilsa"],
       "category": "Rice & festive specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 300,
@@ -759,15 +726,8 @@
         }
       ],
       "cooking_method": "soaked/fermented cooked rice served with fried fish",
-      "allergens": [
-        "fish",
-        "mustard"
-      ],
-      "safety_tags": [
-        "fermented",
-        "raw-ingredient",
-        "seafood"
-      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["fermented", "raw-ingredient", "seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -796,10 +756,7 @@
       "id": "aloo-bhorta",
       "name_en": "Aloo Bhorta",
       "name_bn": "আলু ভর্তা",
-      "aliases": [
-        "Alu bhorta",
-        "Mashed potato bhorta"
-      ],
+      "aliases": ["Alu bhorta", "Mashed potato bhorta"],
       "category": "Traditional bhortas & bhajis",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 180,
@@ -832,12 +789,8 @@
         }
       ],
       "cooking_method": "boiled and mashed",
-      "allergens": [
-        "mustard"
-      ],
-      "safety_tags": [
-        "raw-ingredient"
-      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["raw-ingredient"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -865,9 +818,7 @@
       "id": "begun-bhorta",
       "name_en": "Begun Bhorta",
       "name_bn": "বেগুন ভর্তা",
-      "aliases": [
-        "Eggplant bhorta"
-      ],
+      "aliases": ["Eggplant bhorta"],
       "category": "Traditional bhortas & bhajis",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 180,
@@ -905,12 +856,8 @@
         }
       ],
       "cooking_method": "roasted, peeled and mashed",
-      "allergens": [
-        "mustard"
-      ],
-      "safety_tags": [
-        "raw-ingredient"
-      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["raw-ingredient"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -938,9 +885,7 @@
       "id": "shutki-bhorta",
       "name_en": "Shutki Bhorta",
       "name_bn": "শুঁটকি ভর্তা",
-      "aliases": [
-        "Dried fish bhorta"
-      ],
+      "aliases": ["Dried fish bhorta"],
       "category": "Traditional bhortas & bhajis",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 100,
@@ -978,14 +923,8 @@
         }
       ],
       "cooking_method": "toasted or pan-fried, then mashed",
-      "allergens": [
-        "fish",
-        "mustard"
-      ],
-      "safety_tags": [
-        "raw-ingredient",
-        "seafood"
-      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["raw-ingredient", "seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1013,9 +952,7 @@
       "id": "begun-bhaja",
       "name_en": "Begun Bhaja",
       "name_bn": "বেগুন ভাজা",
-      "aliases": [
-        "Fried eggplant"
-      ],
+      "aliases": ["Fried eggplant"],
       "category": "Traditional bhortas & bhajis",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 170,
@@ -1048,12 +985,8 @@
         }
       ],
       "cooking_method": "shallow-fried",
-      "allergens": [
-        "mustard"
-      ],
-      "safety_tags": [
-        "fried"
-      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["fried"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1081,9 +1014,7 @@
       "id": "shorshe-ilish",
       "name_en": "Shorshe Ilish",
       "name_bn": "সর্ষে ইলিশ",
-      "aliases": [
-        "Hilsa in mustard gravy"
-      ],
+      "aliases": ["Hilsa in mustard gravy"],
       "category": "Fish & seafood curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 230,
@@ -1126,13 +1057,8 @@
         }
       ],
       "cooking_method": "gently simmered in mustard gravy",
-      "allergens": [
-        "fish",
-        "mustard"
-      ],
-      "safety_tags": [
-        "seafood"
-      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1160,10 +1086,7 @@
       "id": "chingri-malai-curry",
       "name_en": "Chingri Malai Curry",
       "name_bn": "চিংড়ি মালাইকারি",
-      "aliases": [
-        "Chingri malaikari",
-        "Prawn coconut curry"
-      ],
+      "aliases": ["Chingri malaikari", "Prawn coconut curry"],
       "category": "Fish & seafood curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 260,
@@ -1221,14 +1144,8 @@
         }
       ],
       "cooking_method": "lightly seared and simmered in coconut milk",
-      "allergens": [
-        "crustacean_shellfish",
-        "milk"
-      ],
-      "safety_tags": [
-        "dairy",
-        "seafood"
-      ],
+      "allergens": ["crustacean_shellfish", "milk"],
+      "safety_tags": ["dairy", "seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1256,9 +1173,7 @@
       "id": "rui-macher-jhol",
       "name_en": "Rui Macher Jhol",
       "name_bn": "রুই মাছের ঝোল",
-      "aliases": [
-        "Rohu fish curry"
-      ],
+      "aliases": ["Rohu fish curry"],
       "category": "Fish & seafood curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 280,
@@ -1316,13 +1231,8 @@
         }
       ],
       "cooking_method": "fried fish simmered in a light gravy",
-      "allergens": [
-        "fish",
-        "mustard"
-      ],
-      "safety_tags": [
-        "seafood"
-      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1350,9 +1260,7 @@
       "id": "ilish-bhaja",
       "name_en": "Ilish Bhaja",
       "name_bn": "ইলিশ ভাজা",
-      "aliases": [
-        "Fried hilsa"
-      ],
+      "aliases": ["Fried hilsa"],
       "category": "Fish & seafood curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 170,
@@ -1380,14 +1288,8 @@
         }
       ],
       "cooking_method": "shallow- or deep-fried",
-      "allergens": [
-        "fish",
-        "mustard"
-      ],
-      "safety_tags": [
-        "fried",
-        "seafood"
-      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["fried", "seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1415,9 +1317,7 @@
       "id": "lau-chingri",
       "name_en": "Lau Chingri",
       "name_bn": "লাউ চিংড়ি",
-      "aliases": [
-        "Bottle gourd with shrimp"
-      ],
+      "aliases": ["Bottle gourd with shrimp"],
       "category": "Fish & seafood curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 220,
@@ -1470,13 +1370,8 @@
         }
       ],
       "cooking_method": "slow-cooked stir-fry",
-      "allergens": [
-        "crustacean_shellfish",
-        "mustard"
-      ],
-      "safety_tags": [
-        "seafood"
-      ],
+      "allergens": ["crustacean_shellfish", "mustard"],
+      "safety_tags": ["seafood"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1504,10 +1399,7 @@
       "id": "beef-kala-bhuna",
       "name_en": "Beef Kala Bhuna",
       "name_bn": "গরুর কালা ভুনা",
-      "aliases": [
-        "Kala bhuna",
-        "Beef kala bhuna"
-      ],
+      "aliases": ["Kala bhuna", "Beef kala bhuna"],
       "category": "Meat & poultry curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 220,
@@ -1570,9 +1462,7 @@
         }
       ],
       "cooking_method": "slow-braised and repeatedly reduced/browned",
-      "allergens": [
-        "mustard"
-      ],
+      "allergens": ["mustard"],
       "safety_tags": [],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
@@ -1601,10 +1491,7 @@
       "id": "bangladeshi-chicken-roast",
       "name_en": "Bangladeshi Chicken Roast",
       "name_bn": "বাংলাদেশি মুরগির রোস্ট",
-      "aliases": [
-        "Chicken roast",
-        "Bangladeshi-style chicken roast"
-      ],
+      "aliases": ["Chicken roast", "Bangladeshi-style chicken roast"],
       "category": "Meat & poultry curries",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 300,
@@ -1672,13 +1559,8 @@
         }
       ],
       "cooking_method": "fried lightly and braised in spiced yogurt-based gravy",
-      "allergens": [
-        "milk",
-        "tree_nuts"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["milk", "tree_nuts"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "lab_analyzed",
       "lab_values_per_serving": {
         "value_basis": "per_100_g_cooked_as_published",
@@ -1729,9 +1611,7 @@
       "id": "mezbaner-gorur-mansho",
       "name_en": "Mezbaner Gorur Mansho",
       "name_bn": "মেজবানি গরুর মাংস",
-      "aliases": [
-        "Mezbani beef"
-      ],
+      "aliases": ["Mezbani beef"],
       "category": "Regional specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 260,
@@ -1789,9 +1669,7 @@
         }
       ],
       "cooking_method": "slow-cooked in a regional spice mixture",
-      "allergens": [
-        "mustard"
-      ],
+      "allergens": ["mustard"],
       "safety_tags": [],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
@@ -1820,9 +1698,7 @@
       "id": "patla-masoor-dal",
       "name_en": "Patla Masoor Dal",
       "name_bn": "পাতলা মসুর ডাল",
-      "aliases": [
-        "Thin red lentil dal"
-      ],
+      "aliases": ["Thin red lentil dal"],
       "category": "Lentils, breads & accompaniments",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 250,
@@ -1870,9 +1746,7 @@
         }
       ],
       "cooking_method": "boiled and tempered",
-      "allergens": [
-        "mustard"
-      ],
+      "allergens": ["mustard"],
       "safety_tags": [],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
@@ -1901,9 +1775,7 @@
       "id": "cholar-dal",
       "name_en": "Cholar Dal",
       "name_bn": "ছোলার ডাল",
-      "aliases": [
-        "Chana dal"
-      ],
+      "aliases": ["Chana dal"],
       "category": "Lentils, breads & accompaniments",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 230,
@@ -1956,12 +1828,8 @@
         }
       ],
       "cooking_method": "boiled then tempered with spices and coconut",
-      "allergens": [
-        "milk"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["milk"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -1989,9 +1857,7 @@
       "id": "dhakaiya-bakarkhani",
       "name_en": "Dhakaiya Bakarkhani",
       "name_bn": "ঢাকাইয়া বাকরখানি",
-      "aliases": [
-        "Bakarkhani"
-      ],
+      "aliases": ["Bakarkhani"],
       "category": "Lentils, breads & accompaniments",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 100,
@@ -2024,13 +1890,8 @@
         }
       ],
       "cooking_method": "layered dough baked until crisp",
-      "allergens": [
-        "milk",
-        "wheat_gluten"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["milk", "wheat_gluten"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2058,9 +1919,7 @@
       "id": "mughlai-paratha",
       "name_en": "Mughlai Paratha",
       "name_bn": "মোগলাই পরোটা",
-      "aliases": [
-        "Moglai paratha"
-      ],
+      "aliases": ["Moglai paratha"],
       "category": "Lentils, breads & accompaniments",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 190,
@@ -2108,14 +1967,8 @@
         }
       ],
       "cooking_method": "stuffed and pan/deep-fried",
-      "allergens": [
-        "egg",
-        "mustard",
-        "wheat_gluten"
-      ],
-      "safety_tags": [
-        "fried"
-      ],
+      "allergens": ["egg", "mustard", "wheat_gluten"],
+      "safety_tags": ["fried"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2143,9 +1996,7 @@
       "id": "chotpoti",
       "name_en": "Chotpoti",
       "name_bn": "চটপটি",
-      "aliases": [
-        "Chotpoti with egg"
-      ],
+      "aliases": ["Chotpoti with egg"],
       "category": "Snacks, street food & sweets",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 250,
@@ -2198,12 +2049,8 @@
         }
       ],
       "cooking_method": "peas and potatoes simmered into a spiced stew",
-      "allergens": [
-        "egg"
-      ],
-      "safety_tags": [
-        "street-food"
-      ],
+      "allergens": ["egg"],
+      "safety_tags": ["street-food"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2232,10 +2079,7 @@
       "id": "fuchka",
       "name_en": "Fuchka",
       "name_bn": "ফুচকা",
-      "aliases": [
-        "Puchka",
-        "Fuska"
-      ],
+      "aliases": ["Puchka", "Fuska"],
       "category": "Snacks, street food & sweets",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 180,
@@ -2293,14 +2137,8 @@
         }
       ],
       "cooking_method": "shells deep-fried, then filled at serving",
-      "allergens": [
-        "mustard",
-        "wheat_gluten"
-      ],
-      "safety_tags": [
-        "fried",
-        "street-food"
-      ],
+      "allergens": ["mustard", "wheat_gluten"],
+      "safety_tags": ["fried", "street-food"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2329,10 +2167,7 @@
       "id": "piyaju",
       "name_en": "Piyaju",
       "name_bn": "পিয়াজু",
-      "aliases": [
-        "Peyaju",
-        "Lentil fritters"
-      ],
+      "aliases": ["Peyaju", "Lentil fritters"],
       "category": "Snacks, street food & sweets",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 100,
@@ -2375,13 +2210,8 @@
         }
       ],
       "cooking_method": "deep-fried lentil and onion fritters",
-      "allergens": [
-        "mustard"
-      ],
-      "safety_tags": [
-        "fried",
-        "street-food"
-      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["fried", "street-food"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2410,9 +2240,7 @@
       "id": "bhapa-pitha",
       "name_en": "Bhapa Pitha",
       "name_bn": "ভাপা পিঠা",
-      "aliases": [
-        "Steamed rice pitha"
-      ],
+      "aliases": ["Steamed rice pitha"],
       "category": "Traditional pithe & desserts",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 100,
@@ -2469,10 +2297,7 @@
       "id": "chitoi-pitha",
       "name_en": "Chitoi Pitha",
       "name_bn": "চিতই পিঠা",
-      "aliases": [
-        "Chitoi",
-        "Chitui pitha"
-      ],
+      "aliases": ["Chitoi", "Chitui pitha"],
       "category": "Traditional pithe & desserts",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 100,
@@ -2524,10 +2349,7 @@
       "id": "mishti-doi",
       "name_en": "Mishti Doi",
       "name_bn": "মিষ্টি দই",
-      "aliases": [
-        "Sweetened yogurt",
-        "Sweet curd"
-      ],
+      "aliases": ["Sweetened yogurt", "Sweet curd"],
       "category": "Traditional pithe & desserts",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 200,
@@ -2550,13 +2372,8 @@
         }
       ],
       "cooking_method": "milk reduced, sweetened and fermented",
-      "allergens": [
-        "milk"
-      ],
-      "safety_tags": [
-        "dairy",
-        "fermented"
-      ],
+      "allergens": ["milk"],
+      "safety_tags": ["dairy", "fermented"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2584,9 +2401,7 @@
       "id": "rasmalai",
       "name_en": "Rasmalai",
       "name_bn": "রসমালাই",
-      "aliases": [
-        "Ras malai"
-      ],
+      "aliases": ["Ras malai"],
       "category": "Traditional pithe & desserts",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 180,
@@ -2619,13 +2434,8 @@
         }
       ],
       "cooking_method": "chhana patties simmered then served in sweetened milk",
-      "allergens": [
-        "milk",
-        "tree_nuts"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["milk", "tree_nuts"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2653,9 +2463,7 @@
       "id": "haleem",
       "name_en": "Haleem",
       "name_bn": "হালিম",
-      "aliases": [
-        "Beef haleem"
-      ],
+      "aliases": ["Beef haleem"],
       "category": "Rice, grain & meat specialties",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 300,
@@ -2718,13 +2526,8 @@
         }
       ],
       "cooking_method": "grain, lentils and meat slow-cooked into a thick stew",
-      "allergens": [
-        "milk",
-        "wheat_gluten"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["milk", "wheat_gluten"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [
@@ -2752,10 +2555,7 @@
       "id": "shemai",
       "name_en": "Shemai",
       "name_bn": "সেমাই",
-      "aliases": [
-        "Dudh shemai",
-        "Vermicelli pudding"
-      ],
+      "aliases": ["Dudh shemai", "Vermicelli pudding"],
       "category": "Traditional pithe & desserts",
       "serving_description": "1 serving (estimated)",
       "serving_weight_g": 250,
@@ -2798,14 +2598,8 @@
         }
       ],
       "cooking_method": "vermicelli toasted then simmered in sweetened milk",
-      "allergens": [
-        "milk",
-        "tree_nuts",
-        "wheat_gluten"
-      ],
-      "safety_tags": [
-        "dairy"
-      ],
+      "allergens": ["milk", "tree_nuts", "wheat_gluten"],
+      "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null,
       "sources": [

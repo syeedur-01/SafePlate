@@ -41,6 +41,7 @@ Done when: the two JSON files exist and `data/raw/` has whatever you could downl
 **Read:** `AGENTS.md` sections 4, 5, 6.
 
 **Files (create):**
+
 - `package.json`, `pnpm-workspace.yaml`, `tsconfig.base.json`, `eslint.config.js`, `.prettierrc`, `.gitignore`, `.env.example`, `.nvmrc`
 - `.github/workflows/ci.yml`, `.github/CODEOWNERS`
 - For each of `packages/contracts`, `packages/knowledge`, `packages/engine`, `packages/ai`, `tools`: `package.json`, `tsconfig.json`, `vitest.config.ts`, `src/index.ts`, `test/smoke.test.ts`
@@ -51,14 +52,16 @@ Done when: the two JSON files exist and `data/raw/` has whatever you could downl
 **Spec:**
 
 `pnpm-workspace.yaml`:
+
 ```yaml
 packages:
-  - "packages/*"
-  - "apps/*"
-  - "tools"
+  - 'packages/*'
+  - 'apps/*'
+  - 'tools'
 ```
 
 Root `package.json` (set `packageManager` to the output of `pnpm --version`, for example `pnpm@9.15.0`):
+
 ```json
 {
   "name": "safeplate",
@@ -76,9 +79,11 @@ Root `package.json` (set `packageManager` to the output of `pnpm --version`, for
   "devDependencies": {}
 }
 ```
+
 Dev dependencies to add at the root (pin exact versions you install): `typescript` (5.x), `vitest` (latest stable 2.x or 3.x), `eslint` (9.x), `@eslint/js`, `typescript-eslint`, `prettier`, `tsx`, `@types/node` (20.x).
 
 `tsconfig.base.json`:
+
 ```json
 {
   "compilerOptions": {
@@ -100,6 +105,7 @@ Dev dependencies to add at the root (pin exact versions you install): `typescrip
 ```
 
 Each package, for example `packages/contracts/package.json`:
+
 ```json
 {
   "name": "@sp/contracts",
@@ -111,17 +117,20 @@ Each package, for example `packages/contracts/package.json`:
   "scripts": { "typecheck": "tsc -p tsconfig.json", "test": "vitest run" }
 }
 ```
+
 Use `@sp/knowledge`, `@sp/engine`, `@sp/ai`, `@sp/tools` for the others. `packages/contracts` also exports `./testing` later (card P0-X03), so use an `exports` map there: `{ ".": "./src/index.ts", "./testing": "./src/testing.ts" }` (keep `main` and `types` too).
 
 Each `tsconfig.json`: `{ "extends": "../../tsconfig.base.json", "include": ["src", "test"] }` (for `tools`: `"../tsconfig.base.json"`).
 
 Each `vitest.config.ts`:
+
 ```ts
 import { defineConfig } from 'vitest/config';
 export default defineConfig({ test: { include: ['test/**/*.test.ts'] } });
 ```
 
 `eslint.config.js`:
+
 ```js
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
@@ -142,6 +151,7 @@ export default tseslint.config(
 `.gitignore`: `node_modules`, `dist`, `.env`, `.env.*` (but not `.env.example`), `data/raw/`, `.wrangler`, `.dev.vars`, `coverage`, `*.log`, `.DS_Store`.
 
 `.env.example` (values empty):
+
 ```
 AI_PROVIDER=mock
 GEMINI_API_KEY=
@@ -150,6 +160,7 @@ ALLOWED_ORIGIN=http://localhost:5173
 ```
 
 `.github/workflows/ci.yml`:
+
 ```yaml
 name: ci
 on:
@@ -171,6 +182,7 @@ jobs:
 ```
 
 `.github/CODEOWNERS` (replace handles in P0-H01 or later):
+
 ```
 packages/engine/ @TEAM-A
 packages/ai/ @TEAM-B
@@ -184,6 +196,7 @@ packages/contracts/ @TEAM-A @TEAM-B @TEAM-C @TEAM-D
 **Tests (write first):**
 
 `packages/contracts/test/workspace.test.ts`:
+
 ```ts
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -205,6 +218,7 @@ describe('workspace', () => {
   });
 });
 ```
+
 Each package's `test/smoke.test.ts`: `import { it, expect } from 'vitest'; it('runs', () => { expect(1 + 1).toBe(2); });`
 Each `src/index.ts`: `export {};`
 
@@ -225,17 +239,26 @@ Each `src/index.ts`: `export {};`
 **Read:** `docs/TECH_DESIGN.md` sections 3 and 11; both files in `packages/knowledge/data/source/` (skim the first dish and first ingredient).
 
 **Files:**
+
 - create `packages/contracts/src/knowledge.ts`
 - edit `packages/contracts/src/index.ts` (export everything from `./knowledge`)
 - create `packages/contracts/test/knowledge.test.ts`
 - edit `packages/contracts/package.json` (add dependency `zod` pinned to the latest **3.x** release; do not use Zod 4)
 
 **Spec** (`knowledge.ts`; implement exactly):
+
 ```ts
 import { z } from 'zod';
 
 export const NUTRIENT_KEYS = [
-  'energy_kcal', 'protein_g', 'fat_g', 'sat_fat_g', 'carbs_g', 'sugars_g', 'fibre_g', 'sodium_mg',
+  'energy_kcal',
+  'protein_g',
+  'fat_g',
+  'sat_fat_g',
+  'carbs_g',
+  'sugars_g',
+  'fibre_g',
+  'sodium_mg',
 ] as const;
 export type NutrientKey = (typeof NUTRIENT_KEYS)[number];
 export const NutrientKeySchema = z.enum(NUTRIENT_KEYS);
@@ -268,34 +291,43 @@ export const IngredientSchema = NutrientValuesSchema.extend({
 }).passthrough();
 export type Ingredient = z.infer<typeof IngredientSchema>;
 
-export const RawDishSchema = z.object({
-  id: slug,
-  name_en: z.string().min(1),
-  name_bn: z.string(),
-  aliases: z.array(z.string()),
-  category: z.string(),
-  serving_description: z.string(),
-  serving_weight_g: z.number().positive(),
-  serving_weight_basis: z.literal('ESTIMATE'),
-  ingredients: z.array(z.object({
-    ingredient_id: slug,
-    grams_raw: z.number().positive(),
-    quantity_basis: z.enum(['ESTIMATE', 'SOURCE']),
-  })).min(1),
-  cooking_method: z.string(),
-  allergens: z.array(z.string()),
-  safety_tags: z.array(z.string()),
-  nutrition_basis: z.enum(['lab_analyzed', 'calculated', 'unavailable']),
-  lab_values_per_serving: z.object({
-    value_basis: z.string(),
-    values: NutrientValuesSchema,
-  }).passthrough().nullable(),
-  sources: z.array(z.object({ title: z.string() }).passthrough()),
-  confidence: z.enum(['low', 'medium', 'high']),
-  needs_expert_review: z.boolean(),
-  notes: z.array(z.string()),
-  batch_number: z.number().int(),
-}).passthrough();
+export const RawDishSchema = z
+  .object({
+    id: slug,
+    name_en: z.string().min(1),
+    name_bn: z.string(),
+    aliases: z.array(z.string()),
+    category: z.string(),
+    serving_description: z.string(),
+    serving_weight_g: z.number().positive(),
+    serving_weight_basis: z.literal('ESTIMATE'),
+    ingredients: z
+      .array(
+        z.object({
+          ingredient_id: slug,
+          grams_raw: z.number().positive(),
+          quantity_basis: z.enum(['ESTIMATE', 'SOURCE']),
+        }),
+      )
+      .min(1),
+    cooking_method: z.string(),
+    allergens: z.array(z.string()),
+    safety_tags: z.array(z.string()),
+    nutrition_basis: z.enum(['lab_analyzed', 'calculated', 'unavailable']),
+    lab_values_per_serving: z
+      .object({
+        value_basis: z.string(),
+        values: NutrientValuesSchema,
+      })
+      .passthrough()
+      .nullable(),
+    sources: z.array(z.object({ title: z.string() }).passthrough()),
+    confidence: z.enum(['low', 'medium', 'high']),
+    needs_expert_review: z.boolean(),
+    notes: z.array(z.string()),
+    batch_number: z.number().int(),
+  })
+  .passthrough();
 export type RawDish = z.infer<typeof RawDishSchema>;
 
 export const RawDishesFileSchema = z.object({
@@ -313,7 +345,8 @@ export function findDanglingRefs(dishes: RawDish[], ingredients: Ingredient[]): 
   const errors: string[] = [];
   for (const d of dishes) {
     for (const line of d.ingredients) {
-      if (!known.has(line.ingredient_id)) errors.push(`${d.id}: unknown ingredient ${line.ingredient_id}`);
+      if (!known.has(line.ingredient_id))
+        errors.push(`${d.id}: unknown ingredient ${line.ingredient_id}`);
     }
   }
   return errors;
@@ -321,17 +354,26 @@ export function findDanglingRefs(dishes: RawDish[], ingredients: Ingredient[]): 
 ```
 
 **Tests (write first)** `packages/contracts/test/knowledge.test.ts`:
+
 ```ts
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, it, expect } from 'vitest';
 import {
-  NUTRIENT_KEYS, RawDishesFileSchema, RawIngredientsFileSchema, RawDishSchema, findDanglingRefs,
+  NUTRIENT_KEYS,
+  RawDishesFileSchema,
+  RawIngredientsFileSchema,
+  RawDishSchema,
+  findDanglingRefs,
 } from '../src/knowledge';
 
 const load = (name: string) =>
-  JSON.parse(readFileSync(
-    fileURLToPath(new URL(`../../knowledge/data/source/${name}`, import.meta.url)), 'utf8'));
+  JSON.parse(
+    readFileSync(
+      fileURLToPath(new URL(`../../knowledge/data/source/${name}`, import.meta.url)),
+      'utf8',
+    ),
+  );
 
 describe('real data files', () => {
   const dishesFile = RawDishesFileSchema.parse(load('dishes.json'));
@@ -356,7 +398,9 @@ describe('schema strictness', () => {
     expect(RawDishSchema.safeParse({ ...(good as object), ingredients: [] }).success).toBe(false);
   });
   it('rejects an unknown nutrition_basis', () => {
-    expect(RawDishSchema.safeParse({ ...(good as object), nutrition_basis: 'guessed' }).success).toBe(false);
+    expect(
+      RawDishSchema.safeParse({ ...(good as object), nutrition_basis: 'guessed' }).success,
+    ).toBe(false);
   });
   it('finds a dangling reference', () => {
     const d = RawDishSchema.parse(good);
@@ -385,6 +429,7 @@ describe('schema strictness', () => {
 **Read:** `docs/TECH_DESIGN.md` sections 4, 5, 6, 11.
 
 **Files:**
+
 - create `packages/contracts/src/vocab.ts`, `dish.ts`, `profile.ts`, `api.ts`, `analysis.ts`, `rules.ts`, `testing.ts`
 - edit `packages/contracts/src/index.ts` (export all except `testing`, which is exported only via `@sp/contracts/testing`)
 - create `packages/contracts/test/contracts.test.ts`
@@ -392,31 +437,61 @@ describe('schema strictness', () => {
 **Spec:**
 
 `vocab.ts`:
+
 ```ts
 import { z } from 'zod';
 
 export const AllergenSchema = z.enum([
-  'milk', 'egg', 'fish', 'crustacean_shellfish', 'tree_nuts', 'peanuts',
-  'wheat_gluten', 'soy', 'sesame', 'mustard',
+  'milk',
+  'egg',
+  'fish',
+  'crustacean_shellfish',
+  'tree_nuts',
+  'peanuts',
+  'wheat_gluten',
+  'soy',
+  'sesame',
+  'mustard',
 ]);
 export type Allergen = z.infer<typeof AllergenSchema>;
 
 export const ConditionSchema = z.enum(['diabetes', 'hypertension', 'high_cholesterol', 'gastric']);
 export type Condition = z.infer<typeof ConditionSchema>;
 
-export const SafetyTagSchema = z.enum(['dairy', 'seafood', 'fried', 'raw-ingredient', 'street-food', 'fermented']);
+export const SafetyTagSchema = z.enum([
+  'dairy',
+  'seafood',
+  'fried',
+  'raw-ingredient',
+  'street-food',
+  'fermented',
+]);
 export type SafetyTag = z.infer<typeof SafetyTagSchema>;
 
 export const SPOILAGE_SIGNS = [
-  'visible_mold', 'slimy_surface', 'discoloration', 'bloated_packaging',
-  'leaking_packaging', 'separated_liquid', 'foam_or_bubbles', 'foreign_object',
+  'visible_mold',
+  'slimy_surface',
+  'discoloration',
+  'bloated_packaging',
+  'leaking_packaging',
+  'separated_liquid',
+  'foam_or_bubbles',
+  'foreign_object',
 ] as const;
 export const SpoilageSignSchema = z.enum(SPOILAGE_SIGNS);
 export type SpoilageSign = z.infer<typeof SpoilageSignSchema>;
 
 export const CookingClassSchema = z.enum([
-  'deep_fried', 'shallow_fried', 'braised_or_curry', 'boiled_or_simmered', 'steamed',
-  'baked_or_roasted', 'mashed_or_raw', 'fermented', 'sweet_milk_based', 'mixed_or_other',
+  'deep_fried',
+  'shallow_fried',
+  'braised_or_curry',
+  'boiled_or_simmered',
+  'steamed',
+  'baked_or_roasted',
+  'mashed_or_raw',
+  'fermented',
+  'sweet_milk_based',
+  'mixed_or_other',
 ]);
 export type CookingClass = z.infer<typeof CookingClassSchema>;
 
@@ -424,6 +499,7 @@ export const RulesStatusSchema = z.enum(['draft', 'approved']);
 ```
 
 `dish.ts` (the normalized dish used by the engine and the web app; the source file keeps the raw form):
+
 ```ts
 import { z } from 'zod';
 import { RawDishSchema } from './knowledge';
@@ -435,36 +511,52 @@ export const DishSchema = RawDishSchema.extend({
   cooking_class: CookingClassSchema,
 });
 export type Dish = z.infer<typeof DishSchema>;
-export const NormalizedDishesFileSchema = z.object({ metadata: z.record(z.unknown()), dishes: z.array(DishSchema).min(1) });
+export const NormalizedDishesFileSchema = z.object({
+  metadata: z.record(z.unknown()),
+  dishes: z.array(DishSchema).min(1),
+});
 ```
 
 `profile.ts`:
+
 ```ts
-export const UserProfileSchema = z.object({
-  conditions: z.array(ConditionSchema),
-  allergies: z.array(AllergenSchema),
-  language: z.enum(['en', 'bn']),
-  consentedAt: z.string().nullable(),
-}).strict();
+export const UserProfileSchema = z
+  .object({
+    conditions: z.array(ConditionSchema),
+    allergies: z.array(AllergenSchema),
+    language: z.enum(['en', 'bn']),
+    consentedAt: z.string().nullable(),
+  })
+  .strict();
 export type UserProfile = z.infer<typeof UserProfileSchema>;
-export const EMPTY_PROFILE: UserProfile = { conditions: [], allergies: [], language: 'en', consentedAt: null };
+export const EMPTY_PROFILE: UserProfile = {
+  conditions: [],
+  allergies: [],
+  language: 'en',
+  consentedAt: null,
+};
 ```
 
 `api.ts`:
+
 ```ts
-export const ScanContextSchema = z.object({
-  place: z.enum(['home', 'restaurant', 'street', 'packaged', 'unknown']),
-  storage: z.enum(['fresh_just_made', 'room_temp', 'refrigerated', 'unknown']),
-  hoursSinceCooked: z.number().min(0).max(240).nullable(),
-}).strict();
+export const ScanContextSchema = z
+  .object({
+    place: z.enum(['home', 'restaurant', 'street', 'packaged', 'unknown']),
+    storage: z.enum(['fresh_just_made', 'room_temp', 'refrigerated', 'unknown']),
+    hoursSinceCooked: z.number().min(0).max(240).nullable(),
+  })
+  .strict();
 export type ScanContext = z.infer<typeof ScanContextSchema>;
 
-export const ScanRequestSchema = z.object({
-  kind: z.enum(['dish', 'label']),
-  imageBase64: z.string().min(100).max(1_800_000),
-  mimeType: z.enum(['image/jpeg', 'image/png', 'image/webp']),
-  context: ScanContextSchema,
-}).strict();                       // strict on purpose: the profile must never be accepted
+export const ScanRequestSchema = z
+  .object({
+    kind: z.enum(['dish', 'label']),
+    imageBase64: z.string().min(100).max(1_800_000),
+    mimeType: z.enum(['image/jpeg', 'image/png', 'image/webp']),
+    context: ScanContextSchema,
+  })
+  .strict(); // strict on purpose: the profile must never be accepted
 export type ScanRequest = z.infer<typeof ScanRequestSchema>;
 
 const ObservationsSchema = z.object({
@@ -475,11 +567,16 @@ const ObservationsSchema = z.object({
 
 export const DishScanResultSchema = z.object({
   kind: z.literal('dish'),
-  candidates: z.array(z.object({
-    dishId: z.string().nullable(),
-    label: z.string(),
-    confidence: z.number().min(0).max(1),
-  })).min(1).max(3),
+  candidates: z
+    .array(
+      z.object({
+        dishId: z.string().nullable(),
+        label: z.string(),
+        confidence: z.number().min(0).max(1),
+      }),
+    )
+    .min(1)
+    .max(3),
   observations: ObservationsSchema,
   provider: z.string(),
   cached: z.boolean(),
@@ -490,29 +587,44 @@ export const LabelScanResultSchema = z.object({
   productName: z.string().nullable(),
   ingredientsText: z.string().nullable(),
   declaredAllergens: z.array(AllergenSchema),
-  expiryDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+  expiryDate: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .nullable(),
   nutritionPer100g: NutrientValuesSchema.partial().nullable(),
   observations: ObservationsSchema,
   provider: z.string(),
   cached: z.boolean(),
 });
 
-export const ScanResultSchema = z.discriminatedUnion('kind', [DishScanResultSchema, LabelScanResultSchema]);
+export const ScanResultSchema = z.discriminatedUnion('kind', [
+  DishScanResultSchema,
+  LabelScanResultSchema,
+]);
 export type ScanResult = z.infer<typeof ScanResultSchema>;
 export type DishScanResult = z.infer<typeof DishScanResultSchema>;
 export type LabelScanResult = z.infer<typeof LabelScanResultSchema>;
 
 export const ApiErrorSchema = z.object({
   error: z.object({
-    code: z.enum(['bad_request', 'too_large', 'ai_unavailable', 'ai_invalid_output', 'rate_limited', 'internal']),
+    code: z.enum([
+      'bad_request',
+      'too_large',
+      'ai_unavailable',
+      'ai_invalid_output',
+      'rate_limited',
+      'internal',
+    ]),
     message: z.string(),
   }),
 });
 export type ApiError = z.infer<typeof ApiErrorSchema>;
 ```
+
 (import `NutrientValuesSchema` from `./knowledge`.)
 
 `analysis.ts` (engine output):
+
 ```ts
 const NutrientResultSchema = z.object({
   value: z.number().nullable(),
@@ -522,9 +634,14 @@ const NutrientResultSchema = z.object({
 });
 export const NutritionResultSchema = z.object({
   perServing: z.object({
-    energy_kcal: NutrientResultSchema, protein_g: NutrientResultSchema, fat_g: NutrientResultSchema,
-    sat_fat_g: NutrientResultSchema, carbs_g: NutrientResultSchema, sugars_g: NutrientResultSchema,
-    fibre_g: NutrientResultSchema, sodium_mg: NutrientResultSchema,
+    energy_kcal: NutrientResultSchema,
+    protein_g: NutrientResultSchema,
+    fat_g: NutrientResultSchema,
+    sat_fat_g: NutrientResultSchema,
+    carbs_g: NutrientResultSchema,
+    sugars_g: NutrientResultSchema,
+    fibre_g: NutrientResultSchema,
+    sodium_mg: NutrientResultSchema,
   }),
   overallCoverage: z.number().min(0).max(1),
   missingIngredientIds: z.array(z.string()),
@@ -535,10 +652,15 @@ export type NutritionResult = z.infer<typeof NutritionResultSchema>;
 export const SafetyResultSchema = z.object({
   score: z.number().int().min(0).max(100),
   level: z.enum(['low', 'moderate', 'high']),
-  signals: z.array(z.object({
-    ruleId: z.string(), labelKey: z.string(), points: z.number(),
-    evidence: z.string(), sourceRef: z.string().nullable(),
-  })),
+  signals: z.array(
+    z.object({
+      ruleId: z.string(),
+      labelKey: z.string(),
+      points: z.number(),
+      evidence: z.string(),
+      sourceRef: z.string().nullable(),
+    }),
+  ),
   mitigationKeys: z.array(z.string()),
   notices: z.array(z.string()).min(1),
   rulesStatus: RulesStatusSchema,
@@ -557,8 +679,15 @@ export const WarningSchema = z.object({
 });
 export type Warning = z.infer<typeof WarningSchema>;
 
-export const SwapSchema = z.object({ dishId: z.string(), improves: z.array(NutrientKeySchema), reasonKey: z.string() });
-export const ShoppingItemSchema = z.object({ ingredientId: z.string(), grams: z.number().positive() });
+export const SwapSchema = z.object({
+  dishId: z.string(),
+  improves: z.array(NutrientKeySchema),
+  reasonKey: z.string(),
+});
+export const ShoppingItemSchema = z.object({
+  ingredientId: z.string(),
+  grams: z.number().positive(),
+});
 
 export const AnalysisResultSchema = z.object({
   dishId: z.string().nullable(),
@@ -572,57 +701,103 @@ export type AnalysisResult = z.infer<typeof AnalysisResultSchema>;
 ```
 
 `rules.ts`:
+
 ```ts
 export const SafetyTriggerSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('spoilage_sign'), sign: SpoilageSignSchema }),
-  z.object({ type: z.literal('storage_hours'), storage: z.enum(['room_temp', 'refrigerated']), minHours: z.number().min(0), tags: z.array(SafetyTagSchema).optional() }),
-  z.object({ type: z.literal('dish_tag'), tag: SafetyTagSchema, place: z.enum(['home', 'restaurant', 'street', 'packaged', 'unknown']).optional() }),
+  z.object({
+    type: z.literal('storage_hours'),
+    storage: z.enum(['room_temp', 'refrigerated']),
+    minHours: z.number().min(0),
+    tags: z.array(SafetyTagSchema).optional(),
+  }),
+  z.object({
+    type: z.literal('dish_tag'),
+    tag: SafetyTagSchema,
+    place: z.enum(['home', 'restaurant', 'street', 'packaged', 'unknown']).optional(),
+  }),
   z.object({ type: z.literal('label_expired') }),
 ]);
 export const SafetyRuleSchema = z.object({
-  id: z.string(), trigger: SafetyTriggerSchema, points: z.number().int().min(1).max(100),
-  labelKey: z.string(), mitigationKeys: z.array(z.string()), sourceRef: z.string().nullable(), status: RulesStatusSchema,
+  id: z.string(),
+  trigger: SafetyTriggerSchema,
+  points: z.number().int().min(1).max(100),
+  labelKey: z.string(),
+  mitigationKeys: z.array(z.string()),
+  sourceRef: z.string().nullable(),
+  status: RulesStatusSchema,
   basis: z.string().optional(), // short paraphrase of what the cited source says, with section or page
 });
 export const SafetyRulesFileSchema = z.object({ rules: z.array(SafetyRuleSchema) });
 export type SafetyRule = z.infer<typeof SafetyRuleSchema>;
 
-export const NutrientRuleSchema = z.object({
-  kind: z.literal('nutrient'), id: z.string(), condition: ConditionSchema, nutrient: NutrientKeySchema,
-  dailyLimit: z.number().positive(), cautionFraction: z.number().min(0).max(1), avoidFraction: z.number().min(0).max(1),
-  messageKey: z.string(), sourceRef: z.string(), status: RulesStatusSchema, basis: z.string().optional(),
-}).refine((r) => r.avoidFraction >= r.cautionFraction, { message: 'avoidFraction must be >= cautionFraction' });
+export const NutrientRuleSchema = z
+  .object({
+    kind: z.literal('nutrient'),
+    id: z.string(),
+    condition: ConditionSchema,
+    nutrient: NutrientKeySchema,
+    dailyLimit: z.number().positive(),
+    cautionFraction: z.number().min(0).max(1),
+    avoidFraction: z.number().min(0).max(1),
+    messageKey: z.string(),
+    sourceRef: z.string(),
+    status: RulesStatusSchema,
+    basis: z.string().optional(),
+  })
+  .refine((r) => r.avoidFraction >= r.cautionFraction, {
+    message: 'avoidFraction must be >= cautionFraction',
+  });
 export const TagRuleSchema = z.object({
-  kind: z.literal('tag'), id: z.string(), condition: ConditionSchema,
+  kind: z.literal('tag'),
+  id: z.string(),
+  condition: ConditionSchema,
   match: z.union([
     z.object({ cookingClasses: z.array(CookingClassSchema).min(1) }),
     z.object({ safetyTags: z.array(SafetyTagSchema).min(1) }),
   ]),
-  level: z.enum(['info', 'caution']), messageKey: z.string(), sourceRef: z.string(), status: RulesStatusSchema, basis: z.string().optional(),
+  level: z.enum(['info', 'caution']),
+  messageKey: z.string(),
+  sourceRef: z.string(),
+  status: RulesStatusSchema,
+  basis: z.string().optional(),
 });
-export const HealthRulesFileSchema = z.object({ rules: z.array(z.union([NutrientRuleSchema, TagRuleSchema])) });
+export const HealthRulesFileSchema = z.object({
+  rules: z.array(z.union([NutrientRuleSchema, TagRuleSchema])),
+});
 export type NutrientRule = z.infer<typeof NutrientRuleSchema>;
 export type TagRule = z.infer<typeof TagRuleSchema>;
 export type HealthRule = NutrientRule | TagRule;
 
 export const SourceEntrySchema = z.object({
-  id: z.string(), title: z.string(), publisher: z.string(),
-  year: z.number().int().nullable(), edition: z.string().nullable(), url: z.string().url(),
+  id: z.string(),
+  title: z.string(),
+  publisher: z.string(),
+  year: z.number().int().nullable(),
+  edition: z.string().nullable(),
+  url: z.string().url(),
   tier: z.enum(['bangladesh', 'global', 'professional', 'data']),
   status: z.enum(['verified', 'unverified']),
-  accessedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+  accessedOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .nullable(),
   notes: z.string().optional(),
 });
 export const SourcesFileSchema = z.object({ sources: z.array(SourceEntrySchema) });
 export type SourceEntry = z.infer<typeof SourceEntrySchema>;
 
 /** messageKey to text in both languages. Placeholders look like {name}. */
-export const MessagesFileSchema = z.record(z.object({ en: z.string().min(1), bn: z.string().min(1) }));
+export const MessagesFileSchema = z.record(
+  z.object({ en: z.string().min(1), bn: z.string().min(1) }),
+);
 export type Messages = z.infer<typeof MessagesFileSchema>;
 ```
+
 (Note: `z.union` over a `ZodEffects` (refine) is allowed. A discriminated union is not used there for that reason.)
 
 `testing.ts` (builders, no randomness):
+
 ```ts
 import type { Ingredient, RawDish } from './knowledge';
 import type { UserProfile } from './profile';
@@ -631,22 +806,45 @@ import { EMPTY_PROFILE } from './profile';
 /** Returns a valid ingredient with all nutrients null unless overridden. */
 export function makeIngredient(over: Partial<Ingredient> & { id: string }): Ingredient {
   return {
-    name_en: over.id, name_bn: '', basis: 'per_100_g_raw_ingredient',
-    energy_kcal: null, protein_g: null, fat_g: null, sat_fat_g: null,
-    carbs_g: null, sugars_g: null, fibre_g: null, sodium_mg: null,
-    source: [], nutrient_sources: {}, ...over,
+    name_en: over.id,
+    name_bn: '',
+    basis: 'per_100_g_raw_ingredient',
+    energy_kcal: null,
+    protein_g: null,
+    fat_g: null,
+    sat_fat_g: null,
+    carbs_g: null,
+    sugars_g: null,
+    fibre_g: null,
+    sodium_mg: null,
+    source: [],
+    nutrient_sources: {},
+    ...over,
   } as Ingredient;
 }
 
 /** Returns a valid dish with one 100 g ingredient line unless overridden. */
 export function makeDish(over: Partial<RawDish> & { id: string }): RawDish {
   return {
-    name_en: over.id, name_bn: '', aliases: [], category: 'test',
-    serving_description: '1 serving (estimated)', serving_weight_g: 200, serving_weight_basis: 'ESTIMATE',
+    name_en: over.id,
+    name_bn: '',
+    aliases: [],
+    category: 'test',
+    serving_description: '1 serving (estimated)',
+    serving_weight_g: 200,
+    serving_weight_basis: 'ESTIMATE',
     ingredients: [{ ingredient_id: 'x', grams_raw: 100, quantity_basis: 'ESTIMATE' }],
-    cooking_method: 'test', allergens: [], safety_tags: [], nutrition_basis: 'unavailable',
-    lab_values_per_serving: null, sources: [], confidence: 'low', needs_expert_review: true,
-    notes: [], batch_number: 1, ...over,
+    cooking_method: 'test',
+    allergens: [],
+    safety_tags: [],
+    nutrition_basis: 'unavailable',
+    lab_values_per_serving: null,
+    sources: [],
+    confidence: 'low',
+    needs_expert_review: true,
+    notes: [],
+    batch_number: 1,
+    ...over,
   } as RawDish;
 }
 
@@ -657,11 +855,19 @@ export function makeProfile(over: Partial<UserProfile> = {}): UserProfile {
 ```
 
 **Tests (write first)** `packages/contracts/test/contracts.test.ts`:
+
 ```ts
 import { describe, it, expect } from 'vitest';
 import {
-  ScanRequestSchema, ScanResultSchema, UserProfileSchema, SafetyResultSchema,
-  NutrientRuleSchema, SPOILAGE_SIGNS, DishSchema, SourceEntrySchema, MessagesFileSchema,
+  ScanRequestSchema,
+  ScanResultSchema,
+  UserProfileSchema,
+  SafetyResultSchema,
+  NutrientRuleSchema,
+  SPOILAGE_SIGNS,
+  DishSchema,
+  SourceEntrySchema,
+  MessagesFileSchema,
 } from '../src';
 import { makeDish, makeIngredient, makeProfile } from '../src/testing';
 import { RawDishSchema, IngredientSchema } from '../src/knowledge';
@@ -671,32 +877,71 @@ const ctx = { place: 'home', storage: 'unknown', hoursSinceCooked: null } as con
 
 describe('ScanRequest', () => {
   it('accepts a valid request', () => {
-    expect(ScanRequestSchema.safeParse({ kind: 'dish', imageBase64: img, mimeType: 'image/jpeg', context: ctx }).success).toBe(true);
+    expect(
+      ScanRequestSchema.safeParse({
+        kind: 'dish',
+        imageBase64: img,
+        mimeType: 'image/jpeg',
+        context: ctx,
+      }).success,
+    ).toBe(true);
   });
   it('rejects any extra field, so a health profile can never be sent', () => {
-    const r = ScanRequestSchema.safeParse({ kind: 'dish', imageBase64: img, mimeType: 'image/jpeg', context: ctx, profile: { conditions: ['diabetes'] } });
+    const r = ScanRequestSchema.safeParse({
+      kind: 'dish',
+      imageBase64: img,
+      mimeType: 'image/jpeg',
+      context: ctx,
+      profile: { conditions: ['diabetes'] },
+    });
     expect(r.success).toBe(false);
   });
   it('rejects an oversized image', () => {
-    expect(ScanRequestSchema.safeParse({ kind: 'dish', imageBase64: 'A'.repeat(1_800_001), mimeType: 'image/jpeg', context: ctx }).success).toBe(false);
+    expect(
+      ScanRequestSchema.safeParse({
+        kind: 'dish',
+        imageBase64: 'A'.repeat(1_800_001),
+        mimeType: 'image/jpeg',
+        context: ctx,
+      }).success,
+    ).toBe(false);
   });
   it('rejects an unsupported mime type', () => {
-    expect(ScanRequestSchema.safeParse({ kind: 'dish', imageBase64: img, mimeType: 'image/gif', context: ctx }).success).toBe(false);
+    expect(
+      ScanRequestSchema.safeParse({
+        kind: 'dish',
+        imageBase64: img,
+        mimeType: 'image/gif',
+        context: ctx,
+      }).success,
+    ).toBe(false);
   });
 });
 
 describe('ScanResult', () => {
   it('discriminates on kind', () => {
-    const dish = { kind: 'dish', candidates: [{ dishId: 'kacchi-biryani', label: 'Kacchi Biryani', confidence: 0.8 }],
-      observations: { spoilageSigns: [], imageQuality: 'good', notes: '' }, provider: 'mock', cached: false };
+    const dish = {
+      kind: 'dish',
+      candidates: [{ dishId: 'kacchi-biryani', label: 'Kacchi Biryani', confidence: 0.8 }],
+      observations: { spoilageSigns: [], imageQuality: 'good', notes: '' },
+      provider: 'mock',
+      cached: false,
+    };
     expect(ScanResultSchema.parse(dish).kind).toBe('dish');
   });
   it('rejects an unknown spoilage sign', () => {
-    const bad = { kind: 'dish', candidates: [{ dishId: null, label: 'x', confidence: 0.1 }],
-      observations: { spoilageSigns: ['smells_bad'], imageQuality: 'good', notes: '' }, provider: 'mock', cached: false };
+    const bad = {
+      kind: 'dish',
+      candidates: [{ dishId: null, label: 'x', confidence: 0.1 }],
+      observations: { spoilageSigns: ['smells_bad'], imageQuality: 'good', notes: '' },
+      provider: 'mock',
+      cached: false,
+    };
     expect(ScanResultSchema.safeParse(bad).success).toBe(false);
   });
-  it('lists 8 spoilage signs', () => { expect(SPOILAGE_SIGNS).toHaveLength(8); });
+  it('lists 8 spoilage signs', () => {
+    expect(SPOILAGE_SIGNS).toHaveLength(8);
+  });
 });
 
 describe('profile and rules', () => {
@@ -704,12 +949,29 @@ describe('profile and rules', () => {
     expect(UserProfileSchema.safeParse({ ...makeProfile(), name: 'x' }).success).toBe(false);
   });
   it('requires at least one notice on a safety result', () => {
-    const base = { score: 0, level: 'low', signals: [], mitigationKeys: [], notices: [], rulesStatus: 'draft' };
+    const base = {
+      score: 0,
+      level: 'low',
+      signals: [],
+      mitigationKeys: [],
+      notices: [],
+      rulesStatus: 'draft',
+    };
     expect(SafetyResultSchema.safeParse(base).success).toBe(false);
   });
   it('requires avoidFraction >= cautionFraction', () => {
-    const r = { kind: 'nutrient', id: 'r1', condition: 'hypertension', nutrient: 'sodium_mg', dailyLimit: 1000,
-      cautionFraction: 0.5, avoidFraction: 0.2, messageKey: 'warn.sodium_high', sourceRef: 's1', status: 'draft' };
+    const r = {
+      kind: 'nutrient',
+      id: 'r1',
+      condition: 'hypertension',
+      nutrient: 'sodium_mg',
+      dailyLimit: 1000,
+      cautionFraction: 0.5,
+      avoidFraction: 0.2,
+      messageKey: 'warn.sodium_high',
+      sourceRef: 's1',
+      status: 'draft',
+    };
     expect(NutrientRuleSchema.safeParse(r).success).toBe(false);
   });
 });
@@ -719,11 +981,25 @@ describe('normalized dish, sources, messages', () => {
   it('DishSchema needs a cooking class and canonical allergens', () => {
     expect(DishSchema.safeParse({ ...raw, cooking_class: 'steamed' }).success).toBe(true);
     expect(DishSchema.safeParse(raw).success).toBe(false);
-    expect(DishSchema.safeParse({ ...raw, cooking_class: 'steamed', allergens: ['dairy'] }).success).toBe(false);
-    expect(DishSchema.safeParse({ ...raw, cooking_class: 'steamed', allergens: ['milk'] }).success).toBe(true);
+    expect(
+      DishSchema.safeParse({ ...raw, cooking_class: 'steamed', allergens: ['dairy'] }).success,
+    ).toBe(false);
+    expect(
+      DishSchema.safeParse({ ...raw, cooking_class: 'steamed', allergens: ['milk'] }).success,
+    ).toBe(true);
   });
   it('SourceEntrySchema requires a url and a known tier and status', () => {
-    const ok = { id: 's1', title: 'T', publisher: 'P', year: 2025, edition: null, url: 'https://example.org/a', tier: 'bangladesh', status: 'unverified', accessedOn: null };
+    const ok = {
+      id: 's1',
+      title: 'T',
+      publisher: 'P',
+      year: 2025,
+      edition: null,
+      url: 'https://example.org/a',
+      tier: 'bangladesh',
+      status: 'unverified',
+      accessedOn: null,
+    };
     expect(SourceEntrySchema.safeParse(ok).success).toBe(true);
     expect(SourceEntrySchema.safeParse({ ...ok, url: 'not a url' }).success).toBe(false);
     expect(SourceEntrySchema.safeParse({ ...ok, status: 'maybe' }).success).toBe(false);
@@ -759,6 +1035,7 @@ describe('builders', () => {
 **Read:** `TECH_DESIGN.md` sections 3, 5.
 
 **Files:**
+
 - create `packages/knowledge/src/index.ts`, `packages/knowledge/test/loader.test.ts`
 - create `fixtures/mock-scan/dish-kacchi-biryani.json`, `dish-shutki-bhorta.json`, `dish-mishti-doi-spoiled.json`, `dish-unknown.json`, `label-snack.json`, `label-poor-quality.json`
 - create `packages/contracts/test/fixtures.test.ts` (the fixtures folder holds data only, never tests)
@@ -767,26 +1044,35 @@ describe('builders', () => {
 **Spec:**
 
 `packages/knowledge/src/index.ts`:
+
 ```ts
 import dishesFile from '../data/source/dishes.json';
 import ingredientsFile from '../data/source/ingredients.json';
 import {
-  RawDishesFileSchema, RawIngredientsFileSchema,
-  type RawDish, type Ingredient,
+  RawDishesFileSchema,
+  RawIngredientsFileSchema,
+  type RawDish,
+  type Ingredient,
 } from '@sp/contracts';
 
 /** Returns the 30 validated source dishes. */
-export function getRawDishes(): RawDish[] { return RawDishesFileSchema.parse(dishesFile).dishes; }
+export function getRawDishes(): RawDish[] {
+  return RawDishesFileSchema.parse(dishesFile).dishes;
+}
 /** Returns the 56 validated source ingredients. */
-export function getRawIngredients(): Ingredient[] { return RawIngredientsFileSchema.parse(ingredientsFile).ingredients; }
+export function getRawIngredients(): Ingredient[] {
+  return RawIngredientsFileSchema.parse(ingredientsFile).ingredients;
+}
 /** Returns a map from ingredient id to ingredient. */
 export function ingredientsById(list: Ingredient[] = getRawIngredients()): Map<string, Ingredient> {
   return new Map(list.map((i) => [i.id, i]));
 }
 ```
+
 Later cards (P1-D01 and P1-D04) switch these loaders to the normalized data; the function names stay the same.
 
 Fixture shape = `ScanResult` (see `api.ts`). Make them realistic:
+
 - `dish-kacchi-biryani.json`: candidates `kacchi-biryani` 0.82, `beef-tehari` 0.12, `morog-polao` 0.04; spoilageSigns `[]`; imageQuality `good`; provider `mock`; cached `false`.
 - `dish-shutki-bhorta.json`: `shutki-bhorta` 0.7, `begun-bhorta` 0.2, `aloo-bhorta` 0.1.
 - `dish-mishti-doi-spoiled.json`: `mishti-doi` 0.75, `rasmalai` 0.15, `shemai` 0.1; spoilageSigns `["separated_liquid","foam_or_bubbles"]`.
@@ -797,6 +1083,7 @@ Fixture shape = `ScanResult` (see `api.ts`). Make them realistic:
 **Tests (write first)**
 
 `packages/knowledge/test/loader.test.ts`:
+
 ```ts
 import { describe, it, expect } from 'vitest';
 import { getRawDishes, getRawIngredients, ingredientsById } from '../src';
@@ -808,12 +1095,14 @@ describe('knowledge loader', () => {
   });
   it('resolves every dish ingredient', () => {
     const map = ingredientsById();
-    for (const d of getRawDishes()) for (const l of d.ingredients) expect(map.has(l.ingredient_id)).toBe(true);
+    for (const d of getRawDishes())
+      for (const l of d.ingredients) expect(map.has(l.ingredient_id)).toBe(true);
   });
 });
 ```
 
 `packages/contracts/test/fixtures.test.ts`:
+
 ```ts
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -822,18 +1111,27 @@ import { ScanResultSchema } from '../src';
 import { RawDishesFileSchema } from '../src/knowledge';
 
 const dir = fileURLToPath(new URL('../../../fixtures/mock-scan/', import.meta.url));
-const dishes = RawDishesFileSchema.parse(JSON.parse(readFileSync(
-  fileURLToPath(new URL('../../knowledge/data/source/dishes.json', import.meta.url)), 'utf8'))).dishes;
+const dishes = RawDishesFileSchema.parse(
+  JSON.parse(
+    readFileSync(
+      fileURLToPath(new URL('../../knowledge/data/source/dishes.json', import.meta.url)),
+      'utf8',
+    ),
+  ),
+).dishes;
 const ids = new Set(dishes.map((d) => d.id));
 const files = readdirSync(dir).filter((f) => f.endsWith('.json'));
 
 describe('mock scan fixtures', () => {
-  it('has at least 6 fixtures', () => { expect(files.length).toBeGreaterThanOrEqual(6); });
+  it('has at least 6 fixtures', () => {
+    expect(files.length).toBeGreaterThanOrEqual(6);
+  });
   for (const f of files) {
     it(`${f} is a valid ScanResult`, () => {
       const parsed = ScanResultSchema.parse(JSON.parse(readFileSync(dir + f, 'utf8')));
       if (parsed.kind === 'dish') {
-        for (const c of parsed.candidates) if (c.dishId !== null) expect(ids.has(c.dishId)).toBe(true);
+        for (const c of parsed.candidates)
+          if (c.dishId !== null) expect(ids.has(c.dishId)).toBe(true);
       }
     });
   }
@@ -857,12 +1155,19 @@ describe('mock scan fixtures', () => {
 **Read:** `docs/TECH_DESIGN.md` section 3. The FCTB url is in `ingredients.json` under `metadata.allowed_sources[0].url`.
 
 **Files:**
+
 - create `tools/src/fetch-raw.ts`, `tools/src/fetch-raw-lib.ts`, `tools/test/fetch-raw-lib.test.ts`
 - edit `tools/package.json` (add script `"fetch-raw": "tsx src/fetch-raw.ts"`)
 
 **Spec** (`fetch-raw-lib.ts`, pure and testable):
+
 ```ts
-export interface RawTarget { id: string; url: string | null; dest: string; manualHint: string; }
+export interface RawTarget {
+  id: string;
+  url: string | null;
+  dest: string;
+  manualHint: string;
+}
 /** Returns the list of files to fetch. url is null where the agent must find the current official link itself. */
 export function planTargets(fctbUrl: string): RawTarget[];
 /** Returns a human-readable instruction block for targets that could not be fetched. */
@@ -870,19 +1175,27 @@ export function humanInstructions(failed: RawTarget[]): string;
 /** Returns true if the file name looks like a PDF by extension and non-empty size. */
 export function looksValid(name: string, bytes: number): boolean;
 ```
+
 - `planTargets` returns two targets: `fctb` (url = argument, dest `data/raw/fctb-2013.pdf`) and `usda` (url `null`, dest `data/raw/usda/`, manualHint: open the official FoodData Central download page and download the CSV datasets for the SR Legacy and Foundation Foods releases; unzip into `data/raw/usda/`).
 - `fetch-raw.ts`: for each target with a URL, try `fetch`; save only if `looksValid`. For the USDA target: **find the current link on the official FoodData Central download page** (fetch that page and read the links). Do **not** guess file names. Any failure leads to `process.exitCode = 2` and printing `humanInstructions(failed)`. Success prints the saved paths and sizes.
 
 **Tests (write first)** `tools/test/fetch-raw-lib.test.ts`:
+
 ```ts
 import { describe, it, expect } from 'vitest';
 import { planTargets, humanInstructions, looksValid } from '../src/fetch-raw-lib';
 
 describe('planTargets', () => {
   const t = planTargets('https://example.org/fctb.pdf');
-  it('plans two targets', () => { expect(t.map((x) => x.id)).toEqual(['fctb', 'usda']); });
-  it('puts raw files under data/raw', () => { expect(t.every((x) => x.dest.startsWith('data/raw/'))).toBe(true); });
-  it('leaves the USDA url for the agent to find', () => { expect(t[1]?.url).toBeNull(); });
+  it('plans two targets', () => {
+    expect(t.map((x) => x.id)).toEqual(['fctb', 'usda']);
+  });
+  it('puts raw files under data/raw', () => {
+    expect(t.every((x) => x.dest.startsWith('data/raw/'))).toBe(true);
+  });
+  it('leaves the USDA url for the agent to find', () => {
+    expect(t[1]?.url).toBeNull();
+  });
 });
 describe('humanInstructions', () => {
   it('names each failed target and its destination', () => {
@@ -890,12 +1203,20 @@ describe('humanInstructions', () => {
     expect(txt).toContain('data/raw/fctb-2013.pdf');
     expect(txt).toContain('data/raw/usda/');
   });
-  it('is empty when nothing failed', () => { expect(humanInstructions([])).toBe(''); });
+  it('is empty when nothing failed', () => {
+    expect(humanInstructions([])).toBe('');
+  });
 });
 describe('looksValid', () => {
-  it('accepts a non-empty pdf', () => { expect(looksValid('a.pdf', 5000)).toBe(true); });
-  it('rejects an empty file', () => { expect(looksValid('a.pdf', 0)).toBe(false); });
-  it('rejects an html error page saved as pdf name', () => { expect(looksValid('a.html', 5000)).toBe(false); });
+  it('accepts a non-empty pdf', () => {
+    expect(looksValid('a.pdf', 5000)).toBe(true);
+  });
+  it('rejects an empty file', () => {
+    expect(looksValid('a.pdf', 0)).toBe(false);
+  });
+  it('rejects an html error page saved as pdf name', () => {
+    expect(looksValid('a.html', 5000)).toBe(false);
+  });
 });
 ```
 

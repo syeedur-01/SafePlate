@@ -2,22 +2,20 @@
 
 ## People and tracks
 
-| Person | GitHub handle | Track | Owns | Buddy reviewer (reviews this person's PRs) |
-|---|---|---|---|---|
-| | @ | A Engine | `packages/engine` | |
-| | @ | B AI and API | `packages/ai`, `apps/api` | |
-| | @ | C Web | `apps/web` | |
-| | @ | D Data | `packages/knowledge`, `tools/` | |
+| Person | GitHub handle | Track        | Owns                           | Buddy reviewer (reviews this person's PRs) |
+| ------ | ------------- | ------------ | ------------------------------ | ------------------------------------------ |
+|        | @             | A Engine     | `packages/engine`              |                                            |
+|        | @             | B AI and API | `packages/ai`, `apps/api`      |                                            |
+|        | @             | C Web        | `apps/web`                     |                                            |
+|        | @             | D Data       | `packages/knowledge`, `tools/` |                                            |
 
 The repo owner (creates the repo, deploys, tags): ______________
-
-Replace `@TEAM-A` to `@TEAM-D` in `.github/CODEOWNERS` with the real handles.
 
 ## Agents and tools each person uses
 
 | Person | Agent or tool | Model (free) | Notes (for example "needs shorter cards") |
-|---|---|---|---|
-| | | | |
+| ------ | ------------- | ------------ | ----------------------------------------- |
+|        |               |              |                                           |
 
 If an agent keeps failing a card: switch the model or tool, restart the card in a fresh session, and tell the team. Do not weaken the tests.
 
@@ -37,19 +35,19 @@ If an agent keeps failing a card: switch the model or tool, restart the card in 
 
 ## Daily rhythm (Oct 23 to Oct 30)
 
-| Time | What |
-|---|---|
-| Morning (15 min) | Status board in `docs/plan/00_INDEX_AND_WORKFLOW.md`: who runs which card today |
-| Midday | Merge what is green; everyone pulls |
+| Time             | What                                                                                         |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| Morning (15 min) | Status board in `docs/plan/00_INDEX_AND_WORKFLOW.md`: who runs which card today              |
+| Midday           | Merge what is green; everyone pulls                                                          |
 | Evening (15 min) | Update the status board; tag the phase if its exit criteria are met; decide tomorrow's cards |
 
 ## Human tasks and owners
 
-| Task | Owner | Due |
-|---|---|---|
-| Expert (nutritionist or doctor) booked | | Oct 25 |
-| Test photos collected (50 to 100 target, at least 25 usable) | | Oct 27 |
-| Bangla review of messages | | Oct 27 |
-| Deploy and phone test | | Oct 29 |
-| Demo video recorded | | Oct 30 or 31 |
-| Submission sent (confirm the exact cutoff) | | before Oct 31 |
+| Task                                                         | Owner | Due           |
+| ------------------------------------------------------------ | ----- | ------------- |
+| Expert (nutritionist or doctor) booked                       |       | Oct 25        |
+| Test photos collected (50 to 100 target, at least 25 usable) |       | Oct 27        |
+| Bangla review of messages                                    |       | Oct 27        |
+| Deploy and phone test                                        |       | Oct 29        |
+| Demo video recorded                                          |       | Oct 30 or 31  |
+| Submission sent (confirm the exact cutoff)                   |       | before Oct 31 |
