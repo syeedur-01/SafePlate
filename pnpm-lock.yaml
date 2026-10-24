@@ -244,7 +244,15 @@ importers:
 
   packages/knowledge: {}
 
-  tools: {}
+  tools:
+    dependencies:
+      adm-zip:
+        specifier: 0.6.1
+        version: 0.6.1
+    devDependencies:
+      '@types/adm-zip':
+        specifier: 0.5.8
+        version: 0.5.8
 
 packages:
   '@esbuild/aix-ppc64@0.28.2':
@@ -810,6 +818,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@types/adm-zip@0.5.8':
+    resolution:
+      {
+        integrity: sha512-RVVH7QvZYbN+ihqZ4kX/dMiowf6o+Jk1fNwiSdx0NahBJLU787zkULhGhJM8mf/obmLGmgdMM0bXsQTmyfbR7Q==,
+      }
+
   '@types/chai@5.2.3':
     resolution:
       {
@@ -994,6 +1008,13 @@ packages:
       }
     engines: { node: '>=0.4.0' }
     hasBin: true
+
+  adm-zip@0.6.1:
+    resolution:
+      {
+        integrity: sha512-Xwrja8nx9e5o2N1my4DsKCeKpdrnACyr1wtbPxBDgGzKzKyE9kRtBFA8mWldI+RVlD7CBZNWY/wQ2+ydwOR6kQ==,
+      }
+    engines: { node: '>=14.0' }
 
   ajv@6.15.0:
     resolution:
@@ -2092,6 +2113,10 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.65.0':
     optional: true
 
+  '@types/adm-zip@0.5.8':
+    dependencies:
+      '@types/node': 20.19.43
+
   '@types/chai@5.2.3':
     dependencies:
       '@types/deep-eql': 4.0.2
@@ -2245,6 +2270,8 @@ snapshots:
       acorn: 8.19.0
 
   acorn@8.19.0: {}
+
+  adm-zip@0.6.1: {}
 
   ajv@6.15.0:
     dependencies:
