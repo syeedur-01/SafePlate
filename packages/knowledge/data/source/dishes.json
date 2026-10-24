@@ -1,0 +1,2833 @@
+{
+  "metadata": {
+    "dataset_title": "Bangladeshi Dishes Knowledge Base — Dish Ingredient Estimates and Lab Findings",
+    "version": "1.0",
+    "dish_count": 30,
+    "portion_policy": "Every grams_raw quantity is labelled ESTIMATE. serving_weight_g is also ESTIMATE. Neither ingredient quantities nor serving weights are represented as source-measured.",
+    "nutrition_policy": "No dish totals are calculated. The sole matched lab-analyzed dish is Chicken Roast from INFS (2026), recorded per 100 g cooked exactly as published rather than scaled to a serving.",
+    "permitted_sources_only": [
+      "Food Composition Table for Bangladesh (FAO/INFS, 2013)",
+      "USDA FoodData Central (not used in this version)",
+      "INFS, University of Dhaka studies of cooked Bangladeshi dishes on BanglaJOL"
+    ],
+    "dish_recipe_policy": "Ingredient selection, method labels and per-serving quantities are structured estimates to support the intended schema. The allowed source set was not used to claim source-verified recipes for all 30 dishes.",
+    "expert_review": "needs_expert_review is true for every dish. Do not publish as authoritative nutrition or recipe advice until the source base, quantities, allergens and cooking methods have been reviewed.",
+    "batching": "Six ordered batches of five dishes each; each dish has batch_number 1–6.",
+    "source_audit": {
+      "dishes_without_verified_matching_lab_analyzed_values": [
+        {
+          "id": "kacchi-biryani",
+          "name_en": "Kacchi Biryani",
+          "name_bn": "কাচ্চি বিরিয়ানি"
+        },
+        {
+          "id": "bhuna-khichuri",
+          "name_en": "Bhuna Khichuri",
+          "name_bn": "ভুনা খিচুড়ি"
+        },
+        {
+          "id": "beef-tehari",
+          "name_en": "Beef Tehari",
+          "name_bn": "গরুর মাংসের তেহারি"
+        },
+        {
+          "id": "morog-polao",
+          "name_en": "Morog Polao",
+          "name_bn": "মোরগ পোলাও"
+        },
+        {
+          "id": "panta-ilish",
+          "name_en": "Panta Ilish",
+          "name_bn": "পান্তা ইলিশ"
+        },
+        {
+          "id": "aloo-bhorta",
+          "name_en": "Aloo Bhorta",
+          "name_bn": "আলু ভর্তা"
+        },
+        {
+          "id": "begun-bhorta",
+          "name_en": "Begun Bhorta",
+          "name_bn": "বেগুন ভর্তা"
+        },
+        {
+          "id": "shutki-bhorta",
+          "name_en": "Shutki Bhorta",
+          "name_bn": "শুঁটকি ভর্তা"
+        },
+        {
+          "id": "begun-bhaja",
+          "name_en": "Begun Bhaja",
+          "name_bn": "বেগুন ভাজা"
+        },
+        {
+          "id": "shorshe-ilish",
+          "name_en": "Shorshe Ilish",
+          "name_bn": "সর্ষে ইলিশ"
+        },
+        {
+          "id": "chingri-malai-curry",
+          "name_en": "Chingri Malai Curry",
+          "name_bn": "চিংড়ি মালাইকারি"
+        },
+        {
+          "id": "rui-macher-jhol",
+          "name_en": "Rui Macher Jhol",
+          "name_bn": "রুই মাছের ঝোল"
+        },
+        {
+          "id": "ilish-bhaja",
+          "name_en": "Ilish Bhaja",
+          "name_bn": "ইলিশ ভাজা"
+        },
+        {
+          "id": "lau-chingri",
+          "name_en": "Lau Chingri",
+          "name_bn": "লাউ চিংড়ি"
+        },
+        {
+          "id": "beef-kala-bhuna",
+          "name_en": "Beef Kala Bhuna",
+          "name_bn": "গরুর কালা ভুনা"
+        },
+        {
+          "id": "mezbaner-gorur-mansho",
+          "name_en": "Mezbaner Gorur Mansho",
+          "name_bn": "মেজবানি গরুর মাংস"
+        },
+        {
+          "id": "patla-masoor-dal",
+          "name_en": "Patla Masoor Dal",
+          "name_bn": "পাতলা মসুর ডাল"
+        },
+        {
+          "id": "cholar-dal",
+          "name_en": "Cholar Dal",
+          "name_bn": "ছোলার ডাল"
+        },
+        {
+          "id": "dhakaiya-bakarkhani",
+          "name_en": "Dhakaiya Bakarkhani",
+          "name_bn": "ঢাকাইয়া বাকরখানি"
+        },
+        {
+          "id": "mughlai-paratha",
+          "name_en": "Mughlai Paratha",
+          "name_bn": "মোগলাই পরোটা"
+        },
+        {
+          "id": "chotpoti",
+          "name_en": "Chotpoti",
+          "name_bn": "চটপটি"
+        },
+        {
+          "id": "fuchka",
+          "name_en": "Fuchka",
+          "name_bn": "ফুচকা"
+        },
+        {
+          "id": "piyaju",
+          "name_en": "Piyaju",
+          "name_bn": "পিয়াজু"
+        },
+        {
+          "id": "bhapa-pitha",
+          "name_en": "Bhapa Pitha",
+          "name_bn": "ভাপা পিঠা"
+        },
+        {
+          "id": "chitoi-pitha",
+          "name_en": "Chitoi Pitha",
+          "name_bn": "চিতই পিঠা"
+        },
+        {
+          "id": "mishti-doi",
+          "name_en": "Mishti Doi",
+          "name_bn": "মিষ্টি দই"
+        },
+        {
+          "id": "rasmalai",
+          "name_en": "Rasmalai",
+          "name_bn": "রসমালাই"
+        },
+        {
+          "id": "haleem",
+          "name_en": "Haleem",
+          "name_bn": "হালিম"
+        },
+        {
+          "id": "shemai",
+          "name_en": "Shemai",
+          "name_bn": "সেমাই"
+        }
+      ],
+      "dishes_with_verified_matching_lab_data": [
+        {
+          "id": "bangladeshi-chicken-roast",
+          "name_en": "Bangladeshi Chicken Roast",
+          "source_doi": "10.3329/brc.v12i1.86760",
+          "value_basis": "per_100_g_cooked_as_published",
+          "note": "No dish totals calculated; energy remains null where not directly reported."
+        }
+      ],
+      "all_dishes_have_estimated_ingredient_quantities": [
+        {
+          "id": "kacchi-biryani",
+          "name_en": "Kacchi Biryani"
+        },
+        {
+          "id": "bhuna-khichuri",
+          "name_en": "Bhuna Khichuri"
+        },
+        {
+          "id": "beef-tehari",
+          "name_en": "Beef Tehari"
+        },
+        {
+          "id": "morog-polao",
+          "name_en": "Morog Polao"
+        },
+        {
+          "id": "panta-ilish",
+          "name_en": "Panta Ilish"
+        },
+        {
+          "id": "aloo-bhorta",
+          "name_en": "Aloo Bhorta"
+        },
+        {
+          "id": "begun-bhorta",
+          "name_en": "Begun Bhorta"
+        },
+        {
+          "id": "shutki-bhorta",
+          "name_en": "Shutki Bhorta"
+        },
+        {
+          "id": "begun-bhaja",
+          "name_en": "Begun Bhaja"
+        },
+        {
+          "id": "shorshe-ilish",
+          "name_en": "Shorshe Ilish"
+        },
+        {
+          "id": "chingri-malai-curry",
+          "name_en": "Chingri Malai Curry"
+        },
+        {
+          "id": "rui-macher-jhol",
+          "name_en": "Rui Macher Jhol"
+        },
+        {
+          "id": "ilish-bhaja",
+          "name_en": "Ilish Bhaja"
+        },
+        {
+          "id": "lau-chingri",
+          "name_en": "Lau Chingri"
+        },
+        {
+          "id": "beef-kala-bhuna",
+          "name_en": "Beef Kala Bhuna"
+        },
+        {
+          "id": "bangladeshi-chicken-roast",
+          "name_en": "Bangladeshi Chicken Roast"
+        },
+        {
+          "id": "mezbaner-gorur-mansho",
+          "name_en": "Mezbaner Gorur Mansho"
+        },
+        {
+          "id": "patla-masoor-dal",
+          "name_en": "Patla Masoor Dal"
+        },
+        {
+          "id": "cholar-dal",
+          "name_en": "Cholar Dal"
+        },
+        {
+          "id": "dhakaiya-bakarkhani",
+          "name_en": "Dhakaiya Bakarkhani"
+        },
+        {
+          "id": "mughlai-paratha",
+          "name_en": "Mughlai Paratha"
+        },
+        {
+          "id": "chotpoti",
+          "name_en": "Chotpoti"
+        },
+        {
+          "id": "fuchka",
+          "name_en": "Fuchka"
+        },
+        {
+          "id": "piyaju",
+          "name_en": "Piyaju"
+        },
+        {
+          "id": "bhapa-pitha",
+          "name_en": "Bhapa Pitha"
+        },
+        {
+          "id": "chitoi-pitha",
+          "name_en": "Chitoi Pitha"
+        },
+        {
+          "id": "mishti-doi",
+          "name_en": "Mishti Doi"
+        },
+        {
+          "id": "rasmalai",
+          "name_en": "Rasmalai"
+        },
+        {
+          "id": "haleem",
+          "name_en": "Haleem"
+        },
+        {
+          "id": "shemai",
+          "name_en": "Shemai"
+        }
+      ],
+      "important_limit": "For 29 dishes, no exact matching lab-analyzed nutrient profile was verified from the permitted INFS/BanglaJOL sources during this pass. These remain nutrition_basis=unavailable. Ingredient lists, recipe methods, ingredient grams and cooked serving weights are estimates, not source-verified standardized recipes."
+    }
+  },
+  "dishes": [
+    {
+      "id": "kacchi-biryani",
+      "name_en": "Kacchi Biryani",
+      "name_bn": "কাচ্চি বিরিয়ানি",
+      "aliases": [
+        "Kacchi",
+        "Kachchi biryani"
+      ],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 420,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mutton-moderately-fat-raw",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "saffron-unverified",
+          "grams_raw": 0.05,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "dried-plum-alubokhara-unverified",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 70,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "layered and slow-cooked (dum)",
+      "allergens": [
+        "dairy",
+        "milk"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 1
+    },
+    {
+      "id": "bhuna-khichuri",
+      "name_en": "Bhuna Khichuri",
+      "name_bn": "ভুনা খিচুড়ি",
+      "aliases": [
+        "Bhuna khichuri",
+        "Bhuna khichuri with moong dal"
+      ],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 350,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "moong-dal-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 7,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 180,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "roasted, sautéed and simmered",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 1
+    },
+    {
+      "id": "beef-tehari",
+      "name_en": "Beef Tehari",
+      "name_bn": "গরুর মাংসের তেহারি",
+      "aliases": [
+        "Tehari",
+        "Beef tehari"
+      ],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 400,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "beef-lean-boneless-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "braised and simmered in one pot",
+      "allergens": [
+        "dairy",
+        "milk",
+        "mustard"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 1
+    },
+    {
+      "id": "morog-polao",
+      "name_en": "Morog Polao",
+      "name_bn": "মোরগ পোলাও",
+      "aliases": [
+        "Murg pulao",
+        "Chicken pulao"
+      ],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 420,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "chicken-leg-skinless-raw",
+          "grams_raw": 130,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "raisin-dried-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "braised chicken with ghee-cooked aromatic rice",
+      "allergens": [
+        "dairy",
+        "milk",
+        "tree_nuts"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 1
+    },
+    {
+      "id": "panta-ilish",
+      "name_en": "Panta Ilish",
+      "name_bn": "পান্তা ইলিশ",
+      "aliases": [
+        "Panta bhat with hilsa"
+      ],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 300,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "hilsa-raw-unverified",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "soaked/fermented cooked rice served with fried fish",
+      "allergens": [
+        "fish",
+        "mustard"
+      ],
+      "safety_tags": [
+        "fermented",
+        "raw-ingredient",
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Traditional fermented rice preparation and safe handling vary; fermentation time/temperature are not specified or validated by this dataset. Review food-safety guidance before giving preparation advice.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 1
+    },
+    {
+      "id": "aloo-bhorta",
+      "name_en": "Aloo Bhorta",
+      "name_bn": "আলু ভর্তা",
+      "aliases": [
+        "Alu bhorta",
+        "Mashed potato bhorta"
+      ],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "boiled and mashed",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [
+        "raw-ingredient"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 2
+    },
+    {
+      "id": "begun-bhorta",
+      "name_en": "Begun Bhorta",
+      "name_bn": "বেগুন ভর্তা",
+      "aliases": [
+        "Eggplant bhorta"
+      ],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "eggplant-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "roasted, peeled and mashed",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [
+        "raw-ingredient"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 2
+    },
+    {
+      "id": "shutki-bhorta",
+      "name_en": "Shutki Bhorta",
+      "name_bn": "শুঁটকি ভর্তা",
+      "aliases": [
+        "Dried fish bhorta"
+      ],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "dried-fish-shutki-unverified",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "dried-red-chilli",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "toasted or pan-fried, then mashed",
+      "allergens": [
+        "fish",
+        "mustard"
+      ],
+      "safety_tags": [
+        "raw-ingredient",
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 2
+    },
+    {
+      "id": "begun-bhaja",
+      "name_en": "Begun Bhaja",
+      "name_bn": "বেগুন ভাজা",
+      "aliases": [
+        "Fried eggplant"
+      ],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 170,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "eggplant-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "red-chilli-powder-unverified",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "shallow-fried",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [
+        "fried"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 2
+    },
+    {
+      "id": "shorshe-ilish",
+      "name_en": "Shorshe Ilish",
+      "name_bn": "সর্ষে ইলিশ",
+      "aliases": [
+        "Hilsa in mustard gravy"
+      ],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 230,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "hilsa-raw-unverified",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-seed-dried",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "gently simmered in mustard gravy",
+      "allergens": [
+        "fish",
+        "mustard"
+      ],
+      "safety_tags": [
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 2
+    },
+    {
+      "id": "chingri-malai-curry",
+      "name_en": "Chingri Malai Curry",
+      "name_bn": "চিংড়ি মালাইকারি",
+      "aliases": [
+        "Chingri malaikari",
+        "Prawn coconut curry"
+      ],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 260,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "large-prawn-raw-unverified",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coconut-milk",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "lightly seared and simmered in coconut milk",
+      "allergens": [
+        "crustacean_shellfish",
+        "milk"
+      ],
+      "safety_tags": [
+        "dairy",
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 3
+    },
+    {
+      "id": "rui-macher-jhol",
+      "name_en": "Rui Macher Jhol",
+      "name_bn": "রুই মাছের ঝোল",
+      "aliases": [
+        "Rohu fish curry"
+      ],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 280,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "rohu-river-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "tomato-red-ripe-raw",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 6,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "fried fish simmered in a light gravy",
+      "allergens": [
+        "fish",
+        "mustard"
+      ],
+      "safety_tags": [
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 3
+    },
+    {
+      "id": "ilish-bhaja",
+      "name_en": "Ilish Bhaja",
+      "name_bn": "ইলিশ ভাজা",
+      "aliases": [
+        "Fried hilsa"
+      ],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 170,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "hilsa-raw-unverified",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 12,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "shallow- or deep-fried",
+      "allergens": [
+        "fish",
+        "mustard"
+      ],
+      "safety_tags": [
+        "fried",
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 3
+    },
+    {
+      "id": "lau-chingri",
+      "name_en": "Lau Chingri",
+      "name_bn": "লাউ চিংড়ি",
+      "aliases": [
+        "Bottle gourd with shrimp"
+      ],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 220,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "bottle-gourd-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "speckled-shrimp-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "slow-cooked stir-fry",
+      "allergens": [
+        "crustacean_shellfish",
+        "mustard"
+      ],
+      "safety_tags": [
+        "seafood"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 3
+    },
+    {
+      "id": "beef-kala-bhuna",
+      "name_en": "Beef Kala Bhuna",
+      "name_bn": "গরুর কালা ভুনা",
+      "aliases": [
+        "Kala bhuna",
+        "Beef kala bhuna"
+      ],
+      "category": "Meat & poultry curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 220,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "beef-15-20-fat-boneless-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coriander-powder-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "bay-leaf-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "slow-braised and repeatedly reduced/browned",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 3
+    },
+    {
+      "id": "bangladeshi-chicken-roast",
+      "name_en": "Bangladeshi Chicken Roast",
+      "name_bn": "বাংলাদেশি মুরগির রোস্ট",
+      "aliases": [
+        "Chicken roast",
+        "Bangladeshi-style chicken roast"
+      ],
+      "category": "Meat & poultry curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 300,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "chicken-leg-skinless-raw",
+          "grams_raw": 160,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "raisin-dried-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "fried lightly and braised in spiced yogurt-based gravy",
+      "allergens": [
+        "milk",
+        "tree_nuts"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "lab_analyzed",
+      "lab_values_per_serving": {
+        "value_basis": "per_100_g_cooked_as_published",
+        "values": {
+          "energy_kcal": null,
+          "protein_g": 10.9,
+          "fat_g": 22.3,
+          "sat_fat_g": null,
+          "carbs_g": 3.6,
+          "sugars_g": null,
+          "fibre_g": 0.5,
+          "sodium_mg": null
+        },
+        "source_doi": "10.3329/brc.v12i1.86760",
+        "source_table": "Table 5, after-cook row; the reported values are composition fields (moisture, protein, fat, available carbohydrate, total dietary fibre, ash). The initial 260 is cooked sample weight in grams, not energy.",
+        "note": "Study-reported cooked composition is retained on its published per-100-g basis; the leading 260 in the table is cooked sample weight in grams, not energy. energy_kcal is null because no directly reported energy value was verified. Values are not scaled to this dataset's estimated serving and are not calculated from ingredients. The study's standardized recipe may differ from this dataset's estimated ingredient list. No sodium, saturated-fat or sugar value is claimed where it was not reported."
+      },
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        },
+        {
+          "title": "Nutrient Composition and Retention of Selected Traditional Bangladeshi Curries and Festival Dishes",
+          "publisher": "Bioresearch Communications; Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2026,
+          "url": "https://doi.org/10.3329/brc.v12i1.86760",
+          "doi": "10.3329/brc.v12i1.86760",
+          "used_for": "Laboratory-analyzed proximate composition of standardized cooked Chicken Roast from Table 5. Recorded on the study's published per-100-g cooked basis; the leading 260 is cooked sample weight, not energy. Does not validate this dataset's estimated ingredient quantities."
+        }
+      ],
+      "confidence": "medium",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "The matching INFS study reports laboratory-analyzed proximate composition for standardized Chicken Roast. Values are retained per 100 g cooked as published; no multiplication or per-serving scaling was performed.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 4
+    },
+    {
+      "id": "mezbaner-gorur-mansho",
+      "name_en": "Mezbaner Gorur Mansho",
+      "name_bn": "মেজবানি গরুর মাংস",
+      "aliases": [
+        "Mezbani beef"
+      ],
+      "category": "Regional specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 260,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "beef-15-20-fat-boneless-raw",
+          "grams_raw": 160,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 35,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "red-chilli-powder-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "slow-cooked in a regional spice mixture",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 4
+    },
+    {
+      "id": "patla-masoor-dal",
+      "name_en": "Patla Masoor Dal",
+      "name_bn": "পাতলা মসুর ডাল",
+      "aliases": [
+        "Thin red lentil dal"
+      ],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 250,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "lentil-red-dried-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "boiled and tempered",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 4
+    },
+    {
+      "id": "cholar-dal",
+      "name_en": "Cholar Dal",
+      "name_bn": "ছোলার ডাল",
+      "aliases": [
+        "Chana dal"
+      ],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 230,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "bengal-gram-split-dried-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coconut-kernel-mature-raw",
+          "grams_raw": 12,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 180,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "boiled then tempered with spices and coconut",
+      "allergens": [
+        "milk"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 4
+    },
+    {
+      "id": "dhakaiya-bakarkhani",
+      "name_en": "Dhakaiya Bakarkhani",
+      "name_bn": "ঢাকাইয়া বাকরখানি",
+      "aliases": [
+        "Bakarkhani"
+      ],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "wheat-flour-white-refined",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "layered dough baked until crisp",
+      "allergens": [
+        "milk",
+        "wheat_gluten"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 4
+    },
+    {
+      "id": "mughlai-paratha",
+      "name_en": "Mughlai Paratha",
+      "name_bn": "মোগলাই পরোটা",
+      "aliases": [
+        "Moglai paratha"
+      ],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 190,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "wheat-flour-white-refined",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "egg-chicken-farmed-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coriander-leaves-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 35,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "stuffed and pan/deep-fried",
+      "allergens": [
+        "egg",
+        "mustard",
+        "wheat_gluten"
+      ],
+      "safety_tags": [
+        "fried"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 5
+    },
+    {
+      "id": "chotpoti",
+      "name_en": "Chotpoti",
+      "name_bn": "চটপটি",
+      "aliases": [
+        "Chotpoti with egg"
+      ],
+      "category": "Snacks, street food & sweets",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 250,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "white-peas-dried-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "tamarind-pulp-unverified",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "egg-chicken-farmed-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "peas and potatoes simmered into a spiced stew",
+      "allergens": [
+        "egg"
+      ],
+      "safety_tags": [
+        "street-food"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Street-vended recipes vary and ingredients can be optional; ingredient list is a structured ESTIMATE, not a source-transcribed recipe.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 5
+    },
+    {
+      "id": "fuchka",
+      "name_en": "Fuchka",
+      "name_bn": "ফুচকা",
+      "aliases": [
+        "Puchka",
+        "Fuska"
+      ],
+      "category": "Snacks, street food & sweets",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "wheat-flour-white-refined",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "semolina-wheat-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-peas-dried-unverified",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "tamarind-pulp-unverified",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "dried-red-chilli",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "shells deep-fried, then filled at serving",
+      "allergens": [
+        "mustard",
+        "wheat_gluten"
+      ],
+      "safety_tags": [
+        "fried",
+        "street-food"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Street-vended recipes vary and ingredients can be optional; ingredient list is a structured ESTIMATE, not a source-transcribed recipe.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 5
+    },
+    {
+      "id": "piyaju",
+      "name_en": "Piyaju",
+      "name_bn": "পিয়াজু",
+      "aliases": [
+        "Peyaju",
+        "Lentil fritters"
+      ],
+      "category": "Snacks, street food & sweets",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "lentil-red-dried-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coriander-leaves-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 12,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "deep-fried lentil and onion fritters",
+      "allergens": [
+        "mustard"
+      ],
+      "safety_tags": [
+        "fried",
+        "street-food"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Street-vended recipes vary and ingredients can be optional; ingredient list is a structured ESTIMATE, not a source-transcribed recipe.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 5
+    },
+    {
+      "id": "bhapa-pitha",
+      "name_en": "Bhapa Pitha",
+      "name_bn": "ভাপা পিঠা",
+      "aliases": [
+        "Steamed rice pitha"
+      ],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "rice-flour-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "date-palm-jaggery",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coconut-kernel-mature-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "steamed in cloth over boiling water",
+      "allergens": [],
+      "safety_tags": [],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 5
+    },
+    {
+      "id": "chitoi-pitha",
+      "name_en": "Chitoi Pitha",
+      "name_bn": "চিতই পিঠা",
+      "aliases": [
+        "Chitoi",
+        "Chitui pitha"
+      ],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "rice-flour-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "steamed or covered-cooked rice batter",
+      "allergens": [],
+      "safety_tags": [],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 6
+    },
+    {
+      "id": "mishti-doi",
+      "name_en": "Mishti Doi",
+      "name_bn": "মিষ্টি দই",
+      "aliases": [
+        "Sweetened yogurt",
+        "Sweet curd"
+      ],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 200,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "fermentation-starter-unverified",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "milk reduced, sweetened and fermented",
+      "allergens": [
+        "milk"
+      ],
+      "safety_tags": [
+        "dairy",
+        "fermented"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 6
+    },
+    {
+      "id": "rasmalai",
+      "name_en": "Rasmalai",
+      "name_bn": "রসমালাই",
+      "aliases": [
+        "Ras malai"
+      ],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "chhana-fresh-unverified",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "chhana patties simmered then served in sweetened milk",
+      "allergens": [
+        "milk",
+        "tree_nuts"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 6
+    },
+    {
+      "id": "haleem",
+      "name_en": "Haleem",
+      "name_bn": "হালিম",
+      "aliases": [
+        "Beef haleem"
+      ],
+      "category": "Rice, grain & meat specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 300,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "beef-lean-boneless-raw",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "broken-wheat-unverified",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "lentil-red-dried-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "bengal-gram-split-dried-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "grain, lentils and meat slow-cooked into a thick stew",
+      "allergens": [
+        "milk",
+        "wheat_gluten"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 6
+    },
+    {
+      "id": "shemai",
+      "name_en": "Shemai",
+      "name_bn": "সেমাই",
+      "aliases": [
+        "Dudh shemai",
+        "Vermicelli pudding"
+      ],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 250,
+      "serving_weight_basis": "ESTIMATE",
+      "ingredients": [
+        {
+          "ingredient_id": "vermicelli-dry-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "raisin-dried-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "cooking_method": "vermicelli toasted then simmered in sweetened milk",
+      "allergens": [
+        "milk",
+        "tree_nuts",
+        "wheat_gluten"
+      ],
+      "safety_tags": [
+        "dairy"
+      ],
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null,
+      "sources": [
+        {
+          "title": "Food Composition Table for Bangladesh",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        }
+      ],
+      "confidence": "low",
+      "needs_expert_review": true,
+      "notes": [
+        "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
+        "No dish-level nutrition totals have been calculated.",
+        "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
+        "Recipe variants and household methods differ; culinary review is required before publication.",
+        "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+      ],
+      "batch_number": 6
+    }
+  ]
+}
