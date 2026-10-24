@@ -1027,7 +1027,7 @@ describe('prompts', () => {
 
 ## P1-B04 Workers deploy spike (human plus agent, the day-1 risk test)
 
-**Depends on:** P1-B01 · **Branch:** `b/P1-B04-workers-spike`
+**Depends on:** P1-B01, P1-B03 (the Gemini spike script uses the provider) · **Branch:** `b/P1-B04-workers-spike`
 
 **Goal:** prove on day one that (a) the API deploys to Cloudflare Workers, (b) a real phone-sized image upload does not hit the free CPU limit, and (c) the Gemini key works. **If (a) or (b) fails, switch the API host to Render** using `src/node.ts` (it needs no code change), and record that in `docs/SPIKE_RESULTS.md`.
 
@@ -1310,7 +1310,7 @@ Write these four tests as real code following the pattern above (Onboarding take
 
 ## P1-C03 Image downscale, scan screen and API client
 
-**Depends on:** P1-C01 · **Branch:** `c/P1-C03-scan-client`
+**Depends on:** P1-C01, P0-X04 (the mock scan uses the fixtures) · **Branch:** `c/P1-C03-scan-client`
 
 **Goal:** pick or capture a photo, shrink it in the browser, choose context, call the API (or the mock) and get a typed result.
 
