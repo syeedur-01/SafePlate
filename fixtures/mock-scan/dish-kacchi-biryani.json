@@ -1,0 +1,15 @@
+{
+  "kind": "dish",
+  "candidates": [
+    { "dishId": "kacchi-biryani", "label": "Kacchi Biryani", "confidence": 0.82 },
+    { "dishId": "beef-tehari", "label": "Beef Tehari", "confidence": 0.12 },
+    { "dishId": "morog-polao", "label": "Morog Polao", "confidence": 0.04 }
+  ],
+  "observations": {
+    "spoilageSigns": [],
+    "imageQuality": "good",
+    "notes": "A rice dish with visible meat chunks, saffron-like orange on part of the rice."
+  },
+  "provider": "mock",
+  "cached": false
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "label",
+  "productName": null,
+  "ingredientsText": null,
+  "declaredAllergens": [],
+  "expiryDate": null,
+  "nutritionPer100g": null,
+  "observations": {
+    "spoilageSigns": [],
+    "imageQuality": "poor",
+    "notes": "The label is too blurry to read; no text could be extracted."
+  },
+  "provider": "mock",
+  "cached": false
+}

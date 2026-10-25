@@ -1,0 +1,11 @@
+{
+  "kind": "dish",
+  "candidates": [{ "dishId": null, "label": "Unrecognized dish", "confidence": 0.2 }],
+  "observations": {
+    "spoilageSigns": [],
+    "imageQuality": "poor",
+    "notes": "The photo is too dark and blurry to identify the dish with confidence."
+  },
+  "provider": "mock",
+  "cached": false
+}

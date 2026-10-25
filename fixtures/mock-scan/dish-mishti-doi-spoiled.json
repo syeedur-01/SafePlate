@@ -1,0 +1,15 @@
+{
+  "kind": "dish",
+  "candidates": [
+    { "dishId": "mishti-doi", "label": "Mishti Doi", "confidence": 0.75 },
+    { "dishId": "rasmalai", "label": "Rasmalai", "confidence": 0.15 },
+    { "dishId": "shemai", "label": "Shemai", "confidence": 0.1 }
+  ],
+  "observations": {
+    "spoilageSigns": ["separated_liquid", "foam_or_bubbles"],
+    "imageQuality": "good",
+    "notes": "Sweet yogurt in a clay pot; the surface looks bubbly and liquid has separated."
+  },
+  "provider": "mock",
+  "cached": false
+}
