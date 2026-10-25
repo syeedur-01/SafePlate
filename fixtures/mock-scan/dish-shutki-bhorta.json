@@ -1,0 +1,15 @@
+{
+  "kind": "dish",
+  "candidates": [
+    { "dishId": "shutki-bhorta", "label": "Shutki Bhorta", "confidence": 0.7 },
+    { "dishId": "begun-bhorta", "label": "Begun Bhorta", "confidence": 0.2 },
+    { "dishId": "aloo-bhorta", "label": "Aloo Bhorta", "confidence": 0.1 }
+  ],
+  "observations": {
+    "spoilageSigns": [],
+    "imageQuality": "good",
+    "notes": "A dry mashed side dish, grey-brown in colour, with visible char marks."
+  },
+  "provider": "mock",
+  "cached": false
+}

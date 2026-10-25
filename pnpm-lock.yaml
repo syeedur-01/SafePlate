@@ -242,7 +242,11 @@ importers:
 
   packages/engine: {}
 
-  packages/knowledge: {}
+  packages/knowledge:
+    dependencies:
+      '@sp/contracts':
+        specifier: workspace:*
+        version: link:../contracts
 
   tools:
     dependencies:

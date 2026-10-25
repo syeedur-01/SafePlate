@@ -1,0 +1,15 @@
+{
+  "kind": "label",
+  "productName": "Test Snack",
+  "ingredientsText": "wheat flour, palm oil, salt, milk powder",
+  "declaredAllergens": ["wheat_gluten", "milk"],
+  "expiryDate": "2026-12-01",
+  "nutritionPer100g": { "sodium_mg": 600, "sugars_g": 5 },
+  "observations": {
+    "spoilageSigns": [],
+    "imageQuality": "good",
+    "notes": "Front-of-pack label, ingredient list and nutrition panel fully readable."
+  },
+  "provider": "mock",
+  "cached": false
+}
