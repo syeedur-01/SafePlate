@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6f8f5;
+  --fg: #142018;
+  --card: #ffffff;
+  --muted: #e7ede8;
+  --primary: #167347;
+  --primary-fg: #ffffff;
+  --border: #cfdad2;
+  --risk-low: #1a7f45;
+  --risk-moderate: #a16207;
+  --risk-high: #b42318;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1410;
+    --fg: #e8f0ea;
+    --card: #141d18;
+    --muted: #1e2a23;
+    --primary: #6ddc9f;
+    --primary-fg: #07130c;
+    --border: #2b3a31;
+    --risk-low: #5fd394;
+    --risk-moderate: #e2b04a;
+    --risk-high: #ff8a80;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0d1410;
+  --fg: #e8f0ea;
+  --card: #141d18;
+  --muted: #1e2a23;
+  --primary: #6ddc9f;
+  --primary-fg: #07130c;
+  --border: #2b3a31;
+  --risk-low: #5fd394;
+  --risk-moderate: #e2b04a;
+  --risk-high: #ff8a80;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply min-h-screen bg-bg font-sans text-fg antialiased;
+  }
+
+  a {
+    @apply text-inherit;
+  }
+}
