@@ -9,12 +9,14 @@
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run",
     "fetch-raw": "tsx src/fetch-raw.ts",
-    "normalize": "tsx src/normalize-data.ts"
+    "normalize": "tsx src/normalize-data.ts",
+    "fctb-match": "tsx src/fctb-match.ts"
   },
   "dependencies": {
     "@sp/contracts": "workspace:*",
     "@sp/knowledge": "workspace:*",
-    "adm-zip": "0.6.1"
+    "adm-zip": "0.6.1",
+    "pdfjs-dist": "5.4.149"
   },
   "devDependencies": {
     "@types/adm-zip": "0.5.8"
