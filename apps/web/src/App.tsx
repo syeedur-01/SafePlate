@@ -1,11 +1,13 @@
 import { History, Info, Languages, ScanLine, Settings } from 'lucide-react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Navigate, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useT } from './i18n/i18n';
 import { cn } from './lib/cn';
 import { About } from './pages/About';
 import { History as HistoryPage } from './pages/History';
+import { Onboarding } from './pages/Onboarding';
 import { Scan } from './pages/Scan';
 import { Settings as SettingsPage } from './pages/Settings';
+import { DEFAULT_PROFILE_STORE } from './state/profile-store';
 
 const NAV_ITEMS = [
   { to: '/', key: 'nav.scan', Icon: ScanLine, end: true },
@@ -17,7 +19,10 @@ const NAV_ITEMS = [
 /** Returns the app shell with top bar, routed content and mobile bottom navigation. */
 export function App() {
   const { t, lang, setLang } = useT();
+  const location = useLocation();
+  const navigate = useNavigate();
   const nextLang = lang === 'en' ? 'bn' : 'en';
+  const needsOnboarding = location.pathname !== '/welcome' && !DEFAULT_PROFILE_STORE.hasSaved();
 
   return (
     <div className="flex min-h-screen flex-col bg-bg text-fg">
@@ -37,12 +42,26 @@ export function App() {
       </header>
 
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-24 pt-6">
-        <Routes>
-          <Route path="/" element={<Scan />} />
-          <Route path="/history" element={<HistoryPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        {needsOnboarding ? (
+          <Navigate to="/welcome" replace />
+        ) : (
+          <Routes>
+            <Route
+              path="/welcome"
+              element={
+                <Onboarding
+                  store={DEFAULT_PROFILE_STORE}
+                  now={() => new Date().toISOString()}
+                  onDone={() => navigate('/')}
+                />
+              }
+            />
+            <Route path="/" element={<Scan />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        )}
       </main>
 
       <nav
