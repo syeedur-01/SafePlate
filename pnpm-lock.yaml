@@ -250,6 +250,9 @@ importers:
 
   tools:
     dependencies:
+      '@sp/contracts':
+        specifier: workspace:*
+        version: link:../packages/contracts
       adm-zip:
         specifier: 0.6.1
         version: 0.6.1

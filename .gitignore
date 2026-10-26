@@ -4,6 +4,7 @@ dist
 .env.*
 !.env.example
 data/raw/
+eval/photos/
 .wrangler
 .dev.vars
 coverage

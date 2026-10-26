@@ -11,6 +11,7 @@
     "fetch-raw": "tsx src/fetch-raw.ts"
   },
   "dependencies": {
+    "@sp/contracts": "workspace:*",
     "adm-zip": "0.6.1"
   },
   "devDependencies": {
