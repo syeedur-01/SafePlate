@@ -8,10 +8,12 @@
   "scripts": {
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run",
-    "fetch-raw": "tsx src/fetch-raw.ts"
+    "fetch-raw": "tsx src/fetch-raw.ts",
+    "normalize": "tsx src/normalize-data.ts"
   },
   "dependencies": {
     "@sp/contracts": "workspace:*",
+    "@sp/knowledge": "workspace:*",
     "adm-zip": "0.6.1"
   },
   "devDependencies": {

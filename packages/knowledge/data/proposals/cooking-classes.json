@@ -1,0 +1,152 @@
+[
+  {
+    "dishId": "kacchi-biryani",
+    "method": "layered and slow-cooked (dum)",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "bhuna-khichuri",
+    "method": "roasted, sautéed and simmered",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "beef-tehari",
+    "method": "braised and simmered in one pot",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "morog-polao",
+    "method": "braised chicken with ghee-cooked aromatic rice",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "panta-ilish",
+    "method": "soaked/fermented cooked rice served with fried fish",
+    "cookingClass": "fermented"
+  },
+  {
+    "dishId": "aloo-bhorta",
+    "method": "boiled and mashed",
+    "cookingClass": "boiled_or_simmered"
+  },
+  {
+    "dishId": "begun-bhorta",
+    "method": "roasted, peeled and mashed",
+    "cookingClass": "baked_or_roasted"
+  },
+  {
+    "dishId": "shutki-bhorta",
+    "method": "toasted or pan-fried, then mashed",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "begun-bhaja",
+    "method": "shallow-fried",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "shorshe-ilish",
+    "method": "gently simmered in mustard gravy",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "chingri-malai-curry",
+    "method": "lightly seared and simmered in coconut milk",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "rui-macher-jhol",
+    "method": "fried fish simmered in a light gravy",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "ilish-bhaja",
+    "method": "shallow- or deep-fried",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "lau-chingri",
+    "method": "slow-cooked stir-fry",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "beef-kala-bhuna",
+    "method": "slow-braised and repeatedly reduced/browned",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "bangladeshi-chicken-roast",
+    "method": "fried lightly and braised in spiced yogurt-based gravy",
+    "cookingClass": "shallow_fried"
+  },
+  {
+    "dishId": "mezbaner-gorur-mansho",
+    "method": "slow-cooked in a regional spice mixture",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "patla-masoor-dal",
+    "method": "boiled and tempered",
+    "cookingClass": "boiled_or_simmered"
+  },
+  {
+    "dishId": "cholar-dal",
+    "method": "boiled then tempered with spices and coconut",
+    "cookingClass": "boiled_or_simmered"
+  },
+  {
+    "dishId": "dhakaiya-bakarkhani",
+    "method": "layered dough baked until crisp",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "mughlai-paratha",
+    "method": "stuffed and pan/deep-fried",
+    "cookingClass": "deep_fried"
+  },
+  {
+    "dishId": "chotpoti",
+    "method": "peas and potatoes simmered into a spiced stew",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "fuchka",
+    "method": "shells deep-fried, then filled at serving",
+    "cookingClass": "deep_fried"
+  },
+  {
+    "dishId": "piyaju",
+    "method": "deep-fried lentil and onion fritters",
+    "cookingClass": "deep_fried"
+  },
+  {
+    "dishId": "bhapa-pitha",
+    "method": "steamed in cloth over boiling water",
+    "cookingClass": "steamed"
+  },
+  {
+    "dishId": "chitoi-pitha",
+    "method": "steamed or covered-cooked rice batter",
+    "cookingClass": "steamed"
+  },
+  {
+    "dishId": "mishti-doi",
+    "method": "milk reduced, sweetened and fermented",
+    "cookingClass": "sweet_milk_based"
+  },
+  {
+    "dishId": "rasmalai",
+    "method": "chhana patties simmered then served in sweetened milk",
+    "cookingClass": "sweet_milk_based"
+  },
+  {
+    "dishId": "haleem",
+    "method": "grain, lentils and meat slow-cooked into a thick stew",
+    "cookingClass": "braised_or_curry"
+  },
+  {
+    "dishId": "shemai",
+    "method": "vermicelli toasted then simmered in sweetened milk",
+    "cookingClass": "sweet_milk_based"
+  }
+]

@@ -253,6 +253,9 @@ importers:
       '@sp/contracts':
         specifier: workspace:*
         version: link:../packages/contracts
+      '@sp/knowledge':
+        specifier: workspace:*
+        version: link:../packages/knowledge
       adm-zip:
         specifier: 0.6.1
         version: 0.6.1
