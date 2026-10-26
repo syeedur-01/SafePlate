@@ -5,3 +5,4 @@ export * from './suitability';
 export * from './swaps';
 export * from './shopping';
 export * from './label';
+export * from './analyze';
