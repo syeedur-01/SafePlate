@@ -1,0 +1,2415 @@
+[
+  {
+    "ingredientId": "white-rice-polished-raw",
+    "candidates": [
+      {
+        "foodCode": "01_0025",
+        "rowName": "Rice, white, sunned, polished, milled, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Rice, white, sunned, polished, milled, raw 5 0.9 43 126 109 5 1.09 0.14",
+        "score": 0.6
+      },
+      {
+        "foodCode": "01_0024",
+        "rowName": "Rice, white, sunned, aromatic, raw",
+        "page": 32,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Rice, white, sunned, aromatic, raw 10 0.9 43 126 113 5 1.09 0.14",
+        "score": 0.4
+      },
+      {
+        "foodCode": "01_0041",
+        "rowName": "Rice, white, sunned, polished, milled, boiled* (without salt)",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 4
+        },
+        "rowText": "Rice, white, sunned, polished, milled, boiled* (without salt) 5 0.4 15 38 19 4 0.33 0.04",
+        "score": 0.375
+      },
+      {
+        "foodCode": "01_0011",
+        "rowName": "Rice flakes, white grain, water- soaked",
+        "page": 29,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 1
+        },
+        "rowText": "Rice flakes, white grain, water- soaked 8 [2] 14 39 45 1 0.4 0.11",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "01_0025",
+        "rowName": "Rice, white, sunned, polished, milled, raw Chal, atop, HYV, kolechata, raw",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 345,
+          "protein_g": 6.6,
+          "fat_g": 0.3,
+          "carbs_g": 77.4,
+          "fibre_g": 3.1
+        },
+        "rowText": "Rice, white, sunned, polished, milled, raw Chal, atop, HYV, kolechata, raw 1.00 (345) 1460 12.2 6.6 0.3 77.4 3.1 0.4",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "lentil-red-dried-raw",
+    "candidates": [
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw Mosur dal",
+        "page": 42,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 317,
+          "protein_g": 27.7,
+          "fat_g": 0.8,
+          "carbs_g": 43.2,
+          "fibre_g": 13.2
+        },
+        "rowText": "Lentil, dried, raw Mosur dal 1.00 (317) 1340 12.2 27.7 0.8 43.2 13.2 2.9",
+        "score": 0.4
+      },
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.4
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "bengal-gram-split-dried-raw",
+    "candidates": [
+      {
+        "foodCode": "02_0001",
+        "rowName": "Bengal gram, dehulled, split, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 39
+        },
+        "rowText": "Bengal gram, dehulled, split, dried, raw 56 8.8 110 331 725 39 3.34 1.34",
+        "score": 0.8
+      },
+      {
+        "foodCode": "02_0001",
+        "rowName": "Bengal gram, dehulled, split, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Bengal gram, dehulled, split, dried, raw 10.5 745",
+        "score": 0.8
+      },
+      {
+        "foodCode": "02_0002",
+        "rowName": "Bengal gram, whole, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 33
+        },
+        "rowText": "Bengal gram, whole, dried, raw 203 8.8 130 368 716 33 2.68 1.23",
+        "score": 0.75
+      },
+      {
+        "foodCode": "02_0004",
+        "rowName": "Black gram, split, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 35
+        },
+        "rowText": "Black gram, split, dried, raw 53 3.3 142 385 790 35 2.45 1.08",
+        "score": 0.75
+      },
+      {
+        "foodCode": "02_0004",
+        "rowName": "Black gram, split, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Black gram, split, dried, raw 10.5 1185 1368",
+        "score": 0.75
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "potato-diamond-raw",
+    "candidates": [
+      {
+        "foodCode": "05_0005",
+        "rowName": "Potato, Diamond, raw",
+        "page": 74,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 16
+        },
+        "rowText": "Potato, Diamond, raw 11 0.5 21 40 286 16 0.79 0.43",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "05_0012",
+        "rowName": "Potato, Diamond, boiled* (without salt)",
+        "page": 74,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 15
+        },
+        "rowText": "Potato, Diamond, boiled* (without salt) 14 0.6 20 38 232 15 0.72 0.39",
+        "score": 0.4
+      },
+      {
+        "foodCode": "04_0026",
+        "rowName": "Sweet potato leaves, raw",
+        "page": 66,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 47
+        },
+        "rowText": "Sweet potato leaves, raw 194 2.7 50 81 497 47 0.32 0.19",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "05_0021",
+        "rowName": "Potato Mash*",
+        "page": 74,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 310
+        },
+        "rowText": "Potato Mash* 14 0.6 23 44 273 310 0.85 0.47",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "eggplant-raw",
+    "candidates": [
+      {
+        "foodCode": "03_0005",
+        "rowName": "Brinjal, purple, long, raw",
+        "page": 51,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 8
+        },
+        "rowText": "Brinjal, purple, long, raw 21 0.4 24 47 178 8 0.57 0.68",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "03_0005",
+        "rowName": "Brinjal, purple, long, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Brinjal, purple, long, raw 91.4 59 90 709",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "03_0005",
+        "rowName": "Brinjal, purple, long, raw Begun, kalo, lomba",
+        "page": 50,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 24,
+          "protein_g": 1.9,
+          "fat_g": 0.1,
+          "carbs_g": 2,
+          "fibre_g": 4.1
+        },
+        "rowText": "Brinjal, purple, long, raw Begun, kalo, lomba 0.94 (24) 100 91.4 1.9 0.1 2.0 4.1 0.7",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "03_0033",
+        "rowName": "Brinjal, purple, long, boiled* (without salt)",
+        "page": 51,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 8
+        },
+        "rowText": "Brinjal, purple, long, boiled* (without salt) 24 0.4 21 47 132 8 0.52 0.63",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "onion-raw",
+    "candidates": [
+      {
+        "foodCode": "03_0024",
+        "rowName": "Onion, raw",
+        "page": 54,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 11
+        },
+        "rowText": "Onion, raw 24 0.9 24 29 210 11 0.41 0.36",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0024",
+        "rowName": "Onion, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Onion, raw 83.7 18 199 1194",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0024",
+        "rowName": "Onion, raw Piaj",
+        "page": 53,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 59,
+          "protein_g": 1.4,
+          "fat_g": 0.1,
+          "carbs_g": 12.2,
+          "fibre_g": 1.9
+        },
+        "rowText": "Onion, raw Piaj 0.87 (59) 249 83.7 1.4 0.1 12.2 1.9 0.7",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "garlic-raw",
+    "candidates": [
+      {
+        "foodCode": "03_0014",
+        "rowName": "Garlic, raw Rosun",
+        "page": 53,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 147,
+          "protein_g": 6.9,
+          "fat_g": 0.6,
+          "carbs_g": 27.6,
+          "fibre_g": 2.1
+        },
+        "rowText": "Garlic, raw Rosun 0.84 (147) 623 61.6 6.9 0.6 27.6 2.1 1.3",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "bottle-gourd-raw",
+    "candidates": [
+      {
+        "foodCode": "03_0017",
+        "rowName": "Gourd, bottle, raw",
+        "page": 54,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 39
+        },
+        "rowText": "Gourd, bottle, raw 26 0.7 11 53 150 39 0.58 0.16",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0017",
+        "rowName": "Gourd, bottle, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Gourd, bottle, raw 90.8 2435 309",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0017",
+        "rowName": "Gourd, bottle, raw Lau",
+        "page": 53,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 34,
+          "protein_g": 1.1,
+          "fat_g": 0.1,
+          "carbs_g": 6.8,
+          "fibre_g": 0.6
+        },
+        "rowText": "Gourd, bottle, raw Lau 0.87 (34) 142 90.8 1.1 0.1 6.8 [0.6] 0.6",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "04_0010",
+        "rowName": "Bottle gourd leaves, raw",
+        "page": 63,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 41
+        },
+        "rowText": "Bottle gourd leaves, raw 94 3.1 69 28 276 41 0.49 0.15",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "03_0015",
+        "rowName": "Gourd, ash, raw",
+        "page": 54,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 39
+        },
+        "rowText": "Gourd, ash, raw 30 0.8 17 14 139 39 0.10 0.02",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "tomato-red-ripe-raw",
+    "candidates": [
+      {
+        "foodCode": "03_0031",
+        "rowName": "Tomato, red, ripe, raw",
+        "page": 57,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 7
+        },
+        "rowText": "Tomato, red, ripe, raw 13 0.2 7 24 156 7 0.41 0.97",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0031",
+        "rowName": "Tomato, red, ripe, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Tomato, red, ripe, raw 95.0 33 277 560",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0031",
+        "rowName": "Tomato, red, ripe, raw Paka tomato",
+        "page": 56,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 16,
+          "protein_g": 1.1,
+          "fat_g": 0.2,
+          "carbs_g": 1.4,
+          "fibre_g": 1.7
+        },
+        "rowText": "Tomato, red, ripe, raw Paka tomato 1.00 (16) 66 95.0 1.1 0.2 1.4 1.7 0.5",
+        "score": 0.75
+      },
+      {
+        "foodCode": "03_0045",
+        "rowName": "Tomato, red, ripe, boiled* (without salt)",
+        "page": 57,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 11
+        },
+        "rowText": "Tomato, red, ripe, boiled* (without salt) 24 0.4 12 41 200 11 0.66 1.55",
+        "score": 0.5
+      },
+      {
+        "foodCode": "03_0004",
+        "rowName": "Beet root, red, raw Beet",
+        "page": 50,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 46,
+          "protein_g": 2,
+          "fat_g": 0.1,
+          "carbs_g": 7.9,
+          "fibre_g": 2.8
+        },
+        "rowText": "Beet root, red, raw Beet 0.85 (46) 194 85.8 2.0 0.1 7.9 2.8 1.4",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "beef-lean-boneless-raw",
+    "candidates": [
+      {
+        "foodCode": "10_0002",
+        "rowName": "Beef, meat, lean, boneless, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 52
+        },
+        "rowText": "Beef, meat, lean, boneless, raw 4 2.0 15 190 395 52 3.52 0.14",
+        "score": 0.75
+      },
+      {
+        "foodCode": "10_0004",
+        "rowName": "Beef, mince, lean, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 66
+        },
+        "rowText": "Beef, mince, lean, raw 9 2.4 22 198 346 66 5.09 0.08",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "10_0001",
+        "rowName": "Beef liver, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 69
+        },
+        "rowText": "Beef liver, raw 4 3.5 18 387 313 69 3.71 1.50",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "10_0003",
+        "rowName": "Beef, meat, 15-20% fat, boneless, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 69
+        },
+        "rowText": "Beef, meat, 15-20% fat, boneless, raw 5 2.2 22 170 309 69 4.6 0.07",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "10_0004",
+        "rowName": "Beef, mince, lean, raw Gorur mangsaw, kima",
+        "page": 129,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 126,
+          "protein_g": 20.3,
+          "fat_g": 5,
+          "carbs_g": 0,
+          "fibre_g": 0
+        },
+        "rowText": "Beef, mince, lean, raw Gorur mangsaw, kima 1.00 (126) 530 75.0 20.3 5.0 0 0 1.0",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "beef-15-20-fat-boneless-raw",
+    "candidates": [
+      {
+        "foodCode": "10_0003",
+        "rowName": "Beef, meat, 15-20% fat, boneless, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 69
+        },
+        "rowText": "Beef, meat, 15-20% fat, boneless, raw 5 2.2 22 170 309 69 4.6 0.07",
+        "score": 0.8333333333333334
+      },
+      {
+        "foodCode": "10_0003",
+        "rowName": "Beef, meat, 15-20% fat, boneless, raw Gorur mangsaw, harh chara",
+        "page": 129,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 207,
+          "protein_g": 19.7,
+          "fat_g": 14.2,
+          "carbs_g": 0,
+          "fibre_g": 0
+        },
+        "rowText": "Beef, meat, 15-20% fat, boneless, raw Gorur mangsaw, harh chara 1.00 (207) 860 65.4 19.7 14.2 0 0 0.9",
+        "score": 0.5
+      },
+      {
+        "foodCode": "10_0002",
+        "rowName": "Beef, meat, lean, boneless, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 52
+        },
+        "rowText": "Beef, meat, lean, boneless, raw 4 2.0 15 190 395 52 3.52 0.14",
+        "score": 0.4
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "chicken-leg-skinless-raw",
+    "candidates": [
+      {
+        "foodCode": "10_0007",
+        "rowName": "Chicken leg, without skin, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 55
+        },
+        "rowText": "Chicken leg, without skin, raw 18 1.0 29 180 299 55 2.09 0.22",
+        "score": 1
+      },
+      {
+        "foodCode": "10_0006",
+        "rowName": "Chicken breast, without skin, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 37
+        },
+        "rowText": "Chicken breast, without skin, raw 15 0.5 32 173 315 37 1.70 0.06",
+        "score": 0.75
+      },
+      {
+        "foodCode": "08_0001",
+        "rowName": "Apple, without skin, raw",
+        "page": 98,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 0
+        },
+        "rowText": "Apple, without skin, raw 5 0.1 4 11 90 0 0.05 0.03",
+        "score": 0.5
+      },
+      {
+        "foodCode": "10_0007",
+        "rowName": "Chicken leg, without skin, raw Murgi, ranner mangsaw, chamra charano",
+        "page": 129,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 128,
+          "protein_g": 19.2,
+          "fat_g": 5.7,
+          "carbs_g": 0,
+          "fibre_g": 0
+        },
+        "rowText": "Chicken leg, without skin, raw Murgi, ranner mangsaw, chamra charano 0.72 (128) 537 71.9 19.2 5.7 0 0 1.0",
+        "score": 0.4444444444444444
+      },
+      {
+        "foodCode": "08_0001",
+        "rowName": "Apple, without skin, raw Apel, khosa chara",
+        "page": 97,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 51,
+          "protein_g": 0.3,
+          "fat_g": 0.1,
+          "carbs_g": 11.5,
+          "fibre_g": 1.3
+        },
+        "rowText": "Apple, without skin, raw Apel, khosa chara 0.77 (51) 215 86.7 0.3 0.1 11.5 1.3 0.2",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "mutton-moderately-fat-raw",
+    "candidates": [
+      {
+        "foodCode": "10_0012",
+        "rowName": "Lamb/mutton, meat, fat, raw moderately",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 41
+        },
+        "rowText": "Lamb/mutton, meat, fat, raw moderately 13 2.2 19 150 136 41 3.92 0.08",
+        "score": 0.4
+      },
+      {
+        "foodCode": "10_0013",
+        "rowName": "Lamb/Mutton, liver, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 73
+        },
+        "rowText": "Lamb/Mutton, liver, raw 10 6.3 19 380 290 73 4.00 9.67",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "egg-chicken-farmed-raw",
+    "candidates": [
+      {
+        "foodCode": "11_0001",
+        "rowName": "Egg, chicken, farmed, raw",
+        "page": 136,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 116
+        },
+        "rowText": "Egg, chicken, farmed, raw [29] 1.5 21 220 110 116 2.36 0.30",
+        "score": 1
+      },
+      {
+        "foodCode": "11_0002",
+        "rowName": "Egg, chicken, native, raw",
+        "page": 136,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 135
+        },
+        "rowText": "Egg, chicken, native, raw 60 1.7 11 220 97 135 2.03 0.30",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "11_0003",
+        "rowName": "Egg, chicken, native, yolk, raw",
+        "page": 136,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 48
+        },
+        "rowText": "Egg, chicken, native, yolk, raw 120 4.8 11 477 113 48 3.33 0.13",
+        "score": 0.5
+      },
+      {
+        "foodCode": "11_0001",
+        "rowName": "Egg, chicken, farmed, raw Murgir dim, farm er",
+        "page": 136,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 139,
+          "protein_g": 14.5,
+          "fat_g": 9,
+          "fibre_g": 0
+        },
+        "rowText": "Egg, chicken, farmed, raw Murgir dim, farm er 0.87 (139) 579 72.3 14.5 9.0 Tr 0 0.8",
+        "score": 0.42857142857142855
+      },
+      {
+        "foodCode": "10_0008",
+        "rowName": "Chicken liver, raw",
+        "page": 130,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 71
+        },
+        "rowText": "Chicken liver, raw 18 9.0 19 297 230 71 2.50 0.29",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "cow-milk-whole-pasteurized",
+    "candidates": [
+      {
+        "foodCode": "12_0008",
+        "rowName": "Milk, cow, whole fat (pasteurized, UTH)",
+        "page": 141,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 51
+        },
+        "rowText": "Milk, cow, whole fat (pasteurized, UTH) 103 0.1 13 90 131 51 0.45 0.05",
+        "score": 1
+      },
+      {
+        "foodCode": "12_0008",
+        "rowName": "Milk, cow, whole fat (pasteurized, UTH) Gorur dudh, purno noni soho",
+        "page": 140,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 63,
+          "protein_g": 3.1,
+          "fat_g": 3.7,
+          "carbs_g": 4.3,
+          "fibre_g": 0
+        },
+        "rowText": "Milk, cow, whole fat (pasteurized, UTH) Gorur dudh, purno noni soho 1.00 (63) 263 88.3 3.1 3.7 4.3 0 0.6",
+        "score": 0.5454545454545454
+      },
+      {
+        "foodCode": "12_0004",
+        "rowName": "Milk, buffalo, whole fat Mohiser dudh",
+        "page": 140,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 101,
+          "protein_g": 3.8,
+          "fat_g": 7.5,
+          "carbs_g": 4.7,
+          "fibre_g": 0
+        },
+        "rowText": "Milk, buffalo, whole fat Mohiser dudh 1.00 (101) 421 83.3 3.8 7.5 4.7 0 0.8",
+        "score": 0.5
+      },
+      {
+        "foodCode": "12_0004",
+        "rowName": "Milk, buffalo, whole fat",
+        "page": 141,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 52
+        },
+        "rowText": "Milk, buffalo, whole fat 206 0.2 18 246 178 52 0.22 0.05",
+        "score": 0.5
+      },
+      {
+        "foodCode": "12_0006",
+        "rowName": "Milk, cow, powder, whole",
+        "page": 141,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 365
+        },
+        "rowText": "Milk, cow, powder, whole 959 0.7 92 758 1180 365 3.71 0.06",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "coconut-milk",
+    "candidates": [
+      {
+        "foodCode": "06_0004",
+        "rowName": "Coconut milk",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 14
+        },
+        "rowText": "Coconut milk 18 3 45 97 227 14 0.60 0.23",
+        "score": 1
+      },
+      {
+        "foodCode": "06_0004",
+        "rowName": "Coconut milk Narikel dudh",
+        "page": 80,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 213,
+          "protein_g": 2.1,
+          "fat_g": 21.7,
+          "carbs_g": 1.2,
+          "fibre_g": 2.2
+        },
+        "rowText": "Coconut milk Narikel dudh 1.00 (213) 876 72.0 2.1 21.7 1.2 2.2 0.8",
+        "score": 0.5
+      },
+      {
+        "foodCode": "06_0005",
+        "rowName": "Coconut, desiccated",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 28
+        },
+        "rowText": "Coconut, desiccated 32 4.7 90 185 660 28 0.90 0.78",
+        "score": 0.5
+      },
+      {
+        "foodCode": "06_0006",
+        "rowName": "Coconut, mature kernel",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 16
+        },
+        "rowText": "Coconut, mature kernel 16 2.2 37 117 424 16 0.74 0.31",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "12_0007",
+        "rowName": "Milk, cow, skimmed",
+        "page": 141,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 51
+        },
+        "rowText": "Milk, cow, skimmed 103 0.1 13 90 131 51 0.45 0.05",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "coconut-kernel-mature-raw",
+    "candidates": [
+      {
+        "foodCode": "06_0006",
+        "rowName": "Coconut, mature kernel",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 16
+        },
+        "rowText": "Coconut, mature kernel 16 2.2 37 117 424 16 0.74 0.31",
+        "score": 1
+      },
+      {
+        "foodCode": "06_0004",
+        "rowName": "Coconut milk",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 14
+        },
+        "rowText": "Coconut milk 18 3 45 97 227 14 0.60 0.23",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "06_0005",
+        "rowName": "Coconut, desiccated",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 28
+        },
+        "rowText": "Coconut, desiccated 32 4.7 90 185 660 28 0.90 0.78",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "12_0012",
+        "rowName": "Milk, human, mature, raw",
+        "page": 141,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 16
+        },
+        "rowText": "Milk, human, mature, raw 32 0.1 3 15 56 16 0.26 0.04",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "mustard-seed-dried",
+    "candidates": [
+      {
+        "foodCode": "06_0012",
+        "rowName": "Mustard seeds, dried",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 13
+        },
+        "rowText": "Mustard seeds, dried 257 8.9 357 800 713 13 5.87 0.62",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "06_0012",
+        "rowName": "Mustard seeds, dried Sarisha",
+        "page": 80,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 501,
+          "protein_g": 22,
+          "fat_g": 35,
+          "carbs_g": 18.5,
+          "fibre_g": 11.8
+        },
+        "rowText": "Mustard seeds, dried Sarisha 1.00 (501) 2080 8.5 22 35.0 18.5 11.8 4.2",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw Motor",
+        "page": 42,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 327,
+          "protein_g": 22.1,
+          "fat_g": 2.1,
+          "carbs_g": 48.3,
+          "fibre_g": 13
+        },
+        "rowText": "Pea, dried, raw Motor 1.00 (327) 1380 11.7 22.1 2.1 48.3 13.0 2.8",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "cashew-raw",
+    "candidates": [
+      {
+        "foodCode": "06_0002",
+        "rowName": "Cashew nuts, raw",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 12
+        },
+        "rowText": "Cashew nuts, raw 50 5.0 292 593 660 12 5.78 2.20",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "cardamom-dried",
+    "candidates": [
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0011",
+        "rowName": "Soybean, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Soybean, dried, raw 241 11.3 207 691 1530 5 5.7 1.25",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0002",
+        "rowName": "Cardamom Elach",
+        "page": 87,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 261,
+          "protein_g": 10.2,
+          "fat_g": 2.2,
+          "carbs_g": 37.8,
+          "fibre_g": 24.4
+        },
+        "rowText": "Cardamom Elach 1.00 (261) 1090 20.0 10.2 2.2 37.8 24.4 5.4",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0002",
+        "rowName": "Cardamom",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 16
+        },
+        "rowText": "Cardamom 130 [4.6] 173 160 976 16 2.81 0.47",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "dried-red-chilli",
+    "candidates": [
+      {
+        "foodCode": "07_0003",
+        "rowName": "Chilli, red, dry",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 30
+        },
+        "rowText": "Chilli, red, dry 160 2.3 152 293 2010 30 2.48 0.37",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "02_0010",
+        "rowName": "Red gram, split, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 29
+        },
+        "rowText": "Red gram, split, dried, raw 55 2.7 96 304 1100 29 2.10 1.2",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0003",
+        "rowName": "Chilli, red, dry Shukna morich",
+        "page": 87,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 313,
+          "protein_g": 15.9,
+          "fat_g": 6.2,
+          "carbs_g": 35.2,
+          "fibre_g": 26.6
+        },
+        "rowText": "Chilli, red, dry Shukna morich 0.94 (313) 1310 10.0 15.9 6.2 35.2 26.6 6.1",
+        "score": 0.4
+      },
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw Motor",
+        "page": 42,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 327,
+          "protein_g": 22.1,
+          "fat_g": 2.1,
+          "carbs_g": 48.3,
+          "fibre_g": 13
+        },
+        "rowText": "Pea, dried, raw Motor 1.00 (327) 1380 11.7 22.1 2.1 48.3 13.0 2.8",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "cinnamon-dried",
+    "candidates": [
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0011",
+        "rowName": "Soybean, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Soybean, dried, raw 241 11.3 207 691 1530 5 5.7 1.25",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0004",
+        "rowName": "Cinnamon, ground",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 10
+        },
+        "rowText": "Cinnamon, ground 1000 8.3 60 64 431 10 1.83 0.34",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0005",
+        "rowName": "Cloves, dried",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 230
+        },
+        "rowText": "Cloves, dried 740 4.9 215 86 847 230 1.93 0.31",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "bay-leaf-dried",
+    "candidates": [
+      {
+        "foodCode": "07_0001",
+        "rowName": "Bay leaf, dried",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 23
+        },
+        "rowText": "Bay leaf, dried 834 43.0 120 113 529 23 3.70 0.42",
+        "score": 1
+      },
+      {
+        "foodCode": "07_0001",
+        "rowName": "Bay leaf, dried Tejpata",
+        "page": 87,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 353,
+          "protein_g": 7.6,
+          "fat_g": 8.4,
+          "carbs_g": 48.7,
+          "fibre_g": 26.3
+        },
+        "rowText": "Bay leaf, dried Tejpata 1.00 (353) 1480 5.4 7.6 8.4 48.7 26.3 3.6",
+        "score": 0.75
+      },
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw Motor",
+        "page": 42,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 327,
+          "protein_g": 22.1,
+          "fat_g": 2.1,
+          "carbs_g": 48.3,
+          "fibre_g": 13
+        },
+        "rowText": "Pea, dried, raw Motor 1.00 (327) 1380 11.7 22.1 2.1 48.3 13.0 2.8",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "coriander-leaves-raw",
+    "candidates": [
+      {
+        "foodCode": "07_0006",
+        "rowName": "Coriander leaves, raw",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 58
+        },
+        "rowText": "Coriander leaves, raw 160 1.4 34 30 396 58 0.32 0.14",
+        "score": 1
+      },
+      {
+        "foodCode": "04_0006",
+        "rowName": "Dock leaves, raw",
+        "page": 63,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 14
+        },
+        "rowText": "Dock leaves, raw 74 6.7 82 48 602 [14] 0.43 0.13",
+        "score": 0.5
+      },
+      {
+        "foodCode": "04_0012",
+        "rowName": "Cassava, leaves, raw",
+        "page": 63,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 22
+        },
+        "rowText": "Cassava, leaves, raw 201 4.9 54 36 303 22 0.45 0.81",
+        "score": 0.5
+      },
+      {
+        "foodCode": "04_0015",
+        "rowName": "Cowpea, leaves, raw",
+        "page": 66,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 44
+        },
+        "rowText": "Cowpea, leaves, raw 290 5.1 60 61 475 44 0.5 0.27",
+        "score": 0.5
+      },
+      {
+        "foodCode": "04_0017",
+        "rowName": "Drumstick, leaves, raw",
+        "page": 66,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 30
+        },
+        "rowText": "Drumstick, leaves, raw 440 0.9 42 70 259 30 0.16 0.07",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "mustard-oil",
+    "candidates": [
+      {
+        "foodCode": "13_0008",
+        "rowName": "Mustard oil",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 0
+        },
+        "rowText": "Mustard oil 0 0 0 0 0 0 0 0",
+        "score": 1
+      },
+      {
+        "foodCode": "13_0002",
+        "rowName": "Cottonseed oil",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 0
+        },
+        "rowText": "Cottonseed oil 0 0 0 0 0 0 0 0",
+        "score": 0.5
+      },
+      {
+        "foodCode": "13_0009",
+        "rowName": "Palm oil",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 0
+        },
+        "rowText": "Palm oil 0 0 0 0 0 0 0 0",
+        "score": 0.5
+      },
+      {
+        "foodCode": "13_0010",
+        "rowName": "Peanut oil",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 0
+        },
+        "rowText": "Peanut oil 0 0 0 0 0 0 0.01",
+        "score": 0.5
+      },
+      {
+        "foodCode": "13_0011",
+        "rowName": "Sesame oil",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 0
+        },
+        "rowText": "Sesame oil 0 0 0 0 0 0 0 0",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "ghee-cow",
+    "candidates": [
+      {
+        "foodCode": "13_0004",
+        "rowName": "Ghee, cow",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 2
+        },
+        "rowText": "Ghee, cow 1 0.2 Tr Tr 1 2 0.01 0.01",
+        "score": 1
+      },
+      {
+        "foodCode": "13_0005",
+        "rowName": "Ghee, vegetable",
+        "page": 148,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 1
+        },
+        "rowText": "Ghee, vegetable 2 0.2 Tr Tr 1 1 0.04 0.01",
+        "score": 0.5
+      },
+      {
+        "foodCode": "12_0007",
+        "rowName": "Milk, cow, skimmed",
+        "page": 141,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 51
+        },
+        "rowText": "Milk, cow, skimmed 103 0.1 13 90 131 51 0.45 0.05",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "green-chilli-raw",
+    "candidates": [
+      {
+        "foodCode": "03_0010",
+        "rowName": "Chilli, green, with seeds, raw",
+        "page": 51,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 12
+        },
+        "rowText": "Chilli, green, with seeds, raw 22 1.6 43 30 282 12 1.97 0.87",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0010",
+        "rowName": "Chilli, green, with seeds, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Chilli, green, with seeds, raw 85.5 896 74 3225",
+        "score": 1
+      },
+      {
+        "foodCode": "03_0010",
+        "rowName": "Chilli, green, with seeds, raw Kancha morich",
+        "page": 50,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 45,
+          "protein_g": 2.8,
+          "fat_g": 0.1,
+          "carbs_g": 5.9,
+          "fibre_g": 4.7
+        },
+        "rowText": "Chilli, green, with seeds, raw Kancha morich 0.91 (45) 189 85.5 2.8 0.1 5.9 4.7 1.0",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "06_0011",
+        "rowName": "Lotus seeds, green",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 1
+        },
+        "rowText": "Lotus seeds, green 47 1.0 56 168 367 1 0.28 0.09",
+        "score": 0.5
+      },
+      {
+        "foodCode": "06_0011",
+        "rowName": "Lotus seeds, green Poddo gota, kancha",
+        "page": 80,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 74,
+          "protein_g": 4.1,
+          "fat_g": 0.6,
+          "carbs_g": 12.5,
+          "fibre_g": 0.9
+        },
+        "rowText": "Lotus seeds, green Poddo gota, kancha 0.53 (74) 312 80.8 4.1 0.6 12.5 [0.9] 1.1",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "white-sugar",
+    "candidates": [
+      {
+        "foodCode": "15_0008",
+        "rowName": "Sugar, white Chini, sada",
+        "page": 159,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 398,
+          "protein_g": 0,
+          "fat_g": 0,
+          "carbs_g": 99.5,
+          "fibre_g": 0
+        },
+        "rowText": "Sugar, white Chini, sada 1.00 (398) 1690 0.4 0 0 99.5 0 0.1",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0031",
+        "rowName": "Wheat, flour, white",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 10
+        },
+        "rowText": "Wheat, flour, white 13 3.8 58 140 210 10 1.55 0.19",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "09_0057",
+        "rowName": "Prawn, Indian white prawn, raw",
+        "page": 120,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 196
+        },
+        "rowText": "Prawn, Indian white prawn, raw 304 0.5 41 922 545 196 2.25 0.52",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "date-palm-jaggery",
+    "candidates": [
+      {
+        "foodCode": "15_0005",
+        "rowName": "Jaggery/Panela, date palm Gur, Khejur",
+        "page": 159,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 352,
+          "protein_g": 1.5,
+          "fat_g": 0.3,
+          "carbs_g": 85.7,
+          "fibre_g": 0.3
+        },
+        "rowText": "Jaggery/Panela, date palm Gur, Khejur 1.00 (352) 1500 9.6 1.5 0.3 85.7 [0.3] 2.6",
+        "score": 0.6666666666666666
+      },
+      {
+        "foodCode": "15_0006",
+        "rowName": "Jagggery liquid, date palm Nolen gur",
+        "page": 159,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 86,
+          "protein_g": 0.3,
+          "fat_g": 0.1,
+          "carbs_g": 20.9,
+          "fibre_g": 0.1
+        },
+        "rowText": "Jagggery liquid, date palm Nolen gur 1.00 (86) 365 78.3 0.3 0.1 20.9 [0.1] 0.3",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "salt",
+    "candidates": [
+      {
+        "foodCode": "15_0007",
+        "rowName": "Salt Lobon",
+        "page": 159,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 0,
+          "protein_g": 0,
+          "fat_g": 0,
+          "carbs_g": 0,
+          "fibre_g": 0
+        },
+        "rowText": "Salt Lobon (0) 0 Tr 0 0 0 0 99.8",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "water",
+    "candidates": [
+      {
+        "foodCode": "04_0030",
+        "rowName": "Water spinach, raw",
+        "page": 68,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 107
+        },
+        "rowText": "Water spinach, raw 107 2.2 19 36 207 107 0.51 0.06",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "moong-dal-raw",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "plain-yogurt-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "ginger-raw-unverified",
+    "candidates": [
+      {
+        "foodCode": "07_0011",
+        "rowName": "Ginger root, raw",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 12
+        },
+        "rowText": "Ginger root, raw 17 1.1 40 32 387 12 0.36 0.17",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0011",
+        "rowName": "Ginger root, raw Ada",
+        "page": 87,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 72,
+          "protein_g": 1.9,
+          "fat_g": 0.8,
+          "carbs_g": 13.3,
+          "fibre_g": 2
+        },
+        "rowText": "Ginger root, raw Ada 0.86 (72) 303 81.1 1.9 0.8 13.3 2.0 0.9",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "saffron-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "dried-plum-alubokhara-unverified",
+    "candidates": [
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw Motor",
+        "page": 42,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 327,
+          "protein_g": 22.1,
+          "fat_g": 2.1,
+          "carbs_g": 48.3,
+          "fibre_g": 13
+        },
+        "rowText": "Pea, dried, raw Motor 1.00 (327) 1380 11.7 22.1 2.1 48.3 13.0 2.8",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0011",
+        "rowName": "Soybean, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Soybean, dried, raw 241 11.3 207 691 1530 5 5.7 1.25",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "06_0001",
+        "rowName": "Sunflower seeds, dried",
+        "page": 81,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 9
+        },
+        "rowText": "Sunflower seeds, dried 78 5.3 325 660 645 9 5.00 1.80",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "whole-spice-mix-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "raisin-dried-unverified",
+    "candidates": [
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.5
+      },
+      {
+        "foodCode": "02_0011",
+        "rowName": "Soybean, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Soybean, dried, raw 241 11.3 207 691 1530 5 5.7 1.25",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0005",
+        "rowName": "Cloves, dried",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 230
+        },
+        "rowText": "Cloves, dried 740 4.9 215 86 847 230 1.93 0.31",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0016",
+        "rowName": "Nutmeg, dried",
+        "page": 90,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 15
+        },
+        "rowText": "Nutmeg, dried 120 4.6 229 240 320 15 1.22 0.71",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "hilsa-raw-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "dried-fish-shutki-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "large-prawn-raw-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "cumin-seed-unverified",
+    "candidates": [
+      {
+        "foodCode": "07_0008",
+        "rowName": "Cumin seeds",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 148
+        },
+        "rowText": "Cumin seeds 1020 44.5 404 507 1380 148 3.89 0.96",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0007",
+        "rowName": "Coriander seed, dry",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 34
+        },
+        "rowText": "Coriander seed, dry 630 17.9 322 398 1230 34 4.58 0.95",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "07_0008",
+        "rowName": "Cumin seeds Jira",
+        "page": 87,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 402,
+          "protein_g": 18.3,
+          "fat_g": 17.6,
+          "carbs_g": 37.2,
+          "fibre_g": 10.5
+        },
+        "rowText": "Cumin seeds Jira 1.00 (402) 1680 10.0 18.3 17.6 37.2 10.5 6.4",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "wheat-flour-white-refined",
+    "candidates": [
+      {
+        "foodCode": "01_0032",
+        "rowName": "Wheat flour, white, refined Maida",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 346,
+          "protein_g": 9.8,
+          "fat_g": 1,
+          "carbs_g": 73.1,
+          "fibre_g": 2.7
+        },
+        "rowText": "Wheat flour, white, refined Maida 1.00 (346) 1470 12.8 9.8 1.0 73.1 2.7 0.6",
+        "score": 1
+      },
+      {
+        "foodCode": "01_0031",
+        "rowName": "Wheat, flour, white",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 10
+        },
+        "rowText": "Wheat, flour, white 13 3.8 58 140 210 10 1.55 0.19",
+        "score": 0.6
+      },
+      {
+        "foodCode": "01_0031",
+        "rowName": "Wheat, flour, white Ata, sada, packet",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 347,
+          "protein_g": 10.6,
+          "fat_g": 1.6,
+          "carbs_g": 70.3,
+          "fibre_g": 4.4
+        },
+        "rowText": "Wheat, flour, white Ata, sada, packet 1.00 (347) 1470 12.2 10.6 1.6 70.3 4.4 0.8",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0004",
+        "rowName": "Maize/corn flour, whole, white",
+        "page": 29,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Maize/corn flour, whole, white 7 2.4 93 272 315 5 1.73 0.23",
+        "score": 0.4
+      },
+      {
+        "foodCode": "01_0030",
+        "rowName": "Wheat flour, brown, whole grain, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 16
+        },
+        "rowText": "Wheat flour, brown, whole grain, raw 52 4.9 151 306 284 16 3.02 0.53",
+        "score": 0.4
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "white-peas-dried-unverified",
+    "candidates": [
+      {
+        "foodCode": "01_0031",
+        "rowName": "Wheat, flour, white",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 10
+        },
+        "rowText": "Wheat, flour, white 13 3.8 58 140 210 10 1.55 0.19",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0008",
+        "rowName": "Lentil, dried, raw",
+        "page": 175,
+        "table": "Mineral composition",
+        "values": {},
+        "rowText": "Lentil, dried, raw 12.2 593",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw Motor",
+        "page": 42,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 327,
+          "protein_g": 22.1,
+          "fat_g": 2.1,
+          "carbs_g": 48.3,
+          "fibre_g": 13
+        },
+        "rowText": "Pea, dried, raw Motor 1.00 (327) 1380 11.7 22.1 2.1 48.3 13.0 2.8",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0009",
+        "rowName": "Pea, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 21
+        },
+        "rowText": "Pea, dried, raw 75 4.8 102 298 709 21 3.49 1.29",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "02_0011",
+        "rowName": "Soybean, dried, raw",
+        "page": 43,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Soybean, dried, raw 241 11.3 207 691 1530 5 5.7 1.25",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "tamarind-pulp-unverified",
+    "candidates": [
+      {
+        "foodCode": "08_0041",
+        "rowName": "Tamarind, pulp, ripe, raw",
+        "page": 104,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 19
+        },
+        "rowText": "Tamarind, pulp, ripe, raw 127 4.0 86 120 700 19 0.11 0.09",
+        "score": 0.6666666666666666
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "rice-flour-unverified",
+    "candidates": [
+      {
+        "foodCode": "01_0010",
+        "rowName": "Rice flaked",
+        "page": 29,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 2
+        },
+        "rowText": "Rice flaked 25 6.8 47 130 150 2 1.36 0.37",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0019",
+        "rowName": "Rice, bran, raw",
+        "page": 32,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Rice, bran, raw 59 18.5 994 1379 1155 5 6.04 0.73",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0022",
+        "rowName": "Rice, popped",
+        "page": 32,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Rice, popped 10 0.7 47 138 160 5 0.87 0.21",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0010",
+        "rowName": "Rice flaked Chira",
+        "page": 28,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 356,
+          "protein_g": 6.5,
+          "fat_g": 1.1,
+          "carbs_g": 79.2,
+          "fibre_g": 1.3
+        },
+        "rowText": "Rice flaked Chira 1.00 (356) 1510 9.9 6.5 1.1 79.2 1.3 2",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "01_0022",
+        "rowName": "Rice, popped Khoi",
+        "page": 31,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 380,
+          "protein_g": 7.1,
+          "fat_g": 0.1,
+          "carbs_g": 87,
+          "fibre_g": 1.4
+        },
+        "rowText": "Rice, popped Khoi 1.00 (380) 1620 3.9 7.1 0.1 87.0 1.4 0.4",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "vermicelli-dry-unverified",
+    "candidates": [
+      {
+        "foodCode": "01_0029",
+        "rowName": "Vermicelli, wheat, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 8
+        },
+        "rowText": "Vermicelli, wheat, raw 22 2.0 42 92 140 8 1.38 0.29",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0029",
+        "rowName": "Vermicelli, wheat, raw Semai",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 347,
+          "protein_g": 8.9,
+          "fat_g": 0.6,
+          "carbs_g": 74.9,
+          "fibre_g": 3.2
+        },
+        "rowText": "Vermicelli, wheat, raw Semai 1.00 (347) 1470 11.7 8.9 0.6 74.9 3.2 0.7",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "07_0003",
+        "rowName": "Chilli, red, dry",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 30
+        },
+        "rowText": "Chilli, red, dry 160 2.3 152 293 2010 30 2.48 0.37",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "07_0007",
+        "rowName": "Coriander seed, dry",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 34
+        },
+        "rowText": "Coriander seed, dry 630 17.9 322 398 1230 34 4.58 0.95",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "chhana-fresh-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "broken-wheat-unverified",
+    "candidates": [
+      {
+        "foodCode": "01_0026",
+        "rowName": "Semolina, wheat, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Semolina, wheat, raw 17 1.1 40 105 158 5 2.18 0.25",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "01_0029",
+        "rowName": "Vermicelli, wheat, raw Semai",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 347,
+          "protein_g": 8.9,
+          "fat_g": 0.6,
+          "carbs_g": 74.9,
+          "fibre_g": 3.2
+        },
+        "rowText": "Vermicelli, wheat, raw Semai 1.00 (347) 1470 11.7 8.9 0.6 74.9 3.2 0.7",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "01_0029",
+        "rowName": "Vermicelli, wheat, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 8
+        },
+        "rowText": "Vermicelli, wheat, raw 22 2.0 42 92 140 8 1.38 0.29",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "01_0031",
+        "rowName": "Wheat, flour, white",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 10
+        },
+        "rowText": "Wheat, flour, white 13 3.8 58 140 210 10 1.55 0.19",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "01_0033",
+        "rowName": "Wheat, whole, raw Gom",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 344,
+          "protein_g": 11.2,
+          "fat_g": 2.9,
+          "carbs_g": 62,
+          "fibre_g": 12.2
+        },
+        "rowText": "Wheat, whole, raw Gom 1.00 (344) 1450 10.0 11.2 2.9 62.0 12.2 1.6",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "turmeric-unverified",
+    "candidates": [
+      {
+        "foodCode": "07_0020",
+        "rowName": "Turmeric, dried",
+        "page": 90,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 35
+        },
+        "rowText": "Turmeric, dried 168 33.2 192 279 2720 35 3.78 0.80",
+        "score": 0.5
+      },
+      {
+        "foodCode": "15_0001",
+        "rowName": "Baking powder Baking powder",
+        "page": 159,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 731,
+          "protein_g": 5.2,
+          "fat_g": 0,
+          "carbs_g": 37.8,
+          "fibre_g": 0
+        },
+        "rowText": "Baking powder Baking powder 1.00 172 (731) 6.3 5.2 0 37.8 0 50.7",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "red-chilli-powder-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "coriander-powder-unverified",
+    "candidates": [
+      {
+        "foodCode": "07_0006",
+        "rowName": "Coriander leaves, raw",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 58
+        },
+        "rowText": "Coriander leaves, raw 160 1.4 34 30 396 58 0.32 0.14",
+        "score": 0.5
+      },
+      {
+        "foodCode": "15_0001",
+        "rowName": "Baking powder Baking powder",
+        "page": 159,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 731,
+          "protein_g": 5.2,
+          "fat_g": 0,
+          "carbs_g": 37.8,
+          "fibre_g": 0
+        },
+        "rowText": "Baking powder Baking powder 1.00 172 (731) 6.3 5.2 0 37.8 0 50.7",
+        "score": 0.5
+      },
+      {
+        "foodCode": "07_0007",
+        "rowName": "Coriander seed, dry",
+        "page": 88,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 34
+        },
+        "rowText": "Coriander seed, dry 630 17.9 322 398 1230 34 4.58 0.95",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "fermentation-starter-unverified",
+    "candidates": [],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "rohu-river-raw",
+    "candidates": [
+      {
+        "foodCode": "09_0059",
+        "rowName": "Rohu, river, raw",
+        "page": 123,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 101
+        },
+        "rowText": "Rohu, river, raw 650 1.0 12 175 288 101 1.13 0.35",
+        "score": 1
+      },
+      {
+        "foodCode": "09_0059",
+        "rowName": "Rohu, river, raw Rui, nodir",
+        "page": 122,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 90,
+          "protein_g": 16.6,
+          "fat_g": 2.7,
+          "carbs_g": 0,
+          "fibre_g": 0
+        },
+        "rowText": "Rohu, river, raw Rui, nodir 0.80 (90) 381 76.7 16.6 2.7 0 0 1.2",
+        "score": 0.5
+      },
+      {
+        "foodCode": "09_0028",
+        "rowName": "Giant river-catfish, raw",
+        "page": 117,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 84
+        },
+        "rowText": "Giant river-catfish, raw 380 0.7 36 180 271 84 0.23 0.06",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "09_0034",
+        "rowName": "Indian river shad, raw",
+        "page": 117,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 57
+        },
+        "rowText": "Indian river shad, raw 1060 4.8 37 560 231 57 1.97",
+        "score": 0.3333333333333333
+      },
+      {
+        "foodCode": "09_0053",
+        "rowName": "Prawn, Birma river prawn, raw",
+        "page": 120,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 98
+        },
+        "rowText": "Prawn, Birma river prawn, raw 16 0.6 19 141 375 98 1.06 0.57",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "speckled-shrimp-raw",
+    "candidates": [
+      {
+        "foodCode": "09_0061",
+        "rowName": "Shrimp, Speckled, raw",
+        "page": 123,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 117
+        },
+        "rowText": "Shrimp, Speckled, raw 421 0.6 26 941 503 117 1.36 0.56",
+        "score": 1
+      },
+      {
+        "foodCode": "09_0061",
+        "rowName": "Shrimp, Speckled, raw Chingri, Horina",
+        "page": 122,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 81,
+          "protein_g": 17,
+          "fat_g": 1.4,
+          "carbs_g": 0,
+          "fibre_g": 0
+        },
+        "rowText": "Shrimp, Speckled, raw Chingri, Horina (81) 341 78.9 17.0 1.4 0 0 2.0",
+        "score": 0.5
+      }
+    ],
+    "approvedFoodCode": null
+  },
+  {
+    "ingredientId": "semolina-wheat-raw",
+    "candidates": [
+      {
+        "foodCode": "01_0026",
+        "rowName": "Semolina, wheat, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 5
+        },
+        "rowText": "Semolina, wheat, raw 17 1.1 40 105 158 5 2.18 0.25",
+        "score": 1
+      },
+      {
+        "foodCode": "01_0026",
+        "rowName": "Semolina, wheat, raw Sooji, gom",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 346,
+          "protein_g": 10.9,
+          "fat_g": 1.4,
+          "carbs_g": 70.6,
+          "fibre_g": 3.9
+        },
+        "rowText": "Semolina, wheat, raw Sooji, gom 1.00 (346) 1470 12.8 10.9 1.4 70.6 3.9 0.5",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0029",
+        "rowName": "Vermicelli, wheat, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 8
+        },
+        "rowText": "Vermicelli, wheat, raw 22 2.0 42 92 140 8 1.38 0.29",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0033",
+        "rowName": "Wheat, whole, raw",
+        "page": 35,
+        "table": "Mineral composition",
+        "values": {
+          "sodium_mg": 18
+        },
+        "rowText": "Wheat, whole, raw 41 4.9 142 316 293 18 2.79 0.70",
+        "score": 0.5
+      },
+      {
+        "foodCode": "01_0029",
+        "rowName": "Vermicelli, wheat, raw Semai",
+        "page": 34,
+        "table": "Proximate composition",
+        "values": {
+          "energy_kcal": 347,
+          "protein_g": 8.9,
+          "fat_g": 0.6,
+          "carbs_g": 74.9,
+          "fibre_g": 3.2
+        },
+        "rowText": "Vermicelli, wheat, raw Semai 1.00 (347) 1470 11.7 8.9 0.6 74.9 3.2 0.7",
+        "score": 0.3333333333333333
+      }
+    ],
+    "approvedFoodCode": null
+  }
+]
