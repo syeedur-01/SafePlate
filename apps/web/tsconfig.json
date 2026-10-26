@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "vitest": ["./node_modules/vitest/dist/index.d.ts"]
+    }
+  },
+  "include": ["src", "test", "vite.config.ts", "vitest.setup.ts"]
+}

@@ -1,0 +1,38 @@
+export type Lang = 'en' | 'bn';
+
+export const uiStrings: Record<Lang, Record<string, string>> = {
+  en: {
+    'app.name': 'SafePlate',
+    'nav.scan': 'Scan',
+    'nav.history': 'History',
+    'nav.settings': 'Settings',
+    'nav.about': 'About',
+    'button.language': 'বাংলা',
+    'button.toggleLanguage': 'Switch to Bangla',
+    'page.scan.title': 'Scan a dish or label',
+    'page.scan.body': 'Photo scanning arrives in the next web card.',
+    'page.history.title': 'History',
+    'page.history.body': 'Your saved scans will appear here.',
+    'page.settings.title': 'Settings',
+    'page.settings.body': 'Language and on-device health settings will appear here.',
+    'page.about.title': 'About SafePlate',
+    'page.about.body': 'General information about food safety and nutrition, not medical advice.',
+  },
+  bn: {
+    'app.name': 'SafePlate',
+    'nav.scan': 'স্ক্যান',
+    'nav.history': 'ইতিহাস',
+    'nav.settings': 'সেটিংস',
+    'nav.about': 'সম্পর্কে',
+    'button.language': 'English',
+    'button.toggleLanguage': 'ইংরেজিতে বদলান',
+    'page.scan.title': 'খাবার বা লেবেল স্ক্যান করুন',
+    'page.scan.body': 'ছবি স্ক্যানের সুবিধা পরের ওয়েব কার্ডে আসবে।',
+    'page.history.title': 'ইতিহাস',
+    'page.history.body': 'আপনার সংরক্ষিত স্ক্যান এখানে দেখা যাবে।',
+    'page.settings.title': 'সেটিংস',
+    'page.settings.body': 'ভাষা ও ডিভাইসে রাখা স্বাস্থ্য সেটিংস এখানে আসবে।',
+    'page.about.title': 'SafePlate সম্পর্কে',
+    'page.about.body': 'খাদ্য নিরাপত্তা ও পুষ্টির সাধারণ তথ্য, চিকিৎসা পরামর্শ নয়।',
+  },
+};
