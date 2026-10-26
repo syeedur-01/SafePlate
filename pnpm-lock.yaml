@@ -245,6 +245,10 @@ importers:
       '@sp/contracts':
         specifier: workspace:*
         version: link:../contracts
+    devDependencies:
+      '@sp/knowledge':
+        specifier: workspace:*
+        version: link:../knowledge
 
   packages/knowledge:
     dependencies:

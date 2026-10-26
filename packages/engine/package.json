@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "@sp/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@sp/knowledge": "workspace:*"
   }
 }
