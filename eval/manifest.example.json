@@ -1,0 +1,39 @@
+[
+  {
+    "file": "kacchi-01.jpg",
+    "kind": "dish",
+    "split": "dev",
+    "expectedDishId": "kacchi-biryani",
+    "notes": "Restaurant plate, good light"
+  },
+  {
+    "file": "kacchi-02-old.jpg",
+    "kind": "dish",
+    "split": "holdout",
+    "expectedDishId": "kacchi-biryani",
+    "notes": "Kept at room temperature overnight, surface looks dry"
+  },
+  {
+    "file": "unlabeled-plate-01.jpg",
+    "kind": "dish",
+    "split": "holdout",
+    "expectedDishId": null,
+    "notes": "Not on the 30-dish list on purpose: the model should answer with no dish"
+  },
+  {
+    "file": "snack-label-01.jpg",
+    "kind": "label",
+    "split": "dev",
+    "expectedAllergens": ["wheat_gluten", "milk"],
+    "expectedExpiry": "2026-12-01",
+    "notes": "Front of pack, fully readable"
+  },
+  {
+    "file": "juice-label-01.jpg",
+    "kind": "label",
+    "split": "holdout",
+    "expectedAllergens": [],
+    "expectedExpiry": null,
+    "notes": "No expiry date printed; no allergen panel"
+  }
+]
