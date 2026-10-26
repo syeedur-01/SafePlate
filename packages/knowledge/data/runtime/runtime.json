@@ -1,0 +1,2416 @@
+{
+  "dishes": [
+    {
+      "id": "kacchi-biryani",
+      "name_en": "Kacchi Biryani",
+      "name_bn": "কাচ্চি বিরিয়ানি",
+      "aliases": ["Kacchi", "Kachchi biryani"],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 420,
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mutton-moderately-fat-raw",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "saffron-unverified",
+          "grams_raw": 0.05,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "dried-plum-alubokhara-unverified",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 70,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "bhuna-khichuri",
+      "name_en": "Bhuna Khichuri",
+      "name_bn": "ভুনা খিচুড়ি",
+      "aliases": ["Bhuna khichuri", "Bhuna khichuri with moong dal"],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 350,
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "moong-dal-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 7,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 180,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": [],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "beef-tehari",
+      "name_en": "Beef Tehari",
+      "name_bn": "গরুর মাংসের তেহারি",
+      "aliases": ["Tehari", "Beef tehari"],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 400,
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "beef-lean-boneless-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "mustard"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "morog-polao",
+      "name_en": "Morog Polao",
+      "name_bn": "মোরগ পোলাও",
+      "aliases": ["Murg pulao", "Chicken pulao"],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 420,
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "chicken-leg-skinless-raw",
+          "grams_raw": 130,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "raisin-dried-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "tree_nuts"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "panta-ilish",
+      "name_en": "Panta Ilish",
+      "name_bn": "পান্তা ইলিশ",
+      "aliases": ["Panta bhat with hilsa"],
+      "category": "Rice & festive specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 300,
+      "ingredients": [
+        {
+          "ingredient_id": "white-rice-polished-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "hilsa-raw-unverified",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["fermented", "raw-ingredient", "seafood"],
+      "cooking_class": "fermented",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "aloo-bhorta",
+      "name_en": "Aloo Bhorta",
+      "name_bn": "আলু ভর্তা",
+      "aliases": ["Alu bhorta", "Mashed potato bhorta"],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "ingredients": [
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["raw-ingredient"],
+      "cooking_class": "boiled_or_simmered",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "begun-bhorta",
+      "name_en": "Begun Bhorta",
+      "name_bn": "বেগুন ভর্তা",
+      "aliases": ["Eggplant bhorta"],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "ingredients": [
+        {
+          "ingredient_id": "eggplant-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["raw-ingredient"],
+      "cooking_class": "baked_or_roasted",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "shutki-bhorta",
+      "name_en": "Shutki Bhorta",
+      "name_bn": "শুঁটকি ভর্তা",
+      "aliases": ["Dried fish bhorta"],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "ingredients": [
+        {
+          "ingredient_id": "dried-fish-shutki-unverified",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "dried-red-chilli",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["raw-ingredient", "seafood"],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "begun-bhaja",
+      "name_en": "Begun Bhaja",
+      "name_bn": "বেগুন ভাজা",
+      "aliases": ["Fried eggplant"],
+      "category": "Traditional bhortas & bhajis",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 170,
+      "ingredients": [
+        {
+          "ingredient_id": "eggplant-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "red-chilli-powder-unverified",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["fried"],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "shorshe-ilish",
+      "name_en": "Shorshe Ilish",
+      "name_bn": "সর্ষে ইলিশ",
+      "aliases": ["Hilsa in mustard gravy"],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 230,
+      "ingredients": [
+        {
+          "ingredient_id": "hilsa-raw-unverified",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-seed-dried",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["seafood"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "chingri-malai-curry",
+      "name_en": "Chingri Malai Curry",
+      "name_bn": "চিংড়ি মালাইকারি",
+      "aliases": ["Chingri malaikari", "Prawn coconut curry"],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 260,
+      "ingredients": [
+        {
+          "ingredient_id": "large-prawn-raw-unverified",
+          "grams_raw": 120,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coconut-milk",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["crustacean_shellfish", "milk"],
+      "safety_tags": ["dairy", "seafood"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "rui-macher-jhol",
+      "name_en": "Rui Macher Jhol",
+      "name_bn": "রুই মাছের ঝোল",
+      "aliases": ["Rohu fish curry"],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 280,
+      "ingredients": [
+        {
+          "ingredient_id": "rohu-river-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "tomato-red-ripe-raw",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 6,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["seafood"],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "ilish-bhaja",
+      "name_en": "Ilish Bhaja",
+      "name_bn": "ইলিশ ভাজা",
+      "aliases": ["Fried hilsa"],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 170,
+      "ingredients": [
+        {
+          "ingredient_id": "hilsa-raw-unverified",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 12,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["fish", "mustard"],
+      "safety_tags": ["fried", "seafood"],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "lau-chingri",
+      "name_en": "Lau Chingri",
+      "name_bn": "লাউ চিংড়ি",
+      "aliases": ["Bottle gourd with shrimp"],
+      "category": "Fish & seafood curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 220,
+      "ingredients": [
+        {
+          "ingredient_id": "bottle-gourd-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "speckled-shrimp-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["crustacean_shellfish", "mustard"],
+      "safety_tags": ["seafood"],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "beef-kala-bhuna",
+      "name_en": "Beef Kala Bhuna",
+      "name_bn": "গরুর কালা ভুনা",
+      "aliases": ["Kala bhuna", "Beef kala bhuna"],
+      "category": "Meat & poultry curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 220,
+      "ingredients": [
+        {
+          "ingredient_id": "beef-15-20-fat-boneless-raw",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coriander-powder-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "bay-leaf-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": [],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "bangladeshi-chicken-roast",
+      "name_en": "Bangladeshi Chicken Roast",
+      "name_bn": "বাংলাদেশি মুরগির রোস্ট",
+      "aliases": ["Chicken roast", "Bangladeshi-style chicken roast"],
+      "category": "Meat & poultry curries",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 300,
+      "ingredients": [
+        {
+          "ingredient_id": "chicken-leg-skinless-raw",
+          "grams_raw": 160,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "plain-yogurt-unverified",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "raisin-dried-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "tree_nuts"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "shallow_fried",
+      "nutrition_basis": "lab_analyzed",
+      "lab_values_per_serving": {
+        "value_basis": "per_100_g_cooked_as_published",
+        "values": {
+          "energy_kcal": null,
+          "protein_g": 10.9,
+          "fat_g": 22.3,
+          "sat_fat_g": null,
+          "carbs_g": 3.6,
+          "sugars_g": null,
+          "fibre_g": 0.5,
+          "sodium_mg": null
+        }
+      }
+    },
+    {
+      "id": "mezbaner-gorur-mansho",
+      "name_en": "Mezbaner Gorur Mansho",
+      "name_bn": "মেজবানি গরুর মাংস",
+      "aliases": ["Mezbani beef"],
+      "category": "Regional specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 260,
+      "ingredients": [
+        {
+          "ingredient_id": "beef-15-20-fat-boneless-raw",
+          "grams_raw": 160,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 35,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 4,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "red-chilli-powder-unverified",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": [],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "patla-masoor-dal",
+      "name_en": "Patla Masoor Dal",
+      "name_bn": "পাতলা মসুর ডাল",
+      "aliases": ["Thin red lentil dal"],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 250,
+      "ingredients": [
+        {
+          "ingredient_id": "lentil-red-dried-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "turmeric-unverified",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": [],
+      "cooking_class": "boiled_or_simmered",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "cholar-dal",
+      "name_en": "Cholar Dal",
+      "name_bn": "ছোলার ডাল",
+      "aliases": ["Chana dal"],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 230,
+      "ingredients": [
+        {
+          "ingredient_id": "bengal-gram-split-dried-raw",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coconut-kernel-mature-raw",
+          "grams_raw": 12,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cinnamon-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 180,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "boiled_or_simmered",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "dhakaiya-bakarkhani",
+      "name_en": "Dhakaiya Bakarkhani",
+      "name_bn": "ঢাকাইয়া বাকরখানি",
+      "aliases": ["Bakarkhani"],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "ingredients": [
+        {
+          "ingredient_id": "wheat-flour-white-refined",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "wheat_gluten"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "mughlai-paratha",
+      "name_en": "Mughlai Paratha",
+      "name_bn": "মোগলাই পরোটা",
+      "aliases": ["Moglai paratha"],
+      "category": "Lentils, breads & accompaniments",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 190,
+      "ingredients": [
+        {
+          "ingredient_id": "wheat-flour-white-refined",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "egg-chicken-farmed-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coriander-leaves-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 35,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["egg", "mustard", "wheat_gluten"],
+      "safety_tags": ["fried"],
+      "cooking_class": "deep_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "chotpoti",
+      "name_en": "Chotpoti",
+      "name_bn": "চটপটি",
+      "aliases": ["Chotpoti with egg"],
+      "category": "Snacks, street food & sweets",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 250,
+      "ingredients": [
+        {
+          "ingredient_id": "white-peas-dried-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "tamarind-pulp-unverified",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "egg-chicken-farmed-raw",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cumin-seed-unverified",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 150,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["egg"],
+      "safety_tags": ["street-food"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "fuchka",
+      "name_en": "Fuchka",
+      "name_bn": "ফুচকা",
+      "aliases": ["Puchka", "Fuska"],
+      "category": "Snacks, street food & sweets",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "ingredients": [
+        {
+          "ingredient_id": "wheat-flour-white-refined",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "semolina-wheat-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "potato-diamond-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-peas-dried-unverified",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "tamarind-pulp-unverified",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "dried-red-chilli",
+          "grams_raw": 0.5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 8,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard", "wheat_gluten"],
+      "safety_tags": ["fried", "street-food"],
+      "cooking_class": "deep_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "piyaju",
+      "name_en": "Piyaju",
+      "name_bn": "পিয়াজু",
+      "aliases": ["Peyaju", "Lentil fritters"],
+      "category": "Snacks, street food & sweets",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "ingredients": [
+        {
+          "ingredient_id": "lentil-red-dried-raw",
+          "grams_raw": 40,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "green-chilli-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coriander-leaves-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "mustard-oil",
+          "grams_raw": 12,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["mustard"],
+      "safety_tags": ["fried", "street-food"],
+      "cooking_class": "deep_fried",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "bhapa-pitha",
+      "name_en": "Bhapa Pitha",
+      "name_bn": "ভাপা পিঠা",
+      "aliases": ["Steamed rice pitha"],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "ingredients": [
+        {
+          "ingredient_id": "rice-flour-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "date-palm-jaggery",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "coconut-kernel-mature-raw",
+          "grams_raw": 10,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 30,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": [],
+      "safety_tags": [],
+      "cooking_class": "steamed",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "chitoi-pitha",
+      "name_en": "Chitoi Pitha",
+      "name_bn": "চিতই পিঠা",
+      "aliases": ["Chitoi", "Chitui pitha"],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 100,
+      "ingredients": [
+        {
+          "ingredient_id": "rice-flour-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": [],
+      "safety_tags": [],
+      "cooking_class": "steamed",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "mishti-doi",
+      "name_en": "Mishti Doi",
+      "name_bn": "মিষ্টি দই",
+      "aliases": ["Sweetened yogurt", "Sweet curd"],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 200,
+      "ingredients": [
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 25,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "fermentation-starter-unverified",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk"],
+      "safety_tags": ["dairy", "fermented"],
+      "cooking_class": "sweet_milk_based",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "rasmalai",
+      "name_en": "Rasmalai",
+      "name_bn": "রসমালাই",
+      "aliases": ["Ras malai"],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 180,
+      "ingredients": [
+        {
+          "ingredient_id": "chhana-fresh-unverified",
+          "grams_raw": 60,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 100,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 2,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "tree_nuts"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "sweet_milk_based",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "haleem",
+      "name_en": "Haleem",
+      "name_bn": "হালিম",
+      "aliases": ["Beef haleem"],
+      "category": "Rice, grain & meat specialties",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 300,
+      "ingredients": [
+        {
+          "ingredient_id": "beef-lean-boneless-raw",
+          "grams_raw": 80,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "broken-wheat-unverified",
+          "grams_raw": 20,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "lentil-red-dried-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "bengal-gram-split-dried-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "onion-raw",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "garlic-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ginger-raw-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "whole-spice-mix-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "salt",
+          "grams_raw": 1,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "water",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "wheat_gluten"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "braised_or_curry",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    },
+    {
+      "id": "shemai",
+      "name_en": "Shemai",
+      "name_bn": "সেমাই",
+      "aliases": ["Dudh shemai", "Vermicelli pudding"],
+      "category": "Traditional pithe & desserts",
+      "serving_description": "1 serving (estimated)",
+      "serving_weight_g": 250,
+      "ingredients": [
+        {
+          "ingredient_id": "vermicelli-dry-unverified",
+          "grams_raw": 50,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cow-milk-whole-pasteurized",
+          "grams_raw": 200,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "white-sugar",
+          "grams_raw": 15,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "ghee-cow",
+          "grams_raw": 5,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "raisin-dried-unverified",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cashew-raw",
+          "grams_raw": 3,
+          "quantity_basis": "ESTIMATE"
+        },
+        {
+          "ingredient_id": "cardamom-dried",
+          "grams_raw": 0.2,
+          "quantity_basis": "ESTIMATE"
+        }
+      ],
+      "allergens": ["milk", "tree_nuts", "wheat_gluten"],
+      "safety_tags": ["dairy"],
+      "cooking_class": "sweet_milk_based",
+      "nutrition_basis": "unavailable",
+      "lab_values_per_serving": null
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "white-rice-polished-raw",
+      "name_en": "White rice, polished, raw (FCTB rice entry)",
+      "name_bn": "সাদা পালিশ করা চাল, কাঁচা",
+      "energy_kcal": 345,
+      "protein_g": 6.6,
+      "fat_g": 0.3,
+      "sat_fat_g": null,
+      "carbs_g": 77.4,
+      "sugars_g": null,
+      "fibre_g": 3.1,
+      "sodium_mg": 5
+    },
+    {
+      "id": "lentil-red-dried-raw",
+      "name_en": "Lentil, dried, raw (FCTB generic lentil entry)",
+      "name_bn": "মসুর ডাল, শুকনা",
+      "energy_kcal": 317,
+      "protein_g": 27.7,
+      "fat_g": 0.8,
+      "sat_fat_g": null,
+      "carbs_g": 43.2,
+      "sugars_g": null,
+      "fibre_g": 13.2,
+      "sodium_mg": 37
+    },
+    {
+      "id": "bengal-gram-split-dried-raw",
+      "name_en": "Bengal gram, split, dried, raw",
+      "name_bn": "ছোলার ডাল, শুকনা",
+      "energy_kcal": 375,
+      "protein_g": 20.2,
+      "fat_g": 6,
+      "sat_fat_g": null,
+      "carbs_g": 59.2,
+      "sugars_g": null,
+      "fibre_g": 1.2,
+      "sodium_mg": null
+    },
+    {
+      "id": "potato-diamond-raw",
+      "name_en": "Potato, Diamond variety, raw",
+      "name_bn": "ডায়মন্ড আলু, কাঁচা",
+      "energy_kcal": 66,
+      "protein_g": 1.2,
+      "fat_g": 0.2,
+      "sat_fat_g": null,
+      "carbs_g": 14,
+      "sugars_g": null,
+      "fibre_g": 2.1,
+      "sodium_mg": 16
+    },
+    {
+      "id": "eggplant-raw",
+      "name_en": "Eggplant, purple long, raw",
+      "name_bn": "বেগুন, কাঁচা",
+      "energy_kcal": 24,
+      "protein_g": 1.9,
+      "fat_g": 0.1,
+      "sat_fat_g": null,
+      "carbs_g": 2,
+      "sugars_g": null,
+      "fibre_g": 4.1,
+      "sodium_mg": null
+    },
+    {
+      "id": "onion-raw",
+      "name_en": "Onion, raw",
+      "name_bn": "পেঁয়াজ, কাঁচা",
+      "energy_kcal": 59,
+      "protein_g": 1.4,
+      "fat_g": 0.1,
+      "sat_fat_g": null,
+      "carbs_g": 12.2,
+      "sugars_g": null,
+      "fibre_g": 1.9,
+      "sodium_mg": 11
+    },
+    {
+      "id": "garlic-raw",
+      "name_en": "Garlic, raw",
+      "name_bn": "রসুন, কাঁচা",
+      "energy_kcal": 147,
+      "protein_g": 6.9,
+      "fat_g": 0.6,
+      "sat_fat_g": null,
+      "carbs_g": 27.6,
+      "sugars_g": null,
+      "fibre_g": 2.1,
+      "sodium_mg": 11
+    },
+    {
+      "id": "bottle-gourd-raw",
+      "name_en": "Bottle gourd, raw",
+      "name_bn": "লাউ, কাঁচা",
+      "energy_kcal": 34,
+      "protein_g": 1.1,
+      "fat_g": 0.1,
+      "sat_fat_g": null,
+      "carbs_g": 6.8,
+      "sugars_g": null,
+      "fibre_g": 0.6,
+      "sodium_mg": null
+    },
+    {
+      "id": "tomato-red-ripe-raw",
+      "name_en": "Tomato, red ripe, raw",
+      "name_bn": "পাকা লাল টমেটো, কাঁচা",
+      "energy_kcal": 16,
+      "protein_g": 1.1,
+      "fat_g": 0.2,
+      "sat_fat_g": null,
+      "carbs_g": 1.4,
+      "sugars_g": null,
+      "fibre_g": 1.7,
+      "sodium_mg": 7
+    },
+    {
+      "id": "beef-lean-boneless-raw",
+      "name_en": "Beef, lean, boneless, raw",
+      "name_bn": "গরুর মাংস, চর্বিহীন, কাঁচা",
+      "energy_kcal": 103,
+      "protein_g": 20.7,
+      "fat_g": 2.3,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "beef-15-20-fat-boneless-raw",
+      "name_en": "Beef, boneless, 15–20% fat, raw",
+      "name_bn": "গরুর মাংস, ১৫–২০% চর্বিযুক্ত, কাঁচা",
+      "energy_kcal": 207,
+      "protein_g": 19.7,
+      "fat_g": 14.2,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "chicken-leg-skinless-raw",
+      "name_en": "Chicken leg, without skin, raw",
+      "name_bn": "মুরগির রান, চামড়া ছাড়া, কাঁচা",
+      "energy_kcal": 128,
+      "protein_g": 19.2,
+      "fat_g": 5.7,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": 55
+    },
+    {
+      "id": "mutton-moderately-fat-raw",
+      "name_en": "Mutton, moderately fatty, raw",
+      "name_bn": "খাসির মাংস, মাঝারি চর্বিযুক্ত, কাঁচা",
+      "energy_kcal": 196,
+      "protein_g": 18.5,
+      "fat_g": 13.5,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "egg-chicken-farmed-raw",
+      "name_en": "Egg, chicken, farmed, raw",
+      "name_bn": "মুরগির ডিম, কাঁচা",
+      "energy_kcal": 139,
+      "protein_g": 14.5,
+      "fat_g": 9,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "cow-milk-whole-pasteurized",
+      "name_en": "Milk, cow, whole fat, pasteurized/UTH",
+      "name_bn": "গরুর পূর্ণ-চর্বিযুক্ত দুধ",
+      "energy_kcal": 63,
+      "protein_g": 3.1,
+      "fat_g": 3.7,
+      "sat_fat_g": null,
+      "carbs_g": 4.3,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": 51
+    },
+    {
+      "id": "coconut-milk",
+      "name_en": "Coconut milk",
+      "name_bn": "নারকেলের দুধ",
+      "energy_kcal": 213,
+      "protein_g": 2.1,
+      "fat_g": 21.7,
+      "sat_fat_g": null,
+      "carbs_g": 1.2,
+      "sugars_g": null,
+      "fibre_g": 2.2,
+      "sodium_mg": null
+    },
+    {
+      "id": "coconut-kernel-mature-raw",
+      "name_en": "Coconut kernel, mature, raw",
+      "name_bn": "পাকা নারকেলের শাঁস, কাঁচা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": 16
+    },
+    {
+      "id": "mustard-seed-dried",
+      "name_en": "Mustard seed, dried",
+      "name_bn": "সরিষা, শুকনা",
+      "energy_kcal": 501,
+      "protein_g": 22,
+      "fat_g": 35,
+      "sat_fat_g": null,
+      "carbs_g": 18.5,
+      "sugars_g": null,
+      "fibre_g": 11.8,
+      "sodium_mg": null
+    },
+    {
+      "id": "cashew-raw",
+      "name_en": "Cashew nut, raw",
+      "name_bn": "কাজুবাদাম, কাঁচা",
+      "energy_kcal": 595,
+      "protein_g": 18,
+      "fat_g": 46.9,
+      "sat_fat_g": null,
+      "carbs_g": 23.5,
+      "sugars_g": null,
+      "fibre_g": 3.3,
+      "sodium_mg": null
+    },
+    {
+      "id": "cardamom-dried",
+      "name_en": "Cardamom, dried",
+      "name_bn": "এলাচ, শুকনা",
+      "energy_kcal": 261,
+      "protein_g": 10.2,
+      "fat_g": 2.2,
+      "sat_fat_g": null,
+      "carbs_g": 37.8,
+      "sugars_g": null,
+      "fibre_g": 24.4,
+      "sodium_mg": 16
+    },
+    {
+      "id": "dried-red-chilli",
+      "name_en": "Red chilli, dried",
+      "name_bn": "শুকনা লাল মরিচ",
+      "energy_kcal": 313,
+      "protein_g": 15.9,
+      "fat_g": 6.2,
+      "sat_fat_g": null,
+      "carbs_g": 35.2,
+      "sugars_g": null,
+      "fibre_g": 26.6,
+      "sodium_mg": 30
+    },
+    {
+      "id": "cinnamon-dried",
+      "name_en": "Cinnamon, dried",
+      "name_bn": "দারুচিনি, শুকনা",
+      "energy_kcal": 243,
+      "protein_g": 4,
+      "fat_g": 1.2,
+      "sat_fat_g": null,
+      "carbs_g": 27.5,
+      "sugars_g": null,
+      "fibre_g": 53.1,
+      "sodium_mg": null
+    },
+    {
+      "id": "bay-leaf-dried",
+      "name_en": "Bay leaf, dried",
+      "name_bn": "তেজপাতা, শুকনা",
+      "energy_kcal": 353,
+      "protein_g": 7.6,
+      "fat_g": 8.4,
+      "sat_fat_g": null,
+      "carbs_g": 48.7,
+      "sugars_g": null,
+      "fibre_g": 26.3,
+      "sodium_mg": 23
+    },
+    {
+      "id": "coriander-leaves-raw",
+      "name_en": "Coriander leaves, raw",
+      "name_bn": "ধনেপাতা, কাঁচা",
+      "energy_kcal": 30,
+      "protein_g": 3.3,
+      "fat_g": 0.5,
+      "sat_fat_g": null,
+      "carbs_g": 0.1,
+      "sugars_g": null,
+      "fibre_g": 5.9,
+      "sodium_mg": null
+    },
+    {
+      "id": "mustard-oil",
+      "name_en": "Mustard oil",
+      "name_bn": "সরিষার তেল",
+      "energy_kcal": 900,
+      "protein_g": 0,
+      "fat_g": 100,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": 0
+    },
+    {
+      "id": "ghee-cow",
+      "name_en": "Ghee, cow",
+      "name_bn": "গরুর ঘি",
+      "energy_kcal": 898,
+      "protein_g": 0,
+      "fat_g": 99.8,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "green-chilli-raw",
+      "name_en": "Green chilli with seeds, raw",
+      "name_bn": "কাঁচা মরিচ, বীজসহ",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": 12
+    },
+    {
+      "id": "white-sugar",
+      "name_en": "Sugar, white",
+      "name_bn": "সাদা চিনি",
+      "energy_kcal": 398,
+      "protein_g": 0,
+      "fat_g": 0,
+      "sat_fat_g": null,
+      "carbs_g": 99.5,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "date-palm-jaggery",
+      "name_en": "Jaggery/panela, date palm",
+      "name_bn": "খেজুরের গুড়",
+      "energy_kcal": 352,
+      "protein_g": 1.5,
+      "fat_g": 0.3,
+      "sat_fat_g": null,
+      "carbs_g": 85.7,
+      "sugars_g": null,
+      "fibre_g": 0.3,
+      "sodium_mg": null
+    },
+    {
+      "id": "salt",
+      "name_en": "Salt",
+      "name_bn": "লবণ",
+      "energy_kcal": 0,
+      "protein_g": null,
+      "fat_g": 0,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": 39340
+    },
+    {
+      "id": "water",
+      "name_en": "Water, drinking",
+      "name_bn": "পানীয় জল",
+      "energy_kcal": 0,
+      "protein_g": 0,
+      "fat_g": 0,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "moong-dal-raw",
+      "name_en": "Mung bean, split, raw (not yet source-matched)",
+      "name_bn": "মুগ ডাল, কাঁচা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "plain-yogurt-unverified",
+      "name_en": "Plain yogurt/curd, unsweetened (matching FCTB profile not verified)",
+      "name_bn": "টক দই",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "ginger-raw-unverified",
+      "name_en": "Ginger, raw",
+      "name_bn": "আদা, কাঁচা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "saffron-unverified",
+      "name_en": "Saffron",
+      "name_bn": "জাফরান",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "dried-plum-alubokhara-unverified",
+      "name_en": "Dried plum (alubukhara)",
+      "name_bn": "আলুবোখারা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "whole-spice-mix-unverified",
+      "name_en": "Whole spice mix (unspecified blend)",
+      "name_bn": "গোটা গরম মসলা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "raisin-dried-unverified",
+      "name_en": "Raisins, dried",
+      "name_bn": "কিশমিশ",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "hilsa-raw-unverified",
+      "name_en": "Hilsa fish, raw (matching nutrient row not verified in this pass)",
+      "name_bn": "ইলিশ মাছ, কাঁচা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "dried-fish-shutki-unverified",
+      "name_en": "Dried fish/shutki (species and processing unspecified)",
+      "name_bn": "শুঁটকি মাছ",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "large-prawn-raw-unverified",
+      "name_en": "Large prawn, raw (matching species-specific nutrient row not verified)",
+      "name_bn": "বড় চিংড়ি, কাঁচা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "cumin-seed-unverified",
+      "name_en": "Cumin seed",
+      "name_bn": "জিরা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "wheat-flour-white-refined",
+      "name_en": "Wheat flour, white refined (maida)",
+      "name_bn": "ময়দা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": 10
+    },
+    {
+      "id": "white-peas-dried-unverified",
+      "name_en": "White peas, dried",
+      "name_bn": "শুকনা সাদা মটর",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "tamarind-pulp-unverified",
+      "name_en": "Tamarind pulp",
+      "name_bn": "তেঁতুলের মণ্ড",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "rice-flour-unverified",
+      "name_en": "Rice flour",
+      "name_bn": "চালের গুঁড়া",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "vermicelli-dry-unverified",
+      "name_en": "Vermicelli, dry",
+      "name_bn": "সেমাই",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "chhana-fresh-unverified",
+      "name_en": "Chhana, fresh",
+      "name_bn": "ছানা",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "broken-wheat-unverified",
+      "name_en": "Broken wheat/dalia",
+      "name_bn": "ভাঙা গম/ডালিয়া",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "turmeric-unverified",
+      "name_en": "Turmeric powder",
+      "name_bn": "হলুদের গুঁড়া",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "red-chilli-powder-unverified",
+      "name_en": "Red chilli powder (not identical to whole dried chilli row)",
+      "name_bn": "মরিচের গুঁড়া",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "coriander-powder-unverified",
+      "name_en": "Coriander powder",
+      "name_bn": "ধনিয়ার গুঁড়া",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "fermentation-starter-unverified",
+      "name_en": "Yogurt starter culture",
+      "name_bn": "দইয়ের স্টার্টার কালচার",
+      "energy_kcal": null,
+      "protein_g": null,
+      "fat_g": null,
+      "sat_fat_g": null,
+      "carbs_g": null,
+      "sugars_g": null,
+      "fibre_g": null,
+      "sodium_mg": null
+    },
+    {
+      "id": "rohu-river-raw",
+      "name_en": "Rohu, river, raw",
+      "name_bn": "রুই মাছ, কাঁচা",
+      "energy_kcal": 90,
+      "protein_g": 16.6,
+      "fat_g": 2.7,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "speckled-shrimp-raw",
+      "name_en": "Shrimp, speckled, raw",
+      "name_bn": "চিংড়ি, কাঁচা (FCTB speckled shrimp entry)",
+      "energy_kcal": 81,
+      "protein_g": 17,
+      "fat_g": 1.4,
+      "sat_fat_g": null,
+      "carbs_g": 0,
+      "sugars_g": null,
+      "fibre_g": 0,
+      "sodium_mg": null
+    },
+    {
+      "id": "semolina-wheat-raw",
+      "name_en": "Semolina wheat, raw",
+      "name_bn": "সুজি, কাঁচা",
+      "energy_kcal": 346,
+      "protein_g": 10.9,
+      "fat_g": 1.4,
+      "sat_fat_g": null,
+      "carbs_g": 70.6,
+      "sugars_g": null,
+      "fibre_g": 3.9,
+      "sodium_mg": 5
+    }
+  ]
+}
