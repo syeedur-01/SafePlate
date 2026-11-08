@@ -10,13 +10,15 @@
     "test": "vitest run",
     "fetch-raw": "tsx src/fetch-raw.ts",
     "normalize": "tsx src/normalize-data.ts",
-    "fctb-match": "tsx src/fctb-match.ts"
+    "fctb-match": "tsx src/fctb-match.ts",
+    "usda-match": "tsx src/usda-match.ts"
   },
   "dependencies": {
     "@sp/ai": "workspace:*",
     "@sp/contracts": "workspace:*",
     "@sp/knowledge": "workspace:*",
     "adm-zip": "0.6.1",
+    "csv-parse": "7.0.3",
     "pdfjs-dist": "5.4.149"
   },
   "devDependencies": {
