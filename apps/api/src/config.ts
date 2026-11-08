@@ -1,0 +1,22 @@
+export interface AppConfig {
+  allowedOrigin: string;
+  maxBodyBytes: number;
+}
+export type Env = Record<string, string | undefined>;
+
+const DEFAULT_ALLOWED_ORIGIN = 'http://localhost:5173';
+const DEFAULT_MAX_BODY_BYTES = 2_000_000;
+
+/** Returns the config from environment variables with defaults (origin http://localhost:5173, 2000000 bytes). */
+export function configFromEnv(env: Env): AppConfig {
+  const origin = env['ALLOWED_ORIGIN'];
+  const bodyBytes = env['MAX_BODY_BYTES'];
+  const parsedBodyBytes = bodyBytes === undefined ? Number.NaN : Number(bodyBytes);
+  return {
+    allowedOrigin: origin === undefined || origin === '' ? DEFAULT_ALLOWED_ORIGIN : origin,
+    maxBodyBytes:
+      Number.isFinite(parsedBodyBytes) && parsedBodyBytes > 0
+        ? parsedBodyBytes
+        : DEFAULT_MAX_BODY_BYTES,
+  };
+}
