@@ -1,6 +1,8 @@
 export interface AppConfig {
   allowedOrigin: string;
   maxBodyBytes: number;
+  /** Optional so callers not using the spike do not need to set it; defaults to false. */
+  enableSpike?: boolean;
 }
 export type Env = Record<string, string | undefined>;
 
@@ -18,5 +20,6 @@ export function configFromEnv(env: Env): AppConfig {
       Number.isFinite(parsedBodyBytes) && parsedBodyBytes > 0
         ? parsedBodyBytes
         : DEFAULT_MAX_BODY_BYTES,
+    enableSpike: env['ENABLE_SPIKE'] === '1',
   };
 }

@@ -1,0 +1,8 @@
+name = "safeplate-api"
+main = "src/worker.ts"
+compatibility_date = "2025-09-01" # if wrangler warns, follow its suggestion
+
+[vars]
+AI_PROVIDER = "mock"
+ALLOWED_ORIGIN = "http://localhost:5173"
+ENABLE_SPIKE = "1"

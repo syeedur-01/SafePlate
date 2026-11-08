@@ -13,6 +13,7 @@
     "fctb-match": "tsx src/fctb-match.ts"
   },
   "dependencies": {
+    "@sp/ai": "workspace:*",
     "@sp/contracts": "workspace:*",
     "@sp/knowledge": "workspace:*",
     "adm-zip": "0.6.1",
