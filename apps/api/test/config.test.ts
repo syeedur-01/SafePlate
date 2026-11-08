@@ -5,11 +5,13 @@ describe('configFromEnv', () => {
     expect(configFromEnv({})).toEqual({
       allowedOrigin: 'http://localhost:5173',
       maxBodyBytes: 2_000_000,
+      enableSpike: false,
     });
   });
   it('reads overrides', () => {
     expect(configFromEnv({ ALLOWED_ORIGIN: 'https://x.pages.dev' }).allowedOrigin).toBe(
       'https://x.pages.dev',
     );
+    expect(configFromEnv({ ENABLE_SPIKE: '1' }).enableSpike).toBe(true);
   });
 });
