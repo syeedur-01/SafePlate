@@ -11,7 +11,8 @@
     "fetch-raw": "tsx src/fetch-raw.ts",
     "normalize": "tsx src/normalize-data.ts",
     "fctb-match": "tsx src/fctb-match.ts",
-    "usda-match": "tsx src/usda-match.ts"
+    "usda-match": "tsx src/usda-match.ts",
+    "check-sources": "tsx src/check-sources.ts"
   },
   "dependencies": {
     "@sp/ai": "workspace:*",
