@@ -6,9 +6,11 @@ import {
   RawDishesFileSchema,
   RawIngredientsFileSchema,
   NormalizedDishesFileSchema,
+  SourcesFileSchema,
   type RawDish,
   type Ingredient,
   type Dish,
+  type SourceEntry,
 } from '@sp/contracts';
 
 export * from './normalize';
@@ -39,4 +41,8 @@ export function getIngredients(): Ingredient[] {
 /** Returns a map from ingredient id to ingredient. */
 export function ingredientsById(list: Ingredient[] = getRawIngredients()): Map<string, Ingredient> {
   return new Map(list.map((i) => [i.id, i]));
+}
+/** Returns the source register entries from data/sources.json. */
+export function getSources(): SourceEntry[] {
+  return SourcesFileSchema.parse(readDataJson('sources.json')).sources;
 }
