@@ -1,0 +1,2317 @@
+[
+  {
+    "ingredientId": "white-rice-polished-raw",
+    "candidates": [
+      {
+        "fdcId": 168879,
+        "description": "Rice, white, medium-grain, raw, enriched",
+        "patch": {
+          "sat_fat_g": 0.158
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 2512381,
+        "description": "Rice, white, long grain, unenriched, raw",
+        "patch": {},
+        "score": 12.5
+      },
+      {
+        "fdcId": 168931,
+        "description": "Rice, white, short-grain, raw, unenriched",
+        "patch": {
+          "sat_fat_g": 0.14
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 169760,
+        "description": "Rice, white, medium-grain, raw, unenriched",
+        "patch": {
+          "sat_fat_g": 0.158
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 168877,
+        "description": "Rice, white, long-grain, regular, raw, enriched",
+        "patch": {
+          "sat_fat_g": 0.18,
+          "sugars_g": 0.12
+        },
+        "score": 12.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "lentil-red-dried-raw",
+    "candidates": [
+      {
+        "fdcId": 172420,
+        "description": "Lentils, raw",
+        "patch": {
+          "sat_fat_g": 0.154,
+          "sugars_g": 2.03
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 168427,
+        "description": "Lentils, sprouted, raw",
+        "patch": {
+          "sat_fat_g": 0.057
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 174284,
+        "description": "Lentils, pink or red, raw",
+        "patch": {
+          "sat_fat_g": 0.379
+        },
+        "score": 9.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "bengal-gram-split-dried-raw",
+    "candidates": [
+      {
+        "fdcId": 173756,
+        "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+        "patch": {
+          "sat_fat_g": 0.603,
+          "sugars_g": 10.7,
+          "sodium_mg": 24
+        },
+        "score": 13.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "potato-diamond-raw",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "eggplant-raw",
+    "candidates": [
+      {
+        "fdcId": 169228,
+        "description": "Eggplant, raw",
+        "patch": {
+          "sat_fat_g": 0.034,
+          "sugars_g": 3.53,
+          "sodium_mg": 2
+        },
+        "score": 11.5
+      },
+      {
+        "fdcId": 2685577,
+        "description": "Eggplant, raw",
+        "patch": {
+          "sodium_mg": 0.4425
+        },
+        "score": 11.5
+      },
+      {
+        "fdcId": 2685727,
+        "description": "Eggplant, Italian, raw",
+        "patch": {},
+        "score": 11.5
+      },
+      {
+        "fdcId": 2685728,
+        "description": "Eggplant, Italian, raw",
+        "patch": {},
+        "score": 11.5
+      },
+      {
+        "fdcId": 2685729,
+        "description": "Eggplant, Italian, raw",
+        "patch": {},
+        "score": 11.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "onion-raw",
+    "candidates": [
+      {
+        "fdcId": 170000,
+        "description": "Onions, raw",
+        "patch": {
+          "sat_fat_g": 0.042,
+          "sugars_g": 4.24
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 790577,
+        "description": "Onions, red, raw",
+        "patch": {},
+        "score": 8.5
+      },
+      {
+        "fdcId": 170007,
+        "description": "Onions, welsh, raw",
+        "patch": {
+          "sat_fat_g": 0.067,
+          "sugars_g": 2.18
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 170008,
+        "description": "Onions, sweet, raw",
+        "patch": {
+          "sugars_g": 5.02
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 1104962,
+        "description": "Onions, white, raw",
+        "patch": {},
+        "score": 8.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "garlic-raw",
+    "candidates": [
+      {
+        "fdcId": 169230,
+        "description": "Garlic, raw",
+        "patch": {
+          "sat_fat_g": 0.089,
+          "sugars_g": 1
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 1104647,
+        "description": "Garlic, raw",
+        "patch": {},
+        "score": 9.5
+      },
+      {
+        "fdcId": 1104593,
+        "description": "GARLIC",
+        "patch": {},
+        "score": 6
+      },
+      {
+        "fdcId": 1104594,
+        "description": "GARLIC",
+        "patch": {},
+        "score": 6
+      },
+      {
+        "fdcId": 1104595,
+        "description": "GARLIC",
+        "patch": {},
+        "score": 6
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "bottle-gourd-raw",
+    "candidates": [
+      {
+        "fdcId": 168414,
+        "description": "Gourd, dishcloth (towelgourd), raw",
+        "patch": {
+          "sat_fat_g": 0.016,
+          "sugars_g": 2.02,
+          "sodium_mg": 3
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 168393,
+        "description": "Balsam-pear (bitter gourd), pods, raw",
+        "patch": {
+          "sodium_mg": 5
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 169232,
+        "description": "Gourd, white-flowered (calabash), raw",
+        "patch": {
+          "sat_fat_g": 0.002,
+          "sodium_mg": 2
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 168391,
+        "description": "Balsam-pear (bitter gourd), leafy tips, raw",
+        "patch": {
+          "sodium_mg": 11
+        },
+        "score": 8.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "tomato-red-ripe-raw",
+    "candidates": [
+      {
+        "fdcId": 170457,
+        "description": "Tomatoes, red, ripe, raw, year round average",
+        "patch": {
+          "sat_fat_g": 0.028,
+          "sugars_g": 2.63
+        },
+        "score": 16.5
+      },
+      {
+        "fdcId": 170050,
+        "description": "Tomatoes, red, ripe, cooked",
+        "patch": {
+          "sat_fat_g": 0.015,
+          "sugars_g": 2.49
+        },
+        "score": 13
+      },
+      {
+        "fdcId": 333281,
+        "description": "Tomatoes, canned, red, ripe, diced",
+        "patch": {},
+        "score": 13
+      },
+      {
+        "fdcId": 170052,
+        "description": "Tomatoes, red, ripe, canned, stewed",
+        "patch": {
+          "sat_fat_g": 0.026,
+          "sugars_g": 3.52
+        },
+        "score": 13
+      },
+      {
+        "fdcId": 170089,
+        "description": "Tomatoes, red, ripe, cooked, stewed",
+        "patch": {
+          "sat_fat_g": 0.521
+        },
+        "score": 13
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "beef-lean-boneless-raw",
+    "candidates": [
+      {
+        "fdcId": 334784,
+        "description": "FA - Beef, Top Loin steak, boneless, U_choice, raw, comp1, lean",
+        "patch": {},
+        "score": 19.5
+      },
+      {
+        "fdcId": 334800,
+        "description": "FA - Beef, Top Loin steak, boneless, U_choice, raw, comp2, lean",
+        "patch": {},
+        "score": 19.5
+      },
+      {
+        "fdcId": 334821,
+        "description": "FA - Beef, Top Loin steak, boneless, L_choice, raw, comp3, lean",
+        "patch": {},
+        "score": 19.5
+      },
+      {
+        "fdcId": 334832,
+        "description": "FA - Beef, Top Loin steak, boneless, L_choice, raw, comp4, lean",
+        "patch": {},
+        "score": 19.5
+      },
+      {
+        "fdcId": 334748,
+        "description": "Se - Beef, Top Loin steak, boneless, L_choice, raw, comp12, lean",
+        "patch": {},
+        "score": 19.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "beef-15-20-fat-boneless-raw",
+    "candidates": [
+      {
+        "fdcId": 334722,
+        "description": "Beef, top loin steak, boneless, 0\" fat trim, raw (TL033-R-3)",
+        "patch": {},
+        "score": 18.5
+      },
+      {
+        "fdcId": 334734,
+        "description": "Beef, top loin steak, boneless, 0\" fat trim, raw (TL033-R-4)",
+        "patch": {},
+        "score": 18.5
+      },
+      {
+        "fdcId": 334735,
+        "description": "Beef, top loin steak, boneless, 0\" fat trim, raw (TL033-R-8)",
+        "patch": {},
+        "score": 18.5
+      },
+      {
+        "fdcId": 334736,
+        "description": "Beef, top loin steak, boneless, 0\" fat trim, raw (TL033-R-9)",
+        "patch": {},
+        "score": 18.5
+      },
+      {
+        "fdcId": 334753,
+        "description": "Beef, top loin steak, boneless, 0\" fat trim, raw (TL033-R-1)",
+        "patch": {},
+        "score": 18.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "chicken-leg-skinless-raw",
+    "candidates": [
+      {
+        "fdcId": 172378,
+        "description": "Chicken, broilers or fryers, leg, meat and skin, raw",
+        "patch": {
+          "sat_fat_g": 4.366,
+          "sugars_g": 0
+        },
+        "score": 17.5
+      },
+      {
+        "fdcId": 171689,
+        "description": "Apples, raw, without skin",
+        "patch": {
+          "sat_fat_g": 0.021,
+          "sugars_g": 10.1
+        },
+        "score": 14.5
+      },
+      {
+        "fdcId": 2346402,
+        "description": "Potatoes, red, without skin, raw",
+        "patch": {},
+        "score": 14.5
+      },
+      {
+        "fdcId": 2346697,
+        "description": "Potatoes, red, without skin, raw",
+        "patch": {},
+        "score": 14.5
+      },
+      {
+        "fdcId": 2346698,
+        "description": "Potatoes, red, without skin, raw",
+        "patch": {},
+        "score": 14.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "mutton-moderately-fat-raw",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "egg-chicken-farmed-raw",
+    "candidates": [
+      {
+        "fdcId": 171116,
+        "description": "Chicken, ground, raw",
+        "patch": {
+          "sat_fat_g": 2.301,
+          "carbs_g": 0.04,
+          "sugars_g": 0,
+          "sodium_mg": 60
+        },
+        "score": 10.5
+      },
+      {
+        "fdcId": 2514796,
+        "description": "Chicken, ground, raw",
+        "patch": {},
+        "score": 10.5
+      },
+      {
+        "fdcId": 2514797,
+        "description": "Chicken, ground, raw",
+        "patch": {},
+        "score": 10.5
+      },
+      {
+        "fdcId": 2514798,
+        "description": "Chicken, ground, raw",
+        "patch": {},
+        "score": 10.5
+      },
+      {
+        "fdcId": 2514799,
+        "description": "Chicken, ground, raw",
+        "patch": {},
+        "score": 10.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "cow-milk-whole-pasteurized",
+    "candidates": [
+      {
+        "fdcId": 323604,
+        "description": "Egg, whole, raw, frozen, pasteurized",
+        "patch": {},
+        "score": 16.5
+      },
+      {
+        "fdcId": 170893,
+        "description": "Egg, whole, raw, frozen, salted, pasteurized",
+        "patch": {
+          "sat_fat_g": 3.178,
+          "sugars_g": 0.07
+        },
+        "score": 16.5
+      },
+      {
+        "fdcId": 172202,
+        "description": "Egg, whole, raw, frozen, pasteurized (Includes foods for USDA's Food Distribution Program)",
+        "patch": {
+          "sat_fat_g": 3.382,
+          "sugars_g": 0.25
+        },
+        "score": 16.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "coconut-milk",
+    "candidates": [
+      {
+        "fdcId": 170172,
+        "description": "Nuts, coconut milk, raw (liquid expressed from grated meat and water)",
+        "patch": {
+          "sat_fat_g": 21.14,
+          "sugars_g": 3.34,
+          "sodium_mg": 15
+        },
+        "score": 11.5
+      },
+      {
+        "fdcId": 168781,
+        "description": "Puddings, coconut cream, dry mix, instant, prepared with 2% milk",
+        "patch": {
+          "sat_fat_g": 1.37,
+          "sodium_mg": 246
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 169615,
+        "description": "Puddings, coconut cream, dry mix, regular, prepared with 2% milk",
+        "patch": {
+          "sat_fat_g": 1.8,
+          "sodium_mg": 163
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 168827,
+        "description": "Puddings, coconut cream, dry mix, instant, prepared with whole milk",
+        "patch": {
+          "sat_fat_g": 2.1,
+          "sodium_mg": 246
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 168829,
+        "description": "Puddings, coconut cream, dry mix, regular, prepared with whole milk",
+        "patch": {
+          "sat_fat_g": 2.57,
+          "sodium_mg": 162
+        },
+        "score": 11
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "coconut-kernel-mature-raw",
+    "candidates": [
+      {
+        "fdcId": 173568,
+        "description": "Shortening confectionery, coconut (hydrogenated) and or palm kernel (hydrogenated)",
+        "patch": {
+          "energy_kcal": 884,
+          "protein_g": 0,
+          "fat_g": 100,
+          "sat_fat_g": 91.3,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0
+        },
+        "score": 13
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "mustard-seed-dried",
+    "candidates": [
+      {
+        "fdcId": 170929,
+        "description": "Spices, mustard seed, ground",
+        "patch": {
+          "sat_fat_g": 1.989,
+          "sugars_g": 6.79,
+          "sodium_mg": 13
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 170554,
+        "description": "Seeds, chia seeds, dried",
+        "patch": {
+          "sat_fat_g": 3.33,
+          "sodium_mg": 16
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 170149,
+        "description": "Seeds, lotus seeds, dried",
+        "patch": {
+          "sat_fat_g": 0.33,
+          "sodium_mg": 5
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 170150,
+        "description": "Seeds, sesame seeds, whole, dried",
+        "patch": {
+          "sat_fat_g": 6.957,
+          "sugars_g": 0.3,
+          "sodium_mg": 11
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 170553,
+        "description": "Seeds, breadnut tree seeds, dried",
+        "patch": {
+          "sat_fat_g": 0.454,
+          "sodium_mg": 53
+        },
+        "score": 9
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "cashew-raw",
+    "candidates": [
+      {
+        "fdcId": 170162,
+        "description": "Nuts, cashew nuts, raw",
+        "patch": {
+          "sat_fat_g": 7.783,
+          "sugars_g": 5.91,
+          "sodium_mg": 12
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 2515374,
+        "description": "Nuts, cashew nuts, raw",
+        "patch": {
+          "sodium_mg": 4.759
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 2515399,
+        "description": "cashews, raw",
+        "patch": {},
+        "score": 9.5
+      },
+      {
+        "fdcId": 2515400,
+        "description": "cashews, raw",
+        "patch": {},
+        "score": 9.5
+      },
+      {
+        "fdcId": 2515401,
+        "description": "cashews, raw",
+        "patch": {},
+        "score": 9.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "cardamom-dried",
+    "candidates": [
+      {
+        "fdcId": 170919,
+        "description": "Spices, cardamom",
+        "patch": {
+          "sat_fat_g": 0.68
+        },
+        "score": 8
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "dried-red-chilli",
+    "candidates": [
+      {
+        "fdcId": 169373,
+        "description": "Peppers, sweet, red, freeze-dried",
+        "patch": {
+          "sat_fat_g": 0.447,
+          "sugars_g": 40.77
+        },
+        "score": 8
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "cinnamon-dried",
+    "candidates": [
+      {
+        "fdcId": 171849,
+        "description": "Bread, cinnamon",
+        "patch": {
+          "sat_fat_g": 0,
+          "sugars_g": 14.11,
+          "sodium_mg": 388
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 172664,
+        "description": "Bagels, cinnamon-raisin",
+        "patch": {
+          "sat_fat_g": 0.274,
+          "sugars_g": 5.98,
+          "sodium_mg": 407
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 171320,
+        "description": "Spices, cinnamon, ground",
+        "patch": {
+          "sat_fat_g": 0.345,
+          "sugars_g": 2.17,
+          "sodium_mg": 10
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 172665,
+        "description": "Bagels, cinnamon-raisin, toasted",
+        "patch": {
+          "sat_fat_g": 0.295,
+          "sugars_g": 6.43,
+          "sodium_mg": 370
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 172753,
+        "description": "Danish pastry, cinnamon, enriched",
+        "patch": {
+          "sat_fat_g": 5.681,
+          "sugars_g": 19.78,
+          "sodium_mg": 414
+        },
+        "score": 8
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "bay-leaf-dried",
+    "candidates": [
+      {
+        "fdcId": 170921,
+        "description": "Spices, coriander leaf, dried",
+        "patch": {
+          "sat_fat_g": 0.115,
+          "sugars_g": 7.27
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 170485,
+        "description": "Leeks, (bulb and lower-leaf portion), freeze-dried",
+        "patch": {
+          "sat_fat_g": 0.279
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 170917,
+        "description": "Spices, bay leaf",
+        "patch": {
+          "sat_fat_g": 2.28
+        },
+        "score": 7
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "coriander-leaves-raw",
+    "candidates": [
+      {
+        "fdcId": 169997,
+        "description": "Coriander (cilantro) leaves, raw",
+        "patch": {
+          "sat_fat_g": 0.014,
+          "sugars_g": 0.87,
+          "sodium_mg": 46
+        },
+        "score": 18.5
+      },
+      {
+        "fdcId": 168487,
+        "description": "Taro leaves, raw",
+        "patch": {
+          "sat_fat_g": 0.151,
+          "sugars_g": 3.01,
+          "sodium_mg": 3
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 168575,
+        "description": "Grape leaves, raw",
+        "patch": {
+          "sat_fat_g": 0.336,
+          "sugars_g": 6.3,
+          "sodium_mg": 9
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 169272,
+        "description": "Pumpkin leaves, raw",
+        "patch": {
+          "sat_fat_g": 0.207,
+          "sodium_mg": 11
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 168385,
+        "description": "Amaranth leaves, raw",
+        "patch": {
+          "sat_fat_g": 0.091,
+          "sodium_mg": 20
+        },
+        "score": 9.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "mustard-oil",
+    "candidates": [
+      {
+        "fdcId": 172337,
+        "description": "Oil, mustard",
+        "patch": {
+          "sat_fat_g": 11.582
+        },
+        "score": 10
+      },
+      {
+        "fdcId": 169256,
+        "description": "Mustard greens, raw",
+        "patch": {
+          "sat_fat_g": 0.01,
+          "sugars_g": 1.32
+        },
+        "score": 7.5
+      },
+      {
+        "fdcId": 168438,
+        "description": "Mustard spinach, (tendergreen), raw",
+        "patch": {
+          "sat_fat_g": 0.015
+        },
+        "score": 7.5
+      },
+      {
+        "fdcId": 169891,
+        "description": "Cabbage, mustard, salted",
+        "patch": {
+          "sat_fat_g": 0.013,
+          "sugars_g": 1.4
+        },
+        "score": 7
+      },
+      {
+        "fdcId": 172234,
+        "description": "Mustard, prepared, yellow",
+        "patch": {
+          "sat_fat_g": 0.214,
+          "sugars_g": 0.92
+        },
+        "score": 7
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "ghee-cow",
+    "candidates": [
+      {
+        "fdcId": 171314,
+        "description": "Butter, Clarified butter (ghee)",
+        "patch": {
+          "sat_fat_g": 60,
+          "sugars_g": 0,
+          "sodium_mg": 0
+        },
+        "score": 4
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "green-chilli-raw",
+    "candidates": [
+      {
+        "fdcId": 172428,
+        "description": "Peas, green, split, mature seeds, raw",
+        "patch": {
+          "energy_kcal": 364,
+          "protein_g": 23.12,
+          "fat_g": 3.89,
+          "sat_fat_g": 0.408,
+          "carbs_g": 61.63,
+          "sugars_g": 3.14,
+          "fibre_g": 22.2
+        },
+        "score": 13.5
+      },
+      {
+        "fdcId": 2710836,
+        "description": "Pear, Anjou, green, with skin, raw",
+        "patch": {
+          "protein_g": 0.3125,
+          "fat_g": 0.3713,
+          "carbs_g": 14.7674,
+          "fibre_g": 2.636
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 168405,
+        "description": "Cowpeas, young pods with seeds, raw",
+        "patch": {
+          "energy_kcal": 44,
+          "protein_g": 3.3,
+          "fat_g": 0.3,
+          "sat_fat_g": 0.079,
+          "carbs_g": 9.5,
+          "sugars_g": 5.04,
+          "fibre_g": 3.3
+        },
+        "score": 12.5
+      },
+      {
+        "fdcId": 2711240,
+        "description": "Pear, Anjou, green, with skin, seeded, core removed, raw",
+        "patch": {},
+        "score": 12.5
+      },
+      {
+        "fdcId": 2711241,
+        "description": "Pear, Anjou, green, with skin, seeded, core removed, raw",
+        "patch": {},
+        "score": 12.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "white-sugar",
+    "candidates": [
+      {
+        "fdcId": 334201,
+        "description": "C&H Granulated White Sugar (OK1) - NFY040Y38",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 334216,
+        "description": "C&H, Sugar, Granulated white (MO1) - NFY040Y30",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 334202,
+        "description": "C&H, Sugar, Granulated, White (CA2) - NFY040Y35",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 334209,
+        "description": "C&H, Sugar, Granulated, White (CO2) - NFY040Y32",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 334229,
+        "description": "C&H, Sugar, Granulated, White (CA1) - NFY040Y3D",
+        "patch": {},
+        "score": 10
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "date-palm-jaggery",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "salt",
+    "candidates": [
+      {
+        "fdcId": 168287,
+        "description": "Pork, cured, salt pork, raw",
+        "patch": {
+          "protein_g": 5.05,
+          "sat_fat_g": 29.38,
+          "sugars_g": 0
+        },
+        "score": 4.5
+      },
+      {
+        "fdcId": 173468,
+        "description": "Salt, table",
+        "patch": {
+          "protein_g": 0,
+          "sat_fat_g": 0,
+          "sugars_g": 0
+        },
+        "score": 4
+      },
+      {
+        "fdcId": 321363,
+        "description": "Salt; iodized",
+        "patch": {},
+        "score": 4
+      },
+      {
+        "fdcId": 321364,
+        "description": "Salt; iodized",
+        "patch": {},
+        "score": 4
+      },
+      {
+        "fdcId": 321365,
+        "description": "Salt; iodized",
+        "patch": {},
+        "score": 4
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "water",
+    "candidates": [
+      {
+        "fdcId": 173647,
+        "description": "Beverages, water, tap, drinking",
+        "patch": {
+          "sat_fat_g": 0,
+          "sugars_g": 0,
+          "sodium_mg": 4
+        },
+        "score": 13
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "moong-dal-raw",
+    "candidates": [
+      {
+        "fdcId": 174256,
+        "description": "Mung beans, mature seeds, raw",
+        "patch": {
+          "energy_kcal": 347,
+          "protein_g": 23.86,
+          "fat_g": 1.15,
+          "sat_fat_g": 0.348,
+          "carbs_g": 62.62,
+          "sugars_g": 6.6,
+          "fibre_g": 16.3,
+          "sodium_mg": 15
+        },
+        "score": 11.5
+      },
+      {
+        "fdcId": 169957,
+        "description": "Mung beans, mature seeds, sprouted, raw",
+        "patch": {
+          "energy_kcal": 30,
+          "protein_g": 3.04,
+          "fat_g": 0.18,
+          "sat_fat_g": 0.046,
+          "carbs_g": 5.94,
+          "sugars_g": 4.13,
+          "fibre_g": 1.8,
+          "sodium_mg": 6
+        },
+        "score": 11.5
+      },
+      {
+        "fdcId": 172428,
+        "description": "Peas, green, split, mature seeds, raw",
+        "patch": {
+          "energy_kcal": 364,
+          "protein_g": 23.12,
+          "fat_g": 3.89,
+          "sat_fat_g": 0.408,
+          "carbs_g": 61.63,
+          "sugars_g": 3.14,
+          "fibre_g": 22.2,
+          "sodium_mg": 5
+        },
+        "score": 8.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "plain-yogurt-unverified",
+    "candidates": [
+      {
+        "fdcId": 1750337,
+        "description": "Soy milk, unsweetened, plain, shelf stable",
+        "patch": {
+          "protein_g": 3.546875,
+          "fat_g": 2.125,
+          "sat_fat_g": 0.3138,
+          "carbs_g": 1.293125,
+          "fibre_g": 0,
+          "sodium_mg": 34.28
+        },
+        "score": 16
+      },
+      {
+        "fdcId": 1750385,
+        "description": "SOY MILK, UNSWEETENED, PLAIN, SHELF STABLE",
+        "patch": {},
+        "score": 16
+      },
+      {
+        "fdcId": 1750386,
+        "description": "SOY MILK, UNSWEETENED, PLAIN, SHELF STABLE",
+        "patch": {},
+        "score": 16
+      },
+      {
+        "fdcId": 1750387,
+        "description": "SOY MILK, UNSWEETENED, PLAIN, SHELF STABLE",
+        "patch": {},
+        "score": 16
+      },
+      {
+        "fdcId": 1750388,
+        "description": "SOY MILK, UNSWEETENED, PLAIN, SHELF STABLE",
+        "patch": {},
+        "score": 16
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "ginger-raw-unverified",
+    "candidates": [
+      {
+        "fdcId": 169231,
+        "description": "Ginger root, raw",
+        "patch": {
+          "energy_kcal": 80,
+          "protein_g": 1.82,
+          "fat_g": 0.75,
+          "sat_fat_g": 0.203,
+          "carbs_g": 17.77,
+          "sugars_g": 1.7,
+          "fibre_g": 2,
+          "sodium_mg": 13
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 170926,
+        "description": "Spices, ginger, ground",
+        "patch": {
+          "energy_kcal": 335,
+          "protein_g": 8.98,
+          "fat_g": 4.24,
+          "sat_fat_g": 2.599,
+          "carbs_g": 71.62,
+          "sugars_g": 3.39,
+          "fibre_g": 14.1,
+          "sodium_mg": 27
+        },
+        "score": 6
+      },
+      {
+        "fdcId": 174846,
+        "description": "Beverages, carbonated, ginger ale",
+        "patch": {
+          "energy_kcal": 34,
+          "protein_g": 0,
+          "fat_g": 0,
+          "sat_fat_g": 0,
+          "carbs_g": 8.76,
+          "sugars_g": 8.9,
+          "fibre_g": 0,
+          "sodium_mg": 7
+        },
+        "score": 6
+      },
+      {
+        "fdcId": 175077,
+        "description": "Archway Home Style Cookies, Reduced Fat Ginger Snaps",
+        "patch": {
+          "energy_kcal": 424,
+          "protein_g": 4.67,
+          "fat_g": 11.14,
+          "sat_fat_g": 2.6,
+          "carbs_g": 76.23,
+          "sugars_g": 36.28,
+          "fibre_g": 1.1,
+          "sodium_mg": 406
+        },
+        "score": 6
+      },
+      {
+        "fdcId": 169765,
+        "description": "Ginger root, pickled, canned, with artificial sweetener",
+        "patch": {
+          "energy_kcal": 20,
+          "protein_g": 0.33,
+          "fat_g": 0.1,
+          "sat_fat_g": 0.037,
+          "carbs_g": 4.83,
+          "sugars_g": 0,
+          "fibre_g": 2.6,
+          "sodium_mg": 906
+        },
+        "score": 6
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "saffron-unverified",
+    "candidates": [
+      {
+        "fdcId": 170934,
+        "description": "Spices, saffron",
+        "patch": {
+          "energy_kcal": 310,
+          "protein_g": 11.43,
+          "fat_g": 5.85,
+          "sat_fat_g": 1.586,
+          "carbs_g": 65.37,
+          "fibre_g": 3.9,
+          "sodium_mg": 148
+        },
+        "score": 7
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "dried-plum-alubokhara-unverified",
+    "candidates": [
+      {
+        "fdcId": 168162,
+        "description": "Plums, dried (prunes), uncooked",
+        "patch": {
+          "energy_kcal": 240,
+          "protein_g": 2.18,
+          "fat_g": 0.38,
+          "sat_fat_g": 0.088,
+          "carbs_g": 63.88,
+          "sugars_g": 38.13,
+          "fibre_g": 7.1,
+          "sodium_mg": 2
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 2758978,
+        "description": "Plums, dried (prunes), uncooked",
+        "patch": {
+          "fibre_g": 6.251,
+          "sodium_mg": 0.85
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 2759031,
+        "description": "Plums, dried (prunes), uncooked",
+        "patch": {},
+        "score": 9
+      },
+      {
+        "fdcId": 2759032,
+        "description": "Plums, dried (prunes), uncooked",
+        "patch": {},
+        "score": 9
+      },
+      {
+        "fdcId": 2759033,
+        "description": "Plums, dried (prunes), uncooked",
+        "patch": {},
+        "score": 9
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "whole-spice-mix-unverified",
+    "candidates": [
+      {
+        "fdcId": 171983,
+        "description": "Mollusks, whelk, unspecified, raw",
+        "patch": {
+          "energy_kcal": 137,
+          "protein_g": 23.84,
+          "fat_g": 0.4,
+          "sat_fat_g": 0.031,
+          "carbs_g": 7.76,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 206
+        },
+        "score": 11.5
+      },
+      {
+        "fdcId": 171570,
+        "description": "Gravy, unspecified type, dry",
+        "patch": {
+          "energy_kcal": 344,
+          "protein_g": 13,
+          "fat_g": 8,
+          "sat_fat_g": 2.86,
+          "carbs_g": 58,
+          "sodium_mg": 5730
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 172161,
+        "description": "Beef, ground, unspecified fat content, cooked",
+        "patch": {
+          "energy_kcal": 240,
+          "protein_g": 25.07,
+          "fat_g": 14.53,
+          "sat_fat_g": 5.6,
+          "carbs_g": 0.62,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 85
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 171984,
+        "description": "Mollusks, whelk, unspecified, cooked, moist heat",
+        "patch": {
+          "energy_kcal": 275,
+          "protein_g": 47.68,
+          "fat_g": 0.8,
+          "sat_fat_g": 0.062,
+          "carbs_g": 15.52,
+          "fibre_g": 0,
+          "sodium_mg": 412
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 168604,
+        "description": "Seeds, sesame butter, tahini, type of kernels unspecified",
+        "patch": {
+          "energy_kcal": 592,
+          "protein_g": 17.4,
+          "fat_g": 53.01,
+          "sat_fat_g": 7.423,
+          "carbs_g": 21.5,
+          "fibre_g": 4.7,
+          "sodium_mg": 35
+        },
+        "score": 11
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "raisin-dried-unverified",
+    "candidates": [
+      {
+        "fdcId": 168166,
+        "description": "Raisins, seeded",
+        "patch": {
+          "energy_kcal": 296,
+          "protein_g": 2.52,
+          "fat_g": 0.54,
+          "sat_fat_g": 0.178,
+          "carbs_g": 78.47,
+          "fibre_g": 6.8,
+          "sodium_mg": 28
+        },
+        "score": 7
+      },
+      {
+        "fdcId": 2758980,
+        "description": "Raisins, dark, seedless",
+        "patch": {
+          "fibre_g": 3.679,
+          "sodium_mg": 13.17
+        },
+        "score": 7
+      },
+      {
+        "fdcId": 2759047,
+        "description": "Raisins, dark, seedless",
+        "patch": {},
+        "score": 7
+      },
+      {
+        "fdcId": 2759048,
+        "description": "Raisins, dark, seedless",
+        "patch": {},
+        "score": 7
+      },
+      {
+        "fdcId": 2759049,
+        "description": "Raisins, dark, seedless",
+        "patch": {},
+        "score": 7
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "hilsa-raw-unverified",
+    "candidates": [
+      {
+        "fdcId": 174151,
+        "description": "Beverages, Fruit punch drink, with added nutrients, canned",
+        "patch": {
+          "energy_kcal": 47,
+          "protein_g": 0,
+          "fat_g": 0,
+          "sat_fat_g": 0,
+          "carbs_g": 11.94,
+          "sugars_g": 11.29,
+          "fibre_g": 0.2,
+          "sodium_mg": 38
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 171914,
+        "description": "Beverages, fruit punch drink, without added nutrients, canned",
+        "patch": {
+          "energy_kcal": 48,
+          "protein_g": 0,
+          "fat_g": 0,
+          "sat_fat_g": 0,
+          "carbs_g": 11.97,
+          "sugars_g": 11.29,
+          "fibre_g": 0,
+          "sodium_mg": 10
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 173197,
+        "description": "Beverages, Mixed vegetable and fruit juice drink, with added nutrients",
+        "patch": {
+          "energy_kcal": 29,
+          "protein_g": 0.04,
+          "fat_g": 0.01,
+          "sat_fat_g": 0,
+          "carbs_g": 7.47,
+          "sugars_g": 2.1,
+          "fibre_g": 0,
+          "sodium_mg": 21
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 175105,
+        "description": "Beverages, orange breakfast drink, ready-to-drink, with added nutrients",
+        "patch": {
+          "energy_kcal": 53,
+          "protein_g": 0,
+          "fat_g": 0,
+          "sat_fat_g": 0,
+          "carbs_g": 13.2,
+          "sugars_g": 8.02,
+          "fibre_g": 0.1,
+          "sodium_mg": 54
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 174159,
+        "description": "Beverages, chocolate-flavor beverage mix for milk, powder, with added nutrients",
+        "patch": {
+          "energy_kcal": 400,
+          "protein_g": 4.55,
+          "fat_g": 2.27,
+          "sat_fat_g": 2.273,
+          "carbs_g": 90.28,
+          "sugars_g": 81.82,
+          "fibre_g": 4.5,
+          "sodium_mg": 136
+        },
+        "score": 8
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "dried-fish-shutki-unverified",
+    "candidates": [
+      {
+        "fdcId": 174196,
+        "description": "Fish, flatfish (flounder and sole species), raw",
+        "patch": {
+          "energy_kcal": 70,
+          "protein_g": 12.41,
+          "fat_g": 1.93,
+          "sat_fat_g": 0.441,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 296
+        },
+        "score": 14.5
+      },
+      {
+        "fdcId": 173672,
+        "description": "Fish, mackerel, Pacific and jack, mixed species, raw",
+        "patch": {
+          "energy_kcal": 158,
+          "protein_g": 20.07,
+          "fat_g": 7.89,
+          "sat_fat_g": 2.247,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 86
+        },
+        "score": 14.5
+      },
+      {
+        "fdcId": 175143,
+        "description": "Fish, shark, mixed species, cooked, batter-dipped and fried",
+        "patch": {
+          "energy_kcal": 228,
+          "protein_g": 18.62,
+          "fat_g": 13.82,
+          "sat_fat_g": 3.205,
+          "carbs_g": 6.39,
+          "fibre_g": 0,
+          "sodium_mg": 122
+        },
+        "score": 14
+      },
+      {
+        "fdcId": 174197,
+        "description": "Fish, flatfish (flounder and sole species), cooked, dry heat",
+        "patch": {
+          "energy_kcal": 86,
+          "protein_g": 15.24,
+          "fat_g": 2.37,
+          "sat_fat_g": 0.542,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 363
+        },
+        "score": 14
+      },
+      {
+        "fdcId": 171994,
+        "description": "Fish, mackerel, Pacific and jack, mixed species, cooked, dry heat",
+        "patch": {
+          "energy_kcal": 201,
+          "protein_g": 25.73,
+          "fat_g": 10.12,
+          "sat_fat_g": 2.881,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 110
+        },
+        "score": 14
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "large-prawn-raw-unverified",
+    "candidates": [
+      {
+        "fdcId": 174193,
+        "description": "Fish, eel, mixed species, raw",
+        "patch": {
+          "energy_kcal": 184,
+          "protein_g": 18.44,
+          "fat_g": 11.66,
+          "sat_fat_g": 2.358,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 51
+        },
+        "score": 10.5
+      },
+      {
+        "fdcId": 175132,
+        "description": "Fish, roe, mixed species, raw",
+        "patch": {
+          "energy_kcal": 143,
+          "protein_g": 22.32,
+          "fat_g": 6.42,
+          "sat_fat_g": 1.456,
+          "carbs_g": 1.5,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 91
+        },
+        "score": 10.5
+      },
+      {
+        "fdcId": 173678,
+        "description": "Fish, perch, mixed species, raw",
+        "patch": {
+          "energy_kcal": 91,
+          "protein_g": 19.39,
+          "fat_g": 0.92,
+          "sat_fat_g": 0.185,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 62
+        },
+        "score": 10.5
+      },
+      {
+        "fdcId": 173697,
+        "description": "Fish, shark, mixed species, raw",
+        "patch": {
+          "energy_kcal": 130,
+          "protein_g": 20.98,
+          "fat_g": 4.51,
+          "sat_fat_g": 0.925,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 79
+        },
+        "score": 10.5
+      },
+      {
+        "fdcId": 175153,
+        "description": "Fish, trout, mixed species, raw",
+        "patch": {
+          "energy_kcal": 148,
+          "protein_g": 20.77,
+          "fat_g": 6.61,
+          "sat_fat_g": 1.149,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 52
+        },
+        "score": 10.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "cumin-seed-unverified",
+    "candidates": [
+      {
+        "fdcId": 170923,
+        "description": "Spices, cumin seed",
+        "patch": {
+          "energy_kcal": 375,
+          "protein_g": 17.81,
+          "fat_g": 22.27,
+          "sat_fat_g": 1.535,
+          "carbs_g": 44.24,
+          "sugars_g": 2.25,
+          "fibre_g": 10.5,
+          "sodium_mg": 168
+        },
+        "score": 9
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "wheat-flour-white-refined",
+    "candidates": [
+      {
+        "fdcId": 169723,
+        "description": "Wheat flour, white, cake, enriched",
+        "patch": {
+          "energy_kcal": 362,
+          "protein_g": 8.2,
+          "fat_g": 0.86,
+          "sat_fat_g": 0.127,
+          "carbs_g": 78.03,
+          "sugars_g": 0.31,
+          "fibre_g": 1.7
+        },
+        "score": 15
+      },
+      {
+        "fdcId": 168896,
+        "description": "Wheat flour, white, bread, enriched",
+        "patch": {
+          "energy_kcal": 361,
+          "protein_g": 11.98,
+          "fat_g": 1.66,
+          "sat_fat_g": 0.244,
+          "carbs_g": 72.53,
+          "sugars_g": 0.31,
+          "fibre_g": 2.4
+        },
+        "score": 15
+      },
+      {
+        "fdcId": 169724,
+        "description": "Wheat flour, white, tortilla mix, enriched",
+        "patch": {
+          "energy_kcal": 405,
+          "protein_g": 9.66,
+          "fat_g": 10.63,
+          "sat_fat_g": 4.1,
+          "carbs_g": 67.14
+        },
+        "score": 15
+      },
+      {
+        "fdcId": 169761,
+        "description": "Wheat flour, white, all-purpose, unenriched",
+        "patch": {
+          "energy_kcal": 364,
+          "protein_g": 10.33,
+          "fat_g": 0.98,
+          "sat_fat_g": 0.155,
+          "carbs_g": 76.31,
+          "sugars_g": 0.27,
+          "fibre_g": 2.7
+        },
+        "score": 15
+      },
+      {
+        "fdcId": 168894,
+        "description": "Wheat flour, white, all-purpose, enriched, bleached",
+        "patch": {
+          "energy_kcal": 364,
+          "protein_g": 10.33,
+          "fat_g": 0.98,
+          "sat_fat_g": 0.155,
+          "carbs_g": 76.31,
+          "sugars_g": 0.27,
+          "fibre_g": 2.7
+        },
+        "score": 15
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "white-peas-dried-unverified",
+    "candidates": [
+      {
+        "fdcId": 323700,
+        "description": "Egg whites dried",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 323701,
+        "description": "Egg whites dried",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 323713,
+        "description": "Egg whites dried",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 323714,
+        "description": "Egg whites dried",
+        "patch": {},
+        "score": 10
+      },
+      {
+        "fdcId": 323738,
+        "description": "Egg whites dried",
+        "patch": {},
+        "score": 10
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "tamarind-pulp-unverified",
+    "candidates": [
+      {
+        "fdcId": 167763,
+        "description": "Tamarinds, raw",
+        "patch": {
+          "energy_kcal": 239,
+          "protein_g": 2.8,
+          "fat_g": 0.6,
+          "sat_fat_g": 0.272,
+          "carbs_g": 62.5,
+          "sugars_g": 38.8,
+          "fibre_g": 5.1,
+          "sodium_mg": 28
+        },
+        "score": 8.5
+      },
+      {
+        "fdcId": 170281,
+        "description": "Candies, Tamarind",
+        "patch": {
+          "energy_kcal": 331,
+          "protein_g": 0,
+          "fat_g": 0,
+          "sat_fat_g": 0,
+          "carbs_g": 91.96,
+          "sugars_g": 78.57,
+          "fibre_g": 2.5,
+          "sodium_mg": 1643
+        },
+        "score": 8
+      },
+      {
+        "fdcId": 167786,
+        "description": "Tamarind nectar, canned",
+        "patch": {
+          "energy_kcal": 57,
+          "protein_g": 0.09,
+          "fat_g": 0.12,
+          "carbs_g": 14.73,
+          "sugars_g": 12.7,
+          "fibre_g": 0.5,
+          "sodium_mg": 7
+        },
+        "score": 8
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "rice-flour-unverified",
+    "candidates": [
+      {
+        "fdcId": 168898,
+        "description": "Rice flour, brown",
+        "patch": {
+          "energy_kcal": 363,
+          "protein_g": 7.23,
+          "fat_g": 2.78,
+          "sat_fat_g": 0.557,
+          "carbs_g": 76.48,
+          "sugars_g": 0.66,
+          "fibre_g": 4.6,
+          "sodium_mg": 8
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 790149,
+        "description": "FLOUR, RICE, WHITE",
+        "patch": {
+          "fat_g": 1.4
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 790150,
+        "description": "FLOUR, RICE, WHITE",
+        "patch": {
+          "sodium_mg": 12
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 790152,
+        "description": "FLOUR, RICE, WHITE",
+        "patch": {},
+        "score": 9
+      },
+      {
+        "fdcId": 790153,
+        "description": "FLOUR, RICE, WHITE",
+        "patch": {
+          "fibre_g": 0.6
+        },
+        "score": 9
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "vermicelli-dry-unverified",
+    "candidates": [
+      {
+        "fdcId": 169884,
+        "description": "Vermicelli, made from soy",
+        "patch": {
+          "energy_kcal": 331,
+          "protein_g": 0.1,
+          "fat_g": 0.1,
+          "sat_fat_g": 0.014,
+          "carbs_g": 82.32,
+          "sugars_g": 17.44,
+          "fibre_g": 3.9,
+          "sodium_mg": 4
+        },
+        "score": 10
+      },
+      {
+        "fdcId": 168949,
+        "description": "Rice and vermicelli mix, beef flavor, unprepared",
+        "patch": {
+          "energy_kcal": 359,
+          "protein_g": 10.84,
+          "fat_g": 1.27,
+          "sat_fat_g": 0.31,
+          "carbs_g": 76.02,
+          "sugars_g": 4.27,
+          "fibre_g": 1.6,
+          "sodium_mg": 1337
+        },
+        "score": 10
+      },
+      {
+        "fdcId": 168951,
+        "description": "Rice and vermicelli mix, rice pilaf flavor, unprepared",
+        "patch": {
+          "energy_kcal": 359,
+          "protein_g": 10.42,
+          "fat_g": 1.37,
+          "sat_fat_g": 0.307,
+          "carbs_g": 76.31,
+          "sugars_g": 1.53,
+          "fibre_g": 1.2,
+          "sodium_mg": 1303
+        },
+        "score": 10
+      },
+      {
+        "fdcId": 168950,
+        "description": "Rice and vermicelli mix, beef flavor, prepared with 80% margarine",
+        "patch": {
+          "energy_kcal": 129,
+          "protein_g": 2.82,
+          "fat_g": 3.2,
+          "sat_fat_g": 0.682,
+          "carbs_g": 22.03,
+          "fibre_g": 0.6,
+          "sodium_mg": 364
+        },
+        "score": 10
+      },
+      {
+        "fdcId": 173348,
+        "description": "Rice and vermicelli mix, chicken flavor, prepared with 80% margarine",
+        "patch": {
+          "energy_kcal": 136,
+          "protein_g": 2.65,
+          "fat_g": 3.45,
+          "sat_fat_g": 0.746,
+          "carbs_g": 23.54,
+          "sugars_g": 0.64,
+          "fibre_g": 0.7,
+          "sodium_mg": 377
+        },
+        "score": 10
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "chhana-fresh-unverified",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "broken-wheat-unverified",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "turmeric-unverified",
+    "candidates": [
+      {
+        "fdcId": 172231,
+        "description": "Spices, turmeric, ground",
+        "patch": {
+          "energy_kcal": 312,
+          "protein_g": 9.68,
+          "fat_g": 3.25,
+          "sat_fat_g": 1.838,
+          "carbs_g": 67.14,
+          "sugars_g": 3.21,
+          "fibre_g": 22.7,
+          "sodium_mg": 27
+        },
+        "score": 8
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "red-chilli-powder-unverified",
+    "candidates": [
+      {
+        "fdcId": 173427,
+        "description": "Egg, white, dried, powder, stabilized, glucose reduced",
+        "patch": {
+          "energy_kcal": 376,
+          "protein_g": 82.4,
+          "fat_g": 0.04,
+          "sat_fat_g": 0,
+          "carbs_g": 4.47,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 1238
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 171905,
+        "description": "Beverages, Eggnog-flavor mix, powder, prepared with whole milk",
+        "patch": {
+          "energy_kcal": 95,
+          "protein_g": 2.93,
+          "fat_g": 3.02,
+          "sat_fat_g": 1.701,
+          "carbs_g": 14.2,
+          "sugars_g": 12.66,
+          "fibre_g": 0,
+          "sodium_mg": 55
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 173221,
+        "description": "Beverages, Malted drink mix, natural, powder, prepared with whole milk",
+        "patch": {
+          "energy_kcal": 88,
+          "protein_g": 3.86,
+          "fat_g": 3.62,
+          "sat_fat_g": 2.039,
+          "carbs_g": 10.23,
+          "sugars_g": 9.56,
+          "fibre_g": 0.1,
+          "sodium_mg": 79
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 174115,
+        "description": "Beverages, Carob-flavor beverage mix, powder, prepared with whole milk",
+        "patch": {
+          "energy_kcal": 75,
+          "protein_g": 3.16,
+          "fat_g": 3.11,
+          "sat_fat_g": 1.779,
+          "carbs_g": 8.68,
+          "fibre_g": 0.4,
+          "sodium_mg": 46
+        },
+        "score": 11
+      },
+      {
+        "fdcId": 174867,
+        "description": "Beverages, Malted drink mix, chocolate, powder, prepared with whole milk",
+        "patch": {
+          "energy_kcal": 85,
+          "protein_g": 3.37,
+          "fat_g": 3.29,
+          "sat_fat_g": 1.883,
+          "carbs_g": 11.2,
+          "sugars_g": 6.68,
+          "fibre_g": 0.5,
+          "sodium_mg": 60
+        },
+        "score": 11
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "coriander-powder-unverified",
+    "candidates": [
+      {
+        "fdcId": 169997,
+        "description": "Coriander (cilantro) leaves, raw",
+        "patch": {
+          "energy_kcal": 23,
+          "protein_g": 2.13,
+          "fat_g": 0.52,
+          "sat_fat_g": 0.014,
+          "carbs_g": 3.67,
+          "sugars_g": 0.87,
+          "fibre_g": 2.8,
+          "sodium_mg": 46
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 170922,
+        "description": "Spices, coriander seed",
+        "patch": {
+          "energy_kcal": 298,
+          "protein_g": 12.37,
+          "fat_g": 17.77,
+          "sat_fat_g": 0.99,
+          "carbs_g": 54.99,
+          "fibre_g": 41.9,
+          "sodium_mg": 35
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 170921,
+        "description": "Spices, coriander leaf, dried",
+        "patch": {
+          "energy_kcal": 279,
+          "protein_g": 21.93,
+          "fat_g": 4.78,
+          "sat_fat_g": 0.115,
+          "carbs_g": 52.1,
+          "sugars_g": 7.27,
+          "fibre_g": 10.4,
+          "sodium_mg": 211
+        },
+        "score": 9
+      },
+      {
+        "fdcId": 172242,
+        "description": "Seasoning mix, dry, sazon, coriander & annatto",
+        "patch": {
+          "energy_kcal": 0,
+          "protein_g": 0,
+          "fat_g": 0,
+          "sat_fat_g": 0,
+          "carbs_g": 0,
+          "sugars_g": 0,
+          "fibre_g": 0,
+          "sodium_mg": 17000
+        },
+        "score": 9
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "fermentation-starter-unverified",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "rohu-river-raw",
+    "candidates": [],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "speckled-shrimp-raw",
+    "candidates": [
+      {
+        "fdcId": 175179,
+        "description": "Crustaceans, shrimp, raw",
+        "patch": {
+          "sat_fat_g": 0.101,
+          "sodium_mg": 119
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 2684443,
+        "description": "Crustaceans, shrimp, farm raised, raw",
+        "patch": {
+          "sodium_mg": 474.9
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 174210,
+        "description": "Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
+        "patch": {
+          "sat_fat_g": 0.261,
+          "sugars_g": 0,
+          "sodium_mg": 566
+        },
+        "score": 9.5
+      },
+      {
+        "fdcId": 2684447,
+        "description": "shrimp, farm raised, raw, tail off, head off, shell removed, not deveined, 31/40 count",
+        "patch": {},
+        "score": 9.5
+      },
+      {
+        "fdcId": 2684448,
+        "description": "shrimp, farm raised, raw, tail off, head off, shell removed, not deveined, 31/40 count",
+        "patch": {},
+        "score": 9.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  },
+  {
+    "ingredientId": "semolina-wheat-raw",
+    "candidates": [
+      {
+        "fdcId": 168915,
+        "description": "Pasta, whole grain, 51% whole wheat, remaining unenriched semolina, dry",
+        "patch": {
+          "sat_fat_g": 0.351,
+          "sugars_g": 2.6
+        },
+        "score": 13
+      },
+      {
+        "fdcId": 168916,
+        "description": "Pasta, whole grain, 51% whole wheat, remaining unenriched semolina, cooked",
+        "patch": {
+          "sat_fat_g": 0.239,
+          "sugars_g": 0.85
+        },
+        "score": 13
+      },
+      {
+        "fdcId": 172025,
+        "description": "Pasta, whole grain, 51% whole wheat, remaining enriched semolina, dry (Includes foods for USDA's Food Distribution Program)",
+        "patch": {
+          "sat_fat_g": 0.324,
+          "sugars_g": 2.2
+        },
+        "score": 13
+      },
+      {
+        "fdcId": 172024,
+        "description": "Pasta, whole grain, 51% whole wheat, remaining enriched semolina, cooked (Includes foods for USDA's Food Distribution Program)",
+        "patch": {
+          "sugars_g": 0.65
+        },
+        "score": 13
+      },
+      {
+        "fdcId": 2710960,
+        "description": "Einkorn, grain, wheat berry, dry, raw",
+        "patch": {},
+        "score": 8.5
+      }
+    ],
+    "matchQuality": "proxy",
+    "approvedFdcId": null
+  }
+]
