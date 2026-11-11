@@ -149,7 +149,7 @@
         "score": 0.75
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "02_0001"
   },
   {
     "ingredientId": "potato-diamond-raw",
@@ -199,7 +199,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "05_0005"
   },
   {
     "ingredientId": "eggplant-raw",
@@ -251,7 +251,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "03_0005"
   },
   {
     "ingredientId": "onion-raw",
@@ -376,7 +376,7 @@
         "score": 0.5
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "03_0017"
   },
   {
     "ingredientId": "tomato-red-ripe-raw",
@@ -508,7 +508,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "10_0002"
   },
   {
     "ingredientId": "beef-15-20-fat-boneless-raw",
@@ -551,7 +551,7 @@
         "score": 0.4
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "10_0003"
   },
   {
     "ingredientId": "chicken-leg-skinless-raw",
@@ -648,7 +648,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "10_0012"
   },
   {
     "ingredientId": "egg-chicken-farmed-raw",
@@ -712,7 +712,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "11_0001"
   },
   {
     "ingredientId": "cow-milk-whole-pasteurized",
@@ -846,7 +846,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "06_0004"
   },
   {
     "ingredientId": "coconut-kernel-mature-raw",
@@ -896,7 +896,22 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "06_0006",
+    "approvedRows": [
+      {
+        "foodCode": "06_0006",
+        "rowName": "Coconut, mature kernel (Narikel)",
+        "table": "Proximate composition",
+        "page": 80,
+        "values": {
+          "energy_kcal": 389,
+          "protein_g": 3.3,
+          "fat_g": 36.7,
+          "carbs_g": 6.9,
+          "fibre_g": 9.2
+        }
+      }
+    ]
   },
   {
     "ingredientId": "mustard-seed-dried",
@@ -963,7 +978,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "06_0012"
   },
   {
     "ingredientId": "cashew-raw",
@@ -980,7 +995,7 @@
         "score": 0.5
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "06_0002"
   },
   {
     "ingredientId": "cardamom-dried",
@@ -1297,7 +1312,7 @@
         "score": 0.5
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "07_0006"
   },
   {
     "ingredientId": "mustard-oil",
@@ -1397,7 +1412,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "13_0004"
   },
   {
     "ingredientId": "green-chilli-raw",
@@ -1464,7 +1479,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "03_0010"
   },
   {
     "ingredientId": "white-sugar",
@@ -1564,7 +1579,7 @@
         "score": 0.5
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "15_0007"
   },
   {
     "ingredientId": "water",
@@ -1623,7 +1638,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "07_0011"
   },
   {
     "ingredientId": "saffron-unverified",
@@ -1760,7 +1775,31 @@
   {
     "ingredientId": "hilsa-raw-unverified",
     "candidates": [],
-    "approvedFoodCode": null
+    "approvedFoodCode": "09_0033",
+    "approvedRows": [
+      {
+        "foodCode": "09_0033",
+        "rowName": "Hilsha, without bones, raw (Ilish, kata chara)",
+        "table": "Proximate composition",
+        "page": 116,
+        "values": {
+          "energy_kcal": 223,
+          "protein_g": 18,
+          "fat_g": 16.8,
+          "carbs_g": 0,
+          "fibre_g": 0
+        }
+      },
+      {
+        "foodCode": "09_0033",
+        "rowName": "Hilsha, without bones, raw (Ilish, kata chara)",
+        "table": "Mineral composition",
+        "page": 117,
+        "values": {
+          "sodium_mg": 52
+        }
+      }
+    ]
   },
   {
     "ingredientId": "dried-fish-shutki-unverified",
@@ -1770,7 +1809,31 @@
   {
     "ingredientId": "large-prawn-raw-unverified",
     "candidates": [],
-    "approvedFoodCode": null
+    "approvedFoodCode": "09_0055",
+    "approvedRows": [
+      {
+        "foodCode": "09_0055",
+        "rowName": "Prawn, Giant tiger prawn, raw (Chingri, Bagda)",
+        "table": "Proximate composition",
+        "page": 119,
+        "values": {
+          "energy_kcal": 92,
+          "protein_g": 16.5,
+          "fat_g": 2.9,
+          "carbs_g": 0,
+          "fibre_g": 0
+        }
+      },
+      {
+        "foodCode": "09_0055",
+        "rowName": "Prawn, Giant tiger prawn, raw (Chingri, Bagda)",
+        "table": "Mineral composition",
+        "page": 120,
+        "values": {
+          "sodium_mg": 117
+        }
+      }
+    ]
   },
   {
     "ingredientId": "cumin-seed-unverified",
@@ -1813,7 +1876,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "07_0008"
   },
   {
     "ingredientId": "wheat-flour-white-refined",
@@ -1882,7 +1945,7 @@
         "score": 0.4
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "01_0032"
   },
   {
     "ingredientId": "white-peas-dried-unverified",
@@ -1945,7 +2008,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "02_0009"
   },
   {
     "ingredientId": "tamarind-pulp-unverified",
@@ -1962,7 +2025,7 @@
         "score": 0.6666666666666666
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "08_0041"
   },
   {
     "ingredientId": "rice-flour-unverified",
@@ -2085,7 +2148,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "01_0029"
   },
   {
     "ingredientId": "chhana-fresh-unverified",
@@ -2191,7 +2254,7 @@
         "score": 0.5
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "07_0020"
   },
   {
     "ingredientId": "red-chilli-powder-unverified",
@@ -2309,7 +2372,7 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "09_0059"
   },
   {
     "ingredientId": "speckled-shrimp-raw",
@@ -2341,7 +2404,7 @@
         "score": 0.5
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "09_0061"
   },
   {
     "ingredientId": "semolina-wheat-raw",
@@ -2410,6 +2473,6 @@
         "score": 0.3333333333333333
       }
     ],
-    "approvedFoodCode": null
+    "approvedFoodCode": "01_0026"
   }
 ]
