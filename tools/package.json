@@ -12,11 +12,14 @@
     "normalize": "tsx src/normalize-data.ts",
     "fctb-match": "tsx src/fctb-match.ts",
     "usda-match": "tsx src/usda-match.ts",
+    "apply-approved": "tsx src/apply-approved.ts",
+    "coverage": "tsx src/coverage-report.ts",
     "check-sources": "tsx src/check-sources.ts"
   },
   "dependencies": {
     "@sp/ai": "workspace:*",
     "@sp/contracts": "workspace:*",
+    "@sp/engine": "workspace:*",
     "@sp/knowledge": "workspace:*",
     "adm-zip": "0.6.1",
     "csv-parse": "7.0.3",

@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "data/source/ingredients.json (never edited)",
-    "generator": "pnpm --filter @sp/tools normalize (tools/src/normalize-data.ts)"
+    "generator": "pnpm --filter @sp/tools apply-approved (tools/src/apply-approved.ts)"
   },
   "ingredients": [
     {
       "energy_kcal": 345,
       "protein_g": 6.6,
       "fat_g": 0.3,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.158,
       "carbs_g": 77.4,
       "sugars_g": null,
       "fibre_g": 3.1,
@@ -77,17 +77,24 @@
           "table": "Mineral composition",
           "pdf_page": 34,
           "food_code": "01_0025"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168879,
+          "description": "Rice, white, medium-grain, raw, enriched"
         }
       },
-      "notes": "FCTB carbohydrates field is 'carbohydrate available', not total carbohydrate. Saturated fat and sugars were not populated because the approved FCTB tables cited here do not provide directly matching values."
+      "notes": "FCTB carbohydrates field is 'carbohydrate available', not total carbohydrate. Saturated fat and sugars were not populated because the approved FCTB tables cited here do not provide directly matching values.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 317,
       "protein_g": 27.7,
       "fat_g": 0.8,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.154,
       "carbs_g": 43.2,
-      "sugars_g": null,
+      "sugars_g": 2.03,
       "fibre_g": 13.2,
       "sodium_mg": 37,
       "id": "lentil-red-dried-raw",
@@ -154,19 +161,31 @@
           "table": "Mineral composition",
           "pdf_page": 42,
           "food_code": "02_0008"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172420,
+          "description": "Lentils, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172420,
+          "description": "Lentils, raw"
         }
       },
-      "notes": "Generic FCTB lentil profile, used as an approximate raw lentil composition reference; it is not a tested profile of a particular commercial cultivar. Saturated fat and sugars are unavailable in this entry."
+      "notes": "Generic FCTB lentil profile, used as an approximate raw lentil composition reference; it is not a tested profile of a particular commercial cultivar. Saturated fat and sugars are unavailable in this entry.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 375,
       "protein_g": 20.2,
       "fat_g": 6,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.603,
       "carbs_g": 59.2,
-      "sugars_g": null,
+      "sugars_g": 10.7,
       "fibre_g": 1.2,
-      "sodium_mg": null,
+      "sodium_mg": 39,
       "id": "bengal-gram-split-dried-raw",
       "name_en": "Bengal gram, split, dried, raw",
       "name_bn": "ছোলার ডাল, শুকনা",
@@ -214,9 +233,27 @@
           "table": "Proximate composition",
           "pdf_page": 41,
           "food_code": "02_0001"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0001",
+          "table": "Mineral composition",
+          "pdf_page": 43
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173756,
+          "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173756,
+          "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw"
         }
       },
-      "notes": "FCTB reports dietary fibre as a bracketed value [1.2]; retained numerically but flagged as a qualified source value. Sodium was not verified in the extracted matching mineral row."
+      "notes": "FCTB reports dietary fibre as a bracketed value [1.2]; retained numerically but flagged as a qualified source value. Sodium was not verified in the extracted matching mineral row.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 66,
@@ -299,11 +336,11 @@
       "energy_kcal": 24,
       "protein_g": 1.9,
       "fat_g": 0.1,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.034,
       "carbs_g": 2,
-      "sugars_g": null,
+      "sugars_g": 3.53,
       "fibre_g": 4.1,
-      "sodium_mg": null,
+      "sodium_mg": 8,
       "id": "eggplant-raw",
       "name_en": "Eggplant, purple long, raw",
       "name_bn": "বেগুন, কাঁচা",
@@ -351,17 +388,35 @@
           "table": "Proximate composition",
           "pdf_page": 49,
           "food_code": "03_0005"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0005",
+          "table": "Mineral composition",
+          "pdf_page": 51
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169228,
+          "description": "Eggplant, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169228,
+          "description": "Eggplant, raw"
         }
       },
-      "notes": "FCTB matching proximate row used. Sodium and saturated fat/sugars were not verified from a matching record in this pass."
+      "notes": "FCTB matching proximate row used. Sodium and saturated fat/sugars were not verified from a matching record in this pass.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 59,
       "protein_g": 1.4,
       "fat_g": 0.1,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.042,
       "carbs_g": 12.2,
-      "sugars_g": null,
+      "sugars_g": 4.24,
       "fibre_g": 1.9,
       "sodium_mg": 11,
       "id": "onion-raw",
@@ -428,17 +483,29 @@
           "table": "Mineral composition",
           "pdf_page": 53,
           "food_code": "03_0024"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170000,
+          "description": "Onions, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170000,
+          "description": "Onions, raw"
         }
       },
-      "notes": "FCTB carbohydrate-available and total dietary fibre values used; sugars and saturated fat are not supplied in this entry."
+      "notes": "FCTB carbohydrate-available and total dietary fibre values used; sugars and saturated fat are not supplied in this entry.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 147,
       "protein_g": 6.9,
       "fat_g": 0.6,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.089,
       "carbs_g": 27.6,
-      "sugars_g": null,
+      "sugars_g": 1,
       "fibre_g": 2.1,
       "sodium_mg": 11,
       "id": "garlic-raw",
@@ -505,19 +572,31 @@
           "table": "Mineral composition",
           "pdf_page": 53,
           "food_code": "03_0014"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169230,
+          "description": "Garlic, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169230,
+          "description": "Garlic, raw"
         }
       },
-      "notes": "FCTB matching proximate and mineral entries used. Sugars and saturated fat not supplied."
+      "notes": "FCTB matching proximate and mineral entries used. Sugars and saturated fat not supplied.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 34,
       "protein_g": 1.1,
       "fat_g": 0.1,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.002,
       "carbs_g": 6.8,
       "sugars_g": null,
       "fibre_g": 0.6,
-      "sodium_mg": null,
+      "sodium_mg": 39,
       "id": "bottle-gourd-raw",
       "name_en": "Bottle gourd, raw",
       "name_bn": "লাউ, কাঁচা",
@@ -565,17 +644,30 @@
           "table": "Proximate composition",
           "pdf_page": 52,
           "food_code": "03_0017"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0017",
+          "table": "Mineral composition",
+          "pdf_page": 54
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169232,
+          "description": "Gourd, white-flowered (calabash), raw"
         }
       },
-      "notes": "FCTB reports dietary fibre as a bracketed value [0.6]; retained as a qualified source value. Sodium not verified in this pass."
+      "notes": "FCTB reports dietary fibre as a bracketed value [0.6]; retained as a qualified source value. Sodium not verified in this pass.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 16,
       "protein_g": 1.1,
       "fat_g": 0.2,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.028,
       "carbs_g": 1.4,
-      "sugars_g": null,
+      "sugars_g": 2.63,
       "fibre_g": 1.7,
       "sodium_mg": 7,
       "id": "tomato-red-ripe-raw",
@@ -642,9 +734,21 @@
           "table": "Mineral composition",
           "pdf_page": 56,
           "food_code": "03_0031"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170457,
+          "description": "Tomatoes, red, ripe, raw, year round average"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170457,
+          "description": "Tomatoes, red, ripe, raw, year round average"
         }
       },
-      "notes": "FCTB carbohydrate-available and fibre values; saturated fat and sugars unavailable."
+      "notes": "FCTB carbohydrate-available and fibre values; saturated fat and sugars unavailable.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 103,
@@ -654,7 +758,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 52,
       "id": "beef-lean-boneless-raw",
       "name_en": "Beef, lean, boneless, raw",
       "name_bn": "গরুর মাংস, চর্বিহীন, কাঁচা",
@@ -702,9 +806,16 @@
           "table": "Proximate composition",
           "pdf_page": 128,
           "food_code": "10_0002"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "10_0002",
+          "table": "Mineral composition",
+          "pdf_page": 130
         }
       },
-      "notes": "FCTB raw lean boneless beef profile. Zero carbohydrate and fibre are the values shown in the matching row; sodium not verified here. Saturated fat/sugars unavailable."
+      "notes": "FCTB raw lean boneless beef profile. Zero carbohydrate and fibre are the values shown in the matching row; sodium not verified here. Saturated fat/sugars unavailable.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 207,
@@ -714,7 +825,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 69,
       "id": "beef-15-20-fat-boneless-raw",
       "name_en": "Beef, boneless, 15–20% fat, raw",
       "name_bn": "গরুর মাংস, ১৫–২০% চর্বিযুক্ত, কাঁচা",
@@ -762,17 +873,24 @@
           "table": "Proximate composition",
           "pdf_page": 128,
           "food_code": "10_0003"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "10_0003",
+          "table": "Mineral composition",
+          "pdf_page": 130
         }
       },
-      "notes": "FCTB matching raw beef row. Sodium, saturated fat and sugars were not populated from a verified matching entry."
+      "notes": "FCTB matching raw beef row. Sodium, saturated fat and sugars were not populated from a verified matching entry.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 128,
       "protein_g": 19.2,
       "fat_g": 5.7,
-      "sat_fat_g": null,
+      "sat_fat_g": 1.05,
       "carbs_g": 0,
-      "sugars_g": null,
+      "sugars_g": 0,
       "fibre_g": 0,
       "sodium_mg": 55,
       "id": "chicken-leg-skinless-raw",
@@ -839,9 +957,21 @@
           "table": "Mineral composition",
           "pdf_page": 129,
           "food_code": "10_0007"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173619,
+          "description": "Chicken, broilers or fryers, leg, meat only, raw (SR Legacy)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173619,
+          "description": "Chicken, broilers or fryers, leg, meat only, raw (SR Legacy)"
         }
       },
-      "notes": "FCTB matching row; zero carbohydrate/fibre as listed. Saturated fat and sugars unavailable."
+      "notes": "FCTB matching row; zero carbohydrate/fibre as listed. Saturated fat and sugars unavailable.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 196,
@@ -851,7 +981,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 41,
       "id": "mutton-moderately-fat-raw",
       "name_en": "Mutton, moderately fatty, raw",
       "name_bn": "খাসির মাংস, মাঝারি চর্বিযুক্ত, কাঁচা",
@@ -899,19 +1029,26 @@
           "table": "Proximate composition",
           "pdf_page": 128,
           "food_code": "10_0012"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "10_0012",
+          "table": "Mineral composition",
+          "pdf_page": 130
         }
       },
-      "notes": "FCTB matching raw mutton row. Sodium was not verified from the matching mineral row; saturated fat and sugars are not reported."
+      "notes": "FCTB matching raw mutton row. Sodium was not verified from the matching mineral row; saturated fat and sugars are not reported.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 139,
       "protein_g": 14.5,
       "fat_g": 9,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
+      "sat_fat_g": 3.126,
+      "carbs_g": 0.72,
+      "sugars_g": 0.37,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 116,
       "id": "egg-chicken-farmed-raw",
       "name_en": "Egg, chicken, farmed, raw",
       "name_bn": "মুরগির ডিম, কাঁচা",
@@ -953,17 +1090,40 @@
           "table": "Proximate composition",
           "pdf_page": 135,
           "food_code": "11_0001"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "11_0001",
+          "table": "Mineral composition",
+          "pdf_page": 136
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171287,
+          "description": "Egg, whole, raw, fresh (SR Legacy)"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171287,
+          "description": "Egg, whole, raw, fresh (SR Legacy)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171287,
+          "description": "Egg, whole, raw, fresh (SR Legacy)"
         }
       },
-      "notes": "FCTB records available carbohydrate as 'Tr' (trace), not a numeric quantity; carbs_g is therefore null rather than falsely set to zero. Sodium, sugars and saturated fat not verified."
+      "notes": "FCTB records available carbohydrate as 'Tr' (trace), not a numeric quantity; carbs_g is therefore null rather than falsely set to zero. Sodium, sugars and saturated fat not verified.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 63,
       "protein_g": 3.1,
       "fat_g": 3.7,
-      "sat_fat_g": null,
+      "sat_fat_g": 1.865,
       "carbs_g": 4.3,
-      "sugars_g": null,
+      "sugars_g": 5.05,
       "fibre_g": 0,
       "sodium_mg": 51,
       "id": "cow-milk-whole-pasteurized",
@@ -1030,19 +1190,31 @@
           "table": "Mineral composition",
           "pdf_page": 140,
           "food_code": "12_0008"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171265,
+          "description": "Milk, whole, 3.25% milkfat, with added vitamin D (SR Legacy)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171265,
+          "description": "Milk, whole, 3.25% milkfat, with added vitamin D (SR Legacy)"
         }
       },
-      "notes": "FCTB matching whole milk entry. Available carbohydrate is used for carbs_g; sugars and saturated fat were not separately reported in this entry."
+      "notes": "FCTB matching whole milk entry. Available carbohydrate is used for carbs_g; sugars and saturated fat were not separately reported in this entry.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 213,
       "protein_g": 2.1,
       "fat_g": 21.7,
-      "sat_fat_g": null,
+      "sat_fat_g": 21.14,
       "carbs_g": 1.2,
-      "sugars_g": null,
+      "sugars_g": 3.34,
       "fibre_g": 2.2,
-      "sodium_mg": null,
+      "sodium_mg": 14,
       "id": "coconut-milk",
       "name_en": "Coconut milk",
       "name_bn": "নারকেলের দুধ",
@@ -1090,18 +1262,36 @@
           "table": "Proximate composition",
           "pdf_page": 79,
           "food_code": "06_0004"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0004",
+          "table": "Mineral composition",
+          "pdf_page": 81
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170172,
+          "description": "Nuts, coconut milk, raw (liquid expressed from grated meat and water)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170172,
+          "description": "Nuts, coconut milk, raw (liquid expressed from grated meat and water)"
         }
       },
-      "notes": "FCTB coconut milk row. Saturated fat, sugars and sodium not populated from the selected matching entries."
+      "notes": "FCTB coconut milk row. Saturated fat, sugars and sodium not populated from the selected matching entries.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 389,
+      "protein_g": 3.3,
+      "fat_g": 36.7,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 6.9,
       "sugars_g": null,
-      "fibre_g": null,
+      "fibre_g": 9.2,
       "sodium_mg": 16,
       "id": "coconut-kernel-mature-raw",
       "name_en": "Coconut kernel, mature, raw",
@@ -1126,9 +1316,40 @@
           "table": "Mineral composition",
           "pdf_page": 80,
           "food_code": "06_0006"
+        },
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0006",
+          "table": "Proximate composition",
+          "pdf_page": 80
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0006",
+          "table": "Proximate composition",
+          "pdf_page": 80
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0006",
+          "table": "Proximate composition",
+          "pdf_page": 80
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0006",
+          "table": "Proximate composition",
+          "pdf_page": 80
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0006",
+          "table": "Proximate composition",
+          "pdf_page": 80
         }
       },
-      "notes": "Only sodium was populated from the verified mineral row. The matching proximate row was not verified in this pass, so all other nutrient values remain null."
+      "notes": "Only sodium was populated from the verified mineral row. The matching proximate row was not verified in this pass, so all other nutrient values remain null.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 501,
@@ -1138,7 +1359,7 @@
       "carbs_g": 18.5,
       "sugars_g": null,
       "fibre_g": 11.8,
-      "sodium_mg": null,
+      "sodium_mg": 13,
       "id": "mustard-seed-dried",
       "name_en": "Mustard seed, dried",
       "name_bn": "সরিষা, শুকনা",
@@ -1186,9 +1407,16 @@
           "table": "Proximate composition",
           "pdf_page": 79,
           "food_code": "06_0012"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0012",
+          "table": "Mineral composition",
+          "pdf_page": 81
         }
       },
-      "notes": "FCTB proximate entry. Sodium, saturated fat and sugars not verified."
+      "notes": "FCTB proximate entry. Sodium, saturated fat and sugars not verified.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 595,
@@ -1198,7 +1426,7 @@
       "carbs_g": 23.5,
       "sugars_g": null,
       "fibre_g": 3.3,
-      "sodium_mg": null,
+      "sodium_mg": 12,
       "id": "cashew-raw",
       "name_en": "Cashew nut, raw",
       "name_bn": "কাজুবাদাম, কাঁচা",
@@ -1246,15 +1474,22 @@
           "table": "Proximate composition",
           "pdf_page": 79,
           "food_code": "06_0002"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "06_0002",
+          "table": "Mineral composition",
+          "pdf_page": 81
         }
       },
-      "notes": "FCTB cashew entry. Saturated fat, sugars and sodium not filled because not verified in the matching entry."
+      "notes": "FCTB cashew entry. Saturated fat, sugars and sodium not filled because not verified in the matching entry.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 261,
       "protein_g": 10.2,
       "fat_g": 2.2,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.68,
       "carbs_g": 37.8,
       "sugars_g": null,
       "fibre_g": 24.4,
@@ -1323,9 +1558,16 @@
           "table": "Mineral composition",
           "pdf_page": 87,
           "food_code": "07_0002"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170919,
+          "description": "Spices, cardamom"
         }
       },
-      "notes": "FCTB cardamom entry. Saturated fat and sugars not reported in matching table."
+      "notes": "FCTB cardamom entry. Saturated fat and sugars not reported in matching table.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 313,
@@ -1408,11 +1650,11 @@
       "energy_kcal": 243,
       "protein_g": 4,
       "fat_g": 1.2,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.345,
       "carbs_g": 27.5,
-      "sugars_g": null,
+      "sugars_g": 2.17,
       "fibre_g": 53.1,
-      "sodium_mg": null,
+      "sodium_mg": 10,
       "id": "cinnamon-dried",
       "name_en": "Cinnamon, dried",
       "name_bn": "দারুচিনি, শুকনা",
@@ -1460,15 +1702,32 @@
           "table": "Proximate composition",
           "pdf_page": 86,
           "food_code": "07_0004"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171320,
+          "description": "Spices, cinnamon, ground"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171320,
+          "description": "Spices, cinnamon, ground"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171320,
+          "description": "Spices, cinnamon, ground"
         }
       },
-      "notes": "FCTB cinnamon entry. Sodium, saturated fat and sugars not verified in matching record."
+      "notes": "FCTB cinnamon entry. Sodium, saturated fat and sugars not verified in matching record.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 353,
       "protein_g": 7.6,
       "fat_g": 8.4,
-      "sat_fat_g": null,
+      "sat_fat_g": 2.28,
       "carbs_g": 48.7,
       "sugars_g": null,
       "fibre_g": 26.3,
@@ -1537,19 +1796,26 @@
           "table": "Mineral composition",
           "pdf_page": 87,
           "food_code": "07_0001"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170917,
+          "description": "Spices, bay leaf"
         }
       },
-      "notes": "FCTB dried bay leaf entry. Saturated fat and sugars not available in matching table."
+      "notes": "FCTB dried bay leaf entry. Saturated fat and sugars not available in matching table.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 30,
       "protein_g": 3.3,
       "fat_g": 0.5,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.014,
       "carbs_g": 0.1,
-      "sugars_g": null,
+      "sugars_g": 0.87,
       "fibre_g": 5.9,
-      "sodium_mg": null,
+      "sodium_mg": 58,
       "id": "coriander-leaves-raw",
       "name_en": "Coriander leaves, raw",
       "name_bn": "ধনেপাতা, কাঁচা",
@@ -1597,15 +1863,33 @@
           "table": "Proximate composition",
           "pdf_page": 86,
           "food_code": "07_0006"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0006",
+          "table": "Mineral composition",
+          "pdf_page": 88
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169997,
+          "description": "Coriander (cilantro) leaves, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169997,
+          "description": "Coriander (cilantro) leaves, raw"
         }
       },
-      "notes": "FCTB coriander-leaf entry. Sodium, saturated fat and sugars not verified in matching record."
+      "notes": "FCTB coriander-leaf entry. Sodium, saturated fat and sugars not verified in matching record.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 900,
       "protein_g": 0,
       "fat_g": 100,
-      "sat_fat_g": null,
+      "sat_fat_g": 11.582,
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
@@ -1674,19 +1958,26 @@
           "table": "Mineral composition",
           "pdf_page": 147,
           "food_code": "13_0008"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172337,
+          "description": "Oil, mustard"
         }
       },
-      "notes": "FCTB mustard-oil entry. Saturated fat and sugars not separately reported; carbohydrate/fibre reported as zero."
+      "notes": "FCTB mustard-oil entry. Saturated fat and sugars not separately reported; carbohydrate/fibre reported as zero.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 898,
       "protein_g": 0,
       "fat_g": 99.8,
-      "sat_fat_g": null,
+      "sat_fat_g": 60,
       "carbs_g": 0,
-      "sugars_g": null,
+      "sugars_g": 0,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 2,
       "id": "ghee-cow",
       "name_en": "Ghee, cow",
       "name_bn": "গরুর ঘি",
@@ -1734,18 +2025,36 @@
           "table": "Proximate composition",
           "pdf_page": 146,
           "food_code": "13_0004"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "13_0004",
+          "table": "Mineral composition",
+          "pdf_page": 148
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171314,
+          "description": "Butter, Clarified butter (ghee)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171314,
+          "description": "Butter, Clarified butter (ghee)"
         }
       },
-      "notes": "FCTB ghee entry. Sodium not verified in the matching mineral row; saturated fat and sugars not given here."
+      "notes": "FCTB ghee entry. Sodium not verified in the matching mineral row; saturated fat and sugars not given here.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 45,
+      "protein_g": 2.8,
+      "fat_g": 0.1,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 5.9,
       "sugars_g": null,
-      "fibre_g": null,
+      "fibre_g": 4.7,
       "sodium_mg": 12,
       "id": "green-chilli-raw",
       "name_en": "Green chilli with seeds, raw",
@@ -1770,19 +2079,50 @@
           "table": "Mineral composition",
           "pdf_page": 50,
           "food_code": "03_0010"
+        },
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0010",
+          "table": "Proximate composition",
+          "pdf_page": 50
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0010",
+          "table": "Proximate composition",
+          "pdf_page": 50
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0010",
+          "table": "Proximate composition",
+          "pdf_page": 50
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0010",
+          "table": "Proximate composition",
+          "pdf_page": 50
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "03_0010",
+          "table": "Proximate composition",
+          "pdf_page": 50
         }
       },
-      "notes": "Only sodium is included from the verified FCTB mineral row; the matching proximate row was not verified in this pass."
+      "notes": "Only sodium is included from the verified FCTB mineral row; the matching proximate row was not verified in this pass.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 398,
       "protein_g": 0,
       "fat_g": 0,
-      "sat_fat_g": null,
+      "sat_fat_g": 0,
       "carbs_g": 99.5,
-      "sugars_g": null,
+      "sugars_g": 99.8,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 1,
       "id": "white-sugar",
       "name_en": "Sugar, white",
       "name_bn": "সাদা চিনি",
@@ -1830,19 +2170,36 @@
           "table": "Proximate composition",
           "pdf_page": 158,
           "food_code": "15_0008"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169655,
+          "description": "Sugars, granulated (SR Legacy)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169655,
+          "description": "Sugars, granulated (SR Legacy)"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169655,
+          "description": "Sugars, granulated (SR Legacy)"
         }
       },
-      "notes": "FCTB white sugar entry. Sugars_g is left null because the requested numeric sugar field was not separately reported in the cited composition row; no outside estimate was substituted. Sodium not verified."
+      "notes": "FCTB white sugar entry. Sugars_g is left null because the requested numeric sugar field was not separately reported in the cited composition row; no outside estimate was substituted. Sodium not verified.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 352,
       "protein_g": 1.5,
       "fat_g": 0.3,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.0692,
       "carbs_g": 85.7,
-      "sugars_g": null,
+      "sugars_g": 84.32,
       "fibre_g": 0.3,
-      "sodium_mg": null,
+      "sodium_mg": 79,
       "id": "date-palm-jaggery",
       "name_en": "Jaggery/panela, date palm",
       "name_bn": "খেজুরের গুড়",
@@ -1890,13 +2247,36 @@
           "table": "Proximate composition",
           "pdf_page": 158,
           "food_code": "15_0005"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "15_0004",
+          "table": "Mineral composition",
+          "pdf_page": 159,
+          "row_name": "Jaggery, sugarcane, solid (Gur, Akh)"
+        },
+        "sat_fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "I001",
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+          "pdf_page": 260,
+          "row_name": "Jaggery, cane (Saccharum officinarum)"
+        },
+        "sugars_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "I001",
+          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
+          "pdf_page": 224,
+          "row_name": "Jaggery, cane (Saccharum officinarum)"
         }
       },
-      "notes": "FCTB reports fibre as bracketed [0.3], retained as a qualified source value. Sugars, saturated fat and sodium not reported in the matching entry."
+      "notes": "FCTB reports fibre as bracketed [0.3], retained as a qualified source value. Sugars, saturated fat and sodium not reported in the matching entry.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 0,
-      "protein_g": null,
+      "protein_g": 0,
       "fat_g": 0,
       "sat_fat_g": null,
       "carbs_g": 0,
@@ -1961,19 +2341,26 @@
           "table": "Mineral composition",
           "pdf_page": 159,
           "food_code": "15_0007"
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "15_0007",
+          "table": "Proximate composition",
+          "pdf_page": 159
         }
       },
-      "notes": "FCTB records protein as trace (Tr), so protein_g is null, not zero. Sodium is from the FCTB mineral table. Saturated fat/sugars unavailable."
+      "notes": "FCTB records protein as trace (Tr), so protein_g is null, not zero. Sodium is from the FCTB mineral table. Saturated fat/sugars unavailable.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 0,
       "protein_g": 0,
       "fat_g": 0,
-      "sat_fat_g": null,
+      "sat_fat_g": 0,
       "carbs_g": 0,
-      "sugars_g": null,
+      "sugars_g": 0,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 4,
       "id": "water",
       "name_en": "Water, drinking",
       "name_bn": "পানীয় জল",
@@ -2021,94 +2408,343 @@
           "table": "Proximate composition",
           "pdf_page": 154,
           "food_code": "14_0010"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173647,
+          "description": "Beverages, water, tap, drinking"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173647,
+          "description": "Beverages, water, tap, drinking"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 173647,
+          "description": "Beverages, water, tap, drinking"
         }
       },
-      "notes": "Zero energy and macronutrient values reflect the FCTB drinking-water entry; sodium not populated because no matching mineral value was verified. Saturated fat and sugars are not separately reported."
+      "notes": "Zero energy and macronutrient values reflect the FCTB drinking-water entry; sodium not populated because no matching mineral value was verified. Saturated fat and sugars are not separately reported.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 325.7,
+      "protein_g": 23.88,
+      "fat_g": 1.35,
+      "sat_fat_g": 0.247,
+      "carbs_g": 52.59,
+      "sugars_g": 0.95,
+      "fibre_g": 9.37,
+      "sodium_mg": 10.14,
       "id": "moong-dal-raw",
       "name_en": "Mung bean, split, raw (not yet source-matched)",
       "name_bn": "মুগ ডাল, কাঁচা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "protein_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "carbs_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "fibre_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "sodium_mg": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 5. Minerals and Trace Elements (Na column)",
+          "pdf_page": 154,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "sat_fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+          "pdf_page": 230,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        },
+        "sugars_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "B010",
+          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
+          "pdf_page": 210,
+          "row_name": "Green gram, dal (Vigna radiata)"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "direct",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 61,
+      "protein_g": 3.47,
+      "fat_g": 3.25,
+      "sat_fat_g": 2.096,
+      "carbs_g": 4.66,
+      "sugars_g": 4.66,
+      "fibre_g": 0,
+      "sodium_mg": 46,
       "id": "plain-yogurt-unverified",
       "name_en": "Plain yogurt/curd, unsweetened (matching FCTB profile not verified)",
       "name_bn": "টক দই",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 171284,
+          "description": "Yogurt, plain, whole milk (SR Legacy)"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 72,
+      "protein_g": 1.9,
+      "fat_g": 0.8,
+      "sat_fat_g": 0.203,
+      "carbs_g": 13.3,
+      "sugars_g": 1.7,
+      "fibre_g": 2,
+      "sodium_mg": 12,
       "id": "ginger-raw-unverified",
       "name_en": "Ginger, raw",
       "name_bn": "আদা, কাঁচা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0011",
+          "table": "Mineral composition",
+          "pdf_page": 88
+        },
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0011",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0011",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0011",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0011",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0011",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169231,
+          "description": "Ginger root, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169231,
+          "description": "Ginger root, raw"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 310,
+      "protein_g": 11.43,
+      "fat_g": 5.85,
+      "sat_fat_g": 1.586,
+      "carbs_g": 65.37,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 3.9,
+      "sodium_mg": 148,
       "id": "saffron-unverified",
       "name_en": "Saffron",
       "name_bn": "জাফরান",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170934,
+          "description": "Spices, saffron"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 240,
+      "protein_g": 2.18,
+      "fat_g": 0.38,
+      "sat_fat_g": 0.088,
+      "carbs_g": 63.88,
+      "sugars_g": 38.13,
+      "fibre_g": 7.1,
+      "sodium_mg": 2,
       "id": "dried-plum-alubokhara-unverified",
       "name_en": "Dried plum (alubukhara)",
       "name_bn": "আলুবোখারা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168162,
+          "description": "Plums, dried (prunes), uncooked"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": null,
@@ -2128,38 +2764,114 @@
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 296,
+      "protein_g": 2.52,
+      "fat_g": 0.54,
+      "sat_fat_g": 0.178,
+      "carbs_g": 78.47,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 6.8,
+      "sodium_mg": 28,
       "id": "raisin-dried-unverified",
       "name_en": "Raisins, dried",
       "name_bn": "কিশমিশ",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 168166,
+          "description": "Raisins, seeded"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 223,
+      "protein_g": 18,
+      "fat_g": 16.8,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 0,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 0,
+      "sodium_mg": 52,
       "id": "hilsa-raw-unverified",
       "name_en": "Hilsa fish, raw (matching nutrient row not verified in this pass)",
       "name_bn": "ইলিশ মাছ, কাঁচা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0033",
+          "table": "Proximate composition",
+          "pdf_page": 116
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0033",
+          "table": "Proximate composition",
+          "pdf_page": 116
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0033",
+          "table": "Proximate composition",
+          "pdf_page": 116
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0033",
+          "table": "Proximate composition",
+          "pdf_page": 116
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0033",
+          "table": "Proximate composition",
+          "pdf_page": 116
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0033",
+          "table": "Mineral composition",
+          "pdf_page": 117
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": null,
@@ -2179,47 +2891,134 @@
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 92,
+      "protein_g": 16.5,
+      "fat_g": 2.9,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 0,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 0,
+      "sodium_mg": 117,
       "id": "large-prawn-raw-unverified",
       "name_en": "Large prawn, raw (matching species-specific nutrient row not verified)",
       "name_bn": "বড় চিংড়ি, কাঁচা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0055",
+          "table": "Proximate composition",
+          "pdf_page": 119
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0055",
+          "table": "Proximate composition",
+          "pdf_page": 119
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0055",
+          "table": "Proximate composition",
+          "pdf_page": 119
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0055",
+          "table": "Proximate composition",
+          "pdf_page": 119
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0055",
+          "table": "Proximate composition",
+          "pdf_page": 119
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0055",
+          "table": "Mineral composition",
+          "pdf_page": 120
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 402,
+      "protein_g": 18.3,
+      "fat_g": 17.6,
+      "sat_fat_g": 1.535,
+      "carbs_g": 37.2,
+      "sugars_g": 2.25,
+      "fibre_g": 10.5,
+      "sodium_mg": 148,
       "id": "cumin-seed-unverified",
       "name_en": "Cumin seed",
       "name_bn": "জিরা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0008",
+          "table": "Mineral composition",
+          "pdf_page": 88
+        },
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0008",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0008",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0008",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0008",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0008",
+          "table": "Proximate composition",
+          "pdf_page": 87
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170923,
+          "description": "Spices, cumin seed"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170923,
+          "description": "Spices, cumin seed"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 346,
+      "protein_g": 9.8,
+      "fat_g": 1,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 73.1,
       "sugars_g": null,
-      "fibre_g": null,
+      "fibre_g": 2.7,
       "sodium_mg": 10,
       "id": "wheat-flour-white-refined",
       "name_en": "Wheat flour, white refined (maida)",
@@ -2244,128 +3043,470 @@
           "table": "Mineral composition",
           "pdf_page": 34,
           "food_code": "01_0032"
+        },
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0032",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0032",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0032",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0032",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0032",
+          "table": "Proximate composition",
+          "pdf_page": 34
         }
       },
-      "notes": "Only sodium (10 mg/100 g) was populated from the FCTB mineral table, PDF page 34, food code 01_0032. Proximate nutrients were not verified from the matching row in this pass; all other fields are null."
+      "notes": "Only sodium (10 mg/100 g) was populated from the FCTB mineral table, PDF page 34, food code 01_0032. Proximate nutrients were not verified from the matching row in this pass; all other fields are null.",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 327,
+      "protein_g": 22.1,
+      "fat_g": 2.1,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 48.3,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 13,
+      "sodium_mg": 21,
       "id": "white-peas-dried-unverified",
       "name_en": "White peas, dried",
       "name_bn": "শুকনা সাদা মটর",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0009",
+          "table": "Proximate composition",
+          "pdf_page": 42
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0009",
+          "table": "Proximate composition",
+          "pdf_page": 42
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0009",
+          "table": "Proximate composition",
+          "pdf_page": 42
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0009",
+          "table": "Proximate composition",
+          "pdf_page": 42
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0009",
+          "table": "Proximate composition",
+          "pdf_page": 42
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "02_0009",
+          "table": "Mineral composition",
+          "pdf_page": 43
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 239,
+      "protein_g": 2.8,
+      "fat_g": 0.6,
+      "sat_fat_g": 0.272,
+      "carbs_g": 62.5,
+      "sugars_g": 38.8,
+      "fibre_g": 5.1,
+      "sodium_mg": 19,
       "id": "tamarind-pulp-unverified",
       "name_en": "Tamarind pulp",
       "name_bn": "তেঁতুলের মণ্ড",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "08_0041",
+          "table": "Mineral composition",
+          "pdf_page": 104
+        },
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 167763,
+          "description": "Tamarinds, raw"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 366,
+      "protein_g": 5.95,
+      "fat_g": 1.42,
+      "sat_fat_g": 0.386,
+      "carbs_g": 80.13,
+      "sugars_g": 0.12,
+      "fibre_g": 2.4,
+      "sodium_mg": 0,
       "id": "rice-flour-unverified",
       "name_en": "Rice flour",
       "name_bn": "চালের গুঁড়া",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 169714,
+          "description": "Rice flour, white, unenriched (SR Legacy)"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 347,
+      "protein_g": 8.9,
+      "fat_g": 0.6,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 74.9,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 3.2,
+      "sodium_mg": 8,
       "id": "vermicelli-dry-unverified",
       "name_en": "Vermicelli, dry",
       "name_bn": "সেমাই",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0029",
+          "table": "Mineral composition",
+          "pdf_page": 35
+        },
+        "energy_kcal": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0029",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "protein_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0029",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "fat_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0029",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "carbs_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0029",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        },
+        "fibre_g": {
+          "source_id": "FCTB-2013",
+          "food_code": "01_0029",
+          "table": "Proximate composition",
+          "pdf_page": 34
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 305.5,
+      "protein_g": 18.86,
+      "fat_g": 24.78,
+      "sat_fat_g": 8.851,
+      "carbs_g": 2.41,
       "sugars_g": null,
       "fibre_g": null,
-      "sodium_mg": null,
+      "sodium_mg": 18.04,
       "id": "chhana-fresh-unverified",
       "name_en": "Chhana, fresh",
       "name_bn": "ছানা",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "IFCT-2017",
+          "food_code": "L003",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 57,
+          "row_name": "Paneer (regional names: Chhena, Channa)"
+        },
+        "protein_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "L003",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 57,
+          "row_name": "Paneer (regional names: Chhena, Channa)"
+        },
+        "fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "L003",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 57,
+          "row_name": "Paneer (regional names: Chhena, Channa)"
+        },
+        "carbs_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "L003",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 57,
+          "row_name": "Paneer (regional names: Chhena, Channa)"
+        },
+        "sodium_mg": {
+          "source_id": "IFCT-2017",
+          "food_code": "L003",
+          "table": "Table 5. Minerals and Trace Elements (Na column)",
+          "pdf_page": 184,
+          "row_name": "Paneer (regional names: Chhena, Channa)"
+        },
+        "sat_fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "L003",
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+          "pdf_page": 260,
+          "row_name": "Paneer (regional names: Chhena, Channa)"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 341.8,
+      "protein_g": 10.84,
+      "fat_g": 1.45,
+      "sat_fat_g": 0.196,
+      "carbs_g": 69.06,
+      "sugars_g": 1.2,
+      "fibre_g": 8.81,
+      "sodium_mg": 2.09,
       "id": "broken-wheat-unverified",
       "name_en": "Broken wheat/dalia",
       "name_bn": "ভাঙা গম/ডালিয়া",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "protein_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "carbs_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "fibre_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
+          "pdf_page": 42,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "sodium_mg": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 5. Minerals and Trace Elements (Na column)",
+          "pdf_page": 154,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "sat_fat_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+          "pdf_page": 230,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        },
+        "sugars_g": {
+          "source_id": "IFCT-2017",
+          "food_code": "A021",
+          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
+          "pdf_page": 210,
+          "row_name": "Wheat, bulgur (Triticum aestivum)"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "energy_kcal": 312,
+      "protein_g": 9.68,
+      "fat_g": 3.25,
+      "sat_fat_g": 1.838,
+      "carbs_g": 67.14,
+      "sugars_g": 3.21,
+      "fibre_g": 22.7,
+      "sodium_mg": 35,
       "id": "turmeric-unverified",
       "name_en": "Turmeric powder",
       "name_bn": "হলুদের গুঁড়া",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "07_0020",
+          "table": "Mineral composition",
+          "pdf_page": 90
+        },
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        },
+        "sugars_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 172231,
+          "description": "Spices, turmeric, ground"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": null,
@@ -2385,21 +3526,59 @@
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
     },
     {
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 298,
+      "protein_g": 12.37,
+      "fat_g": 17.77,
+      "sat_fat_g": 0.99,
+      "carbs_g": 54.99,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null,
+      "fibre_g": 41.9,
+      "sodium_mg": 35,
       "id": "coriander-powder-unverified",
       "name_en": "Coriander powder",
       "name_bn": "ধনিয়ার গুঁড়া",
       "basis": "per_100_g_raw_ingredient",
       "source": [],
-      "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "nutrient_sources": {
+        "energy_kcal": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        },
+        "protein_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        },
+        "fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        },
+        "carbs_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        },
+        "fibre_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        },
+        "sodium_mg": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 170922,
+          "description": "Spices, coriander seed"
+        }
+      },
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": null,
@@ -2426,7 +3605,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 101,
       "id": "rohu-river-raw",
       "name_en": "Rohu, river, raw",
       "name_bn": "রুই মাছ, কাঁচা",
@@ -2474,19 +3653,26 @@
           "table": "Proximate composition",
           "pdf_page": 121,
           "food_code": "09_0059"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0059",
+          "table": "Mineral composition",
+          "pdf_page": 123
         }
       },
-      "notes": "FCTB river rohu raw entry. Specific sodium, saturated fat and sugars not verified."
+      "notes": "FCTB river rohu raw entry. Specific sodium, saturated fat and sugars not verified.",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 81,
       "protein_g": 17,
       "fat_g": 1.4,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.101,
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null,
+      "sodium_mg": 117,
       "id": "speckled-shrimp-raw",
       "name_en": "Shrimp, speckled, raw",
       "name_bn": "চিংড়ি, কাঁচা (FCTB speckled shrimp entry)",
@@ -2534,9 +3720,22 @@
           "table": "Proximate composition",
           "pdf_page": 121,
           "food_code": "09_0061"
+        },
+        "sodium_mg": {
+          "source_id": "FCTB-2013",
+          "food_code": "09_0061",
+          "table": "Mineral composition",
+          "pdf_page": 123
+        },
+        "sat_fat_g": {
+          "source_id": "USDA-FDC",
+          "fdc_id": 175179,
+          "description": "Crustaceans, shrimp, raw"
         }
       },
-      "notes": "This is the specific FCTB speckled-shrimp entry, not a universal profile for every shrimp species or prawn size. Sodium, saturated fat and sugars not verified."
+      "notes": "This is the specific FCTB speckled-shrimp entry, not a universal profile for every shrimp species or prawn size. Sodium, saturated fat and sugars not verified.",
+      "match_quality": "proxy",
+      "review_status": "approved"
     },
     {
       "energy_kcal": 346,
