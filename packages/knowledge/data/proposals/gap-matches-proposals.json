@@ -1,0 +1,290 @@
+[
+  {
+    "ingredientId": "moong-dal-raw",
+    "decision": "approved",
+    "source": "ifct-2017",
+    "matchQuality": "exact",
+    "note": "IFCT B010 'Green gram, dal' is a true dal row (not the whole-bean proxy rejected in P1-DH01). Energy converted from Table 1 kJ by dividing by 4.184. Table 6 'Available CHO' (42.01) disagrees with Table 1 (52.59); Table 1 used because it is consistent with the reported energy.",
+    "approvedRows": [
+      {
+        "source": "ifct-2017",
+        "foodCode": "B010",
+        "rowName": "Green gram, dal (Vigna radiata)",
+        "table": "Table 1. Proximate Principles and Dietary Fibre",
+        "page": 42,
+        "values": {
+          "energy_kcal": 325.7,
+          "protein_g": 23.88,
+          "fat_g": 1.35,
+          "carbs_g": 52.59,
+          "fibre_g": 9.37
+        }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "B010",
+        "rowName": "Green gram, dal (Vigna radiata)",
+        "table": "Table 5. Minerals and Trace Elements (Na column)",
+        "page": 154,
+        "values": { "sodium_mg": 10.14 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "B010",
+        "rowName": "Green gram, dal (Vigna radiata)",
+        "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+        "page": 230,
+        "values": { "sat_fat_g": 0.247 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "B010",
+        "rowName": "Green gram, dal (Vigna radiata)",
+        "table": "Table 6. Starch and Individual Sugars (total free sugars)",
+        "page": 210,
+        "values": { "sugars_g": 0.95 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "broken-wheat-unverified",
+    "decision": "approved",
+    "source": "ifct-2017",
+    "matchQuality": "proxy",
+    "note": "IFCT A021 'Wheat, bulgur'; IFCT's own regional name list maps 'Dalia' to A021. Bulgur is parboiled-cracked wheat while Bangladeshi dalia is usually raw cracked wheat, so this stays a flagged proxy. Energy converted from Table 1 kJ by dividing by 4.184. Table 6 'Available CHO' (61.74) disagrees with Table 1 (69.06); Table 1 used because it is consistent with the reported energy.",
+    "approvedRows": [
+      {
+        "source": "ifct-2017",
+        "foodCode": "A021",
+        "rowName": "Wheat, bulgur (Triticum aestivum)",
+        "table": "Table 1. Proximate Principles and Dietary Fibre",
+        "page": 42,
+        "values": {
+          "energy_kcal": 341.8,
+          "protein_g": 10.84,
+          "fat_g": 1.45,
+          "carbs_g": 69.06,
+          "fibre_g": 8.81
+        }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "A021",
+        "rowName": "Wheat, bulgur (Triticum aestivum)",
+        "table": "Table 5. Minerals and Trace Elements (Na column)",
+        "page": 154,
+        "values": { "sodium_mg": 2.09 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "A021",
+        "rowName": "Wheat, bulgur (Triticum aestivum)",
+        "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+        "page": 230,
+        "values": { "sat_fat_g": 0.196 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "A021",
+        "rowName": "Wheat, bulgur (Triticum aestivum)",
+        "table": "Table 6. Starch and Individual Sugars (total free sugars)",
+        "page": 210,
+        "values": { "sugars_g": 1.2 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "date-palm-jaggery",
+    "decision": "approved",
+    "source": "mixed",
+    "matchQuality": "proxy",
+    "note": "No usable date-palm jaggery row exists anywhere (FCTB 15_0005 mineral row has only two legible values; no IFCT row), so sugarcane-jaggery proxies are used: Na from FCTB 15_0004 per source priority (Bangladesh first), sat fat and sugars from IFCT I001 cane jaggery.",
+    "approvedRows": [
+      {
+        "source": "bd-fctb-2013",
+        "foodCode": "15_0004",
+        "rowName": "Jaggery, sugarcane, solid (Gur, Akh)",
+        "table": "Mineral composition",
+        "page": 159,
+        "values": { "sodium_mg": 79 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "I001",
+        "rowName": "Jaggery, cane (Saccharum officinarum)",
+        "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+        "page": 260,
+        "values": { "sat_fat_g": 0.0692 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "I001",
+        "rowName": "Jaggery, cane (Saccharum officinarum)",
+        "table": "Table 6. Starch and Individual Sugars (total free sugars)",
+        "page": 224,
+        "values": { "sugars_g": 84.32 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "white-sugar",
+    "decision": "approved",
+    "source": "usda-fdc",
+    "matchQuality": "exact",
+    "note": "All three missing fields taken from one USDA row for internal consistency. FCTB 15_0008 (Na 5, p159) was verified but not used; its Na is the documented alternative. USDA sugars 99.8 sits 0.3 above the FCTB available-carb value 99.5 already in the source data - rounding level, no conflict introduced.",
+    "approvedRows": [
+      {
+        "source": "usda-fdc",
+        "fdcId": 169655,
+        "rowName": "Sugars, granulated (SR Legacy)",
+        "table": "Foundation/SR Legacy nutrient record (sat fat, total sugars, sodium)",
+        "page": null,
+        "values": { "sat_fat_g": 0, "sugars_g": 99.8, "sodium_mg": 1 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "cow-milk-whole-pasteurized",
+    "decision": "approved",
+    "source": "usda-fdc",
+    "matchQuality": "exact",
+    "note": "Only the two missing fields (sat fat, sugars) are taken; the vitamin-D fortification that distinguishes 171265 from unfortified 172217 does not affect them.",
+    "approvedRows": [
+      {
+        "source": "usda-fdc",
+        "fdcId": 171265,
+        "rowName": "Milk, whole, 3.25% milkfat, with added vitamin D (SR Legacy)",
+        "table": "SR Legacy nutrient record (sat fat, total sugars)",
+        "page": null,
+        "values": { "sat_fat_g": 1.865, "sugars_g": 5.05 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "egg-chicken-farmed-raw",
+    "decision": "approved",
+    "source": "usda-fdc",
+    "matchQuality": "exact",
+    "note": "Fills the four missing fields only; proximates stay on the approved FCTB 11_0001 row.",
+    "approvedRows": [
+      {
+        "source": "usda-fdc",
+        "fdcId": 171287,
+        "rowName": "Egg, whole, raw, fresh (SR Legacy)",
+        "table": "SR Legacy nutrient record (sat fat, carbs, sugars, sodium)",
+        "page": null,
+        "values": { "sat_fat_g": 3.126, "carbs_g": 0.72, "sugars_g": 0.37, "sodium_mg": 142 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "chicken-leg-skinless-raw",
+    "decision": "approved",
+    "source": "usda-fdc",
+    "matchQuality": "exact",
+    "note": "Meat-only leg row matches the ingredient definition (skinless); fills the two missing fields only.",
+    "approvedRows": [
+      {
+        "source": "usda-fdc",
+        "fdcId": 173619,
+        "rowName": "Chicken, broilers or fryers, leg, meat only, raw (SR Legacy)",
+        "table": "SR Legacy nutrient record (sat fat, total sugars)",
+        "page": null,
+        "values": { "sat_fat_g": 1.05, "sugars_g": 0 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "plain-yogurt-unverified",
+    "decision": "approved",
+    "source": "usda-fdc",
+    "matchQuality": "proxy",
+    "note": "Supersedes the P1-DH01 NULL: that decision was made before this candidate existed. USDA 171284 plain whole-milk yogurt is a fair stand-in for dahi (whole-milk set yogurt), but US dairy may be vitamin-fortified and the fat content is somewhat higher than typical Bangladeshi dahi, so it stays a flagged proxy.",
+    "approvedRows": [
+      {
+        "source": "usda-fdc",
+        "fdcId": 171284,
+        "rowName": "Yogurt, plain, whole milk (SR Legacy)",
+        "table": "SR Legacy nutrient record (full per-100 g patch)",
+        "page": null,
+        "values": {
+          "energy_kcal": 61,
+          "protein_g": 3.47,
+          "fat_g": 3.25,
+          "sat_fat_g": 2.096,
+          "carbs_g": 4.66,
+          "sugars_g": 4.66,
+          "fibre_g": 0,
+          "sodium_mg": 46
+        }
+      }
+    ]
+  },
+  {
+    "ingredientId": "chhana-fresh-unverified",
+    "decision": "approved",
+    "source": "ifct-2017",
+    "matchQuality": "proxy",
+    "note": "IFCT L003 'Paneer' carries the regional names Chhena/Channa but is pressed, while fresh chhana is unpressed, so this stays a flagged proxy. The third-party npm CSV is digit-corrupted for this row (fat 14.78, carbs 12.41, energy 1079); the PDF is authoritative. sugars_g deliberately left null: IFCT's total free sugars for L003 is 11.57 (including 9.12 lactose per the Table 6 footnote) while the same book's proximate available CHO is 2.41 - the source contradicts itself, so no value is asserted. fibre_g left null: the Table 1 fibre cells are blank for L003 (IFCT omits zero cells) and a blank is not read as a value.",
+    "approvedRows": [
+      {
+        "source": "ifct-2017",
+        "foodCode": "L003",
+        "rowName": "Paneer (regional names: Chhena, Channa)",
+        "table": "Table 1. Proximate Principles and Dietary Fibre",
+        "page": 57,
+        "values": { "energy_kcal": 305.5, "protein_g": 18.86, "fat_g": 24.78, "carbs_g": 2.41 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "L003",
+        "rowName": "Paneer (regional names: Chhena, Channa)",
+        "table": "Table 5. Minerals and Trace Elements (Na column)",
+        "page": 184,
+        "values": { "sodium_mg": 18.04 }
+      },
+      {
+        "source": "ifct-2017",
+        "foodCode": "L003",
+        "rowName": "Paneer (regional names: Chhena, Channa)",
+        "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
+        "page": 260,
+        "values": { "sat_fat_g": 8.851 }
+      }
+    ]
+  },
+  {
+    "ingredientId": "rice-flour-unverified",
+    "decision": "approved",
+    "source": "usda-fdc",
+    "matchQuality": "exact",
+    "note": "Supersedes the P1-DH01 NULL (which was driven by the brown-flour mismatch): 169714 is white rice flour, an exact match, and the unenriched variant is chosen deliberately because Bangladeshi rice flour is not fortified. US rice varieties differ from Bangladeshi ones, noted as residual proxy risk.",
+    "approvedRows": [
+      {
+        "source": "usda-fdc",
+        "fdcId": 169714,
+        "rowName": "Rice flour, white, unenriched (SR Legacy)",
+        "table": "SR Legacy nutrient record (full per-100 g patch)",
+        "page": null,
+        "values": {
+          "energy_kcal": 366,
+          "protein_g": 5.95,
+          "fat_g": 1.42,
+          "sat_fat_g": 0.386,
+          "carbs_g": 80.13,
+          "sugars_g": 0.12,
+          "fibre_g": 2.4,
+          "sodium_mg": 0
+        }
+      }
+    ]
+  },
+  {
+    "ingredientId": "dried-fish-shutki-unverified",
+    "decision": "no-source",
+    "source": null,
+    "matchQuality": null,
+    "note": "Stays null. USDA 174190 (dried-salted cod, Na 7027 mg) was rejected as wildly unrepresentative of Bangladeshi sun-dried shutki; IFCT has no dried-fish row; FCTB has no suitable row. A wrong proximate here would poison every score for this ingredient.",
+    "approvedRows": []
+  }
+]
