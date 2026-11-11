@@ -360,6 +360,9 @@ importers:
       '@sp/contracts':
         specifier: workspace:*
         version: link:../packages/contracts
+      '@sp/engine':
+        specifier: workspace:*
+        version: link:../packages/engine
       '@sp/knowledge':
         specifier: workspace:*
         version: link:../packages/knowledge

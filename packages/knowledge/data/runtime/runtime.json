@@ -1691,11 +1691,12 @@
       "energy_kcal": 345,
       "protein_g": 6.6,
       "fat_g": 0.3,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.158,
       "carbs_g": 77.4,
       "sugars_g": null,
       "fibre_g": 3.1,
-      "sodium_mg": 5
+      "sodium_mg": 5,
+      "match_quality": "proxy"
     },
     {
       "id": "lentil-red-dried-raw",
@@ -1704,11 +1705,12 @@
       "energy_kcal": 317,
       "protein_g": 27.7,
       "fat_g": 0.8,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.154,
       "carbs_g": 43.2,
-      "sugars_g": null,
+      "sugars_g": 2.03,
       "fibre_g": 13.2,
-      "sodium_mg": 37
+      "sodium_mg": 37,
+      "match_quality": "proxy"
     },
     {
       "id": "bengal-gram-split-dried-raw",
@@ -1717,11 +1719,12 @@
       "energy_kcal": 375,
       "protein_g": 20.2,
       "fat_g": 6,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.603,
       "carbs_g": 59.2,
-      "sugars_g": null,
+      "sugars_g": 10.7,
       "fibre_g": 1.2,
-      "sodium_mg": null
+      "sodium_mg": 39,
+      "match_quality": "proxy"
     },
     {
       "id": "potato-diamond-raw",
@@ -1743,11 +1746,12 @@
       "energy_kcal": 24,
       "protein_g": 1.9,
       "fat_g": 0.1,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.034,
       "carbs_g": 2,
-      "sugars_g": null,
+      "sugars_g": 3.53,
       "fibre_g": 4.1,
-      "sodium_mg": null
+      "sodium_mg": 8,
+      "match_quality": "proxy"
     },
     {
       "id": "onion-raw",
@@ -1756,11 +1760,12 @@
       "energy_kcal": 59,
       "protein_g": 1.4,
       "fat_g": 0.1,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.042,
       "carbs_g": 12.2,
-      "sugars_g": null,
+      "sugars_g": 4.24,
       "fibre_g": 1.9,
-      "sodium_mg": 11
+      "sodium_mg": 11,
+      "match_quality": "proxy"
     },
     {
       "id": "garlic-raw",
@@ -1769,11 +1774,12 @@
       "energy_kcal": 147,
       "protein_g": 6.9,
       "fat_g": 0.6,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.089,
       "carbs_g": 27.6,
-      "sugars_g": null,
+      "sugars_g": 1,
       "fibre_g": 2.1,
-      "sodium_mg": 11
+      "sodium_mg": 11,
+      "match_quality": "proxy"
     },
     {
       "id": "bottle-gourd-raw",
@@ -1782,11 +1788,12 @@
       "energy_kcal": 34,
       "protein_g": 1.1,
       "fat_g": 0.1,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.002,
       "carbs_g": 6.8,
       "sugars_g": null,
       "fibre_g": 0.6,
-      "sodium_mg": null
+      "sodium_mg": 39,
+      "match_quality": "proxy"
     },
     {
       "id": "tomato-red-ripe-raw",
@@ -1795,11 +1802,12 @@
       "energy_kcal": 16,
       "protein_g": 1.1,
       "fat_g": 0.2,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.028,
       "carbs_g": 1.4,
-      "sugars_g": null,
+      "sugars_g": 2.63,
       "fibre_g": 1.7,
-      "sodium_mg": 7
+      "sodium_mg": 7,
+      "match_quality": "proxy"
     },
     {
       "id": "beef-lean-boneless-raw",
@@ -1812,7 +1820,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 52
     },
     {
       "id": "beef-15-20-fat-boneless-raw",
@@ -1825,7 +1833,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 69
     },
     {
       "id": "chicken-leg-skinless-raw",
@@ -1834,11 +1842,12 @@
       "energy_kcal": 128,
       "protein_g": 19.2,
       "fat_g": 5.7,
-      "sat_fat_g": null,
+      "sat_fat_g": 1.05,
       "carbs_g": 0,
-      "sugars_g": null,
+      "sugars_g": 0,
       "fibre_g": 0,
-      "sodium_mg": 55
+      "sodium_mg": 55,
+      "match_quality": "proxy"
     },
     {
       "id": "mutton-moderately-fat-raw",
@@ -1851,7 +1860,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 41
     },
     {
       "id": "egg-chicken-farmed-raw",
@@ -1860,11 +1869,12 @@
       "energy_kcal": 139,
       "protein_g": 14.5,
       "fat_g": 9,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
+      "sat_fat_g": 3.126,
+      "carbs_g": 0.72,
+      "sugars_g": 0.37,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 116,
+      "match_quality": "proxy"
     },
     {
       "id": "cow-milk-whole-pasteurized",
@@ -1873,11 +1883,12 @@
       "energy_kcal": 63,
       "protein_g": 3.1,
       "fat_g": 3.7,
-      "sat_fat_g": null,
+      "sat_fat_g": 1.865,
       "carbs_g": 4.3,
-      "sugars_g": null,
+      "sugars_g": 5.05,
       "fibre_g": 0,
-      "sodium_mg": 51
+      "sodium_mg": 51,
+      "match_quality": "proxy"
     },
     {
       "id": "coconut-milk",
@@ -1886,23 +1897,24 @@
       "energy_kcal": 213,
       "protein_g": 2.1,
       "fat_g": 21.7,
-      "sat_fat_g": null,
+      "sat_fat_g": 21.14,
       "carbs_g": 1.2,
-      "sugars_g": null,
+      "sugars_g": 3.34,
       "fibre_g": 2.2,
-      "sodium_mg": null
+      "sodium_mg": 14,
+      "match_quality": "proxy"
     },
     {
       "id": "coconut-kernel-mature-raw",
       "name_en": "Coconut kernel, mature, raw",
       "name_bn": "পাকা নারকেলের শাঁস, কাঁচা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 389,
+      "protein_g": 3.3,
+      "fat_g": 36.7,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 6.9,
       "sugars_g": null,
-      "fibre_g": null,
+      "fibre_g": 9.2,
       "sodium_mg": 16
     },
     {
@@ -1916,7 +1928,7 @@
       "carbs_g": 18.5,
       "sugars_g": null,
       "fibre_g": 11.8,
-      "sodium_mg": null
+      "sodium_mg": 13
     },
     {
       "id": "cashew-raw",
@@ -1929,7 +1941,7 @@
       "carbs_g": 23.5,
       "sugars_g": null,
       "fibre_g": 3.3,
-      "sodium_mg": null
+      "sodium_mg": 12
     },
     {
       "id": "cardamom-dried",
@@ -1938,11 +1950,12 @@
       "energy_kcal": 261,
       "protein_g": 10.2,
       "fat_g": 2.2,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.68,
       "carbs_g": 37.8,
       "sugars_g": null,
       "fibre_g": 24.4,
-      "sodium_mg": 16
+      "sodium_mg": 16,
+      "match_quality": "proxy"
     },
     {
       "id": "dried-red-chilli",
@@ -1964,11 +1977,12 @@
       "energy_kcal": 243,
       "protein_g": 4,
       "fat_g": 1.2,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.345,
       "carbs_g": 27.5,
-      "sugars_g": null,
+      "sugars_g": 2.17,
       "fibre_g": 53.1,
-      "sodium_mg": null
+      "sodium_mg": 10,
+      "match_quality": "proxy"
     },
     {
       "id": "bay-leaf-dried",
@@ -1977,11 +1991,12 @@
       "energy_kcal": 353,
       "protein_g": 7.6,
       "fat_g": 8.4,
-      "sat_fat_g": null,
+      "sat_fat_g": 2.28,
       "carbs_g": 48.7,
       "sugars_g": null,
       "fibre_g": 26.3,
-      "sodium_mg": 23
+      "sodium_mg": 23,
+      "match_quality": "proxy"
     },
     {
       "id": "coriander-leaves-raw",
@@ -1990,11 +2005,12 @@
       "energy_kcal": 30,
       "protein_g": 3.3,
       "fat_g": 0.5,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.014,
       "carbs_g": 0.1,
-      "sugars_g": null,
+      "sugars_g": 0.87,
       "fibre_g": 5.9,
-      "sodium_mg": null
+      "sodium_mg": 58,
+      "match_quality": "proxy"
     },
     {
       "id": "mustard-oil",
@@ -2003,11 +2019,12 @@
       "energy_kcal": 900,
       "protein_g": 0,
       "fat_g": 100,
-      "sat_fat_g": null,
+      "sat_fat_g": 11.582,
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": 0
+      "sodium_mg": 0,
+      "match_quality": "proxy"
     },
     {
       "id": "ghee-cow",
@@ -2016,23 +2033,24 @@
       "energy_kcal": 898,
       "protein_g": 0,
       "fat_g": 99.8,
-      "sat_fat_g": null,
+      "sat_fat_g": 60,
       "carbs_g": 0,
-      "sugars_g": null,
+      "sugars_g": 0,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 2,
+      "match_quality": "proxy"
     },
     {
       "id": "green-chilli-raw",
       "name_en": "Green chilli with seeds, raw",
       "name_bn": "কাঁচা মরিচ, বীজসহ",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 45,
+      "protein_g": 2.8,
+      "fat_g": 0.1,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 5.9,
       "sugars_g": null,
-      "fibre_g": null,
+      "fibre_g": 4.7,
       "sodium_mg": 12
     },
     {
@@ -2042,11 +2060,12 @@
       "energy_kcal": 398,
       "protein_g": 0,
       "fat_g": 0,
-      "sat_fat_g": null,
+      "sat_fat_g": 0,
       "carbs_g": 99.5,
-      "sugars_g": null,
+      "sugars_g": 99.8,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 1,
+      "match_quality": "proxy"
     },
     {
       "id": "date-palm-jaggery",
@@ -2055,18 +2074,19 @@
       "energy_kcal": 352,
       "protein_g": 1.5,
       "fat_g": 0.3,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.0692,
       "carbs_g": 85.7,
-      "sugars_g": null,
+      "sugars_g": 84.32,
       "fibre_g": 0.3,
-      "sodium_mg": null
+      "sodium_mg": 79,
+      "match_quality": "proxy"
     },
     {
       "id": "salt",
       "name_en": "Salt",
       "name_bn": "লবণ",
       "energy_kcal": 0,
-      "protein_g": null,
+      "protein_g": 0,
       "fat_g": 0,
       "sat_fat_g": null,
       "carbs_g": 0,
@@ -2081,76 +2101,82 @@
       "energy_kcal": 0,
       "protein_g": 0,
       "fat_g": 0,
-      "sat_fat_g": null,
+      "sat_fat_g": 0,
       "carbs_g": 0,
-      "sugars_g": null,
+      "sugars_g": 0,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 4,
+      "match_quality": "proxy"
     },
     {
       "id": "moong-dal-raw",
       "name_en": "Mung bean, split, raw (not yet source-matched)",
       "name_bn": "মুগ ডাল, কাঁচা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 325.7,
+      "protein_g": 23.88,
+      "fat_g": 1.35,
+      "sat_fat_g": 0.247,
+      "carbs_g": 52.59,
+      "sugars_g": 0.95,
+      "fibre_g": 9.37,
+      "sodium_mg": 10.14,
+      "match_quality": "direct"
     },
     {
       "id": "plain-yogurt-unverified",
       "name_en": "Plain yogurt/curd, unsweetened (matching FCTB profile not verified)",
       "name_bn": "টক দই",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 61,
+      "protein_g": 3.47,
+      "fat_g": 3.25,
+      "sat_fat_g": 2.096,
+      "carbs_g": 4.66,
+      "sugars_g": 4.66,
+      "fibre_g": 0,
+      "sodium_mg": 46,
+      "match_quality": "proxy"
     },
     {
       "id": "ginger-raw-unverified",
       "name_en": "Ginger, raw",
       "name_bn": "আদা, কাঁচা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 72,
+      "protein_g": 1.9,
+      "fat_g": 0.8,
+      "sat_fat_g": 0.203,
+      "carbs_g": 13.3,
+      "sugars_g": 1.7,
+      "fibre_g": 2,
+      "sodium_mg": 12,
+      "match_quality": "proxy"
     },
     {
       "id": "saffron-unverified",
       "name_en": "Saffron",
       "name_bn": "জাফরান",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 310,
+      "protein_g": 11.43,
+      "fat_g": 5.85,
+      "sat_fat_g": 1.586,
+      "carbs_g": 65.37,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 3.9,
+      "sodium_mg": 148,
+      "match_quality": "proxy"
     },
     {
       "id": "dried-plum-alubokhara-unverified",
       "name_en": "Dried plum (alubukhara)",
       "name_bn": "আলুবোখারা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 240,
+      "protein_g": 2.18,
+      "fat_g": 0.38,
+      "sat_fat_g": 0.088,
+      "carbs_g": 63.88,
+      "sugars_g": 38.13,
+      "fibre_g": 7.1,
+      "sodium_mg": 2,
+      "match_quality": "proxy"
     },
     {
       "id": "whole-spice-mix-unverified",
@@ -2169,27 +2195,28 @@
       "id": "raisin-dried-unverified",
       "name_en": "Raisins, dried",
       "name_bn": "কিশমিশ",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 296,
+      "protein_g": 2.52,
+      "fat_g": 0.54,
+      "sat_fat_g": 0.178,
+      "carbs_g": 78.47,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 6.8,
+      "sodium_mg": 28,
+      "match_quality": "proxy"
     },
     {
       "id": "hilsa-raw-unverified",
       "name_en": "Hilsa fish, raw (matching nutrient row not verified in this pass)",
       "name_bn": "ইলিশ মাছ, কাঁচা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 223,
+      "protein_g": 18,
+      "fat_g": 16.8,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 0,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 0,
+      "sodium_mg": 52
     },
     {
       "id": "dried-fish-shutki-unverified",
@@ -2208,131 +2235,137 @@
       "id": "large-prawn-raw-unverified",
       "name_en": "Large prawn, raw (matching species-specific nutrient row not verified)",
       "name_bn": "বড় চিংড়ি, কাঁচা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 92,
+      "protein_g": 16.5,
+      "fat_g": 2.9,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 0,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 0,
+      "sodium_mg": 117
     },
     {
       "id": "cumin-seed-unverified",
       "name_en": "Cumin seed",
       "name_bn": "জিরা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 402,
+      "protein_g": 18.3,
+      "fat_g": 17.6,
+      "sat_fat_g": 1.535,
+      "carbs_g": 37.2,
+      "sugars_g": 2.25,
+      "fibre_g": 10.5,
+      "sodium_mg": 148,
+      "match_quality": "proxy"
     },
     {
       "id": "wheat-flour-white-refined",
       "name_en": "Wheat flour, white refined (maida)",
       "name_bn": "ময়দা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 346,
+      "protein_g": 9.8,
+      "fat_g": 1,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 73.1,
       "sugars_g": null,
-      "fibre_g": null,
+      "fibre_g": 2.7,
       "sodium_mg": 10
     },
     {
       "id": "white-peas-dried-unverified",
       "name_en": "White peas, dried",
       "name_bn": "শুকনা সাদা মটর",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 327,
+      "protein_g": 22.1,
+      "fat_g": 2.1,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 48.3,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 13,
+      "sodium_mg": 21
     },
     {
       "id": "tamarind-pulp-unverified",
       "name_en": "Tamarind pulp",
       "name_bn": "তেঁতুলের মণ্ড",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 239,
+      "protein_g": 2.8,
+      "fat_g": 0.6,
+      "sat_fat_g": 0.272,
+      "carbs_g": 62.5,
+      "sugars_g": 38.8,
+      "fibre_g": 5.1,
+      "sodium_mg": 19,
+      "match_quality": "proxy"
     },
     {
       "id": "rice-flour-unverified",
       "name_en": "Rice flour",
       "name_bn": "চালের গুঁড়া",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 366,
+      "protein_g": 5.95,
+      "fat_g": 1.42,
+      "sat_fat_g": 0.386,
+      "carbs_g": 80.13,
+      "sugars_g": 0.12,
+      "fibre_g": 2.4,
+      "sodium_mg": 0,
+      "match_quality": "proxy"
     },
     {
       "id": "vermicelli-dry-unverified",
       "name_en": "Vermicelli, dry",
       "name_bn": "সেমাই",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
+      "energy_kcal": 347,
+      "protein_g": 8.9,
+      "fat_g": 0.6,
       "sat_fat_g": null,
-      "carbs_g": null,
+      "carbs_g": 74.9,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 3.2,
+      "sodium_mg": 8
     },
     {
       "id": "chhana-fresh-unverified",
       "name_en": "Chhana, fresh",
       "name_bn": "ছানা",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 305.5,
+      "protein_g": 18.86,
+      "fat_g": 24.78,
+      "sat_fat_g": 8.851,
+      "carbs_g": 2.41,
       "sugars_g": null,
       "fibre_g": null,
-      "sodium_mg": null
+      "sodium_mg": 18.04,
+      "match_quality": "proxy"
     },
     {
       "id": "broken-wheat-unverified",
       "name_en": "Broken wheat/dalia",
       "name_bn": "ভাঙা গম/ডালিয়া",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 341.8,
+      "protein_g": 10.84,
+      "fat_g": 1.45,
+      "sat_fat_g": 0.196,
+      "carbs_g": 69.06,
+      "sugars_g": 1.2,
+      "fibre_g": 8.81,
+      "sodium_mg": 2.09,
+      "match_quality": "proxy"
     },
     {
       "id": "turmeric-unverified",
       "name_en": "Turmeric powder",
       "name_bn": "হলুদের গুঁড়া",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
-      "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "energy_kcal": 312,
+      "protein_g": 9.68,
+      "fat_g": 3.25,
+      "sat_fat_g": 1.838,
+      "carbs_g": 67.14,
+      "sugars_g": 3.21,
+      "fibre_g": 22.7,
+      "sodium_mg": 35,
+      "match_quality": "proxy"
     },
     {
       "id": "red-chilli-powder-unverified",
@@ -2351,14 +2384,15 @@
       "id": "coriander-powder-unverified",
       "name_en": "Coriander powder",
       "name_bn": "ধনিয়ার গুঁড়া",
-      "energy_kcal": null,
-      "protein_g": null,
-      "fat_g": null,
-      "sat_fat_g": null,
-      "carbs_g": null,
+      "energy_kcal": 298,
+      "protein_g": 12.37,
+      "fat_g": 17.77,
+      "sat_fat_g": 0.99,
+      "carbs_g": 54.99,
       "sugars_g": null,
-      "fibre_g": null,
-      "sodium_mg": null
+      "fibre_g": 41.9,
+      "sodium_mg": 35,
+      "match_quality": "proxy"
     },
     {
       "id": "fermentation-starter-unverified",
@@ -2384,7 +2418,7 @@
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 101
     },
     {
       "id": "speckled-shrimp-raw",
@@ -2393,11 +2427,12 @@
       "energy_kcal": 81,
       "protein_g": 17,
       "fat_g": 1.4,
-      "sat_fat_g": null,
+      "sat_fat_g": 0.101,
       "carbs_g": 0,
       "sugars_g": null,
       "fibre_g": 0,
-      "sodium_mg": null
+      "sodium_mg": 117,
+      "match_quality": "proxy"
     },
     {
       "id": "semolina-wheat-raw",
