@@ -43,7 +43,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 168879
   },
   {
     "ingredientId": "lentil-red-dried-raw",
@@ -75,7 +75,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 172420
   },
   {
     "ingredientId": "bengal-gram-split-dried-raw",
@@ -92,7 +92,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 173756
   },
   {
     "ingredientId": "potato-diamond-raw",
@@ -141,7 +141,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 169228
   },
   {
     "ingredientId": "onion-raw",
@@ -186,7 +186,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170000
   },
   {
     "ingredientId": "garlic-raw",
@@ -226,7 +226,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 169230
   },
   {
     "ingredientId": "bottle-gourd-raw",
@@ -268,7 +268,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 169232
   },
   {
     "ingredientId": "tomato-red-ripe-raw",
@@ -316,7 +316,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170457
   },
   {
     "ingredientId": "beef-lean-boneless-raw",
@@ -565,7 +565,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170172
   },
   {
     "ingredientId": "coconut-kernel-mature-raw",
@@ -698,7 +698,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170919
   },
   {
     "ingredientId": "dried-red-chilli",
@@ -771,7 +771,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 171320
   },
   {
     "ingredientId": "bay-leaf-dried",
@@ -803,7 +803,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170917
   },
   {
     "ingredientId": "coriander-leaves-raw",
@@ -858,7 +858,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 169997
   },
   {
     "ingredientId": "mustard-oil",
@@ -908,7 +908,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 172337
   },
   {
     "ingredientId": "ghee-cow",
@@ -925,7 +925,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 171314
   },
   {
     "ingredientId": "green-chilli-raw",
@@ -1088,7 +1088,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 173647
   },
   {
     "ingredientId": "moong-dal-raw",
@@ -1266,7 +1266,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 169231
   },
   {
     "ingredientId": "saffron-unverified",
@@ -1287,7 +1287,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170934
   },
   {
     "ingredientId": "dried-plum-alubokhara-unverified",
@@ -1336,7 +1336,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 168162
   },
   {
     "ingredientId": "whole-spice-mix-unverified",
@@ -1462,7 +1462,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 168166
   },
   {
     "ingredientId": "hilsa-raw-unverified",
@@ -1729,7 +1729,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170923
   },
   {
     "ingredientId": "wheat-flour-white-refined",
@@ -1892,7 +1892,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 167763
   },
   {
     "ingredientId": "rice-flour-unverified",
@@ -2059,7 +2059,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 172231
   },
   {
     "ingredientId": "red-chilli-powder-unverified",
@@ -2206,7 +2206,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 170922
   },
   {
     "ingredientId": "fermentation-starter-unverified",
@@ -2264,7 +2264,7 @@
       }
     ],
     "matchQuality": "proxy",
-    "approvedFdcId": null
+    "approvedFdcId": 175179
   },
   {
     "ingredientId": "semolina-wheat-raw",
