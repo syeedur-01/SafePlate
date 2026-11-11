@@ -20,7 +20,7 @@
       "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
       "tier": "data",
       "status": "verified",
-      "accessedOn": "2026-11-08"
+      "accessedOn": "2026-11-11"
     },
     {
       "id": "bd-safe-food-act-2013",
@@ -31,7 +31,7 @@
       "url": "https://faolex.fao.org/docs/pdf/bgd153882.pdf",
       "tier": "bangladesh",
       "status": "verified",
-      "accessedOn": "2026-11-08"
+      "accessedOn": "2026-11-11"
     },
     {
       "id": "bd-bfsa",
@@ -64,7 +64,7 @@
       "url": "https://www.who.int/groups/nutrition-guidance-expert-advisory-group-(nugag)",
       "tier": "global",
       "status": "verified",
-      "accessedOn": "2026-11-08"
+      "accessedOn": "2026-11-11"
     },
     {
       "id": "codex-texts",
@@ -75,7 +75,7 @@
       "url": "https://www.fao.org/fao-who-codexalimentarius/codex-texts",
       "tier": "global",
       "status": "verified",
-      "accessedOn": "2026-11-08"
+      "accessedOn": "2026-11-11"
     },
     {
       "id": "usda-fdc",
@@ -86,7 +86,7 @@
       "url": "https://fdc.nal.usda.gov/",
       "tier": "data",
       "status": "verified",
-      "accessedOn": "2026-11-08"
+      "accessedOn": "2026-11-11"
     },
     {
       "id": "infs-brc-v12i1-86760",
@@ -97,8 +97,20 @@
       "url": "https://doi.org/10.3329/brc.v12i1.86760",
       "tier": "data",
       "status": "verified",
-      "accessedOn": "2026-11-08",
+      "accessedOn": "2026-11-11",
       "notes": "the single INFS/BanglaJOL paper the team collected (ingredients.json allowed_sources INFS-2026-CHICKEN-ROAST); one register entry per paper"
+    },
+    {
+      "id": "ifct-2017",
+      "title": "Indian Food Composition Tables 2017",
+      "publisher": "ICMR - National Institute of Nutrition, Hyderabad (Longvah, Ananthan, Bhaskarachary, Venkaiah)",
+      "year": 2017,
+      "edition": null,
+      "url": "https://www.nin.res.in/ebooks/IFCT2017_16122024.pdf",
+      "tier": "data",
+      "status": "verified",
+      "accessedOn": "2026-11-11",
+      "notes": "regional South Asian FCT; copyright notice (book p.3) encourages data use with full acknowledgment, so every value is cited by food code and PDF page; used after FCTB and before USDA in source priority"
     }
   ]
 }

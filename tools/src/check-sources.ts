@@ -19,6 +19,7 @@ const CONTENT_CHECKS: Record<string, { pdfTitle?: RegExp; htmlText?: RegExp }> =
   'who-nugag': { htmlText: /nugag/i },
   'codex-texts': { htmlText: /codex/i },
   'usda-fdc': { htmlText: /fooddata/i },
+  'ifct-2017': { pdfTitle: /food composition/i },
   'infs-brc-v12i1-86760': { htmlText: /10[.]3329[/]brc[.]v12i1[.]86760/i },
 };
 
@@ -26,7 +27,7 @@ function writeln(line: string): void {
   process.stdout.write(`${line}\n`);
 }
 
-/** Fetches the URL and returns the fetched text (first page text for PDFs) or null when unreachable. */
+/** Fetches the URL and returns the fetched text (first two page texts for PDFs) or null when unreachable. */
 async function fetchText(url: string): Promise<string | null> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
@@ -44,11 +45,15 @@ async function fetchText(url: string): Promise<string | null> {
     if (/pdf|octet-stream/.test(contentType) || url.endsWith('.pdf')) {
       const buffer = new Uint8Array(await response.arrayBuffer());
       const doc = await pdfjs.getDocument({ data: buffer, isEvalSupported: false }).promise;
-      const content = await doc.getPage(1).then((p) => p.getTextContent());
       const parts: string[] = [];
-      for (const rawItem of content.items) {
-        if (!('str' in rawItem)) continue; // marks carry no glyphs
-        parts.push(rawItem.str);
+      // some PDFs (e.g. IFCT 2017) have a blank page 1 and put the title on page 2
+      const pagesToCheck = Math.min(2, doc.numPages);
+      for (let pageNumber = 1; pageNumber <= pagesToCheck; pageNumber += 1) {
+        const content = await doc.getPage(pageNumber).then((p) => p.getTextContent());
+        for (const rawItem of content.items) {
+          if (!('str' in rawItem)) continue; // marks carry no glyphs
+          parts.push(rawItem.str);
+        }
       }
       return parts.join(' ').slice(0, MAX_TEXT_CHARS);
     }
