@@ -6,12 +6,12 @@
 
 **Dependencies at a glance:**
 
-| Track        | Order                                                                       | Notes                        |
-| ------------ | --------------------------------------------------------------------------- | ---------------------------- |
-| A Engine     | A01 → A02 → A03 → A04                                                       | A04 uses A01 and A02         |
-| B AI and API | B01 and B02 in parallel → B03 (needs B02) · B04 (needs B01, human involved) | B04 is the day-1 risk test   |
-| C Web        | C01 → C02, C03, C04 in parallel                                             | C04 needs the contracts only |
-| D Data       | D01 → D02 and D03 in parallel → DH01 (human) → D04 (needs A01)              | D is the critical path       |
+| Track        | Order                                                                                        | Notes                        |
+| ------------ | -------------------------------------------------------------------------------------------- | ---------------------------- |
+| A Engine     | A01 → A02 → A03 → A04                                                                        | A04 uses A01 and A02         |
+| B AI and API | B01 and B02 in parallel → B03 (needs B02) · B04 (needs B01, human involved)                  | B04 is the day-1 risk test   |
+| C Web        | C01 → C02, C03, C04 in parallel                                                              | C04 needs the contracts only |
+| D Data       | D01 → D02 and D03 in parallel → DH01 (human) → DH02 (human, inserted card) → D04 (needs A01) | D is the critical path       |
 
 Every card below starts from a clean `main` (AGENTS.md section 2). Track letter in branch names is lowercase: `a/P1-A01-nutrition`.
 
@@ -1785,11 +1785,51 @@ Done when: every high-impact ingredient has a decision.
 
 ---
 
+## P1-DH02 [HUMAN] Gap-fill lookups and second approval round (inserted card)
+
+**Note:** this card was not in the original plan. P1-DH01 left 14 ingredients with no usable
+match, and a follow-up lookup round was agreed with the owner in chat on 2026-11-11. It is
+recorded here so the plan stays the source of truth. It adds no code path — it is data work
+between DH01 and D04.
+
+**Depends on:** P1-DH01 · **Branch:** `d/P1-DH02-gap-lookups`
+
+**Files:** edit `packages/knowledge/data/sources.json`, `tools/src/check-sources.ts`;
+create `packages/knowledge/data/proposals/gap-matches-proposals.json`,
+`packages/knowledge/data/proposals/P1-DH02-approval-record.md`.
+
+- [ ] Register IFCT 2017 (Longvah et al., ICMR-NIN) in `sources.json` as `ifct-2017` (tier
+      `data`) and verify it with `check-sources`. Its copyright notice permits data use with full
+      acknowledgment: cite every value by IFCT food code and physical PDF page, and keep the PDF
+      out of the repo.
+- [ ] The agent researches the gap ingredients: new IFCT 2017 lookups, FCTB re-checks of rows
+      the first round could not read, targeted USDA (SR Legacy only) searches. Every candidate value
+      must be read from the source text, never from memory or a third-party digitization (the npm
+      `ifct2017` package CSV is digit-corrupted for some rows, e.g. L003).
+- [ ] The human reviews the candidate table and decides per ingredient: approve, partially
+      approve (fields with no usable source stay null), or keep null. An earlier P1-DH01 null may be
+      superseded here — that happened: plain yogurt and rice flour were approved on the second
+      round, and moong dal was approved from an IFCT exact row instead of the rejected USDA
+      whole-bean proxy.
+- [ ] Record the decisions: `gap-matches-proposals.json` holds source-tagged `approvedRows`
+      (FCTB, IFCT and USDA values in one file, with table and page per row);
+      `P1-DH02-approval-record.md` is the audit trail.
+
+Done when: every gap ingredient has a decision and `pnpm check` is green.
+
+---
+
 ## P1-D04 Apply approved matches and coverage report
 
-**Depends on:** P1-DH01, P1-A01 · **Branch:** `d/P1-D04-apply-coverage`
+**Depends on:** P1-DH01, P1-DH02, P1-A01 · **Branch:** `d/P1-D04-apply-coverage`
 
 **Goal:** merge only approved proposals into the normalized ingredients, with provenance, and print how well each dish is covered.
+
+**Note from P1-DH02:** besides the two approval files below, D04 must consume
+`packages/knowledge/data/proposals/gap-matches-proposals.json` (source-tagged `approvedRows`,
+including FCTB, IFCT and USDA rows for the same ingredient). Same rules apply: fill only null
+fields, never overwrite, add provenance per value. The stale candidate lists in
+`usda-matches.json` for the gap ingredients must be ignored in favour of the gap file.
 
 **Files:** create `tools/src/apply-lib.ts`, `tools/src/apply-approved.ts`, `tools/src/coverage-report.ts`, `tools/test/apply-lib.test.ts`; edit `tools/package.json` (scripts `apply-approved`, `coverage`), `tools/package.json` dependency on `@sp/engine` and `@sp/knowledge`. Generated: updated `packages/knowledge/data/normalized/ingredients.json`, `packages/knowledge/data/runtime/runtime.json`.
 
