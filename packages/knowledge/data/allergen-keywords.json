@@ -1,0 +1,12 @@
+{
+  "milk": ["milk", "whey", "casein", "ghee", "paneer", "curd", "yogurt", "দুধ", "ঘি", "ছানা", "দই"],
+  "egg": ["egg", "ডিম"],
+  "fish": ["fish", "hilsa", "ilish", "rui", "মাছ", "ইলিশ"],
+  "crustacean_shellfish": ["prawn", "shrimp", "lobster", "crab", "চিংড়ি"],
+  "tree_nuts": ["cashew", "almond", "pistachio", "walnut", "কাজু", "বাদাম"],
+  "peanuts": ["peanut", "groundnut", "চিনাবাদাম"],
+  "wheat_gluten": ["wheat", "flour", "maida", "atta", "semolina", "gluten", "ময়দা", "আটা", "সুজি"],
+  "soy": ["soy", "soya", "tofu", "সয়া", "সয়াবিন"],
+  "sesame": ["sesame", "til", "তিল"],
+  "mustard": ["mustard", "সরিষা"]
+}

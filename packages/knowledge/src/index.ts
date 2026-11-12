@@ -14,6 +14,7 @@ import {
 } from '@sp/contracts';
 
 export * from './normalize';
+export * from './messages';
 
 const knowledgeDataUrl = new URL('../data/', import.meta.url);
 
