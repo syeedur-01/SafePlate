@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@hono/node-server": "2.1.6",
+    "@sp/ai": "workspace:*",
     "@sp/contracts": "workspace:*",
+    "@sp/knowledge": "workspace:*",
     "hono": "4.13.17"
   },
   "devDependencies": {

@@ -1,8 +1,14 @@
+import type { DishPromptEntry, VisionProvider } from '@sp/ai';
+
 export interface AppConfig {
   allowedOrigin: string;
   maxBodyBytes: number;
   /** Optional so callers not using the spike do not need to set it; defaults to false. */
   enableSpike?: boolean;
+  /** Optional so the P1 tests still compile; the scan route answers 503 when it is missing. */
+  provider?: VisionProvider;
+  /** Optional dish context for the vision provider; defaults to an empty list. */
+  dishes?: DishPromptEntry[];
 }
 export type Env = Record<string, string | undefined>;
 
