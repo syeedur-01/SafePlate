@@ -1,0 +1,182 @@
+{
+  "mitigation.check-label": {
+    "en": "Check the expiry date on the label again before eating.",
+    "bn": "খাওয়ার আগে লেবেলের মেয়াদ আরেকবার দেখে নিন।"
+  },
+  "mitigation.discard": {
+    "en": "Discard the food; do not eat it.",
+    "bn": "খাবারটি ফেলে দিন; খাবেন না।"
+  },
+  "mitigation.verify-freshness": {
+    "en": "Check how fresh the seafood is, and how it was stored.",
+    "bn": "মাছ কতটা টাটকা ছিল এবং কীভাবে সংরক্ষিত ছিল তা যাচাই করুন।"
+  },
+  "safety.dish-tag-seafood": {
+    "en": "Seafood dish: freshness matters.",
+    "bn": "মাছ বা চিংড়ির খাবার: টাটকা হওয়া জরুরি।"
+  },
+  "safety.label-expired": {
+    "en": "The expiry date on the label has passed.",
+    "bn": "লেবেলে উল্লিখিত মেয়াদ শেষ হয়ে গেছে।"
+  },
+  "safety.spoilage-bloated-packaging": {
+    "en": "Possible bloated packaging.",
+    "bn": "সম্ভাব্য ফোলা প্যাকেজিং।"
+  },
+  "safety.spoilage-discoloration": {
+    "en": "Possible unusual discoloration.",
+    "bn": "সম্ভাব্য অস্বাভাবিক রঙের পরিবর্তন।"
+  },
+  "safety.spoilage-foam-or-bubbles": {
+    "en": "Possible unexpected foam or bubbles.",
+    "bn": "সম্ভাব্য অপ্রত্যাশিত ফেনা বা বুদবুদ।"
+  },
+  "safety.spoilage-foreign-object": {
+    "en": "Possible foreign object (glass, metal).",
+    "bn": "সম্ভাব্য বহিঃস্থ বস্তু (কাচ, ধাতু)।"
+  },
+  "safety.spoilage-leaking-packaging": {
+    "en": "Possible leaking packaging.",
+    "bn": "সম্ভাব্য ফুটো প্যাকেজিং।"
+  },
+  "safety.spoilage-separated-liquid": {
+    "en": "Possible separated liquid.",
+    "bn": "সম্ভাব্য আলাদা হয়ে যাওয়া তরল।"
+  },
+  "safety.spoilage-slimy-surface": {
+    "en": "Possible slimy surface.",
+    "bn": "সম্ভাব্য পিচ্ছিল পৃষ্ঠ।"
+  },
+  "safety.spoilage-visible-mold": {
+    "en": "Possible visible mold.",
+    "bn": "সম্ভাব্য দৃশ্যমান ছাঁচ।"
+  },
+  "warn.allergen_present": {
+    "en": "This dish contains {allergen} and may not suit you.",
+    "bn": "এই খাবারে {allergen} আছে, যা আপনার পক্ষে নাও হতে পারে।"
+  },
+  "warn.diabetes_fried": {
+    "en": "Fried foods may not suit you. Consider limiting fried foods and choosing boiled, steamed or grilled options.",
+    "bn": "ভাজা খাবার আপনার পক্ষে নাও হতে পারে। ভাজা খাবার কম খাওয়ার এবং সেদ্ধ, স্টিম বা গ্রিল করা বিকল্প বেছে নেওয়ার কথা বিবেচনা করুন।"
+  },
+  "warn.diabetes_sodium": {
+    "en": "This dish provides about {percent}% of the {nutrient} level suggested for people with diabetes. Consider limiting how much you eat.",
+    "bn": "ডায়াবেটিস থাকলে প্রস্তাবিত দৈনিক {nutrient}-এর প্রায় {percent}% এই খাবারে রয়েছে। কম খাওয়ার কথা বিবেচনা করুন।"
+  },
+  "warn.high_cholesterol_fried": {
+    "en": "Fried foods may not suit you. Consider limiting fried and oily foods.",
+    "bn": "ভাজা খাবার আপনার পক্ষে নাও হতে পারে। ভাজা ও তৈলাক্ত খাবার কম খাওয়ার কথা বিবেচনা করুন।"
+  },
+  "warn.hypertension_sodium": {
+    "en": "This dish provides about {percent}% of the {nutrient} level suggested for people with high blood pressure. Consider limiting how much you eat.",
+    "bn": "উচ্চ রক্তচাপ থাকলে প্রস্তাবিত দৈনিক {nutrient}-এর প্রায় {percent}% এই খাবারে রয়েছে। কম খাওয়ার কথা বিবেচনা করুন।"
+  },
+  "warn.insufficient_data": {
+    "en": "Not enough data to estimate {nutrient} in this dish. A missing number does not mean it is absent.",
+    "bn": "এই খাবারে {nutrient} অনুমান করার মতো যথেষ্ট তথ্য নেই। সংখ্যা না থাকা মানে এটি অনুপস্থিত, এমনটা নয়।"
+  },
+  "notice.chemical_limit": {
+    "en": "This check can only look at what a photo and a label show. It cannot detect invisible chemical contamination (for example formalin) or tell you a food is safe. It is general information, not medical or legal advice.",
+    "bn": "এই যাচাই কেবল ছবি ও লেবেলে যা দেখা যায় তা-ই দেখতে পারে। এটি অদৃশ্য রাসায়নিক দূষণ (যেমন ফরমালিন) ধরতে পারে না এবং খাবার নিরাপদ কি না বলতে পারে না। এটি সাধারণ তথ্য, চিকিৎসা বা আইনি পরামর্শ নয়।"
+  },
+  "notice.poor_image": {
+    "en": "The photo is not clear enough for a reliable check. If you can, retake it in better light.",
+    "bn": "ছবিটি নির্ভরযোগ্য যাচাইয়ের জন্য যথেষ্ট স্পষ্ট নয়। সম্ভব হলে ভালো আলোতে আবার তুলুন।"
+  },
+  "safety.level.low": {
+    "en": "Low risk",
+    "bn": "ঝুঁকি কম"
+  },
+  "safety.level.moderate": {
+    "en": "Moderate risk",
+    "bn": "ঝুঁকি মাঝারি"
+  },
+  "safety.level.high": {
+    "en": "High risk",
+    "bn": "ঝুঁকি বেশি"
+  },
+  "safety.no_signals": {
+    "en": "No safety signals were found in this photo. That is not a promise that the food is safe.",
+    "bn": "এই ছবিতে কোনো নিরাপত্তা সংকেত পাওয়া যায়নি। এটি খাবার নিরাপদ তার নিশ্চয়তা নয়।"
+  },
+  "safety.next_steps": {
+    "en": "What you can do next",
+    "bn": "আপনি এখন কী করতে পারেন"
+  },
+  "foryou.none": {
+    "en": "No warnings for this dish with your current profile.",
+    "bn": "আপনার বর্তমান প্রোফাইল অনুযায়ী এই খাবারের জন্য কোনো সতর্কতা নেই।"
+  },
+  "foryou.add_profile": {
+    "en": "Set up your health profile to get warnings that fit you.",
+    "bn": "আপনার জন্য মানানসই সতর্কতা পেতে স্বাস্থ্য প্রোফাইল সেট আপ করুন।"
+  },
+  "swap.lower_nutrient": {
+    "en": "Suggested because it is lower in {nutrient}.",
+    "bn": "{nutrient}-এ কম বলে এটি প্রস্তাব করা হয়েছে।"
+  },
+  "swap.none": {
+    "en": "No alternative dish was found that is lower in the flagged nutrients and safe for you.",
+    "bn": "পতাকাযুক্ত পুষ্টিতে কম এবং আপনার জন্য নিরাপদ কোনো বিকল্প খাবার পাওয়া যায়নি।"
+  },
+  "nutrition.not_enough_data": {
+    "en": "Not enough data for a reliable estimate.",
+    "bn": "নির্ভরযোগ্য হিসাবের জন্য যথেষ্ট তথ্য নেই।"
+  },
+  "nutrition.estimate_note": {
+    "en": "All nutrition numbers are estimates from food-composition tables, not measurements of this dish.",
+    "bn": "সব পুষ্টির সংখ্যা খাদ্য-উপাদান তালিকা থেকে অনুমান; এই খাবারের পরিমাপ নয়।"
+  },
+  "nutrition.from_lab_study": {
+    "en": "Based on a laboratory study of this dish, scaled to the serving size (estimate).",
+    "bn": "এই খাবারের একটি পরীক্ষাগার গবেষণার ভিত্তিতে, পরিবেশন মাপে রূপান্তরিত (আনুমানিক)।"
+  },
+  "nutrition.why_missing": {
+    "en": "Why is some data missing?",
+    "bn": "কিছু তথ্য কেন নেই?"
+  },
+  "badge.estimated": {
+    "en": "Estimated",
+    "bn": "আনুমানিক"
+  },
+  "badge.draft": {
+    "en": "Draft",
+    "bn": "খসড়া"
+  },
+  "onboarding.consent": {
+    "en": "I understand this app gives general information only, not medical advice, and my profile is stored on this device only.",
+    "bn": "আমি বুঝছি এই অ্যাপ কেবল সাধারণ তথ্য দেয়, চিকিৎসা পরামর্শ নয়, এবং আমার প্রোফাইল শুধু এই ডিভাইসেই সংরক্ষিত থাকে।"
+  },
+  "nutrient.energy_kcal": {
+    "en": "Energy",
+    "bn": "শক্তি"
+  },
+  "nutrient.protein_g": {
+    "en": "Protein",
+    "bn": "প্রোটিন"
+  },
+  "nutrient.fat_g": {
+    "en": "Fat",
+    "bn": "চর্বি"
+  },
+  "nutrient.sat_fat_g": {
+    "en": "Saturated fat",
+    "bn": "স্যাচুরেটেড ফ্যাট"
+  },
+  "nutrient.carbs_g": {
+    "en": "Carbohydrates",
+    "bn": "কার্বোহাইড্রেট"
+  },
+  "nutrient.sugars_g": {
+    "en": "Sugars",
+    "bn": "চিনি"
+  },
+  "nutrient.fibre_g": {
+    "en": "Fibre",
+    "bn": "আঁশ"
+  },
+  "nutrient.sodium_mg": {
+    "en": "Sodium",
+    "bn": "সোডিয়াম"
+  }
+}
