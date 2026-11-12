@@ -3,6 +3,7 @@ import type { Context } from 'hono';
 import { ScanRequestSchema } from '@sp/contracts';
 import { AiInvalidOutputError, AiUnavailableError, RateLimitedError, runScan } from '@sp/ai';
 import type { AppConfig } from './config';
+import { sanitizeLabelResult } from './sanitize';
 
 /** Registers POST /api/scan, which validates the request, runs the AI scan and maps failures to API codes. */
 export function registerScanRoute(app: Hono, config: AppConfig): void {
@@ -42,6 +43,9 @@ export function registerScanRoute(app: Hono, config: AppConfig): void {
           },
           502,
         );
+      }
+      if (result.kind === 'label') {
+        return c.json(sanitizeLabelResult(result), 200);
       }
       return c.json(result, 200);
     } catch (error) {
