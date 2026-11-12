@@ -5,9 +5,12 @@ import {
   AiUnavailableError,
   AiInvalidOutputError,
   RateLimitedError,
+  MemoryScanCache,
+  createBudgetGuard,
   type VisionProvider,
 } from '@sp/ai';
 import { createApp } from '../src/app';
+import type { AppConfig } from '../src/config';
 
 const IMG = 'Z'.repeat(300);
 const body = (over: object = {}) =>
@@ -25,11 +28,12 @@ const post = (app: ReturnType<typeof createApp>, b: string) =>
     body: b,
   });
 const dishes = [{ id: 'kacchi-biryani', name_en: 'Kacchi Biryani', name_bn: '', aliases: [] }];
-const cfg = (provider?: VisionProvider) => ({
+const cfg = (provider?: VisionProvider, extra: Partial<AppConfig> = {}): AppConfig => ({
   allowedOrigin: 'http://x',
   maxBodyBytes: 2_000_000,
   provider,
   dishes,
+  ...extra,
 });
 const throwing = (e: Error): VisionProvider => ({
   name: 't',
@@ -71,5 +75,50 @@ describe('POST /api/scan', () => {
   });
   it('answers 503 when no provider is configured', async () => {
     expect((await post(createApp(cfg(undefined)), body())).status).toBe(503);
+  });
+});
+
+const counting = (inner: VisionProvider) => {
+  const state = { calls: 0 };
+  const provider: VisionProvider = {
+    name: inner.name,
+    analyze: async (req, ctx) => {
+      state.calls += 1;
+      return inner.analyze(req, ctx);
+    },
+  };
+  return { provider, calls: () => state.calls };
+};
+
+describe('POST /api/scan cache and budget', () => {
+  it('serves a repeated image from cache without calling the provider again', async () => {
+    const counter = counting(new MockProvider());
+    const app = createApp(cfg(counter.provider, { cache: new MemoryScanCache() }));
+    const first = await post(app, body());
+    expect(first.status).toBe(200);
+    expect((await first.json()).cached).toBe(false);
+    const second = await post(app, body());
+    expect(second.status).toBe(200);
+    expect((await second.json()).cached).toBe(true);
+    expect(counter.calls()).toBe(1);
+  });
+  it('refuses a different image once the daily budget is spent but still serves the cache', async () => {
+    const counter = counting(new MockProvider());
+    const app = createApp(
+      cfg(counter.provider, {
+        cache: new MemoryScanCache(),
+        budget: createBudgetGuard({ maxPerDay: 1, now: () => 0 }),
+      }),
+    );
+    expect((await post(app, body())).status).toBe(200);
+    const limited = await post(app, body({ imageBase64: 'Y'.repeat(300) }));
+    expect(limited.status).toBe(429);
+    const limitJson = await limited.json();
+    expect(limitJson.error.code).toBe('rate_limited');
+    expect(limitJson.error.message).toBe('Daily AI limit reached');
+    const again = await post(app, body());
+    expect(again.status).toBe(200);
+    expect((await again.json()).cached).toBe(true);
+    expect(counter.calls()).toBe(1);
   });
 });

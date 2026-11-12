@@ -5,3 +5,5 @@ export { MockProvider } from './mock-provider';
 export { runScan } from './run-scan';
 export { GeminiProvider, type GeminiOptions } from './gemini-provider';
 export { buildDishPrompt, buildLabelPrompt } from './prompts';
+export { MemoryScanCache, imageCacheKey, type ScanCache } from './cache';
+export { createBudgetGuard, type BudgetGuard } from './budget';
