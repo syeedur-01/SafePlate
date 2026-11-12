@@ -2,7 +2,9 @@ name = "safeplate-api"
 main = "src/worker.ts"
 compatibility_date = "2025-09-01" # if wrangler warns, follow its suggestion
 
+# Production provider. Set GEMINI_MODEL to the model name in the current Gemini
+# docs (plain var, next to the one below). Keys never go in this file; set the
+# key with: pnpm --filter @sp/api exec wrangler secret put GEMINI_API_KEY
 [vars]
-AI_PROVIDER = "mock"
-ALLOWED_ORIGIN = "http://localhost:5173"
-ENABLE_SPIKE = "1"
+AI_PROVIDER = "gemini"
+ALLOWED_ORIGIN = "http://localhost:5173" # replace with the deployed web app origin
