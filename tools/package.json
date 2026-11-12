@@ -15,6 +15,8 @@
     "apply-approved": "tsx src/apply-approved.ts",
     "coverage": "tsx src/coverage-report.ts",
     "review-pack": "tsx src/export-review-pack.ts",
+    "merge-rules": "tsx src/merge-rules.ts",
+    "demo-gate": "tsx src/demo-gate.ts",
     "check-sources": "tsx src/check-sources.ts"
   },
   "dependencies": {
