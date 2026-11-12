@@ -7,10 +7,14 @@ import {
   RawIngredientsFileSchema,
   NormalizedDishesFileSchema,
   SourcesFileSchema,
+  SafetyRulesFileSchema,
+  HealthRulesFileSchema,
   type RawDish,
   type Ingredient,
   type Dish,
   type SourceEntry,
+  type SafetyRule,
+  type HealthRule,
 } from '@sp/contracts';
 
 export * from './normalize';
@@ -46,4 +50,27 @@ export function ingredientsById(list: Ingredient[] = getRawIngredients()): Map<s
 /** Returns the source register entries from data/sources.json. */
 export function getSources(): SourceEntry[] {
   return SourcesFileSchema.parse(readDataJson('sources.json')).sources;
+}
+/** Returns the live safety rules from data/rules/safety-rules.json (created by merge-rules). */
+export function getSafetyRules(): SafetyRule[] {
+  return SafetyRulesFileSchema.parse(readDataJson('rules/safety-rules.json')).rules;
+}
+/** Returns the live health rules from data/rules/health-rules.json (created by merge-rules). */
+export function getHealthRules(): HealthRule[] {
+  return HealthRulesFileSchema.parse(readDataJson('rules/health-rules.json')).rules;
+}
+/** Returns the demo dish ids from data/runtime/demo-dishes.json (the energy coverage gate). */
+export function getDemoDishIds(): string[] {
+  const file = readDataJson('runtime/demo-dishes.json') as {
+    minCoverage?: unknown;
+    dishIds?: unknown;
+  };
+  if (
+    !Array.isArray(file.dishIds) ||
+    file.dishIds.some((id) => typeof id !== 'string') ||
+    file.dishIds.length === 0
+  ) {
+    throw new Error('data/runtime/demo-dishes.json has no valid dishIds list');
+  }
+  return [...file.dishIds];
 }

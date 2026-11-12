@@ -1,0 +1,56 @@
+{
+  "rules": [
+    {
+      "kind": "nutrient",
+      "id": "diabetes-sodium",
+      "condition": "diabetes",
+      "nutrient": "sodium_mg",
+      "dailyLimit": 2000,
+      "cautionFraction": 0.3,
+      "avoidFraction": 0.6,
+      "messageKey": "warn.diabetes_sodium",
+      "sourceRef": "bd-dietary-guidelines",
+      "status": "draft",
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (diabetes mellitus), p.69: for type-2 diabetes, sodium restriction varies with health status, usually in the range below 2000 mg/day."
+    },
+    {
+      "kind": "nutrient",
+      "id": "hypertension-sodium",
+      "condition": "hypertension",
+      "nutrient": "sodium_mg",
+      "dailyLimit": 1500,
+      "cautionFraction": 0.3,
+      "avoidFraction": 0.6,
+      "messageKey": "warn.hypertension_sodium",
+      "sourceRef": "bd-dietary-guidelines",
+      "status": "draft",
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 7 (hypertension), p.81: consume sodium below 1.5 g (with fibre 30 g, cholesterol 150 mg); reduce salt intake to less than 1 tsp/day, preferably three-quarters of a teaspoon."
+    },
+    {
+      "kind": "tag",
+      "id": "diabetes-fried",
+      "condition": "diabetes",
+      "match": {
+        "cookingClasses": ["deep_fried", "shallow_fried"]
+      },
+      "level": "caution",
+      "messageKey": "warn.diabetes_fried",
+      "sourceRef": "bd-dietary-guidelines",
+      "status": "draft",
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2, p.68-69: restrict foods containing fat and oil as people with diabetes are at higher risk of coronary heart disease, and prefer low-fat methods such as boiling, steaming and grilling."
+    },
+    {
+      "kind": "tag",
+      "id": "high-cholesterol-fried",
+      "condition": "high_cholesterol",
+      "match": {
+        "cookingClasses": ["deep_fried", "shallow_fried"]
+      },
+      "level": "caution",
+      "messageKey": "warn.high_cholesterol_fried",
+      "sourceRef": "bd-dietary-guidelines",
+      "status": "draft",
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (fats and oils), p.19: limit the intake of deep-fried foods and oily snacks; trans fats in fried and processed foods increase the risk of coronary heart disease."
+    }
+  ]
+}
