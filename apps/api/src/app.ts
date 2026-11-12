@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import type { AppConfig } from './config';
+import { registerScanRoute } from './scan-route';
 import { registerSpikeRoute } from './spike';
 
 const VERSION = '0.1.0';
@@ -26,6 +27,8 @@ export function createApp(config: AppConfig): Hono {
   });
 
   app.get('/api/health', (c) => c.json({ ok: true, version: VERSION }));
+
+  registerScanRoute(app, config);
 
   if (config.enableSpike === true) {
     registerSpikeRoute(app); // deploy spike only; never enabled in production by default
