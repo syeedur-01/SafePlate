@@ -14,6 +14,7 @@
     "usda-match": "tsx src/usda-match.ts",
     "apply-approved": "tsx src/apply-approved.ts",
     "coverage": "tsx src/coverage-report.ts",
+    "review-pack": "tsx src/export-review-pack.ts",
     "check-sources": "tsx src/check-sources.ts"
   },
   "dependencies": {
