@@ -1,5 +1,5 @@
 {
-  "note": "Approved 2026-11-14 after review by an external AI acting as a nutritionist stand-in; the owner accepted the review (no human nutritionist session was held - see data/proposals/P2-DH01-approval-record.md). The reviewer could not open the source PDFs, so all Act/Codex/Guideline page numbers are plausibility-checked only, and the bd-dietary-guidelines register entry remains unverified (a human should still re-run check-sources). cautionFraction 0.3 and avoidFraction 0.6 are SafePlate heuristics chosen by the card (a single serving providing 30 or 60 percent of the daily limit), not from any source - stated in each sodium rule's basis at the reviewer's request. Sources opened on 2026-11-11: National Dietary Guidelines for Bangladesh 2025 (142-page PDF), WHO Guideline: sodium intake for adults and children (2012), WHO Guideline: sugars intake for adults and children (2015). Skipped nutrients: sugars_g (WHO 2015 and BD Guideline 4 state percentages of energy only, plus a teaspoon equivalent; the only gram figure, Table 3 p.7 sugar 20 g, is a general desirable intake, not condition-specific - converting a percentage or a teaspoon myself is forbidden by the card); sat_fat_g (BD states percentages only: <10 percent of energy, Guideline 2 p.19, <7 percent for coronary heart disease, Guideline 6 p.79; the WHO 2023 saturated-fat guidance is also percentage-based). Conditions with no rules: gastric (the opened guidelines have no gastric/gastritis chapter).",
+  "note": "Approved 2026-11-14 after review by an external AI acting as a nutritionist stand-in; the owner accepted the review (no human nutritionist session was held - see data/proposals/P2-DH01-approval-record.md). Citation verification 2026-11-14: every Guideline page number in these bases was confirmed verbatim against the downloaded 142-page PDF (printed page = PDF page minus 22), so this source is now verified in sources.json. The Codex texts could not be retrieved (FAO download endpoints dead); Codex citations elsewhere remain plausibility-checked only. cautionFraction 0.3 and avoidFraction 0.6 are SafePlate heuristics chosen by the card (a single serving providing 30 or 60 percent of the daily limit), not from any source - stated in each sodium rule's basis at the reviewer's request. Sources opened: National Dietary Guidelines for Bangladesh 2025 (142-page PDF), WHO Guideline: sodium intake for adults and children (2012), WHO Guideline: sugars intake for adults and children (2015). Skipped nutrients: sugars_g (WHO 2015 and BD Guideline 4 state percentages of energy only, plus a teaspoon equivalent; the only gram figure, Table 3 p.7 sugar 20 g, is a general desirable intake, not condition-specific - converting a percentage or a teaspoon myself is forbidden by the card); sat_fat_g (BD states percentages only: <10 percent of energy, Guideline 2 p.19, <7 percent for coronary heart disease, Guideline 6 p.79; the WHO 2023 saturated-fat guidance is also percentage-based). Conditions with no rules: gastric (the opened guidelines have no gastric/gastritis chapter).",
   "rules": [
     {
       "kind": "nutrient",
@@ -12,7 +12,7 @@
       "messageKey": "warn.diabetes_sodium",
       "sourceRef": "bd-dietary-guidelines",
       "status": "approved",
-      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (diabetes mellitus), p.69: for type-2 diabetes, sodium restriction varies with health status, usually in the range below 2000 mg/day. Caution/avoid fractions (0.3/0.6) are SafePlate heuristics, not from the guideline."
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (diabetes mellitus), p.69: \"Sodium restriction varies with individual health status, usually in a range of <2000 mg/day is recommended\" (verified verbatim against the downloaded PDF on 2026-11-14; printed p.69 = PDF p.91). Caution/avoid fractions (0.3/0.6) are SafePlate heuristics, not from the guideline."
     },
     {
       "kind": "nutrient",
@@ -25,7 +25,7 @@
       "messageKey": "warn.hypertension_sodium",
       "sourceRef": "bd-dietary-guidelines",
       "status": "approved",
-      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 7 (hypertension), p.81: consume sodium below 1.5 g (with fibre 30 g, cholesterol 150 mg); reduce salt intake to less than 1 tsp/day, preferably three-quarters of a teaspoon. Caution/avoid fractions (0.3/0.6) are SafePlate heuristics, not from the guideline. A human should check the original page: the quote as recorded is internally inconsistent (sodium under 1.5 g, but salt \"under 1 tsp\" is about 2000 mg sodium)."
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 7 (hypertension), p.81: \"sodium <1.5 g\" (with fibre 30 g, cholesterol 150 mg) and \"Reduce salt intake to less than 1tsp/day, preferably three-quarters of a teaspoon/day\" (verified verbatim against the downloaded PDF on 2026-11-14; printed p.81 = PDF p.103). The source itself states both sodium <1.5 g and salt under 1 tsp (about 2000 mg sodium) - the inconsistency is in the source; the quote is faithful. Caution/avoid fractions (0.3/0.6) are SafePlate heuristics, not from the guideline."
     },
     {
       "kind": "tag",
@@ -36,7 +36,7 @@
       "messageKey": "warn.diabetes_fried",
       "sourceRef": "bd-dietary-guidelines",
       "status": "approved",
-      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2, p.68-69: restrict foods containing fat and oil as people with diabetes are at higher risk of coronary heart disease, and prefer low-fat methods such as boiling, steaming and grilling."
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (diabetes mellitus), p.68: \"Use low fat and fat free cooking methods such as boiling, steaming, broiling, baking, roasting and grilling\" (verified verbatim against the downloaded PDF on 2026-11-14; printed p.68 = PDF p.90). Restricting fat and oil and the higher coronary risk of people with diabetes are stated in the same chapter."
     },
     {
       "kind": "tag",
@@ -47,7 +47,7 @@
       "messageKey": "warn.high_cholesterol_fried",
       "sourceRef": "bd-dietary-guidelines",
       "status": "approved",
-      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (fats and oils), p.19: limit the intake of deep-fried foods and oily snacks; trans fats in fried and processed foods increase the risk of coronary heart disease."
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (fats and oils), p.19: \"Limit the intake of deep-fried foods and oily snacks\" (verified verbatim against the downloaded PDF on 2026-11-14; printed p.19 = PDF p.41). The same page limits trans-fat foods including fried and processed items. The document has two different chapters both numbered Guideline 2 (fats/oils and diabetes); the page numbers disambiguate them."
     }
   ]
 }
