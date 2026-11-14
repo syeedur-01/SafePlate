@@ -660,7 +660,14 @@ All C cards use fixtures in `apps/web/src/fixtures/` (create them in P2-C02): `a
 
 **Depends on:** P1-C03, P1-C01, P1-D01 (the dish list comes from the knowledge package) · **Branch:** `c/P2-C01-confirm`
 
-**Files:** create `apps/web/src/lib/filter-dishes.ts`, `src/pages/Confirm.tsx`, `apps/web/test/filter-dishes.test.ts`, `confirm-page.test.tsx`; edit `App.tsx` (route `/confirm`).
+**Files:** create `apps/web/src/lib/filter-dishes.ts`, `src/pages/Confirm.tsx`, `apps/web/test/filter-dishes.test.ts`, `confirm-page.test.tsx`; edit `App.tsx` (route `/confirm`), `apps/web/src/i18n/ui-strings.ts` (add the `confirm.*` strings, English and Bangla — see Amendment).
+
+**Amendment (2026-11-14, after the first implementation attempt flagged two blockers):**
+
+1. **Dish source for the browser:** do not import `getDishes()` — it is Node-only (`node:fs` in `packages/knowledge/src/index.ts`) and would break the Vite browser build. Instead deep-import the slim browser artifact: `import runtimeJson from '@sp/knowledge/data/runtime/runtime.json'`. This works with the existing config (`resolveJsonModule` and `moduleResolution: "Bundler"` are already on in `tsconfig.base.json`; `@sp/knowledge` has no `exports` map, so the subpath is accessible; Vite bundles JSON natively) and touches nothing outside this card. Map the runtime dishes onto `DishOption` in the page.
+2. **Candidates with `dishId: null`:** only candidates with a non-null `dishId` render as selectable dish buttons. The "We're not sure" trigger stays exactly as specified below (top confidence < 0.5 or top `dishId` null).
+3. **"None of these" destination:** navigate to `/result` with `{ scanResult, dishId: null, thumbDataUrl }` — the same shape as the label path. Coordinate with the P2-C02 author (card written before P2-C02 lands).
+4. **Test fixtures:** the Bangla strings printed in this card are mojibake from copy-paste. Use real UTF-8 Bangla names from `data/runtime/runtime.json` (for example কাচ্চি বিরিয়ানি, ফুচকা) and inline a small fixture in the tests (the shared fixtures arrive with P2-C02).
 
 **Spec:**
 
@@ -675,7 +682,7 @@ export interface DishOption {
 export function filterDishes(query: string, options: DishOption[], lang: 'en' | 'bn'): DishOption[];
 ```
 
-Page: reads `{ result, thumbDataUrl }` from router state (missing state redirects to `/`). For a `dish` result show the top 3 candidates as large buttons ("Best guess" label on the first); if the top confidence is below 0.5 or `dishId` is null show the "We're not sure" message and focus the search box; search box lists all 30 dishes (from `@sp/knowledge` `getDishes()`); a "None of these" button. Choosing a dish navigates to `/result` with `{ scanResult, dishId, thumbDataUrl }`. For a `label` result, skip this screen and go straight to `/result` with `dishId: null`.
+Page: reads `{ result, thumbDataUrl }` from router state (missing state redirects to `/`). For a `dish` result show the top 3 candidates as large buttons ("Best guess" label on the first); if the top confidence is below 0.5 or `dishId` is null show the "We're not sure" message and focus the search box; search box lists all 30 dishes (from the runtime artifact per Amendment item 1, not `getDishes()`); a "None of these" button. Choosing a dish navigates to `/result` with `{ scanResult, dishId, thumbDataUrl }`. For a `label` result, skip this screen and go straight to `/result` with `dishId: null`.
 
 **Tests (write first):**
 
