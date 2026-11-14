@@ -168,7 +168,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "roasted, sautéed and simmered",
+      "cooking_method": "rice and dal boiled together with roasted spices",
       "allergens": ["mustard"],
       "safety_tags": [],
       "nutrition_basis": "unavailable",
@@ -193,7 +193,7 @@
         "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
       ],
       "batch_number": 1,
-      "cooking_class": "shallow_fried"
+      "cooking_class": "boiled_or_simmered"
     },
     {
       "id": "beef-tehari",
@@ -949,7 +949,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "fried fish simmered in a light gravy",
+      "cooking_method": "fish lightly browned, then simmered in a light gravy",
       "allergens": ["fish", "mustard"],
       "safety_tags": ["seafood"],
       "nutrition_basis": "unavailable",
@@ -974,7 +974,7 @@
         "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
       ],
       "batch_number": 3,
-      "cooking_class": "shallow_fried"
+      "cooking_class": "braised_or_curry"
     },
     {
       "id": "ilish-bhaja",
@@ -1616,7 +1616,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "layered dough baked until crisp",
+      "cooking_method": "flaky dough baked until crisp",
       "allergens": ["milk", "wheat_gluten"],
       "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
@@ -1641,7 +1641,7 @@
         "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
       ],
       "batch_number": 4,
-      "cooking_class": "braised_or_curry"
+      "cooking_class": "baked_or_roasted"
     },
     {
       "id": "mughlai-paratha",
@@ -1777,7 +1777,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "peas and potatoes simmered into a spiced stew",
+      "cooking_method": "peas and potatoes boiled with spices",
       "allergens": ["egg"],
       "safety_tags": ["street-food"],
       "nutrition_basis": "unavailable",
@@ -1803,7 +1803,7 @@
         "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
       ],
       "batch_number": 5,
-      "cooking_class": "braised_or_curry"
+      "cooking_class": "boiled_or_simmered"
     },
     {
       "id": "fuchka",

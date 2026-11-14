@@ -10,8 +10,8 @@
       "avoidFraction": 0.6,
       "messageKey": "warn.diabetes_sodium",
       "sourceRef": "bd-dietary-guidelines",
-      "status": "draft",
-      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (diabetes mellitus), p.69: for type-2 diabetes, sodium restriction varies with health status, usually in the range below 2000 mg/day."
+      "status": "approved",
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (diabetes mellitus), p.69: for type-2 diabetes, sodium restriction varies with health status, usually in the range below 2000 mg/day. Caution/avoid fractions (0.3/0.6) are SafePlate heuristics, not from the guideline."
     },
     {
       "kind": "nutrient",
@@ -23,8 +23,8 @@
       "avoidFraction": 0.6,
       "messageKey": "warn.hypertension_sodium",
       "sourceRef": "bd-dietary-guidelines",
-      "status": "draft",
-      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 7 (hypertension), p.81: consume sodium below 1.5 g (with fibre 30 g, cholesterol 150 mg); reduce salt intake to less than 1 tsp/day, preferably three-quarters of a teaspoon."
+      "status": "approved",
+      "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 7 (hypertension), p.81: consume sodium below 1.5 g (with fibre 30 g, cholesterol 150 mg); reduce salt intake to less than 1 tsp/day, preferably three-quarters of a teaspoon. Caution/avoid fractions (0.3/0.6) are SafePlate heuristics, not from the guideline. A human should check the original page: the quote as recorded is internally inconsistent (sodium under 1.5 g, but salt \"under 1 tsp\" is about 2000 mg sodium)."
     },
     {
       "kind": "tag",
@@ -36,7 +36,7 @@
       "level": "caution",
       "messageKey": "warn.diabetes_fried",
       "sourceRef": "bd-dietary-guidelines",
-      "status": "draft",
+      "status": "approved",
       "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2, p.68-69: restrict foods containing fat and oil as people with diabetes are at higher risk of coronary heart disease, and prefer low-fat methods such as boiling, steaming and grilling."
     },
     {
@@ -44,12 +44,12 @@
       "id": "high-cholesterol-fried",
       "condition": "high_cholesterol",
       "match": {
-        "cookingClasses": ["deep_fried", "shallow_fried"]
+        "cookingClasses": ["deep_fried"]
       },
       "level": "caution",
       "messageKey": "warn.high_cholesterol_fried",
       "sourceRef": "bd-dietary-guidelines",
-      "status": "draft",
+      "status": "approved",
       "basis": "National Dietary Guidelines for Bangladesh 2025, Guideline 2 (fats and oils), p.19: limit the intake of deep-fried foods and oily snacks; trans fats in fried and processed foods increase the risk of coronary heart disease."
     }
   ]

@@ -459,7 +459,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "roasted, sautéed and simmered",
+      "cooking_method": "rice and dal boiled together with roasted spices",
       "allergens": ["mustard"],
       "safety_tags": [],
       "nutrition_basis": "unavailable",
@@ -1230,7 +1230,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "fried fish simmered in a light gravy",
+      "cooking_method": "fish lightly browned, then simmered in a light gravy",
       "allergens": ["fish", "mustard"],
       "safety_tags": ["seafood"],
       "nutrition_basis": "unavailable",
@@ -1889,7 +1889,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "layered dough baked until crisp",
+      "cooking_method": "flaky dough baked until crisp",
       "allergens": ["milk", "wheat_gluten"],
       "safety_tags": ["dairy"],
       "nutrition_basis": "unavailable",
@@ -2048,7 +2048,7 @@
           "quantity_basis": "ESTIMATE"
         }
       ],
-      "cooking_method": "peas and potatoes simmered into a spiced stew",
+      "cooking_method": "peas and potatoes boiled with spices",
       "allergens": ["egg"],
       "safety_tags": ["street-food"],
       "nutrition_basis": "unavailable",
