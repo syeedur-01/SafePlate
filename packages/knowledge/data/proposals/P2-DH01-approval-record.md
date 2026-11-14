@@ -81,6 +81,15 @@ Reviewer found **no allergen-list errors** in any dish; all gram amounts and oth
 3. **Salt 1 g → 2–3 g** in kacchi-biryani, beef-tehari, morog-polao, bhuna-khichuri, haleem — the reviewer is
    right that 1 g (~390 mg sodium) is implausibly low for 300–420 g servings and systematically understates
    sodium warnings, but setting a number is a nutritionist's call. **Do not invent it.**
+   **→ Partly resolved 2026-11-14 (branch `d/E02-sourced-salt-values`):** the FCTB 2013 (already a verified
+   source) turned out to contain cooked composite dishes: code 01_0035 **Plain Khichuri = 410 mg Na/100 g**
+   (recipe calculation from Pasricha et al 2006) and code 01_0036 **Plain pulao = 167 mg Na/100 g** (Rahim 2013),
+   PDF pp. 28–29. On that direct basis the salt lines were set by deterministic back-calculation:
+   bhuna-khichuri 1 → **3.62 g**, morog-polao 1 → **1.55 g** (see each dish's second source entry and the new
+   engine test `fctb-composites.test.ts`). For **kacchi-biryani, beef-tehari and haleem no legitimate source
+   exists** (Isfahan biryani study is a different dish type; UK ready-meal labels are reformulated products;
+   no tehari or prepared-haleem analysis found anywhere) — they stay at 1 g and are documented in
+   `data/proposals/salt-values-proposals.json` with candidate anchors for a nutritionist to decide.
 4. Panta-ilish (class `fermented`, no fried tag despite pre-fried hilsa) — nutritionist's call.
 
 ## Known limitations accepted with this review (follow-ups for future cards)

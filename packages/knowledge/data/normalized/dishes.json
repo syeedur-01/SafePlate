@@ -159,7 +159,7 @@
         },
         {
           "ingredient_id": "salt",
-          "grams_raw": 1,
+          "grams_raw": 3.62,
           "quantity_basis": "ESTIMATE"
         },
         {
@@ -180,6 +180,13 @@
           "year": 2013,
           "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
           "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        },
+        {
+          "title": "Food Composition Table for Bangladesh (code 01_0035 Plain Khichuri, PDF pp. 28-29)",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Sodium anchor for the salt line only: the FCTB cooked composite 01_0035 Plain Khichuri (recipe calculation from Pasricha et al 2006) states 410 mg sodium per 100 g. The salt line (3.62 g per 350 g serving) is back-calculated from that value: target 1435 mg minus 10.4 mg from the other non-water ingredients, divided by 393.4 mg Na per g salt (FCTB 15_0007 Salt, 39340 mg/100 g). Other dish quantities remain ESTIMATE; see data/proposals/salt-values-proposals.json."
         }
       ],
       "confidence": "low",
@@ -190,7 +197,8 @@
         "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
         "Recipe variants and household methods differ; culinary review is required before publication.",
         "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
-        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices.",
+        "Salt line 3.62 g per serving was set on 2026-11-14 so the computed dish sodium reproduces the FCTB 2013 cooked composite 01_0035 Plain Khichuri value (410 mg Na/100 g, PDF pp. 28-29, recipe calculation from Pasricha et al 2006); see the second source entry. Restaurant bhuna-khichuri may be saltier - nutritionist review still required (needs_expert_review stays true)."
       ],
       "batch_number": 1,
       "cooking_class": "boiled_or_simmered"
@@ -355,7 +363,7 @@
         },
         {
           "ingredient_id": "salt",
-          "grams_raw": 1,
+          "grams_raw": 1.55,
           "quantity_basis": "ESTIMATE"
         },
         {
@@ -376,6 +384,13 @@
           "year": 2013,
           "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
           "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        },
+        {
+          "title": "Food Composition Table for Bangladesh (code 01_0036 Plain pulao, PDF pp. 28-29)",
+          "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
+          "year": 2013,
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+          "used_for": "Sodium anchor for the salt line only: the FCTB cooked composite 01_0036 Plain pulao (Rahim 2013) states 167 mg sodium per 100 g. The salt line (1.55 g per 420 g serving) is back-calculated from that value: target 701.4 mg minus 93.6 mg from the other non-water ingredients, divided by 393.4 mg Na per g salt (FCTB 15_0007 Salt, 39340 mg/100 g). Plain pulao is the closest published cooked-rice composite; restaurant morog polao may be saltier. Other dish quantities remain ESTIMATE; see data/proposals/salt-values-proposals.json."
         }
       ],
       "confidence": "low",
@@ -386,7 +401,8 @@
         "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
         "Recipe variants and household methods differ; culinary review is required before publication.",
         "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
-        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices.",
+        "Salt line 1.55 g per serving was set on 2026-11-14 so the computed dish sodium reproduces the FCTB 2013 cooked composite 01_0036 Plain pulao value (167 mg Na/100 g, PDF pp. 28-29, Rahim 2013); see the second source entry. Plain pulao is the closest published cooked-rice composite; restaurant morog polao may be saltier - nutritionist review still required (needs_expert_review stays true)."
       ],
       "batch_number": 1,
       "cooking_class": "braised_or_curry"
