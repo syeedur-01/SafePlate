@@ -1,9 +1,16 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { MessagesFileSchema } from '@sp/contracts';
+import messagesFile from '@sp/knowledge/data/messages.json';
 import { App } from './App';
-import { I18nProvider } from './i18n/i18n';
+import { I18nProvider, registerMessages } from './i18n/i18n';
+import { DEFAULT_PROFILE_STORE } from './state/profile-store';
 import './index.css';
+
+registerMessages(MessagesFileSchema.parse(messagesFile));
+
+const initialLang = DEFAULT_PROFILE_STORE.load().language;
 
 const rootElement = document.getElementById('root');
 
@@ -13,7 +20,7 @@ if (rootElement === null) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <I18nProvider lang="en">
+    <I18nProvider lang={initialLang}>
       <BrowserRouter>
         <App />
       </BrowserRouter>

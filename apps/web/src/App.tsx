@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { History, Info, Languages, ScanLine, Settings } from 'lucide-react';
 import { Navigate, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useT } from './i18n/i18n';
@@ -24,6 +25,16 @@ export function App() {
   const navigate = useNavigate();
   const nextLang = lang === 'en' ? 'bn' : 'en';
   const needsOnboarding = location.pathname !== '/welcome' && !DEFAULT_PROFILE_STORE.hasSaved();
+
+  useEffect(() => {
+    if (!DEFAULT_PROFILE_STORE.hasSaved()) {
+      return;
+    }
+    const profile = DEFAULT_PROFILE_STORE.load();
+    if (profile.language !== lang) {
+      DEFAULT_PROFILE_STORE.save({ ...profile, language: lang });
+    }
+  }, [lang]);
 
   return (
     <div className="flex min-h-screen flex-col bg-bg text-fg">
