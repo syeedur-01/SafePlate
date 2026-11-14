@@ -1,6 +1,7 @@
 import type { AnalysisResult, Dish } from '@sp/contracts';
 import { Navigate, useLocation } from 'react-router-dom';
 import { ForYouCard } from '../components/ForYouCard';
+import { NutritionCard } from '../components/NutritionCard';
 import { SafetyCard } from '../components/SafetyCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { useT } from '../i18n/i18n';
@@ -11,8 +12,8 @@ export interface ResultViewProps {
   hasProfile: boolean;
 }
 
-/** Returns the result tabs for an analysis, with Safety and For you filled and the other two pending. */
-export function ResultView({ analysis, hasProfile }: ResultViewProps) {
+/** Returns the result tabs for an analysis, with Safety, For you and Nutrition filled and Swap pending. */
+export function ResultView({ analysis, dish, hasProfile }: ResultViewProps) {
   const { t } = useT();
 
   return (
@@ -38,7 +39,7 @@ export function ResultView({ analysis, hasProfile }: ResultViewProps) {
         <ForYouCard warnings={analysis.warnings} hasProfile={hasProfile} />
       </TabsContent>
       <TabsContent value="nutrition">
-        <p className="text-sm">{t('result.coming_soon')}</p>
+        <NutritionCard nutrition={analysis.nutrition} dish={dish} />
       </TabsContent>
       <TabsContent value="swap">
         <p className="text-sm">{t('result.coming_soon')}</p>
