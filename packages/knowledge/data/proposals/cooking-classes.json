@@ -6,8 +6,8 @@
   },
   {
     "dishId": "bhuna-khichuri",
-    "method": "roasted, sautéed and simmered",
-    "cookingClass": "shallow_fried"
+    "method": "rice and dal boiled together with roasted spices",
+    "cookingClass": "boiled_or_simmered"
   },
   {
     "dishId": "beef-tehari",
@@ -56,8 +56,8 @@
   },
   {
     "dishId": "rui-macher-jhol",
-    "method": "fried fish simmered in a light gravy",
-    "cookingClass": "shallow_fried"
+    "method": "fish lightly browned, then simmered in a light gravy",
+    "cookingClass": "braised_or_curry"
   },
   {
     "dishId": "ilish-bhaja",
@@ -96,8 +96,8 @@
   },
   {
     "dishId": "dhakaiya-bakarkhani",
-    "method": "layered dough baked until crisp",
-    "cookingClass": "braised_or_curry"
+    "method": "flaky dough baked until crisp",
+    "cookingClass": "baked_or_roasted"
   },
   {
     "dishId": "mughlai-paratha",
@@ -106,8 +106,8 @@
   },
   {
     "dishId": "chotpoti",
-    "method": "peas and potatoes simmered into a spiced stew",
-    "cookingClass": "braised_or_curry"
+    "method": "peas and potatoes boiled with spices",
+    "cookingClass": "boiled_or_simmered"
   },
   {
     "dishId": "fuchka",

@@ -16,9 +16,9 @@ describe('safety rule proposals', () => {
     expect(rules.length).toBeGreaterThan(0);
     expect(new Set(rules.map((r) => r.id)).size).toBe(rules.length);
   });
-  it('every rule is draft, cited, and explained', () => {
+  it('every rule is approved, cited, and explained', () => {
     for (const r of rules) {
-      expect(r.status).toBe('draft');
+      expect(r.status).toBe('approved');
       expect(r.sourceRef && ids.has(r.sourceRef)).toBeTruthy();
       expect(r.basis && r.basis.length > 10).toBeTruthy();
     }

@@ -1,5 +1,5 @@
 {
-  "note": "Draft proposals only (AGENTS.md 3.10): every rule needs expert approval before use. Points are team heuristics chosen within the card's suggested ranges (spoilage sign 30-40, expired label 50, dish tag 5-10), not from any source. Skipped rule types: storage_hours (no opened source states an explicit hour limit; Codex GPFH 13.2.1 asks FBOs to set limits but gives no numbers), and dish tags dairy/fried/raw-ingredient/street-food/fermented (no openable official source as of 2026-11-11; the Regional code CXC 76R-2017 and CXG 103-2024 could not be opened).",
+  "note": "Approved 2026-11-14 after review by an external AI acting as a nutritionist/food-safety stand-in; the owner accepted the review (no human nutritionist session was held - see data/proposals/P2-DH01-approval-record.md). The reviewer could not open the source PDFs, so every Act/Codex section and clause number is plausibility-checked only, not verified against the originals. Points are team heuristics chosen within the card's suggested ranges (spoilage sign 30-40, expired label 50, dish tag 5-10), not from any source. Skipped rule types: storage_hours (no opened source states an explicit hour limit; Codex GPFH 13.2.1 asks FBOs to set limits but gives no numbers), and dish tags dairy/fried/raw-ingredient/street-food/fermented (no openable official source as of 2026-11-11; the Regional code CXC 76R-2017 and CXG 103-2024 could not be opened).",
   "rules": [
     {
       "id": "spoilage-visible-mold",
@@ -8,7 +8,7 @@
       "labelKey": "safety.spoilage-visible-mold",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "codex-texts",
-      "status": "draft",
+      "status": "approved",
       "basis": "Codex GPFH (CXC 1-1969) 13.2.8: incoming material known to carry microbiological contaminants that cannot be reduced to an acceptable level must not be accepted; visible mold is such microbiological spoilage."
     },
     {
@@ -18,7 +18,7 @@
       "labelKey": "safety.spoilage-slimy-surface",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "bd-safe-food-act-2013",
-      "status": "draft",
+      "status": "approved",
       "basis": "Food Safety Act 2013 s34 prohibits producing, storing or selling decomposed fish, meat, milk, egg or foods made from them; a slimy surface is a typical decomposition sign."
     },
     {
@@ -28,7 +28,7 @@
       "labelKey": "safety.spoilage-discoloration",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "bd-safe-food-act-2013",
-      "status": "draft",
+      "status": "approved",
       "basis": "Food Safety Act 2013 s26 bans food that is sub-standard for human consumption; abnormal discoloration indicates deterioration to sub-standard condition."
     },
     {
@@ -38,8 +38,8 @@
       "labelKey": "safety.spoilage-bloated-packaging",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "codex-texts",
-      "status": "draft",
-      "basis": "Codex GPFH (CXC 1-1969) 13.2.8: raw materials are visually inspected for packages damaged during transportation; a bloated package signals gas-producing contamination and must not be accepted."
+      "status": "approved",
+      "basis": "Codex GPFH asks for visual inspection of incoming packaging; bloating as a sign of gas-producing microbes is SafePlate's inference."
     },
     {
       "id": "spoilage-leaking-packaging",
@@ -48,7 +48,7 @@
       "labelKey": "safety.spoilage-leaking-packaging",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "codex-texts",
-      "status": "draft",
+      "status": "approved",
       "basis": "Codex GPFH (CXC 1-1969) 13.2.8: incoming material is inspected visually for packages damaged during transportation and material known to be contaminated is not accepted."
     },
     {
@@ -58,7 +58,7 @@
       "labelKey": "safety.spoilage-separated-liquid",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "bd-safe-food-act-2013",
-      "status": "draft",
+      "status": "approved",
       "basis": "Food Safety Act 2013 s34 bans decomposed milk and egg; curdling or unexpected liquid separation is a decomposition sign."
     },
     {
@@ -68,7 +68,7 @@
       "labelKey": "safety.spoilage-foam-or-bubbles",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "bd-safe-food-act-2013",
-      "status": "draft",
+      "status": "approved",
       "basis": "Food Safety Act 2013 s26 bans food that is sub-standard for human consumption; unexpected foam or bubbles indicate unwanted fermentation or contamination."
     },
     {
@@ -78,7 +78,7 @@
       "labelKey": "safety.spoilage-foreign-object",
       "mitigationKeys": ["mitigation.discard"],
       "sourceRef": "codex-texts",
-      "status": "draft",
+      "status": "approved",
       "basis": "Codex GPFH (CXC 1-1969) 13.2.5: systems must prevent extraneous hard or sharp objects such as glass or metal from reaching food; food containing foreign matter is not acceptable."
     },
     {
@@ -88,7 +88,7 @@
       "labelKey": "safety.label-expired",
       "mitigationKeys": ["mitigation.check-label", "mitigation.discard"],
       "sourceRef": "bd-safe-food-act-2013",
-      "status": "draft",
+      "status": "approved",
       "basis": "Food Safety Act 2013 s29 prohibits storing, supplying or selling any food after its expiry date; s32(c) requires packaged food labels to state the expiry date."
     },
     {
@@ -98,8 +98,8 @@
       "labelKey": "safety.dish-tag-seafood",
       "mitigationKeys": ["mitigation.verify-freshness"],
       "sourceRef": "codex-texts",
-      "status": "draft",
-      "basis": "Codex CXC 52-2003 s4: fish known to contain toxic, decomposed or extraneous substances must not be accepted and unfit fish must be removed and disposed of; seafood dishes warrant particular attention to freshness and time/temperature control."
+      "status": "approved",
+      "basis": "Codex fish code (CXC 52-2003) sets freshness and temperature-control expectations for fish; used here only as a general freshness reminder for seafood dishes."
     }
   ]
 }

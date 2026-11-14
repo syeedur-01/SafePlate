@@ -1,83 +1,83 @@
 {
   "mitigation.check-label": {
     "en": "Check the expiry date on the label again before eating.",
-    "bn": "খাওয়ার আগে লেবেলের মেয়াদ আরেকবার দেখে নিন।"
+    "bn": "খাওয়ার আগে লেবেলে মেয়াদ শেষ হওয়ার তারিখ আরেকবার দেখে নিন।"
   },
   "mitigation.discard": {
     "en": "Discard the food; do not eat it.",
-    "bn": "খাবারটি ফেলে দিন; খাবেন না।"
+    "bn": "খাবারটি ফেলে দিন, খাবেন না।"
   },
   "mitigation.verify-freshness": {
     "en": "Check how fresh the seafood is, and how it was stored.",
-    "bn": "মাছ কতটা টাটকা ছিল এবং কীভাবে সংরক্ষিত ছিল তা যাচাই করুন।"
+    "bn": "মাছ বা চিংড়ি কতটা তাজা এবং কীভাবে সংরক্ষণ করা হয়েছিল, তা দেখে নিন।"
   },
   "safety.dish-tag-seafood": {
     "en": "Seafood dish: freshness matters.",
-    "bn": "মাছ বা চিংড়ির খাবার: টাটকা হওয়া জরুরি।"
+    "bn": "মাছ বা চিংড়ির খাবার: তাজা হওয়া জরুরি।"
   },
   "safety.label-expired": {
     "en": "The expiry date on the label has passed.",
-    "bn": "লেবেলে উল্লিখিত মেয়াদ শেষ হয়ে গেছে।"
+    "bn": "লেবেলে লেখা মেয়াদ শেষ হওয়ার তারিখ পেরিয়ে গেছে।"
   },
   "safety.spoilage-bloated-packaging": {
     "en": "Possible bloated packaging.",
-    "bn": "সম্ভাব্য ফোলা প্যাকেজিং।"
+    "bn": "প্যাকেট ফুলে থাকতে পারে।"
   },
   "safety.spoilage-discoloration": {
     "en": "Possible unusual discoloration.",
-    "bn": "সম্ভাব্য অস্বাভাবিক রঙের পরিবর্তন।"
+    "bn": "রঙের অস্বাভাবিক পরিবর্তন দেখা যেতে পারে।"
   },
   "safety.spoilage-foam-or-bubbles": {
     "en": "Possible unexpected foam or bubbles.",
-    "bn": "সম্ভাব্য অপ্রত্যাশিত ফেনা বা বুদবুদ।"
+    "bn": "অস্বাভাবিক ফেনা বা বুদবুদ দেখা যেতে পারে।"
   },
   "safety.spoilage-foreign-object": {
     "en": "Possible foreign object (glass, metal).",
-    "bn": "সম্ভাব্য বহিঃস্থ বস্তু (কাচ, ধাতু)।"
+    "bn": "বাইরের কোনো বস্তু (যেমন কাচ বা ধাতুর টুকরো) থাকতে পারে।"
   },
   "safety.spoilage-leaking-packaging": {
     "en": "Possible leaking packaging.",
-    "bn": "সম্ভাব্য ফুটো প্যাকেজিং।"
+    "bn": "প্যাকেট থেকে তরল বেরিয়ে আসার চিহ্ন থাকতে পারে।"
   },
   "safety.spoilage-separated-liquid": {
     "en": "Possible separated liquid.",
-    "bn": "সম্ভাব্য আলাদা হয়ে যাওয়া তরল।"
+    "bn": "তরল আলাদা হয়ে থাকতে পারে।"
   },
   "safety.spoilage-slimy-surface": {
     "en": "Possible slimy surface.",
-    "bn": "সম্ভাব্য পিচ্ছিল পৃষ্ঠ।"
+    "bn": "উপরিভাগ পিচ্ছিল থাকতে পারে।"
   },
   "safety.spoilage-visible-mold": {
     "en": "Possible visible mold.",
-    "bn": "সম্ভাব্য দৃশ্যমান ছাঁচ।"
+    "bn": "ছাতা পড়ার চিহ্ন দেখা যেতে পারে।"
   },
   "warn.allergen_present": {
     "en": "This dish contains {allergen} and may not suit you.",
-    "bn": "এই খাবারে {allergen} আছে, যা আপনার পক্ষে নাও হতে পারে।"
+    "bn": "এই খাবারে {allergen} আছে, যা আপনার জন্য উপযোগী নাও হতে পারে।"
   },
   "warn.diabetes_fried": {
     "en": "Fried foods may not suit you. Consider limiting fried foods and choosing boiled, steamed or grilled options.",
-    "bn": "ভাজা খাবার আপনার পক্ষে নাও হতে পারে। ভাজা খাবার কম খাওয়ার এবং সেদ্ধ, স্টিম বা গ্রিল করা বিকল্প বেছে নেওয়ার কথা বিবেচনা করুন।"
+    "bn": "ভাজা খাবার আপনার জন্য উপযোগী নাও হতে পারে। ভাজা খাবার কম খাওয়ার এবং সেদ্ধ, ভাপে রান্না করা বা গ্রিল করা খাবার বেছে নেওয়ার কথা ভেবে দেখতে পারেন।"
   },
   "warn.diabetes_sodium": {
-    "en": "This dish provides about {percent}% of the {nutrient} level suggested for people with diabetes. Consider limiting how much you eat.",
-    "bn": "ডায়াবেটিস থাকলে প্রস্তাবিত দৈনিক {nutrient}-এর প্রায় {percent}% এই খাবারে রয়েছে। কম খাওয়ার কথা বিবেচনা করুন।"
+    "en": "This dish provides about {percent}% of the daily {nutrient} level suggested for people with diabetes. Consider limiting how much you eat.",
+    "bn": "ডায়াবেটিস আছে এমন ব্যক্তিদের জন্য প্রস্তাবিত দৈনিক {nutrient} গ্রহণের সীমার প্রায় {percent}% এই খাবারে রয়েছে। খাবারের পরিমাণ কমানোর কথা ভেবে দেখতে পারেন।"
   },
   "warn.high_cholesterol_fried": {
     "en": "Fried foods may not suit you. Consider limiting fried and oily foods.",
-    "bn": "ভাজা খাবার আপনার পক্ষে নাও হতে পারে। ভাজা ও তৈলাক্ত খাবার কম খাওয়ার কথা বিবেচনা করুন।"
+    "bn": "ভাজা খাবার আপনার জন্য উপযোগী নাও হতে পারে। ভাজা ও তৈলাক্ত খাবার কম খাওয়ার কথা ভেবে দেখতে পারেন।"
   },
   "warn.hypertension_sodium": {
-    "en": "This dish provides about {percent}% of the {nutrient} level suggested for people with high blood pressure. Consider limiting how much you eat.",
-    "bn": "উচ্চ রক্তচাপ থাকলে প্রস্তাবিত দৈনিক {nutrient}-এর প্রায় {percent}% এই খাবারে রয়েছে। কম খাওয়ার কথা বিবেচনা করুন।"
+    "en": "This dish provides about {percent}% of the daily {nutrient} level suggested for people with high blood pressure. Consider limiting how much you eat.",
+    "bn": "উচ্চ রক্তচাপ আছে এমন ব্যক্তিদের জন্য প্রস্তাবিত দৈনিক {nutrient} গ্রহণের সীমার প্রায় {percent}% এই খাবারে রয়েছে। খাবারের পরিমাণ কমানোর কথা ভেবে দেখতে পারেন।"
   },
   "warn.insufficient_data": {
     "en": "Not enough data to estimate {nutrient} in this dish. A missing number does not mean it is absent.",
-    "bn": "এই খাবারে {nutrient} অনুমান করার মতো যথেষ্ট তথ্য নেই। সংখ্যা না থাকা মানে এটি অনুপস্থিত, এমনটা নয়।"
+    "bn": "এই খাবারের {nutrient} কতটা, তা অনুমান করার মতো যথেষ্ট তথ্য নেই। সংখ্যা না থাকার মানে এই নয় যে উপাদানটি এতে নেই।"
   },
   "notice.chemical_limit": {
     "en": "This check can only look at what a photo and a label show. It cannot detect invisible chemical contamination (for example formalin) or tell you a food is safe. It is general information, not medical or legal advice.",
-    "bn": "এই যাচাই কেবল ছবি ও লেবেলে যা দেখা যায় তা-ই দেখতে পারে। এটি অদৃশ্য রাসায়নিক দূষণ (যেমন ফরমালিন) ধরতে পারে না এবং খাবার নিরাপদ কি না বলতে পারে না। এটি সাধারণ তথ্য, চিকিৎসা বা আইনি পরামর্শ নয়।"
+    "bn": "এই যাচাই শুধু ছবি ও লেবেলে যা দেখা যায়, তার ওপরই নির্ভর করে। এটি চোখে দেখা যায় না এমন রাসায়নিক দূষণ (যেমন ফরমালিন) শনাক্ত করতে পারে না এবং কোনো খাবার নিরাপদ কি না, তাও বলতে পারে না। এটি সাধারণ তথ্য মাত্র; চিকিৎসা বা আইনি পরামর্শ নয়।"
   },
   "notice.poor_image": {
     "en": "The photo is not clear enough for a reliable check. If you can, retake it in better light.",
@@ -97,7 +97,7 @@
   },
   "safety.no_signals": {
     "en": "No safety signals were found in this photo. That is not a promise that the food is safe.",
-    "bn": "এই ছবিতে কোনো নিরাপত্তা সংকেত পাওয়া যায়নি। এটি খাবার নিরাপদ তার নিশ্চয়তা নয়।"
+    "bn": "এই ছবিতে খাবারের নিরাপত্তা নিয়ে কোনো সতর্ক সংকেত পাওয়া যায়নি। তবে এটি খাবার নিরাপদ হওয়ার নিশ্চয়তা নয়।"
   },
   "safety.next_steps": {
     "en": "What you can do next",
@@ -109,27 +109,27 @@
   },
   "foryou.add_profile": {
     "en": "Set up your health profile to get warnings that fit you.",
-    "bn": "আপনার জন্য মানানসই সতর্কতা পেতে স্বাস্থ্য প্রোফাইল সেট আপ করুন।"
+    "bn": "আপনার উপযোগী সতর্কবার্তা পেতে স্বাস্থ্য প্রোফাইল তৈরি করুন।"
   },
   "swap.lower_nutrient": {
     "en": "Suggested because it is lower in {nutrient}.",
-    "bn": "{nutrient}-এ কম বলে এটি প্রস্তাব করা হয়েছে।"
+    "bn": "এতে {nutrient} কম, তাই এটি প্রস্তাব করা হয়েছে।"
   },
   "swap.none": {
-    "en": "No alternative dish was found that is lower in the flagged nutrients and safe for you.",
-    "bn": "পতাকাযুক্ত পুষ্টিতে কম এবং আপনার জন্য নিরাপদ কোনো বিকল্প খাবার পাওয়া যায়নি।"
+    "en": "No alternative dish was found that is lower in the flagged nutrients and has no warnings for your profile.",
+    "bn": "সতর্কতা দেওয়া পুষ্টি উপাদানে কম এবং আপনার প্রোফাইলে কোনো সতর্কতা নেই, এমন কোনো বিকল্প খাবার পাওয়া যায়নি।"
   },
   "nutrition.not_enough_data": {
     "en": "Not enough data for a reliable estimate.",
-    "bn": "নির্ভরযোগ্য হিসাবের জন্য যথেষ্ট তথ্য নেই।"
+    "bn": "নির্ভরযোগ্য অনুমানের জন্য যথেষ্ট তথ্য নেই।"
   },
   "nutrition.estimate_note": {
     "en": "All nutrition numbers are estimates from food-composition tables, not measurements of this dish.",
-    "bn": "সব পুষ্টির সংখ্যা খাদ্য-উপাদান তালিকা থেকে অনুমান; এই খাবারের পরিমাপ নয়।"
+    "bn": "পুষ্টির সব সংখ্যা খাদ্য উপাদান তালিকা থেকে নেওয়া অনুমান, এই খাবারের সরাসরি পরিমাপ নয়।"
   },
   "nutrition.from_lab_study": {
     "en": "Based on a laboratory study of this dish, scaled to the serving size (estimate).",
-    "bn": "এই খাবারের একটি পরীক্ষাগার গবেষণার ভিত্তিতে, পরিবেশন মাপে রূপান্তরিত (আনুমানিক)।"
+    "bn": "এই খাবারের ওপর পরীক্ষাগারে করা একটি গবেষণার ভিত্তিতে, এক পরিবেশনের পরিমাণ অনুযায়ী হিসাব করা (আনুমানিক)।"
   },
   "nutrition.why_missing": {
     "en": "Why is some data missing?",
@@ -145,11 +145,11 @@
   },
   "onboarding.consent": {
     "en": "I understand this app gives general information only, not medical advice, and my profile is stored on this device only.",
-    "bn": "আমি বুঝছি এই অ্যাপ কেবল সাধারণ তথ্য দেয়, চিকিৎসা পরামর্শ নয়, এবং আমার প্রোফাইল শুধু এই ডিভাইসেই সংরক্ষিত থাকে।"
+    "bn": "আমি বুঝতে পেরেছি যে এই অ্যাপ শুধু সাধারণ তথ্য দেয়, চিকিৎসা পরামর্শ নয়, এবং আমার প্রোফাইল শুধু এই ডিভাইসেই সংরক্ষিত থাকে।"
   },
   "nutrient.energy_kcal": {
     "en": "Energy",
-    "bn": "শক্তি"
+    "bn": "খাদ্যশক্তি"
   },
   "nutrient.protein_g": {
     "en": "Protein",
@@ -161,7 +161,7 @@
   },
   "nutrient.sat_fat_g": {
     "en": "Saturated fat",
-    "bn": "স্যাচুরেটেড ফ্যাট"
+    "bn": "সম্পৃক্ত চর্বি (স্যাচুরেটেড ফ্যাট)"
   },
   "nutrient.carbs_g": {
     "en": "Carbohydrates",
@@ -173,7 +173,7 @@
   },
   "nutrient.fibre_g": {
     "en": "Fibre",
-    "bn": "আঁশ"
+    "bn": "খাদ্য আঁশ"
   },
   "nutrient.sodium_mg": {
     "en": "Sodium",

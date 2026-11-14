@@ -143,7 +143,7 @@
       ],
       "allergens": ["mustard"],
       "safety_tags": [],
-      "cooking_class": "shallow_fried",
+      "cooking_class": "boiled_or_simmered",
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null
     },
@@ -703,7 +703,7 @@
       ],
       "allergens": ["fish", "mustard"],
       "safety_tags": ["seafood"],
-      "cooking_class": "shallow_fried",
+      "cooking_class": "braised_or_curry",
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null
     },
@@ -1183,7 +1183,7 @@
       ],
       "allergens": ["milk", "wheat_gluten"],
       "safety_tags": ["dairy"],
-      "cooking_class": "braised_or_curry",
+      "cooking_class": "baked_or_roasted",
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null
     },
@@ -1300,7 +1300,7 @@
       ],
       "allergens": ["egg"],
       "safety_tags": ["street-food"],
-      "cooking_class": "braised_or_curry",
+      "cooking_class": "boiled_or_simmered",
       "nutrition_basis": "unavailable",
       "lab_values_per_serving": null
     },
