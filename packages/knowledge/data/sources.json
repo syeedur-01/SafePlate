@@ -4,12 +4,13 @@
       "id": "bd-dietary-guidelines",
       "title": "National Dietary Guidelines for Bangladesh",
       "publisher": "National Nutrition Services (copy hosted by WHO)",
-      "year": null,
+      "year": 2025,
       "edition": null,
       "url": "https://cdn.who.int/media/docs/default-source/searo/bangladesh/national-dietary-guidelines-for-bangladesh.pdf",
       "tier": "bangladesh",
-      "status": "unverified",
-      "accessedOn": null
+      "status": "verified",
+      "accessedOn": "2026-11-14",
+      "notes": "Verified 2026-11-14 by downloading the 142-page PDF and extracting the text: title/publisher match, and every rule citation was confirmed verbatim (printed pages 19, 68, 69 and 81 = PDF pages minus 22). The document has two different chapters both numbered Guideline 2 (fats/oils, and diabetes) - an editorial flaw of the source, not a citation error."
     },
     {
       "id": "bd-fctb-2013",
