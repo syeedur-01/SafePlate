@@ -11,7 +11,7 @@ const kw: AllergenKeywords = {
   tree_nuts: ['cashew'],
   peanuts: ['peanut'],
   wheat_gluten: ['wheat', 'flour'],
-  soy: ['soy'],
+  soy: ['soy', 'soybean'],
   sesame: ['sesame'],
   mustard: ['mustard'],
 };
@@ -41,10 +41,46 @@ describe('detectAllergens', () => {
       { allergen: 'milk', via: 'declared' },
     ]);
   });
-  it('is conservative: soybean matches soy', () => {
+  it('is conservative: soybean matches soy when soybean is listed as a keyword', () => {
     expect(
       detectAllergens({ ingredientsText: 'soybean oil', declaredAllergens: [] }, kw)[0],
     ).toEqual({ allergen: 'soy', via: 'ingredients' });
+  });
+  it('matches words split by punctuation and casing', () => {
+    expect(
+      detectAllergens({ ingredientsText: 'WHEAT FLOUR, milk', declaredAllergens: [] }, kw)
+        .map((d) => d.allergen)
+        .sort(),
+    ).toEqual(['milk', 'wheat_gluten']);
+  });
+  it('matches a multi-word keyword as consecutive tokens', () => {
+    const milk: AllergenKeywords = { ...kw, milk: ['milk solids'] };
+    expect(
+      detectAllergens(
+        { ingredientsText: 'contains milk, solids and sugar', declaredAllergens: [] },
+        milk,
+      ).map((d) => d.allergen),
+    ).toEqual(['milk']);
+  });
+  it('does not flag a whole word hiding inside another word', () => {
+    // egg is not in eggplant; til is not in lentil; fish is not in shellfish
+    const tricky: AllergenKeywords = { ...kw, egg: ['egg'], sesame: ['til'], fish: ['fish'] };
+    expect(
+      detectAllergens(
+        { ingredientsText: 'eggplant, red lentil, shellfish extract', declaredAllergens: [] },
+        tricky,
+      ),
+    ).toEqual([]);
+  });
+  it('does not flag a Bangla keyword inside a longer Bangla word', () => {
+    // বাদাম (nut) must not match চিনাবাদাম (peanut) or কাঠবাদাম (almond), but matches বাদাম alone
+    const nuts: AllergenKeywords = { ...kw, tree_nuts: ['বাদাম'] };
+    expect(
+      detectAllergens({ ingredientsText: 'চিনাবাদাম তেল', declaredAllergens: [] }, nuts),
+    ).toEqual([]);
+    expect(
+      detectAllergens({ ingredientsText: 'মিক্সড বাদাম', declaredAllergens: [] }, nuts),
+    ).toEqual([{ allergen: 'tree_nuts', via: 'ingredients' }]);
   });
   it('handles missing text', () => {
     expect(detectAllergens({ ingredientsText: null, declaredAllergens: [] }, kw)).toEqual([]);
