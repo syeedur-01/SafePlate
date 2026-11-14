@@ -91,6 +91,14 @@ Reviewer found **no allergen-list errors** in any dish; all gram amounts and oth
   egg→eggplant/eggless, til→lentil, rui→fruit, fish→shellfish, flour→rice flour, milk→coconut milk,
   বাদাম→চিনাবাদাম (peanut dishes also flag tree nuts). A future engine card should switch to whole-word/token
   matching; then decide whether `flour` and `বাদাম` should be dropped.
+  **→ Resolved 2026-11-14 (branch `a/E01-token-matching`):** the engine now matches keywords as whole tokens
+  (Unicode-aware, punctuation-split, Bangla vowel marks kept attached to their word). All keywords were kept —
+  including `flour` and `বাদাম` — so the conservative direction is preserved; the false-positive collisions above
+  are fixed at the matching level, not by dropping keywords. Two single-token variants that substring used to
+  catch (`wholewheat`, `wheatgerm`) were added to `wheat_gluten`. Remaining over-warnings are semantic, not
+  mechanical: `butter`→peanut butter, `milk`→coconut milk, `flour`→rice/corn flour still match because the
+  keyword word itself appears as a whole token (e.g. "rice **flour**"); fixing those needs per-ingredient
+  knowledge, not matching changes. `cornflour` no longer triggers wheat_gluten — correct, it is maize.
 - **Policy questions**: coconut is not in tree_nuts (correct by most food laws, but confirm for BD labels);
   rasmalai and polao may also use pistachio; chotpoti is often topped with crushed puri (wheat) or chanachur
   (peanut); oats are omitted from gluten; plain "lecithin" omitted (may be soy or sunflower).
