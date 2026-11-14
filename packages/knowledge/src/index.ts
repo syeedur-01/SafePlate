@@ -19,6 +19,7 @@ import {
 
 export * from './normalize';
 export * from './messages';
+export * from './runtime';
 
 const knowledgeDataUrl = new URL('../data/', import.meta.url);
 
