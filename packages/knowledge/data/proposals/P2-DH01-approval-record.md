@@ -86,10 +86,12 @@ Reviewer found **no allergen-list errors** in any dish; all gram amounts and oth
    (recipe calculation from Pasricha et al 2006) and code 01_0036 **Plain pulao = 167 mg Na/100 g** (Rahim 2013),
    PDF pp. 28–29. On that direct basis the salt lines were set by deterministic back-calculation:
    bhuna-khichuri 1 → **3.62 g**, morog-polao 1 → **1.55 g** (see each dish's second source entry and the new
-   engine test `fctb-composites.test.ts`). For **kacchi-biryani, beef-tehari and haleem no legitimate source
-   exists** (Isfahan biryani study is a different dish type; UK ready-meal labels are reformulated products;
-   no tehari or prepared-haleem analysis found anywhere) — they stay at 1 g and are documented in
-   `data/proposals/salt-values-proposals.json` with candidate anchors for a nutritionist to decide.
+   engine test `fctb-composites.test.ts`). A second search pass on the same day found a laboratory-analyzed
+   biryani value in the UK CoFID 2021 dataset (McCance & Widdowson, GOV.UK): code 19-454 "Biryani, chicken,
+   takeaway" = **263 mg Na/100 g**, 10 samples from 2 establishments in each of 5 regions (Aspland and James
+   Ltd 1997), so kacchi-biryani 1 → **2.61 g** as a documented cross-country proxy. For **beef-tehari and
+   haleem no legitimate source exists in any database searched (CoFID included)** — they stay at 1 g and are
+   documented in `data/proposals/salt-values-proposals.json` for a nutritionist to decide.
 4. Panta-ilish (class `fermented`, no fried tag despite pre-fried hilsa) — nutritionist's call.
 
 ## Known limitations accepted with this review (follow-ups for future cards)

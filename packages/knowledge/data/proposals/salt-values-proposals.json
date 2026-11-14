@@ -1,5 +1,5 @@
 {
-  "note": "Proposals for the remaining understated salt lines (kacchi-biryani, beef-tehari, haleem), created 2026-11-14 on branch d/E02-sourced-salt-values. Per AGENTS.md 3.1 (no source, no value) and 3.10 (proposals are not approvals), these numbers are NOT applied: every dish needs a nutritionist's decision. This file documents what was searched, what was found and rejected, and the candidate values a nutritionist could adopt. Two sibling dishes WERE applied because a direct FCTB cooked composite exists for their exact dish family: bhuna-khichuri (01_0035 Plain Khichuri, 410 mg Na/100 g -> salt 3.62 g) and morog-polao (01_0036 Plain pulao, 167 mg Na/100 g -> salt 1.55 g).",
+  "note": "Proposals for the remaining understated salt lines (beef-tehari, haleem), created 2026-11-14 on branch d/E02-sourced-salt-values. Per AGENTS.md 3.1 (no source, no value) and 3.10 (proposals are not approvals), these numbers are NOT applied: every dish needs a nutritionist's decision. This file documents what was searched, what was found and rejected, and the candidate values a nutritionist could adopt. Three sibling dishes WERE applied because a direct published cooked composite exists for their dish family: bhuna-khichuri (FCTB 01_0035 Plain Khichuri, 410 mg Na/100 g -> salt 3.62 g), morog-polao (FCTB 01_0036 Plain pulao, 167 mg Na/100 g -> salt 1.55 g) and kacchi-biryani (UK CoFID 2021 19-454 Biryani chicken takeaway, 263 mg Na/100 g analytical -> salt 2.61 g).",
   "searchLog": [
     {
       "query": "peer-reviewed sodium analysis of South Asian biryani, tehari, khichuri, polao, haleem (Crossref, Semantic Scholar, DuckDuckGo, USDA FDC, Open Food Facts, IFCT 2017 dataset)",
@@ -31,23 +31,19 @@
     {
       "query": "FCTB 2013 for cooked composite dishes of these families",
       "result": "The FCTB contains exactly ten cooked composite dishes (biscuit, khichuri, pulao, boiled rices, ruti, vermicelli, boiled dals/vegetables, lady's finger-tomato bhuna 565, bitter gourd fry 469, fish ball 345, small fish fry 242, beef handi kabab 345, potato mash 310, payesh 65 mg Na/100 g). No biryani, tehari or haleem composite exists."
+    },
+    {
+      "query": "Second pass 2026-11-14: UK CoFID 2021 (McCance and Widdowson's Composition of Foods Integrated Dataset, GOV.UK XLSX downloaded and read verbatim) plus nutridex.org.uk mirror",
+      "result": "APPLIED for kacchi-biryani: CoFID code 19-454 'Biryani, chicken, takeaway' = 263 mg sodium/100 g (sheet 1.4 Inorganics), description '10 samples, 2 from different establishments in each of 5 regions. Consists of chicken fried in oil with saffron flavoured rice and a curry sauce that contains vegetables and coconut', analytical source 'Aspland and James Ltd, Nutrient analysis of ethnic takeaway foods, 1997'. This is the only found laboratory-analyzed sodium value for an actual biryani dish in a national composition table. Applied as a DOCUMENTED PROXY (UK takeaway chicken biryani with curry sauce, not Dhaka mutton kacchi biryani): salt line 1 -> 2.61 g. No CoFID entry exists for haleem, halim, tehari or tehri (searched the full 18,192-row sharedStrings)."
     }
   ],
   "proposals": [
     {
       "kind": "dish_salt_grams",
-      "dishId": "kacchi-biryani",
-      "currentSaltG": 1,
-      "proposedSaltG": null,
-      "reasonNoValue": "No source for kacchi biryani sodium. Nearest published anchors disagree in range (BD plain pulao 167 mg/100 g as floor; Isfahan patty-dish 347.4; UK retail declared 140-574 mg/100 g). This is a nutritionist's call.",
-      "currentComputedNaMgPer100g": 113
-    },
-    {
-      "kind": "dish_salt_grams",
       "dishId": "beef-tehari",
       "currentSaltG": 1,
       "proposedSaltG": null,
-      "reasonNoValue": "No source for tehari/tehri sodium anywhere searched. Same rice-family anchors as biryani apply only as context.",
+      "reasonNoValue": "No source for tehari/tehri sodium anywhere searched (two passes: Crossref, Semantic Scholar, USDA FDC, IFCT 2017, Open Food Facts, CoFID 2021, DuckDuckGo incl. Bangla queries). Same rice-family anchors as biryani apply only as context.",
       "currentComputedNaMgPer100g": 117
     },
     {
@@ -55,7 +51,7 @@
       "dishId": "haleem",
       "currentSaltG": 1,
       "proposedSaltG": null,
-      "reasonNoValue": "No prepared-haleem sodium source found in any database searched (USDA, OFF, Crossref, Semantic Scholar, DDG). The 2016 AJFS haleem paper covers raw ingredients only.",
+      "reasonNoValue": "No prepared-haleem sodium source found in any database searched (two passes: USDA, OFF, Crossref, Semantic Scholar, CoFID 2021, DDG). The 2016 AJFS haleem paper covers raw ingredients only.",
       "currentComputedNaMgPer100g": 152
     }
   ],

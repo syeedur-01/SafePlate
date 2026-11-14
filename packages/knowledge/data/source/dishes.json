@@ -363,7 +363,7 @@
         },
         {
           "ingredient_id": "salt",
-          "grams_raw": 1,
+          "grams_raw": 2.61,
           "quantity_basis": "ESTIMATE"
         },
         {
@@ -384,6 +384,13 @@
           "year": 2013,
           "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
           "used_for": "Raw-ingredient composition for ingredient IDs that have an FCTB-matched nutrient profile in ingredients.json only. This source does not establish this dish's ingredient quantities or final dish nutrient totals."
+        },
+        {
+          "title": "McCance and Widdowson's The Composition of Foods Integrated Dataset (CoFID) 2021, code 19-454 \"Biryani, chicken, takeaway\"",
+          "publisher": "Public Health England / UK Food Standards Agency, GOV.UK",
+          "year": 2021,
+          "url": "https://assets.publishing.service.gov.uk/media/60538b91e90e07527df82ae4/McCance_Widdowsons_Composition_of_Foods_Integrated_Dataset_2021..xlsx",
+          "used_for": "Sodium anchor for the salt line only: CoFID sheet 1.4 Inorganics row 19-454 states 263 mg sodium per 100 g for takeaway biryani (chicken fried in oil with saffron-flavoured rice and curry sauce), analytical basis: 10 samples, 2 from different establishments in each of 5 UK regions (Aspland and James Ltd, Nutrient analysis of ethnic takeaway foods, 1997). The salt line (2.61 g per 420 g serving) is back-calculated: target 1104.6 mg minus 78.6 mg from the other non-water ingredients, divided by 393.4 mg Na per g salt (FCTB 15_0007 Salt). This is a documented proxy: UK takeaway chicken biryani, not Dhaka kacchi biryani (mutton, no curry sauce); 1997 analysis. Other dish quantities remain ESTIMATE; see data/proposals/salt-values-proposals.json."
         }
       ],
       "confidence": "low",
@@ -394,7 +401,8 @@
         "Ingredient-level nutrient values must be read only from ingredients.json and only where individually source-cited; null means not available from the permitted sources verified in this pass.",
         "Recipe variants and household methods differ; culinary review is required before publication.",
         "No exact dish-level lab-analyzed nutrient profile from the permitted INFS/BanglaJOL sources was verified for this dish in this pass.",
-        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices."
+        "Allergen labels are inferred from the estimated ingredient list; verify against the allergen standard used by the deployment jurisdiction and cross-contact practices.",
+        "Salt line 2.61 g per serving was set on 2026-11-14 so the computed dish sodium reproduces the UK CoFID 2021 analytical value for takeaway biryani (code 19-454, 263 mg Na/100 g, 10 samples from 2 establishments in each of 5 regions, Aspland and James 1997); see the second source entry. This is a documented cross-country proxy (UK takeaway chicken biryani, not Dhaka kacchi biryani) - nutritionist review still required (needs_expert_review stays true)."
       ],
       "batch_number": 1
     },
