@@ -10,7 +10,25 @@ import type {
 import { NUTRIENT_KEYS } from '@sp/contracts';
 import { evaluateSuitability } from './suitability';
 
-export type AllergenKeywords = Record<Allergen, string[]>; // lowercase words; matching is by substring (conservative on purpose)
+export type AllergenKeywords = Record<Allergen, string[]>; // lowercase words or phrases; matched as whole tokens (Bangla and Latin), never inside a longer word
+
+/** Splits text into lowercase letter/number tokens (Unicode-aware, and combining marks stay attached so Bangla words keep their vowel signs). */
+function tokenize(text: string): string[] {
+  return text.toLowerCase().match(/[\p{L}\p{M}\p{N}]+/gu) ?? [];
+}
+
+/** Returns true when the keyword's token sequence appears as consecutive tokens (punctuation between them is fine). */
+function keywordMatches(keyword: string, tokens: string[]): boolean {
+  const kt = tokenize(keyword);
+  if (kt.length === 0) return false;
+  outer: for (let i = 0; i + kt.length <= tokens.length; i++) {
+    for (let j = 0; j < kt.length; j++) {
+      if (tokens[i + j] !== kt[j]) continue outer;
+    }
+    return true;
+  }
+  return false;
+}
 export interface LabelInput {
   ingredientsText: string | null;
   declaredAllergens: Allergen[];
@@ -21,7 +39,7 @@ export interface DetectedAllergen {
   via: 'declared' | 'ingredients';
 }
 
-/** Returns declared allergens plus any allergen whose keyword appears in the ingredients text (case-insensitive substring). Declared wins when both apply. */
+/** Returns declared allergens plus any allergen whose keyword appears as whole tokens in the ingredients text (case-insensitive). Declared wins when both apply. */
 export function detectAllergens(
   label: Pick<LabelInput, 'ingredientsText' | 'declaredAllergens'>,
   keywords: AllergenKeywords,
@@ -37,9 +55,10 @@ export function detectAllergens(
 
   const text = label.ingredientsText?.toLowerCase() ?? '';
   if (text.length === 0) return detected;
+  const tokens = tokenize(text);
   for (const allergen of Object.keys(keywords) as Allergen[]) {
     if (seen.has(allergen)) continue;
-    if (!keywords[allergen].some((word) => text.includes(word))) continue;
+    if (!keywords[allergen].some((word) => keywordMatches(word, tokens))) continue;
     seen.add(allergen);
     detected.push({ allergen, via: 'ingredients' });
   }
