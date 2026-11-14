@@ -1,0 +1,59 @@
+{
+  "note": "Proposals for the remaining understated salt lines (beef-tehari, haleem), created 2026-11-14 on branch d/E02-sourced-salt-values. Per AGENTS.md 3.1 (no source, no value) and 3.10 (proposals are not approvals), these numbers are NOT applied: every dish needs a nutritionist's decision. This file documents what was searched, what was found and rejected, and the candidate values a nutritionist could adopt. Three sibling dishes WERE applied because a direct published cooked composite exists for their dish family: bhuna-khichuri (FCTB 01_0035 Plain Khichuri, 410 mg Na/100 g -> salt 3.62 g), morog-polao (FCTB 01_0036 Plain pulao, 167 mg Na/100 g -> salt 1.55 g) and kacchi-biryani (UK CoFID 2021 19-454 Biryani chicken takeaway, 263 mg Na/100 g analytical -> salt 2.61 g).",
+  "searchLog": [
+    {
+      "query": "peer-reviewed sodium analysis of South Asian biryani, tehari, khichuri, polao, haleem (Crossref, Semantic Scholar, DuckDuckGo, USDA FDC, Open Food Facts, IFCT 2017 dataset)",
+      "result": "No laboratory or published composition value found for any of the three dishes below. IFCT 2017 (npm @ifct2017/corpus, 542 key foods) contains raw ingredients only, no composite dishes. USDA FNDDS biryani entries (2706538 chicken, 2706490 meat, 2708985 vegetable) carry no sodium values. Kuna et al 2020 (Journal of Meat Science, 'Nutritional Evaluation of Meat Biryani', acspublisher.com/journals/index.php/jms/article/view/3305) measured energy/fat/protein/fatty/amino acids only - no sodium. Rahman/INFS haleem review (African Journal of Food Science 2016) reviews raw-ingredient composition only."
+    },
+    {
+      "query": "Journal of Nutrition and Food Security 2025 'Sodium Content in Biryani and Grilled Lungs ... Isfahan, Iran' (DOI 10.18502/jnfs.v10i4.20004, PDF downloaded and read)",
+      "result": "REJECTED as anchor: mean sodium 347.4 +/- 170.7 mg/100 g in 25 samples, but the paper's own definition says the Isfahani 'Biryani' is 'a mixture of lamb, liver, onions, and various spices... grilled and patty-like dish' - a different dish type from South Asian kacchi biryani (dum-cooked rice + meat). Quoting it as a kacchi-biryani value would be a false citation.",
+      "candidateIfNutritionistAcceptsProxy": {
+        "na_mg_per_100g": 347.4,
+        "salt_g_for_serving": 2.85,
+        "salt_basis": "(347.4*4.2 - 84.2 other mg) / 393.4 = 2.85 g per 420 g serving"
+      }
+    },
+    {
+      "query": "Open Food Facts declared label values for retail biryani ready meals (searched 2026-11-14)",
+      "result": "Found but REJECTED as anchor for Dhaka restaurant dishes: declared salt 0.35-1.43 g/100 g across ~20 products (Patak's 0.59, Sainsbury's/Tesco/Waitrose 0.35-0.56, Ashoka Bombay Biryani retort 1.43). UK/EU products are reformulated to salt-reduction targets; the median (~0.5 g/100 g) would put kacchi-biryani BELOW the FCTB plain-pulao anchor already applied to morog-polao, which is not credible for a rich restaurant biryani.",
+      "candidateIfNutritionistAcceptsProxy": {
+        "na_mg_per_100g": 200,
+        "salt_g_for_serving": 1.83,
+        "salt_basis": "median ~0.5 g salt/100 g -> (200*4.2 - 84.2) / 393.4 = 1.83 g; conservative end (Ashoka 1.43 g salt/100 g -> 574 mg Na/100 g) would give 5.99 g salt"
+      }
+    },
+    {
+      "query": "haleem sodium (prepared dish) any country",
+      "result": "No prepared-dish sodium value found. USDA branded 'Haleem mix' products are dehydrated spice/lentil mixes (per-100 g of dry mix, not prepared haleem). snapcalorie.com states 240 mg/100 g but is an AI-estimation site, not a citable source.",
+      "candidateIfNutritionistAcceptsProxy": null
+    },
+    {
+      "query": "FCTB 2013 for cooked composite dishes of these families",
+      "result": "The FCTB contains exactly ten cooked composite dishes (biscuit, khichuri, pulao, boiled rices, ruti, vermicelli, boiled dals/vegetables, lady's finger-tomato bhuna 565, bitter gourd fry 469, fish ball 345, small fish fry 242, beef handi kabab 345, potato mash 310, payesh 65 mg Na/100 g). No biryani, tehari or haleem composite exists."
+    },
+    {
+      "query": "Second pass 2026-11-14: UK CoFID 2021 (McCance and Widdowson's Composition of Foods Integrated Dataset, GOV.UK XLSX downloaded and read verbatim) plus nutridex.org.uk mirror",
+      "result": "APPLIED for kacchi-biryani: CoFID code 19-454 'Biryani, chicken, takeaway' = 263 mg sodium/100 g (sheet 1.4 Inorganics), description '10 samples, 2 from different establishments in each of 5 regions. Consists of chicken fried in oil with saffron flavoured rice and a curry sauce that contains vegetables and coconut', analytical source 'Aspland and James Ltd, Nutrient analysis of ethnic takeaway foods, 1997'. This is the only found laboratory-analyzed sodium value for an actual biryani dish in a national composition table. Applied as a DOCUMENTED PROXY (UK takeaway chicken biryani with curry sauce, not Dhaka mutton kacchi biryani): salt line 1 -> 2.61 g. No CoFID entry exists for haleem, halim, tehari or tehri (searched the full 18,192-row sharedStrings)."
+    }
+  ],
+  "proposals": [
+    {
+      "kind": "dish_salt_grams",
+      "dishId": "beef-tehari",
+      "currentSaltG": 1,
+      "proposedSaltG": null,
+      "reasonNoValue": "No source for tehari/tehri sodium anywhere searched (two passes: Crossref, Semantic Scholar, USDA FDC, IFCT 2017, Open Food Facts, CoFID 2021, DuckDuckGo incl. Bangla queries). Same rice-family anchors as biryani apply only as context.",
+      "currentComputedNaMgPer100g": 117
+    },
+    {
+      "kind": "dish_salt_grams",
+      "dishId": "haleem",
+      "currentSaltG": 1,
+      "proposedSaltG": null,
+      "reasonNoValue": "No prepared-haleem sodium source found in any database searched (two passes: USDA, OFF, Crossref, Semantic Scholar, CoFID 2021, DDG). The 2016 AJFS haleem paper covers raw ingredients only.",
+      "currentComputedNaMgPer100g": 152
+    }
+  ],
+  "howToApplyIfApproved": "Set each dish's salt line in data/source/dishes.json so that (otherNonWaterNa + 393.4 * saltG) / serving_weight_g * 100 equals the approved Na mg/100 g, i.e. saltG = (targetMgPer100g * servingG / 100 - otherNonWaterNa) / 393.4. Re-run normalize, demo-gate, review-pack; the engine test test/fctb-composites.test.ts guards the two applied dishes."
+}
