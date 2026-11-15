@@ -49,6 +49,11 @@ async function postWithTimeout(
 /** Returns the validated scan result, or throws ApiClientError for API failures. */
 export async function scan(req: ScanRequest, opts: ScanOptions = {}): Promise<ScanResult> {
   const parsedRequest = ScanRequestSchema.parse(req);
+  // Mock is opt-in only (VITE_USE_MOCK=1) and only for real app usage; an injected
+  // fetchFn always means a direct/contract-test call, so the mock never applies there.
+  if (opts.fetchFn === undefined && import.meta.env.VITE_USE_MOCK === '1') {
+    return mockScan(parsedRequest.kind);
+  }
   const baseUrl = (opts.baseUrl ?? import.meta.env.VITE_API_BASE ?? '').replace(/\/+$/, '');
   const doFetch =
     opts.fetchFn ??
