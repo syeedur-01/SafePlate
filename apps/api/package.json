@@ -17,6 +17,7 @@
     "hono": "4.13.17"
   },
   "devDependencies": {
+    "@sp/engine": "workspace:*",
     "wrangler": "4.158.0"
   }
 }
