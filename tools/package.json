@@ -17,7 +17,8 @@
     "review-pack": "tsx src/export-review-pack.ts",
     "merge-rules": "tsx src/merge-rules.ts",
     "demo-gate": "tsx src/demo-gate.ts",
-    "check-sources": "tsx src/check-sources.ts"
+    "check-sources": "tsx src/check-sources.ts",
+    "smoke": "tsx src/smoke.ts"
   },
   "dependencies": {
     "@sp/ai": "workspace:*",

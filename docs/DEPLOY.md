@@ -73,7 +73,26 @@ pnpm install
 pnpm --filter @sp/api exec wrangler deploy
 ```
 
-## 6. Render fallback
+## 6. Deploy the web app (Cloudflare Pages)
+
+The web app (`apps/web`) is a static Vite build served by Cloudflare Pages; the API stays on the Worker. Setup below was checked against the Cloudflare Pages build-configuration docs (last updated September 2026); if the dashboard has changed since, fix this file.
+
+1. In the Cloudflare dashboard, go to **Workers & Pages**, choose **Create**, then the **Pages** tab, and **Connect to Git**: connect this GitHub repository.
+2. Project settings (the repo is a pnpm monorepo, so leave the root directory at the repository root):
+   - **Build command:** `pnpm install && pnpm --filter @sp/web build`
+   - **Build output directory:** `apps/web/dist`
+3. **Environment variables** (Pages project, Settings > Environment variables, set for Production and Preview):
+   - `VITE_API_BASE=<the Worker URL from step 3>` (no trailing slash)
+4. Deploy. The committed `apps/web/public/_redirects` file (checked by `apps/web/test/redirects.test.ts`) is copied to `dist/_redirects` and makes client-side routes like `/confirm` and `/result` resolve to the app instead of 404.
+5. Point the Worker at the Pages URL: set the Worker's `ALLOWED_ORIGIN` var to the exact Pages origin (for example `https://safeplate.pages.dev`, no trailing slash) and redeploy the Worker (`pnpm --filter @sp/api exec wrangler deploy`). Until this is done the browser calls fail with a CORS error.
+6. Run the smoke script against the Worker:
+   ```
+   API_URL=https://<worker-url> pnpm --filter @sp/tools smoke
+   ```
+   It prints PASS or FAIL and the elapsed milliseconds for `GET /api/health` and `POST /api/scan`. The scan check uses a placeholder image, so a mapped error body (for example `ai_invalid_output`) still counts as PASS - the contract round-trip is what is being verified; verify real photo scans with the curl from step 4.
+7. Open the Pages URL on two real phones, scan one dish photo and one label photo, and confirm the full flow works.
+
+## 7. Render fallback
 
 Use this only if the Workers free plan fails the CPU or payload test. Render runs the Node entry and needs the same environment.
 
