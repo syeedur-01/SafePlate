@@ -8,4 +8,4 @@ compatibility_date = "2025-09-01" # if wrangler warns, follow its suggestion
 [vars]
 AI_PROVIDER = "gemini"
 GEMINI_MODEL = "gemini-3.5-flash-lite" # current stable vision-capable model per ai.google.dev/docs/models (checked 2026-11-15)
-ALLOWED_ORIGIN = "http://localhost:5173" # replace with the deployed web app origin
+ALLOWED_ORIGIN = "https://safeplate-czd.pages.dev" # the deployed web app origin (Cloudflare Pages)
