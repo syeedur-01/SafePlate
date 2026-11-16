@@ -12,7 +12,8 @@
     "test": "pnpm -r --if-present test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test",
+    "verify": "pnpm --filter @sp/tools verify"
   },
   "devDependencies": {
     "@eslint/js": "9.39.5",

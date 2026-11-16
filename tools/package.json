@@ -18,7 +18,8 @@
     "merge-rules": "tsx src/merge-rules.ts",
     "demo-gate": "tsx src/demo-gate.ts",
     "check-sources": "tsx src/check-sources.ts",
-    "smoke": "tsx src/smoke.ts"
+    "smoke": "tsx src/smoke.ts",
+    "verify": "tsx src/verify.ts"
   },
   "dependencies": {
     "@sp/ai": "workspace:*",
