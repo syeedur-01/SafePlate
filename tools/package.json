@@ -19,6 +19,7 @@
     "demo-gate": "tsx src/demo-gate.ts",
     "check-sources": "tsx src/check-sources.ts",
     "smoke": "tsx src/smoke.ts",
+    "eval-run": "tsx src/eval-run.ts",
     "verify": "tsx src/verify.ts"
   },
   "dependencies": {
