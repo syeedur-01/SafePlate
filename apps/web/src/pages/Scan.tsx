@@ -1,13 +1,16 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { ScanContext, ScanRequest } from '@sp/contracts';
-import { mockScan, scan } from '../api/client';
+import { ApiClientError, mockScan, scan } from '../api/client';
+import { SamplePicker } from '../components/SamplePicker';
 import { Button, buttonVariants } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { useT } from '../i18n/i18n';
 import { cn } from '../lib/cn';
 import { downscaleToJpeg } from '../lib/downscale';
+import { errorKeyFor } from '../lib/error-messages';
+import { useSlowNotice } from '../lib/useSlowNotice';
 
 const PLACES: readonly ScanContext['place'][] = [
   'home',
@@ -38,16 +41,17 @@ export function Scan() {
   const [storage, setStorage] = useState<ScanContext['storage']>('unknown');
   const [hours, setHours] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [errorKey, setErrorKey] = useState<string | null>(null);
+  const slow = useSlowNotice(loading);
 
   function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     setFile(event.target.files?.[0] ?? null);
-    setError(null);
+    setErrorKey(null);
   }
 
   function handleKindChange(value: string) {
     setKind(value as Kind);
-    setError(null);
+    setErrorKey(null);
   }
 
   function hoursSinceCooked(): number | null {
@@ -67,7 +71,7 @@ export function Scan() {
     }
 
     setLoading(true);
-    setError(null);
+    setErrorKey(null);
 
     try {
       const [image, thumb] = await Promise.all([
@@ -86,8 +90,8 @@ export function Scan() {
       navigate('/confirm', {
         state: { result, thumbDataUrl: `data:image/jpeg;base64,${thumb.base64}` },
       });
-    } catch {
-      setError(t('scan.error'));
+    } catch (error) {
+      setErrorKey(errorKeyFor(error instanceof ApiClientError ? error.code : 'internal'));
       setLoading(false);
     }
   }
@@ -185,19 +189,27 @@ export function Scan() {
             </label>
           ) : null}
 
-          {error === null ? null : (
+          {errorKey === null ? null : (
             <div role="alert" className="space-y-3 rounded-md border border-risk-high p-3">
-              <p className="text-sm text-risk-high">{error}</p>
+              <p className="text-sm text-risk-high">{t(errorKey)}</p>
               <Button variant="secondary" onClick={() => void analyze()} disabled={loading}>
                 {t('scan.retry')}
               </Button>
             </div>
           )}
 
+          {slow ? (
+            <p role="status" className="text-sm text-fg/80">
+              {t('scan.slowNotice')}
+            </p>
+          ) : null}
+
           <Button type="submit" disabled={file === null || loading}>
             {loading ? t('scan.analyzing') : t('scan.analyze')}
           </Button>
         </form>
+
+        <SamplePicker />
       </CardContent>
     </Card>
   );
