@@ -5,23 +5,23 @@ Branch: `improvement/development`
 Baseline tag: `v1.0.0` (remote tag → `a377f77`; local tag → `a38d74e` — see notes)
 Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 
-| Phase | Status      | Commit                     | Checks                                                                             | Notes / blockers                                                                  |
-| ----- | ----------- | -------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 0     | Complete    | `fc6b771` + Phase 0 commit | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                  |
-| 1     | In progress |                            |                                                                                    | P4-X04/X05 already merged from main; remaining: status-board + doc reconciliation |
-| 2     | Not started |                            |                                                                                    |                                                                                   |
-| 3     | Not started |                            |                                                                                    | Dataset licence audit is a gate before any image use                              |
-| 4     | Not started |                            |                                                                                    | Depends on Phase 3 benchmark                                                      |
-| 5     | Not started |                            |                                                                                    |                                                                                   |
-| 6     | Not started |                            |                                                                                    | Human-review dependent                                                            |
-| 7     | Not started |                            |                                                                                    |                                                                                   |
-| 8     | Not started |                            |                                                                                    |                                                                                   |
-| 9     | Not started |                            |                                                                                    |                                                                                   |
-| 10    | Not started |                            |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                       |
+| Phase | Status      | Commit                     | Checks                                                                             | Notes / blockers                                                                                  |
+| ----- | ----------- | -------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 0     | Complete    | `fc6b771` + Phase 0 commit | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                                  |
+| 1     | Complete    | `a60066d`                  | `pnpm check` green at commit                                                       | Honest doc status banners; status board reconciled; README cache claim corrected                  |
+| 2     | Complete    | `6dd7c5c`                  | `pnpm check` exit 0 (86 files / 815 tests), `pnpm verify` 0 problems               | KV binding + global budget enforcement remain approval-gated (see docs/PRODUCTION_RELIABILITY.md) |
+| 3     | Not started |                            |                                                                                    | Dataset licence audit is a gate before any image use                                              |
+| 4     | Not started |                            |                                                                                    | Depends on Phase 3 benchmark                                                                      |
+| 5     | Not started |                            |                                                                                    |                                                                                                   |
+| 6     | Not started |                            |                                                                                    | Human-review dependent                                                                            |
+| 7     | Not started |                            |                                                                                    |                                                                                                   |
+| 8     | Not started |                            |                                                                                    |                                                                                                   |
+| 9     | Not started |                            |                                                                                    |                                                                                                   |
+| 10    | Not started |                            |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                                       |
 
 ## Current phase
 
-Phase 1 — foundation and documentation debt. P4-X04 (bundle size budget: `apps/web/scripts/size.ts`, `apps/web/size-budget.json`) and P4-X05 (root `README.md`, `docs/KNOWN_LIMITATIONS.md`) were completed on `main` (PRs #75, #76) after the audit snapshot and are now merged into this branch. Remaining Phase 1 work: reconcile the plan status board with actual Git history, mark the real state of `TEAM.md` / `SPIKE_RESULTS.md` / `EVAL_REPORT.md` without fabricating results, correct any doc claims that do not match code (e.g. README claims scan responses are cached in production; the audit found the cache is not wired into the Worker/Node entry points — Phase 2 will wire it).
+Phase 2 — production AI reliability, privacy, cost control (complete at `6dd7c5c`).
 
 ## Baseline (recorded 2026-11-18, commit `fc6b771`)
 
@@ -35,6 +35,16 @@ Phase 1 — foundation and documentation debt. P4-X04 (bundle size budget: `apps
 ## Completed work
 
 - Phase 0: verified branch/tag/remote safety; merged `origin/main` (P4-X04, P4-X05, merged audit report PR #77) into `improvement/development` (merge `fc6b771`, one add/add conflict in `docs/AUDIT_REPORT.md` resolved with the prettier-formatted merged version); formatted `SAFEPLATE_V2_IMPROVEMENT_PLAN.md`; recorded baseline.
+- Phase 1 (`a60066d`): status board reconciled with Git history; `TEAM.md` / `SPIKE_RESULTS.md` given honest status banners; `docs/EVAL_REPORT.md` replaced with an honest "no measured results yet" stub; README corrected (cache claim scoped to tests/local until Phase 2) and env-var table added.
+- Phase 2 (`6dd7c5c`):
+  - Fail-fast provider selection in `apps/api/src/provider.ts` — missing `AI_PROVIDER` is a boot error, never a silent mock; `node.ts` boots fail-fast; the Worker builds the provider tolerantly so `/api/health` (process health) stays up while `/api/scan` answers 503 (config health).
+  - Worker keeps one app per isolate keyed on the env signature, so the budget guard and cache persist across requests instead of being recreated per request (audit finding fixed).
+  - `packages/ai/src/cache.ts`: versioned cache keys (`SCAN_CACHE_VERSION` + provider + model + kind + MIME + image hash) and a `KvScanCache` adapter with schema-validated reads and a 60 s TTL floor; the Node entry uses `MemoryScanCache`, the Worker uses KV when the `SCAN_CACHE_KV` binding exists (provisioning is an approval gate; `wrangler.toml` carries a commented block).
+  - `GeminiProvider`: bounded retries (default 3 attempts) with exponential backoff, jitter and `Retry-After`; non-retryable 4xx errors stop after one attempt (a loop bug found by the new tests).
+  - Magic-byte upload validation (`apps/api/src/image-signature.ts`) rejects image bytes that do not match the declared MIME type with 400; the scan page adds client-side type and 10 MB size checks with bilingual messages, and hides the Retry button when no scan has run.
+  - `/api/health` reports `provider`, `providerConfigured`, `cache` kind and `budgetScope: 'in-memory'`.
+  - New `docs/PRODUCTION_RELIABILITY.md` documents what is guaranteed and what still needs approved work (KV provisioning, globally atomic budget via Durable Objects).
+  - Test counts after Phase 2: 86 files / 815 tests (contracts 31, ai 37, knowledge 41, engine 447, tools 79, api 49, web 131).
 
 ## Decisions and evidence
 
@@ -44,14 +54,17 @@ Phase 1 — foundation and documentation debt. P4-X04 (bundle size budget: `apps
 
 ## Approval gates awaiting the user
 
-- None yet. Upcoming: dataset/legal gate (Phase 3 dataset use), production/deploy + spend gates (Phase 2 provisioning decisions, Phase 10), public-release gate (Phase 10).
+- **KV cache provisioning (Phase 2 follow-up):** using `KvScanCache` in the deployed Worker requires creating the `SCAN_CACHE_KV` namespace and uncommenting the `[[kv_namespaces]]` block in `apps/api/wrangler.toml` — a Cloudflare resource creation, hence user-approved work.
+- **Global budget enforcement:** the daily AI budget is per-isolate in-memory; globally atomic enforcement needs Durable Objects (paid-tier feature on the free plan) — deferred behind the spend gate.
+- Upcoming: dataset/legal gate (Phase 3 dataset use), production/deploy + public-release gates (Phase 10).
 
 ## Risks / known limitations
 
 - Recognition accuracy remains unmeasured (no real-image benchmark yet) — Phase 3.
-- Production scan cache is not wired into Worker/Node entry points; budget guard is in-memory — Phase 2.
-- README currently states scan responses "are cached for 24 h" in production; this is not yet true in code (Phase 2 wires it, or the claim gets corrected).
+- The daily AI budget is enforced per isolate, not globally across Cloudflare's edge; a burst spread over many isolates can exceed the configured daily count — documented in `docs/PRODUCTION_RELIABILITY.md`, needs Durable Objects (spend gate).
+- KV cache is eventually consistent: a just-cached scan may briefly be re-analyzed by another edge location (cost, not correctness).
+- The web scan page still uses the native file picker without camera-flow polish — Phase 8.
 
 ## Next phase
 
-Phase 1 — documentation reconciliation (status board, TEAM/SPIKE/EVAL artifacts state, README/code mismatches).
+Phase 3 — reproducible vision evaluation benchmark. **Starts with the dataset licence audit (hard stop):** no image download, commit, training or redistribution until licence/attribution/terms/provenance of FoodBD v2, BD-Food33 and the HF candidates are verified and recorded.
