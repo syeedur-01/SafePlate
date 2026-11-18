@@ -5,8 +5,10 @@ import { useT } from './i18n/i18n';
 import { cn } from './lib/cn';
 import { About } from './pages/About';
 import { Confirm } from './pages/Confirm';
+import { Demo } from './pages/Demo';
 import { History as HistoryPage } from './pages/History';
 import { Onboarding } from './pages/Onboarding';
+import { Result } from './pages/Result';
 import { Scan } from './pages/Scan';
 import { Settings as SettingsPage } from './pages/Settings';
 import { DEFAULT_PROFILE_STORE } from './state/profile-store';
@@ -70,9 +72,11 @@ export function App() {
             />
             <Route path="/" element={<Scan />} />
             <Route path="/confirm" element={<Confirm />} />
+            <Route path="/result" element={<Result />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/demo" element={<Demo />} />
           </Routes>
         )}
       </main>

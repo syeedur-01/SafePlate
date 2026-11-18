@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import type { ScanContext, ScanRequest } from '@sp/contracts';
 import { ApiClientError, mockScan, scan } from '../api/client';
 import { SamplePicker } from '../components/SamplePicker';
@@ -210,6 +210,12 @@ export function Scan() {
         </form>
 
         <SamplePicker />
+
+        <p>
+          <Link to="/demo" className="font-semibold text-primary underline">
+            {t('demo.link')}
+          </Link>
+        </p>
       </CardContent>
     </Card>
   );
