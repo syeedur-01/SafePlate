@@ -115,6 +115,11 @@ recommendation does not depend on the second candidate's result.
 
 ## 6. Recommendation — option (a): cloud Gemini remains production primary
 
+**Decision accepted by the user on 2026-11-18** (option a, with the added
+direction that future accuracy work targets the Gemini path itself — prompt
+quality, candidate preselection, preprocessing — measured on the
+benchmark). The rationale below is the measured evidence behind it.
+
 Grounded in the local evidence (the Gemini column has no new numbers; the
 baseline is the production behaviour already shipped):
 

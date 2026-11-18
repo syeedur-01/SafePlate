@@ -52,7 +52,7 @@ Phase 4 — hybrid model comparison (complete: local column measured, Gemini col
   - `--pace-ms` added to `eval-run` for free-tier-paced runs (~13 RPM).
   - `docs/MODEL_COMPARISON.md` records the audit, method, both run commands and results.
   - **Local run executed 2026-11-18** (`qwen2.5vl:3b`, 100% GPU, 200 dev images): top-1 **44.5%**, top-3 64.0%, unknown rate 0.5%, macro-F1 0.244, median latency 3,763 ms, 3/200 call failures. Confident-wrong failure profile (near-zero unknown rejection); dhakaiya-bakarkhani recall 0.00, rasmalai recall 0.04, chicken-roast F1 0.98.
-  - **Recommendation: option (a)** — cloud Gemini remains production primary; the local model is suitable for offline/local evaluation only (option b noted as a limited secondary finding); no separately hosted pilot proposed. Cloudflare production unchanged.
+  - **Recommendation: option (a)** — cloud Gemini remains production primary; the local model is suitable for offline/local evaluation only (option b noted as a limited secondary finding); no separately hosted pilot proposed. Cloudflare production unchanged. **User accepted this decision on 2026-11-18** and directed that future accuracy work target the Gemini path (prompts, candidate preselection, preprocessing), measured on the benchmark.
   - Gemini benchmark column remains spend-gated (no paid call made, per the user's keep-it-free instruction); the exact command is recorded in `docs/MODEL_COMPARISON.md` §4.
 
 ## Decisions and evidence
