@@ -34,7 +34,7 @@ afterEach(() => {
 });
 
 describe('app routes', () => {
-  it('renders the result page when the scan flow navigates to /result', () => {
+  it('renders the result page when the scan flow navigates to /result', async () => {
     render(
       <I18nProvider lang="en">
         <MemoryRouter
@@ -50,6 +50,10 @@ describe('app routes', () => {
       </I18nProvider>,
     );
 
-    expect(screen.getByRole('tab', { name: 'Safety' })).toBeInTheDocument();
-  });
+    // React.lazy needs the page chunk transformed on first visit, which can exceed the
+    // default 1000 ms findBy timeout on a cold worker.
+    expect(
+      await screen.findByRole('tab', { name: 'Safety' }, { timeout: 15000 }),
+    ).toBeInTheDocument();
+  }, 30000);
 });
