@@ -10,7 +10,7 @@ Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 | 0     | Complete    | `fc6b771` + Phase 0 commit | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                                  |
 | 1     | Complete    | `a60066d`                  | `pnpm check` green at commit                                                       | Honest doc status banners; status board reconciled; README cache claim corrected                  |
 | 2     | Complete    | `6dd7c5c`                  | `pnpm check` exit 0 (86 files / 815 tests), `pnpm verify` 0 problems               | KV binding + global budget enforcement remain approval-gated (see docs/PRODUCTION_RELIABILITY.md) |
-| 3     | Not started |                            |                                                                                    | Dataset licence audit is a gate before any image use                                              |
+| 3     | In progress | `1396571`                  | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Scaffolding complete; real dataset download awaits user approval (docs/EVAL_DATASETS.md)          |
 | 4     | Not started |                            |                                                                                    | Depends on Phase 3 benchmark                                                                      |
 | 5     | Not started |                            |                                                                                    |                                                                                                   |
 | 6     | Not started |                            |                                                                                    | Human-review dependent                                                                            |
@@ -54,9 +54,10 @@ Phase 2 — production AI reliability, privacy, cost control (complete at `6dd7c
 
 ## Approval gates awaiting the user
 
+- **Dataset download approval (Phase 3):** the licence audit is recorded in `docs/EVAL_DATASETS.md`; BD-Food33 (CC0 1.0, 133 MB zip, published SHA-256) is approved-for-eval by the audit but the actual download into the gitignored `eval/datasets/` directory needs explicit user confirmation.
 - **KV cache provisioning (Phase 2 follow-up):** using `KvScanCache` in the deployed Worker requires creating the `SCAN_CACHE_KV` namespace and uncommenting the `[[kv_namespaces]]` block in `apps/api/wrangler.toml` — a Cloudflare resource creation, hence user-approved work.
 - **Global budget enforcement:** the daily AI budget is per-isolate in-memory; globally atomic enforcement needs Durable Objects (paid-tier feature on the free plan) — deferred behind the spend gate.
-- Upcoming: dataset/legal gate (Phase 3 dataset use), production/deploy + public-release gates (Phase 10).
+- Upcoming: production/deploy + public-release gates (Phase 10).
 
 ## Risks / known limitations
 
@@ -67,4 +68,4 @@ Phase 2 — production AI reliability, privacy, cost control (complete at `6dd7c
 
 ## Next phase
 
-Phase 3 — reproducible vision evaluation benchmark. **Starts with the dataset licence audit (hard stop):** no image download, commit, training or redistribution until licence/attribution/terms/provenance of FoodBD v2, BD-Food33 and the HF candidates are verified and recorded.
+Finish Phase 3: download BD-Food33 (after user approval), verify its SHA-256, inspect categories, write the human-reviewable label map, build the real manifest, and — once the user approves paid Gemini calls — produce the first real recognition report. Phase 4 (hybrid cloud/local comparison) builds on the same benchmark.
