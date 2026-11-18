@@ -2,50 +2,50 @@
   {
     "datasetLabel": "Alu Vorta",
     "safePlateDishId": "aloo-bhorta",
-    "status": "proposed",
-    "reason": "Alu Vorta is the same dish as Aloo Bhorta (mashed potato); spelling variant only"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. Alu Vorta is the same dish as Aloo Bhorta (mashed potato); spelling variant only"
   },
   {
     "datasetLabel": "Bakorkhani",
     "safePlateDishId": "dhakaiya-bakarkhani",
-    "status": "proposed",
-    "reason": "Bakorkhani/Bakarkhani is the same Dhaka flatbread; spelling variant only"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. Bakorkhani/Bakarkhani is the same Dhaka flatbread; spelling variant only"
   },
   {
     "datasetLabel": "Chicken Roast",
     "safePlateDishId": "bangladeshi-chicken-roast",
-    "status": "proposed",
-    "reason": "same dish family; confirm the dataset images show Bangladeshi-style roast, not western roast chicken, before approving"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. same dish family; confirm the dataset images show Bangladeshi-style roast, not western roast chicken, before approving"
   },
   {
     "datasetLabel": "Fuchka",
     "safePlateDishId": "fuchka",
-    "status": "proposed",
-    "reason": "exact dish match"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. exact dish match"
   },
   {
     "datasetLabel": "Morog Polao",
     "safePlateDishId": "morog-polao",
-    "status": "proposed",
-    "reason": "exact dish match"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. exact dish match"
   },
   {
     "datasetLabel": "Peyaju",
     "safePlateDishId": "piyaju",
-    "status": "proposed",
-    "reason": "same dish; spelling variant of Piyaju"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. same dish; spelling variant of Piyaju"
   },
   {
     "datasetLabel": "Roshmalai",
     "safePlateDishId": "rasmalai",
-    "status": "proposed",
-    "reason": "same sweet; spelling variant of Rasmalai"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. same sweet; spelling variant of Rasmalai"
   },
   {
     "datasetLabel": "Shorshe Ilish",
     "safePlateDishId": "shorshe-ilish",
-    "status": "proposed",
-    "reason": "exact dish match"
+    "status": "approved",
+    "reason": "approved by user 2026-11-18. exact dish match"
   },
   {
     "datasetLabel": "Bhapa",
