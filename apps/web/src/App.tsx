@@ -1,17 +1,20 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { History, Info, Languages, ScanLine, Settings } from 'lucide-react';
 import { Navigate, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useT } from './i18n/i18n';
 import { cn } from './lib/cn';
-import { About } from './pages/About';
-import { Confirm } from './pages/Confirm';
-import { Demo } from './pages/Demo';
-import { History as HistoryPage } from './pages/History';
-import { Onboarding } from './pages/Onboarding';
-import { Result } from './pages/Result';
-import { Scan } from './pages/Scan';
-import { Settings as SettingsPage } from './pages/Settings';
 import { DEFAULT_PROFILE_STORE } from './state/profile-store';
+
+const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
+const Confirm = lazy(() => import('./pages/Confirm').then((m) => ({ default: m.Confirm })));
+const Demo = lazy(() => import('./pages/Demo').then((m) => ({ default: m.Demo })));
+const HistoryPage = lazy(() => import('./pages/History').then((m) => ({ default: m.History })));
+const Onboarding = lazy(() =>
+  import('./pages/Onboarding').then((m) => ({ default: m.Onboarding })),
+);
+const Result = lazy(() => import('./pages/Result').then((m) => ({ default: m.Result })));
+const Scan = lazy(() => import('./pages/Scan').then((m) => ({ default: m.Scan })));
+const SettingsPage = lazy(() => import('./pages/Settings').then((m) => ({ default: m.Settings })));
 
 const NAV_ITEMS = [
   { to: '/', key: 'nav.scan', Icon: ScanLine, end: true },
@@ -59,25 +62,35 @@ export function App() {
         {needsOnboarding ? (
           <Navigate to="/welcome" replace />
         ) : (
-          <Routes>
-            <Route
-              path="/welcome"
-              element={
-                <Onboarding
-                  store={DEFAULT_PROFILE_STORE}
-                  now={() => new Date().toISOString()}
-                  onDone={() => navigate('/')}
-                />
-              }
-            />
-            <Route path="/" element={<Scan />} />
-            <Route path="/confirm" element={<Confirm />} />
-            <Route path="/result" element={<Result />} />
-            <Route path="/history" element={<HistoryPage />} />
-            <Route path="/settings" element={<SettingsPage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/demo" element={<Demo />} />
-          </Routes>
+          <Suspense
+            fallback={
+              <div role="status" aria-busy="true" className="space-y-3">
+                <div className="h-8 w-2/3 rounded-md bg-muted" />
+                <div className="h-24 rounded-md bg-muted" />
+                <div className="h-24 rounded-md bg-muted" />
+              </div>
+            }
+          >
+            <Routes>
+              <Route
+                path="/welcome"
+                element={
+                  <Onboarding
+                    store={DEFAULT_PROFILE_STORE}
+                    now={() => new Date().toISOString()}
+                    onDone={() => navigate('/')}
+                  />
+                }
+              />
+              <Route path="/" element={<Scan />} />
+              <Route path="/confirm" element={<Confirm />} />
+              <Route path="/result" element={<Result />} />
+              <Route path="/history" element={<HistoryPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/demo" element={<Demo />} />
+            </Routes>
+          </Suspense>
         )}
       </main>
 

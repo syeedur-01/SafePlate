@@ -22,8 +22,8 @@ No other changes in the same branch. The branch name follows the card: `<track>/
 
 ## Queue
 
-| id     | severity | where                  | how to reproduce                                                                                                                                                                                                | owner | status      |
-| ------ | -------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ----------- |
-| BUG-01 | P1       | `apps/web/src/App.tsx` | Run a scan (or a sample), confirm the dish: `navigate('/result')` shows only the header and bottom nav, the content area is blank - `App.tsx` had no `/result` route. Reproduced by `test/app-routes.test.tsx`. | C     | in progress |
+| id     | severity | where                  | how to reproduce                                                                                                                                                                                                | owner | status |
+| ------ | -------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------ |
+| BUG-01 | P1       | `apps/web/src/App.tsx` | Run a scan (or a sample), confirm the dish: `navigate('/result')` shows only the header and bottom nav, the content area is blank - `App.tsx` had no `/result` route. Reproduced by `test/app-routes.test.tsx`. | C     | fixed  |
 
 Statuses: `open`, `in progress`, `fixed`, `deferred to phase 5` (P2 after freeze).
