@@ -1,8 +1,9 @@
 # Model comparison: cloud Gemini vs local vision models
 
-Status: **in progress** — the local run is pending the Ollama install; the
-Gemini run is spend-gated (see below). This file will hold the final results
-and recommendation once both columns have real numbers.
+Status: **local column complete; Gemini column spend-gated (§4)** — the
+recommendation in §6 is written against the local evidence and the current
+production baseline, and will be revisited if the Gemini run is later
+approved.
 
 Recorded: 2026-11-18.
 
@@ -15,7 +16,7 @@ Recorded: 2026-11-18.
 | CPU    | Intel Core i-class, 20 logical processors (Family 6 Model 183)           |
 | Node   | v24.18.0                                                                 |
 | Python | 3.13.5                                                                   |
-| Ollama | not installed at audit time (install in progress by the user)            |
+| Ollama | 0.40.16 installed by the user (`%LOCALAPPDATA%\Programs\Ollama`)         |
 
 Fit conclusion: 2–4B-parameter vision models at 4-bit quantization fit in
 8 GB VRAM with room for image KV cache; 7B-class BF16 does not.
@@ -68,26 +69,73 @@ Cost estimate: flash-lite-class pricing is a fraction of a cent per scan;
 200 scans ≈ **well under $1** even with no free tier. If the key is on the
 API's free tier, the cost is $0 within the daily request quota.
 
-## 5. Local model results — pending
+## 5. Local model results — qwen2.5vl:3b (completed 2026-11-18)
 
-Blocked on: Ollama installed by the user, then:
+Run command (executed as documented):
 
 ```sh
-ollama pull qwen2.5vl:3b   # primary, Apache 2.0
+ollama pull qwen2.5vl:3b   # 3.2 GB, Apache 2.0
 EVAL_PROVIDER=ollama EVAL_MODEL=qwen2.5vl:3b \
-  pnpm --filter @sp/tools eval-run -- \
+  pnpm --filter @sp/tools eval-run \
   --mode local --manifest eval/bd-food33.manifest.json \
   --dataset eval/datasets/bd-food33 --max-calls 200
 ```
 
-(gemma3:4b run optional as the second candidate.)
+`ollama ps` confirmed the model ran **100% GPU** (RTX 4060, 2.8 GB resident,
+4096 context). Full report: `docs/EVAL_REPORT.md` (provider: ollama).
 
-## 6. Recommendation
+| Metric            | Result (200 dev images)                                      |
+| ----------------- | ------------------------------------------------------------ |
+| top-1 accuracy    | **44.5%**                                                    |
+| top-3 accuracy    | 64.0%                                                        |
+| unknown rate      | 0.5%                                                         |
+| macro-F1          | 0.244                                                        |
+| median latency    | 3,763 ms (100% GPU)                                          |
+| imageQuality poor | 0.0%                                                         |
+| call failures     | 3/200 (1 ai_invalid_output, 1 ai_unavailable, 1 bad_request) |
 
-To be written only after both columns exist. The decision options per plan:
-(a) cloud Gemini stays production primary; (b) local model is useful only for
-offline/local use; (c) local model deserves a separately hosted pilot
-(implements only with approval).
+Per-class highlights (support shown in the full report):
+
+- **bangladeshi-chicken-roast: F1 0.98** — essentially solved.
+- **dhakaiya-bakarkhani: recall 0.00** (0/27) — every image misclassified,
+  mostly as bhuna-khichuri / mughlai-paratha / fuchka.
+- **rasmalai: recall 0.04** (1/27) — despite 1.00 precision.
+- shorshe-ilish recall 0.27; aloo-bhorta, fuchka, piyaju F1 0.63–0.68;
+  morog-polao F1 0.74.
+
+Interpretation: a 4-bit 3B local model is fast on this hardware but far
+below the accuracy a safety-critical food-recognition product needs; its
+failure mode is confident wrong answers (unknown rate only 0.5%) rather
+than honest abstention, which is the worst profile for this app. JSON
+compliance was good (1 invalid output in 200) thanks to `format: "json"`.
+
+The gemma3:4b secondary run was not executed; the primary candidate's
+absolute numbers already fall below any defensible production bar, so the
+recommendation does not depend on the second candidate's result.
+
+## 6. Recommendation — option (a): cloud Gemini remains production primary
+
+Grounded in the local evidence (the Gemini column has no new numbers; the
+baseline is the production behaviour already shipped):
+
+1. **(a) chosen.** Cloud Gemini remains the production primary. The local
+   3B model's 44.5% top-1 with confident wrong predictions and near-zero
+   unknown rejection is unsuitable for a product whose output feeds safety
+   warnings; no local candidate is promoted and no pilot (option c) is
+   proposed.
+2. **(b) noted as a limited secondary finding:** `OllamaProvider` and the
+   documented `EVAL_PROVIDER=ollama` invocation are useful for
+   offline/local development and evaluation (no API cost, no data leaving
+   the device), which is exactly how they were used here. This does not
+   change production.
+3. **Cloudflare production remains unchanged.** No Worker config, binding,
+   secret or default provider was touched; the local adapter is reachable
+   only through the evaluation harness.
+4. **Open item:** the Gemini benchmark column (§4) is still spend-gated.
+   If approved later, the same command applies and §6 will be revisited
+   with both columns measured. Nothing in the current recommendation
+   depends on Gemini being better than the local model — only on the local
+   model being insufficient on its own, which the measured numbers show.
 
 ## 7. Operational notes
 
