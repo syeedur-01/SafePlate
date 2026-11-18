@@ -18,12 +18,12 @@ Every bug found during demo preparation, evaluation runs or review is logged in 
 4. Commit `fix(<area>): <bug id> <what>`.
 5. Report.
 
-No other changes in the same branch. The branch name follows the card: `<track>/BUG-<n>-<slug>`, for example `c/BUG-01-result-overflow`.
+No other changes in the same branch. The branch name follows the card: `<track>/BUG-<n>-<slug>`, for example `c/BUG-02-result-overflow`.
 
 ## Queue
 
-| id                    | severity | where | how to reproduce | owner | status |
-| --------------------- | -------- | ----- | ---------------- | ----- | ------ |
-| _No bugs logged yet._ |          |       |                  |       |        |
+| id     | severity | where                  | how to reproduce                                                                                                                                                                                                | owner | status      |
+| ------ | -------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ----------- |
+| BUG-01 | P1       | `apps/web/src/App.tsx` | Run a scan (or a sample), confirm the dish: `navigate('/result')` shows only the header and bottom nav, the content area is blank - `App.tsx` had no `/result` route. Reproduced by `test/app-routes.test.tsx`. | C     | in progress |
 
 Statuses: `open`, `in progress`, `fixed`, `deferred to phase 5` (P2 after freeze).
