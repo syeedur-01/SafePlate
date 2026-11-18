@@ -36,15 +36,15 @@ SafePlate is a **pnpm monorepo** (TypeScript strict, Vitest, Hono API on Cloudfl
 
 VERIFIED (matches `docs/TECH_DESIGN.md` closely):
 
-| Layer | Package | Role |
-|---|---|---|
-| Contracts | `packages/contracts` | Zod schemas (.strict() for API), types, test builders (`makeDish`/`makeIngredient`/`makeProfile`) |
-| Engine | `packages/engine` | Pure functions: nutrition, safety scoring, suitability, swaps, shopping, label analysis. No clock/IO — `today` is injected |
-| AI | `packages/ai` | `VisionProvider` interface (`packages/ai/src/provider.ts:12-15`), `GeminiProvider` (raw REST, no SDK), `MockProvider`, prompt builders, JSON repair/parse, cache, daily budget |
-| API | `apps/api` | Hono; Worker entry (`worker.ts`, bundles `normalized/dishes.json` at build time) + Node entry (`node.ts`); routes: `GET /api/health`, `POST /api/scan` |
-| Web | `apps/web` | Vite+React+Tailwind; **runs the engine in the browser** with bundled runtime JSON |
-| Knowledge | `packages/knowledge` | Loaders (Zod-validated) over source→normalized→runtime data, rules, messages, allergen keywords, sources |
-| Tools | `tools` | fetch/match/apply/normalize/demo-gate/coverage/merge/eval/verify/smoke scripts |
+| Layer     | Package              | Role                                                                                                                                                                           |
+| --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Contracts | `packages/contracts` | Zod schemas (.strict() for API), types, test builders (`makeDish`/`makeIngredient`/`makeProfile`)                                                                              |
+| Engine    | `packages/engine`    | Pure functions: nutrition, safety scoring, suitability, swaps, shopping, label analysis. No clock/IO — `today` is injected                                                     |
+| AI        | `packages/ai`        | `VisionProvider` interface (`packages/ai/src/provider.ts:12-15`), `GeminiProvider` (raw REST, no SDK), `MockProvider`, prompt builders, JSON repair/parse, cache, daily budget |
+| API       | `apps/api`           | Hono; Worker entry (`worker.ts`, bundles `normalized/dishes.json` at build time) + Node entry (`node.ts`); routes: `GET /api/health`, `POST /api/scan`                         |
+| Web       | `apps/web`           | Vite+React+Tailwind; **runs the engine in the browser** with bundled runtime JSON                                                                                              |
+| Knowledge | `packages/knowledge` | Loaders (Zod-validated) over source→normalized→runtime data, rules, messages, allergen keywords, sources                                                                       |
+| Tools     | `tools`              | fetch/match/apply/normalize/demo-gate/coverage/merge/eval/verify/smoke scripts                                                                                                 |
 
 **Key design decision:** `POST /api/scan` returns only an identification (candidates + observations). The personalized analysis (`analyze()` from `@sp/engine`) executes **on the client** (`apps/web/src/state/useAnalysis.ts:85-118`), which is what keeps the profile off the network. The API package has no analyze route (verified: `apps/api/src/app.ts` registers only `/api/scan`, `/api/health`, and a spike route).
 
@@ -55,26 +55,26 @@ VERIFIED (matches `docs/TECH_DESIGN.md` closely):
 
 ## 3. Existing Features and Implementation Status
 
-| Feature | Status | Evidence |
-|---|---|---|
-| Dish photo scan → candidates | IMPLEMENTED AND VERIFIED | `packages/ai/src/prompts.ts:8-26`, `runScan` |
-| Packaged-label scan (OCR mode) | IMPLEMENTED AND VERIFIED | `buildLabelPrompt` (`prompts.ts:29-41`) |
-| Client-side downscale to ≤1024px JPEG | IMPLEMENTED AND VERIFIED | `apps/web/src/lib/downscale.ts` |
-| Candidate confirm/correction UI + "None of these" | IMPLEMENTED AND VERIFIED | `apps/web/src/pages/Confirm.tsx` |
-| Deterministic safety score w/ evidence links | IMPLEMENTED AND VERIFIED | `packages/engine/src/safety.ts:54-92` |
-| Spoilage-sign detection (8 signs) | IMPLEMENTED BUT NOT VERIFIED (LLM visual judgment, unmeasured accuracy) | `SPOILAGE_SIGNS` in `packages/contracts/src/vocab.ts:30-41` |
-| Allergen keyword matching (EN + Bangla script + romanized) | IMPLEMENTED AND VERIFIED (known false-positive risks) | `packages/engine/src/label.ts:16-66` |
-| "May contain"/trace advisories | **NOT IMPLEMENTED** | No code or data anywhere |
-| Storage-duration (`storage_hours`) safety rules | PARTIALLY IMPLEMENTED — trigger type exists in engine, **no rule data**, and the UI always sends `storage: 'unknown'` so it can never fire | `packages/engine/src/safety.ts:29-37`; `apps/web/src/state/useAnalysis.ts:59-63` |
-| Nutrition card w/ coverage gate (0.8) | IMPLEMENTED AND VERIFIED | `packages/engine/src/nutrition.ts` |
-| Swaps + shopping list | IMPLEMENTED AND VERIFIED | `packages/engine` + web tabs |
-| Bilingual UI (45 message keys, en+bn) | IMPLEMENTED AND VERIFIED | `packages/knowledge/data/messages.json`, key-coverage test |
-| Offline demo/sample scans (no AI call) | IMPLEMENTED AND VERIFIED | `apps/web/src/components/SamplePicker.tsx`, `/demo` scenarios |
-| AI response caching | MOCK / PLACEHOLDER in production — implemented + tested, **never wired into `worker.ts`/`node.ts`** | `packages/ai/src/cache.ts` |
-| Eval runner + metrics | IMPLEMENTED BUT NEVER RUN on real data (`eval/` has only README + example manifest; runner targets the deployed API) | `tools/src/eval-run.ts` |
-| Daily AI budget guard | IMPLEMENTED AND VERIFIED (200/day, in-memory, resets on restart) | `packages/ai/src/budget.ts` |
-| On-device/local AI inference | NOT IMPLEMENTED (Phase-5 idea only) | — |
-| E2E browser tests | NOT IMPLEMENTED (only jsdom component + in-process contract-integration tests) | — |
+| Feature                                                    | Status                                                                                                                                     | Evidence                                                                         |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Dish photo scan → candidates                               | IMPLEMENTED AND VERIFIED                                                                                                                   | `packages/ai/src/prompts.ts:8-26`, `runScan`                                     |
+| Packaged-label scan (OCR mode)                             | IMPLEMENTED AND VERIFIED                                                                                                                   | `buildLabelPrompt` (`prompts.ts:29-41`)                                          |
+| Client-side downscale to ≤1024px JPEG                      | IMPLEMENTED AND VERIFIED                                                                                                                   | `apps/web/src/lib/downscale.ts`                                                  |
+| Candidate confirm/correction UI + "None of these"          | IMPLEMENTED AND VERIFIED                                                                                                                   | `apps/web/src/pages/Confirm.tsx`                                                 |
+| Deterministic safety score w/ evidence links               | IMPLEMENTED AND VERIFIED                                                                                                                   | `packages/engine/src/safety.ts:54-92`                                            |
+| Spoilage-sign detection (8 signs)                          | IMPLEMENTED BUT NOT VERIFIED (LLM visual judgment, unmeasured accuracy)                                                                    | `SPOILAGE_SIGNS` in `packages/contracts/src/vocab.ts:30-41`                      |
+| Allergen keyword matching (EN + Bangla script + romanized) | IMPLEMENTED AND VERIFIED (known false-positive risks)                                                                                      | `packages/engine/src/label.ts:16-66`                                             |
+| "May contain"/trace advisories                             | **NOT IMPLEMENTED**                                                                                                                        | No code or data anywhere                                                         |
+| Storage-duration (`storage_hours`) safety rules            | PARTIALLY IMPLEMENTED — trigger type exists in engine, **no rule data**, and the UI always sends `storage: 'unknown'` so it can never fire | `packages/engine/src/safety.ts:29-37`; `apps/web/src/state/useAnalysis.ts:59-63` |
+| Nutrition card w/ coverage gate (0.8)                      | IMPLEMENTED AND VERIFIED                                                                                                                   | `packages/engine/src/nutrition.ts`                                               |
+| Swaps + shopping list                                      | IMPLEMENTED AND VERIFIED                                                                                                                   | `packages/engine` + web tabs                                                     |
+| Bilingual UI (45 message keys, en+bn)                      | IMPLEMENTED AND VERIFIED                                                                                                                   | `packages/knowledge/data/messages.json`, key-coverage test                       |
+| Offline demo/sample scans (no AI call)                     | IMPLEMENTED AND VERIFIED                                                                                                                   | `apps/web/src/components/SamplePicker.tsx`, `/demo` scenarios                    |
+| AI response caching                                        | MOCK / PLACEHOLDER in production — implemented + tested, **never wired into `worker.ts`/`node.ts`**                                        | `packages/ai/src/cache.ts`                                                       |
+| Eval runner + metrics                                      | IMPLEMENTED BUT NEVER RUN on real data (`eval/` has only README + example manifest; runner targets the deployed API)                       | `tools/src/eval-run.ts`                                                          |
+| Daily AI budget guard                                      | IMPLEMENTED AND VERIFIED (200/day, in-memory, resets on restart)                                                                           | `packages/ai/src/budget.ts`                                                      |
+| On-device/local AI inference                               | NOT IMPLEMENTED (Phase-5 idea only)                                                                                                        | —                                                                                |
+| E2E browser tests                                          | NOT IMPLEMENTED (only jsdom component + in-process contract-integration tests)                                                             | —                                                                                |
 
 **Plan status (verified via git log, 74 merged PRs):**
 
@@ -114,19 +114,19 @@ End-to-end trace, all VERIFIED:
 
 **Counts (VERIFIED via scripted counts):**
 
-| Item | Value |
-|---|---|
-| Dishes | **30** (`packages/knowledge/data/source/dishes.json`), 238 composition lines (3–13 per dish) |
-| Dish quantities | all `quantity_basis: "ESTIMATE"`, all `serving_weight_basis: "ESTIMATE"`, all `needs_expert_review: true`; confidence 29×`low`, 1×`medium` |
-| Lab values | only 1 dish (`bangladeshi-chicken-roast`) has `lab_values_per_serving` |
-| Ingredients | **56** (`source/ingredients.json`), per-100g raw |
-| Ingredient nulls | energy 24/56 null, protein 25, fat 24, carbs 25, sodium 39; **`sat_fat_g` and `sugars_g` 56/56 null** |
-| Unsourced ingredients | **21** (`*-unverified` ids) |
-| Rules | 10 safety + 4 health (all `approved`) |
-| Messages | 45 keys, every entry with both `en` and `bn` |
-| Allergens | 10 canonical allergens; ~250+ keywords (English + Bangla script + romanized) |
-| Sources | 10 entries (8 verified, 2 unverified; verified by content-matching fetch in `tools/src/check-sources.ts`) |
-| Demo gate | 29/30 dishes pass the 0.8 energy-coverage gate (`shutki-bhorta` fails) |
+| Item                  | Value                                                                                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Dishes                | **30** (`packages/knowledge/data/source/dishes.json`), 238 composition lines (3–13 per dish)                                               |
+| Dish quantities       | all `quantity_basis: "ESTIMATE"`, all `serving_weight_basis: "ESTIMATE"`, all `needs_expert_review: true`; confidence 29×`low`, 1×`medium` |
+| Lab values            | only 1 dish (`bangladeshi-chicken-roast`) has `lab_values_per_serving`                                                                     |
+| Ingredients           | **56** (`source/ingredients.json`), per-100g raw                                                                                           |
+| Ingredient nulls      | energy 24/56 null, protein 25, fat 24, carbs 25, sodium 39; **`sat_fat_g` and `sugars_g` 56/56 null**                                      |
+| Unsourced ingredients | **21** (`*-unverified` ids)                                                                                                                |
+| Rules                 | 10 safety + 4 health (all `approved`)                                                                                                      |
+| Messages              | 45 keys, every entry with both `en` and `bn`                                                                                               |
+| Allergens             | 10 canonical allergens; ~250+ keywords (English + Bangla script + romanized)                                                               |
+| Sources               | 10 entries (8 verified, 2 unverified; verified by content-matching fetch in `tools/src/check-sources.ts`)                                  |
+| Demo gate             | 29/30 dishes pass the 0.8 energy-coverage gate (`shutki-bhorta` fails)                                                                     |
 
 **Three-state distinction — VERIFIED and clean:**
 
@@ -147,7 +147,7 @@ End-to-end trace, all VERIFIED:
 ## 6. Food Safety and Allergen Analysis
 
 - **Spoilage detection — IMPLEMENTED BUT NOT VERIFIED:** 8 enum-constrained signs (`visible_mold`, `slimy_surface`, `discoloration`, `bloated_packaging`, `leaking_packaging`, `separated_liquid`, `foam_or_bubbles`, `foreign_object`) reported by the Gemini vision model (temperature 0.1, JSON mode), each mapping to a 30–40-point safety rule with evidence text and sourceRef. Mitigations: enum constraint, poor-image notice, always-on `notice.chemical_limit` disclaimer. **No per-sign confidence; accuracy unmeasured** (no eval images exist).
-- **Safety score — VERIFIED deterministic:** `scoreSafety` (`packages/engine/src/safety.ts:54-92`) sums triggered rule points, capped at 100; every signal carries evidence + source; `today` injected (no clock reads). However, rule *points are team heuristics* and Codex clause citations were only "plausibility-checked" per the proposals file — the substance of the rules is not expert-validated.
+- **Safety score — VERIFIED deterministic:** `scoreSafety` (`packages/engine/src/safety.ts:54-92`) sums triggered rule points, capped at 100; every signal carries evidence + source; `today` injected (no clock reads). However, rule _points are team heuristics_ and Codex clause citations were only "plausibility-checked" per the proposals file — the substance of the rules is not expert-validated.
 - **Allergen matching — VERIFIED with real reliability risks:** whole-token consecutive matching over Unicode-tokenized text (`packages/engine/src/label.ts:16-31`), Bangla combining marks handled correctly. Risks:
   - `wheat_gluten` keywords include bare `flour`/`bread`/`biscuit` → **false positives on rice/chickpea flour**;
   - `milk` includes dish names (`kheer`, `payesh`);
@@ -193,15 +193,15 @@ Journey: upload → context chips (place/storage/hours) → Analyze → Confirm 
 
 ## 8. Dataset and Recognition Coverage
 
-| Question | Finding |
-|---|---|
-| Approved nutrition dishes | **30** (238 composition lines) — VERIFIED |
-| Ingredients | **56** (21 unsourced; sat_fat/sugars 100% null) — VERIFIED |
-| Recognition categories/aliases | Same 30 dishes; aliases live in `dishes.json` and are injected into the prompt — **recognition and nutrition sets are the same list, not separated** — VERIFIED |
-| External datasets integrated | FCTB-2013, USDA FDC (sr-legacy + foundation foods) fetched to `data/raw/` and matched via proposals; 3 IFCT gap entries; ~31 FCTB + 25 USDA approvals applied — VERIFIED |
-| Image evaluation data | **None.** `eval/` = README + example manifest only; `fixtures/mock-scan/` = 6 synthetic JSON, no photos — VERIFIED |
-| License documentation | **Absent** — `sources.json` has tier/status/accessedOn but no license fields — VERIFIED |
-| Runner usability | `tools/src/eval-run.ts` targets the **deployed API** with `API_URL`; never demonstrably run (no report committed) — VERIFIED |
+| Question                       | Finding                                                                                                                                                                  |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Approved nutrition dishes      | **30** (238 composition lines) — VERIFIED                                                                                                                                |
+| Ingredients                    | **56** (21 unsourced; sat_fat/sugars 100% null) — VERIFIED                                                                                                               |
+| Recognition categories/aliases | Same 30 dishes; aliases live in `dishes.json` and are injected into the prompt — **recognition and nutrition sets are the same list, not separated** — VERIFIED          |
+| External datasets integrated   | FCTB-2013, USDA FDC (sr-legacy + foundation foods) fetched to `data/raw/` and matched via proposals; 3 IFCT gap entries; ~31 FCTB + 25 USDA approvals applied — VERIFIED |
+| Image evaluation data          | **None.** `eval/` = README + example manifest only; `fixtures/mock-scan/` = 6 synthetic JSON, no photos — VERIFIED                                                       |
+| License documentation          | **Absent** — `sources.json` has tier/status/accessedOn but no license fields — VERIFIED                                                                                  |
+| Runner usability               | `tools/src/eval-run.ts` targets the **deployed API** with `API_URL`; never demonstrably run (no report committed) — VERIFIED                                             |
 
 ---
 
@@ -209,16 +209,16 @@ Journey: upload → context chips (place/storage/hours) → Analyze → Confirm 
 
 **Run by auditor: `pnpm check` → green (exit 0). `pnpm -r test` → all passing:**
 
-| Package | Files | Tests |
-|---|---|---|
-| contracts | 5 | 31 |
-| ai | 8 | 26 |
-| knowledge | 8 | 41 |
-| engine | 11 | **447** (incl. golden test over all 30 real dishes) |
-| tools | 10 | 79 |
-| api | 11 | 40 (incl. e2e + privacy scan) |
-| web | 31 | 127 |
-| **Total** | **84** | **791** |
+| Package   | Files  | Tests                                               |
+| --------- | ------ | --------------------------------------------------- |
+| contracts | 5      | 31                                                  |
+| ai        | 8      | 26                                                  |
+| knowledge | 8      | 41                                                  |
+| engine    | 11     | **447** (incl. golden test over all 30 real dishes) |
+| tools     | 10     | 79                                                  |
+| api       | 11     | 40 (incl. e2e + privacy scan)                       |
+| web       | 31     | 127                                                 |
+| **Total** | **84** | **791**                                             |
 
 **Strengths:** no test touches network or real AI (all providers inject `fetchFn`); builders from `@sp/contracts/testing`; a runtime-data drift guard; WCAG contrast tests; an i18n key-coverage test; contract-integration test wiring the web client against the in-process API.
 
@@ -228,7 +228,7 @@ Journey: upload → context chips (place/storage/hours) → Analyze → Confirm 
 - **No browser E2E** (Playwright etc.); routing bugs like BUG-01 only became visible at runtime.
 - **Untested AI recognition behavior** — model accuracy, prompt drift, spoilage-sign precision/recall, label OCR quality are all unmeasured; the eval harness exists but has no data and no committed report.
 - No tests for the production wiring gap (cache) because only tests construct `config.cache`.
-- `pnpm verify` (data/rules/messages/source-ref consistency) runs in CI and passes, but source *liveness* checking is a separate, manual script.
+- `pnpm verify` (data/rules/messages/source-ref consistency) runs in CI and passes, but source _liveness_ checking is a separate, manual script.
 
 ---
 
@@ -285,4 +285,4 @@ Journey: upload → context chips (place/storage/hours) → Analyze → Confirm 
 
 ---
 
-*Audit method: read-only investigation (git status/log, source and data inspection, scripted data counts, existing `pnpm check` and test suites). No project files were modified, no packages installed, no network AI calls made.*
+_Audit method: read-only investigation (git status/log, source and data inspection, scripted data counts, existing `pnpm check` and test suites). No project files were modified, no packages installed, no network AI calls made._
