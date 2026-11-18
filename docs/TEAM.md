@@ -1,5 +1,7 @@
 # TEAM.md: fill in on day one
 
+> **Status (2026-11-18):** this template has not been filled in — the team roster, reviewer pairs and the agent/model usage list are unknown to the repository. The README's AI usage statement remains accurate at the programme level (AI agents wrote most code card-by-card; humans reviewed and merged every PR). Nothing in this file has been fabricated to fill the gaps.
+
 ## People and tracks
 
 | Person | GitHub handle | Track        | Owns                           | Buddy reviewer (reviews this person's PRs) |

@@ -15,6 +15,22 @@ pnpm check                  # typecheck + lint + every test (must be green)
 
 No camera, network or AI quota needed to judge the app: the Scan page links to **Demo scenarios (offline)** (`/demo`), four scripted scans that run the real engine on canned fixtures and render the real result page. The Scan page also offers sample scans when a live scan fails or you are offline.
 
+### Environment variables (names only — values live in `.env` / platform secrets, never in Git)
+
+| Where | Variable          | Purpose                                                                            |
+| ----- | ----------------- | ---------------------------------------------------------------------------------- |
+| API   | `AI_PROVIDER`     | selects the vision provider: `gemini` or `mock` (mock is for local dev/tests only) |
+| API   | `GEMINI_API_KEY`  | secret; Cloudflare secret / local `.env`                                           |
+| API   | `GEMINI_MODEL`    | model id, set in `apps/api/wrangler.toml` for deploy                               |
+| API   | `ALLOWED_ORIGIN`  | the one web origin CORS allows                                                     |
+| API   | `MAX_BODY_BYTES`  | request body size limit                                                            |
+| API   | `DAILY_AI_BUDGET` | max AI calls per UTC day                                                           |
+| API   | `ENABLE_SPIKE`    | enables the `/api/_spike/echo` debug route (never in production)                   |
+| Web   | `VITE_API_BASE`   | API base URL (empty = same origin)                                                 |
+| Web   | `VITE_USE_MOCK`   | `1` = use canned fixture scans instead of the API (local only)                     |
+
+Deployment: see [`docs/DEPLOY.md`](docs/DEPLOY.md) for the Cloudflare Worker + Pages runbook, secrets and smoke checks.
+
 ## Stack
 
 | Part      | Where                | What                                                                                    |
@@ -59,7 +75,7 @@ Most of the code was written by **AI coding agents** (LLM models) working card-b
 ## Privacy
 
 - Your health profile (conditions, allergies, consent) is stored in your browser's local storage **on your device only**. It never appears in any API request, URL, log or prompt — the scan request schema rejects unknown fields for exactly this reason.
-- Uploaded photos are processed in memory and never stored by the API. Scan responses (not photos) are cached for 24 h keyed by an image hash, so identical photos skip the AI call.
+- Uploaded photos are processed in memory and never stored by the API. Scan responses (not photos) can be cached for 24 h keyed by an image hash so identical photos skip the AI call — the cache is active in tests and local setups; wiring it into the deployed Worker is tracked as Phase 2 of the v2 plan (`docs/plan/SAFEPLATE_V2_PROGRESS.md`).
 - The API accepts only the configured web origin (CORS) and rejects request bodies above a fixed size limit.
 - **Settings → Delete my data** removes the profile from the device.
 
