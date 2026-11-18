@@ -5,23 +5,23 @@ Branch: `improvement/development`
 Baseline tag: `v1.0.0` (remote tag → `a377f77`; local tag → `a38d74e` — see notes)
 Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 
-| Phase | Status      | Commit                                      | Checks                                                                             | Notes / blockers                                                                                  |
-| ----- | ----------- | ------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| 0     | Complete    | `fc6b771` + Phase 0 commit                  | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                                  |
-| 1     | Complete    | `a60066d`                                   | `pnpm check` green at commit                                                       | Honest doc status banners; status board reconciled; README cache claim corrected                  |
-| 2     | Complete    | `6dd7c5c`                                   | `pnpm check` exit 0 (86 files / 815 tests), `pnpm verify` 0 problems               | KV binding + global budget enforcement remain approval-gated (see docs/PRODUCTION_RELIABILITY.md) |
-| 3     | Complete    | `1396571` + `e5d14a4` + `0c53fa7`           | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Real Gemini run deferred to Phase 4 (spend gate); dataset + approved mappings + harness in place  |
-| 4     | Complete    | `7973d46` + `fb7daeb` + Phase 4 docs commit | Local run executed and documented (see notes)                                      | Gemini column spend-gated; recommendation option (a): cloud Gemini stays production primary       |
-| 5     | Not started |                                             |                                                                                    |                                                                                                   |
-| 6     | Not started |                                             |                                                                                    | Human-review dependent                                                                            |
-| 7     | Not started |                                             |                                                                                    |                                                                                                   |
-| 8     | Not started |                                             |                                                                                    |                                                                                                   |
-| 9     | Not started |                                             |                                                                                    |                                                                                                   |
-| 10    | Not started |                                             |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                                       |
+| Phase | Status      | Commit                                      | Checks                                                                             | Notes / blockers                                                                                       |
+| ----- | ----------- | ------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| 0     | Complete    | `fc6b771` + Phase 0 commit                  | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                                       |
+| 1     | Complete    | `a60066d`                                   | `pnpm check` green at commit                                                       | Honest doc status banners; status board reconciled; README cache claim corrected                       |
+| 2     | Complete    | `6dd7c5c`                                   | `pnpm check` exit 0 (86 files / 815 tests), `pnpm verify` 0 problems               | KV binding + global budget enforcement remain approval-gated (see docs/PRODUCTION_RELIABILITY.md)      |
+| 3     | Complete    | `1396571` + `e5d14a4` + `0c53fa7`           | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Real Gemini run deferred to Phase 4 (spend gate); dataset + approved mappings + harness in place       |
+| 4     | Complete    | `7973d46` + `fb7daeb` + Phase 4 docs commit | Local run executed and documented (see notes)                                      | Gemini column spend-gated; recommendation option (a): cloud Gemini stays production primary            |
+| 5     | Complete    | `20d4d6a`                                   | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Recognition catalogue (46 entries) separate from nutrition; identified-unsupported UI state; see notes |
+| 6     | Not started |                                             |                                                                                    | Human-review dependent                                                                                 |
+| 7     | Not started |                                             |                                                                                    |                                                                                                        |
+| 8     | Not started |                                             |                                                                                    |                                                                                                        |
+| 9     | Not started |                                             |                                                                                    |                                                                                                        |
+| 10    | Not started |                                             |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                                            |
 
 ## Current phase
 
-Phase 4 — hybrid model comparison (complete: local column measured, Gemini column spend-gated with the run command recorded).
+Phase 5 — separate recognition catalogue from approved nutrition knowledge (complete at `20d4d6a`).
 
 ## Baseline (recorded 2026-11-18, commit `fc6b771`)
 
@@ -54,6 +54,14 @@ Phase 4 — hybrid model comparison (complete: local column measured, Gemini col
   - **Local run executed 2026-11-18** (`qwen2.5vl:3b`, 100% GPU, 200 dev images): top-1 **44.5%**, top-3 64.0%, unknown rate 0.5%, macro-F1 0.244, median latency 3,763 ms, 3/200 call failures. Confident-wrong failure profile (near-zero unknown rejection); dhakaiya-bakarkhani recall 0.00, rasmalai recall 0.04, chicken-roast F1 0.98.
   - **Recommendation: option (a)** — cloud Gemini remains production primary; the local model is suitable for offline/local evaluation only (option b noted as a limited secondary finding); no separately hosted pilot proposed. Cloudflare production unchanged. **User accepted this decision on 2026-11-18** and directed that future accuracy work target the Gemini path (prompts, candidate preselection, preprocessing), measured on the benchmark.
   - Gemini benchmark column remains spend-gated (no paid call made, per the user's keep-it-free instruction); the exact command is recorded in `docs/MODEL_COMPARISON.md` §4.
+- Phase 5 (`20d4d6a`):
+  - New recognition catalogue `packages/knowledge/data/catalogue/catalogue.json` (version 1, 46 entries: 30 linked to approved nutrition dishes, 16 catalogue-only seeded from unambiguous BD-Food33 labels) with per-entry provenance and stable slug ids; `nutrition_dish_id` is the only link into the nutrition set.
+  - Contracts: additive `CatalogueEntrySchema` / `CatalogueFileSchema`; no scan-response or analysis schema change (analysis already permits dishId non-null + nutrition null).
+  - `packages/ai`: `ProviderContext.dishes` renamed to `catalogue`; the dish prompt now lists id, Bangla name, category and aliases from the catalogue; `sanitize` accepts any catalogue id, so a recognized-but-unsupported dish reaches the UI instead of being nulled to unknown.
+  - API composition roots (Node, Worker, eval harness) now feed the catalogue; the Worker bundles `catalogue.json` instead of the dishes file.
+  - Engine unchanged: `analyze` still throws for a dish id outside the approved nutrition set — the guard that keeps unapproved catalogue items out of deterministic nutrition/safety scoring.
+  - Web: Confirm offers the full catalogue; Result shows a distinct "Dish identified / no reviewed nutrition or safety data" state (bilingual) for catalogue-only dishes, with no score, no nutrition card, and no history entry.
+  - Data pipeline incident caught by tests: a plain `normalize` run reverted `data/normalized/ingredients.json` approved values (it is written by `apply-approved`, which must run after `normalize`); restored from Git and re-ran `apply-approved`; `pnpm verify` and engine sodium-anchor tests confirm data integrity.
 
 ## Decisions and evidence
 
@@ -79,4 +87,4 @@ Phase 4 — hybrid model comparison (complete: local column measured, Gemini col
 
 ## Next phase
 
-Phase 5 — separate recognition catalogue from approved nutrition knowledge. Optional pending user decision: run the spend-gated Gemini column from `docs/MODEL_COMPARISON.md` §4 to complete both sides of the Phase 4 comparison.
+Phase 6 — strengthen nutrition knowledge and provenance (human-review dependent). Open decisions for the user: (a) run the spend-gated Gemini benchmark column (command in `docs/MODEL_COMPARISON.md` §4); (b) approve proposed catalogue/eval label mappings beyond the current 8, so benchmark recognition can be scored against catalogue-only dishes too.
