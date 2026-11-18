@@ -5,6 +5,7 @@ import { useT } from './i18n/i18n';
 import { cn } from './lib/cn';
 import { About } from './pages/About';
 import { Confirm } from './pages/Confirm';
+import { Demo } from './pages/Demo';
 import { History as HistoryPage } from './pages/History';
 import { Onboarding } from './pages/Onboarding';
 import { Scan } from './pages/Scan';
@@ -73,6 +74,7 @@ export function App() {
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/demo" element={<Demo />} />
           </Routes>
         )}
       </main>
