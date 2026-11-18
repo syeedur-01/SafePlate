@@ -7,7 +7,7 @@ const app = createApp({
   allowedOrigin: 'http://localhost:5173',
   maxBodyBytes: 2_000_000,
   provider: new MockProvider(),
-  dishes: [],
+  catalogue: [],
 });
 // Route the client's fetch into the API app in-process: no network, same contract.
 // The signal is stripped because jsdom's AbortSignal and Node's Request come from

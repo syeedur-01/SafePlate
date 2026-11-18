@@ -89,6 +89,31 @@ export const RawIngredientsFileSchema = z.object({
   ingredients: z.array(IngredientSchema).min(1),
 });
 
+/**
+ * One recognition-catalogue entry: what the vision model may name, independent of
+ * whether approved nutrition data exists. `nutrition_dish_id` links to the approved
+ * nutrition set, or is null for catalogue-only dishes.
+ */
+export const CatalogueEntrySchema = z.object({
+  id: slug,
+  name_en: z.string().min(1),
+  name_bn: z.string().min(1).nullable(),
+  aliases: z.array(z.string()),
+  category: z.string().min(1),
+  nutrition_dish_id: slug.nullable(),
+  provenance: z.object({
+    source: z.string().min(1),
+    added: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  }),
+});
+export type CatalogueEntry = z.infer<typeof CatalogueEntrySchema>;
+
+export const CatalogueFileSchema = z.object({
+  version: z.number().int().positive(),
+  entries: z.array(CatalogueEntrySchema).min(1),
+});
+export type CatalogueFile = z.infer<typeof CatalogueFileSchema>;
+
 /** Returns one message per dish ingredient line whose ingredient_id is not in the ingredient list. */
 export function findDanglingRefs(dishes: RawDish[], ingredients: Ingredient[]): string[] {
   const known = new Set(ingredients.map((i) => i.id));

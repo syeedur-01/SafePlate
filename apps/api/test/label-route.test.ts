@@ -20,7 +20,7 @@ const cfg = (provider: VisionProvider) => ({
   allowedOrigin: 'http://x',
   maxBodyBytes: 2_000_000,
   provider,
-  dishes: [],
+  catalogue: [],
 });
 const dishForLabel: VisionProvider = {
   name: 't',

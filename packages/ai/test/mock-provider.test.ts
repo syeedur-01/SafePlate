@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { ScanResultSchema } from '@sp/contracts';
 import { MockProvider } from '../src/mock-provider';
-const ctx = { dishes: [] };
+const ctx = { catalogue: [] };
 const mk = (kind: 'dish' | 'label', img = 'B'.repeat(200)) => ({
   kind,
   imageBase64: img,

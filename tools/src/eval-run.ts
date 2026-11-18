@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createApp } from '@sp/api/src/app';
 import { GeminiProvider, MockProvider, OllamaProvider, type VisionProvider } from '@sp/ai';
-import { getDishes } from '@sp/knowledge';
+import { getCatalogue } from '@sp/knowledge';
 import type { AppConfig } from '@sp/api/src/config';
 import {
   dishMetrics,
@@ -480,11 +480,12 @@ async function main(): Promise<void> {
       allowedOrigin: 'http://eval.local',
       maxBodyBytes: 20_000_000,
       provider: localProviderFromEnv(process.env),
-      dishes: getDishes().map((dish) => ({
-        id: dish.id,
-        name_en: dish.name_en,
-        name_bn: dish.name_bn,
-        aliases: dish.aliases,
+      catalogue: getCatalogue().entries.map((entry) => ({
+        id: entry.id,
+        name_en: entry.name_en,
+        name_bn: entry.name_bn,
+        aliases: entry.aliases,
+        category: entry.category,
       })),
     };
     const app = createApp(config);

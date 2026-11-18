@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { AnalysisResult, Dish, ScanResult } from '@sp/contracts';
 import runtimeJson from '@sp/knowledge/data/runtime/runtime.json';
 import { Navigate, useLocation } from 'react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { ForYouCard } from '../components/ForYouCard';
 import { NutritionCard } from '../components/NutritionCard';
 import { SafetyCard } from '../components/SafetyCard';
@@ -17,6 +18,13 @@ import { useProfile } from '../state/useProfile';
 const DISH_NAMES = {
   en: Object.fromEntries(runtimeJson.dishes.map((dish) => [dish.id, dish.name_en])),
   bn: Object.fromEntries(runtimeJson.dishes.map((dish) => [dish.id, dish.name_bn])),
+};
+
+const CATALOGUE_NAMES = {
+  en: Object.fromEntries(runtimeJson.catalogue.map((entry) => [entry.id, entry.name_en])),
+  bn: Object.fromEntries(
+    runtimeJson.catalogue.map((entry) => [entry.id, entry.name_bn ?? entry.name_en]),
+  ),
 };
 
 const INGREDIENT_NAMES = {
@@ -98,12 +106,56 @@ interface ResultAnalysisProps extends ResultProps {
   state: { scanResult: ScanResult; dishId: string | null; thumbDataUrl: string | null };
 }
 
+/**
+ * Returns the identified-but-unsupported screen: the dish is in the recognition
+ * catalogue but has no approved nutrition data, so no score or nutrition is shown.
+ */
+function IdentifiedNoNutrition({ dishName }: { dishName: string }) {
+  const { t } = useT();
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>{dishName}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p role="status">{t('result.noNutrition.body')}</p>
+      </CardContent>
+    </Card>
+  );
+}
+
 function ResultAnalysis({
   state,
   profileStore,
   historyStore = DEFAULT_HISTORY_STORE,
   now = systemNow,
 }: ResultAnalysisProps) {
+  const { lang } = useT();
+  const { dishId } = state;
+  const dish = dishId === null ? null : getDish(dishId);
+
+  if (state.scanResult.kind === 'dish' && dishId !== null && dish === null) {
+    return <IdentifiedNoNutrition dishName={CATALOGUE_NAMES[lang][dishId] ?? dishId} />;
+  }
+
+  return (
+    <ResultWithAnalysis
+      state={state}
+      dish={dish}
+      profileStore={profileStore}
+      historyStore={historyStore}
+      now={now}
+    />
+  );
+}
+
+function ResultWithAnalysis({
+  state,
+  dish,
+  profileStore,
+  historyStore = DEFAULT_HISTORY_STORE,
+  now = systemNow,
+}: ResultAnalysisProps & { dish: Dish | null }) {
   const { t, lang } = useT();
   const { profile } = useProfile(profileStore);
   const [servings, setServings] = useState(1);
@@ -114,7 +166,6 @@ function ResultAnalysis({
     profile,
     now,
   });
-  const dish = getDish(state.dishId);
   const saved = useRef(false);
 
   useEffect(() => {

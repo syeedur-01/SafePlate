@@ -73,7 +73,7 @@ function main(): void {
   const started = Date.now();
   const provider = new GeminiProvider({ apiKey, model });
   provider
-    .analyze(candidate.data, { dishes: [] })
+    .analyze(candidate.data, { catalogue: [] })
     .then((result) => {
       process.stdout.write(`elapsed ms: ${Date.now() - started}\n`);
       process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);

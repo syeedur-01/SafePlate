@@ -69,6 +69,9 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
     'result.tab.foryou': 'For you',
     'result.tab.nutrition': 'Nutrition',
     'result.tab.swap': 'Swap and shopping',
+    'result.noNutrition.title': 'Dish identified',
+    'result.noNutrition.body':
+      'We recognized this dish, but SafePlate does not have reviewed nutrition or safety data for it yet. No score or nutrition numbers are shown, and nothing is guessed.',
     'page.history.title': 'History',
     'page.history.body': 'Your saved scans will appear here.',
     'page.settings.title': 'Settings',
@@ -191,6 +194,9 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
     'result.tab.foryou': 'আপনার জন্য',
     'result.tab.nutrition': 'পুষ্টি',
     'result.tab.swap': 'বদল ও কেনাকাটা',
+    'result.noNutrition.title': 'খাবার শনাক্ত হয়েছে',
+    'result.noNutrition.body':
+      'এই খাবার আমরা চিনেছি, কিন্তু SafePlate-এ এখনো এর যাচাইকৃত পুষ্টি বা নিরাপত্তা তথ্য নেই। তাই কোনো স্কোর বা পুষ্টির সংখ্যা দেখানো হয় না, এবং কিছু অনুমান করা হয় না।',
     'page.history.title': 'ইতিহাস',
     'page.history.body': 'আপনার সংরক্ষিত স্ক্যান এখানে দেখা যাবে।',
     'page.settings.title': 'সেটিংস',

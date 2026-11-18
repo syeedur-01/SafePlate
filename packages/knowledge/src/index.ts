@@ -9,12 +9,14 @@ import {
   SourcesFileSchema,
   SafetyRulesFileSchema,
   HealthRulesFileSchema,
+  CatalogueFileSchema,
   type RawDish,
   type Ingredient,
   type Dish,
   type SourceEntry,
   type SafetyRule,
   type HealthRule,
+  type CatalogueFile,
 } from '@sp/contracts';
 
 export * from './normalize';
@@ -59,6 +61,10 @@ export function getSafetyRules(): SafetyRule[] {
 /** Returns the live health rules from data/rules/health-rules.json (created by merge-rules). */
 export function getHealthRules(): HealthRule[] {
   return HealthRulesFileSchema.parse(readDataJson('rules/health-rules.json')).rules;
+}
+/** Returns the recognition catalogue from data/catalogue/catalogue.json (independent of the nutrition set). */
+export function getCatalogue(): CatalogueFile {
+  return CatalogueFileSchema.parse(readDataJson('catalogue/catalogue.json'));
 }
 /** Returns the demo dish ids from data/runtime/demo-dishes.json (the energy coverage gate). */
 export function getDemoDishIds(): string[] {

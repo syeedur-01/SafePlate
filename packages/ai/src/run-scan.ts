@@ -38,7 +38,7 @@ function validate(candidate: unknown, providerName: string): ScanResult | null {
 
 /** Returns the result with candidate dish ids that are unknown to the context replaced by null. */
 function sanitize(result: ScanResult, ctx: ProviderContext): ScanResult {
-  const knownIds = new Set(ctx.dishes.map((dish) => dish.id));
+  const knownIds = new Set(ctx.catalogue.map((entry) => entry.id));
   if (result.kind !== 'dish') return result;
   return {
     ...result,

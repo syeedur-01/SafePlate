@@ -44,7 +44,7 @@ async function scanThroughApi(stem: string) {
     allowedOrigin: 'http://localhost:5173',
     maxBodyBytes: 2_000_000,
     provider: new MockProvider({ forceFixture: stem as ForceFixture }),
-    dishes: [],
+    catalogue: [],
   });
   const res = await app.request('/api/scan', {
     method: 'POST',

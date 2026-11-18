@@ -3,11 +3,13 @@ import type { ScanRequest } from '@sp/contracts';
 export interface DishPromptEntry {
   id: string;
   name_en: string;
-  name_bn: string;
+  name_bn: string | null;
   aliases: string[];
+  category: string;
 }
 export interface ProviderContext {
-  dishes: DishPromptEntry[];
+  /** The recognition catalogue: every id the model may return, including entries without nutrition data. */
+  catalogue: DishPromptEntry[];
 }
 export interface VisionProvider {
   readonly name: string;

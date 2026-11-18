@@ -70,7 +70,7 @@ export function registerScanRoute(app: Hono, config: AppConfig): void {
     }
 
     try {
-      const result = await runScan(provider, parsed.data, { dishes: config.dishes ?? [] });
+      const result = await runScan(provider, parsed.data, { catalogue: config.catalogue ?? [] });
       if (result.kind !== parsed.data.kind) {
         return c.json(
           {

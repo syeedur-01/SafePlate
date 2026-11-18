@@ -4,11 +4,12 @@ import type { ProviderContext } from './provider';
 const MAX_CANDIDATES = 3;
 const MAX_NOTES_CHARS = 300;
 
-/** Returns the dish-identification prompt listing every known dish and the exact JSON answer shape. */
+/** Returns the dish-identification prompt listing every catalogue entry and the exact JSON answer shape. */
 export function buildDishPrompt(ctx: ProviderContext, context: ScanContext): string {
-  const dishLines = ctx.dishes.map((dish) => {
+  const dishLines = ctx.catalogue.map((dish) => {
     const aliases = dish.aliases.length > 0 ? ` (aliases: ${dish.aliases.join(', ')})` : '';
-    return `- ${dish.id}: ${dish.name_en}${aliases}`;
+    const bangla = dish.name_bn === null ? '' : ` [bn: ${dish.name_bn}]`;
+    return `- ${dish.id}: ${dish.name_en}${bangla} (${dish.category})${aliases}`;
   });
   return [
     `You are looking at one photograph of food in ${context.place}.`,

@@ -27,12 +27,20 @@ const post = (app: ReturnType<typeof createApp>, b: string) =>
     headers: { 'content-type': 'application/json' },
     body: b,
   });
-const dishes = [{ id: 'kacchi-biryani', name_en: 'Kacchi Biryani', name_bn: '', aliases: [] }];
+const catalogue = [
+  {
+    id: 'kacchi-biryani',
+    name_en: 'Kacchi Biryani',
+    name_bn: null,
+    aliases: [],
+    category: 'Rice & festive specialties',
+  },
+];
 const cfg = (provider?: VisionProvider, extra: Partial<AppConfig> = {}): AppConfig => ({
   allowedOrigin: 'http://x',
   maxBodyBytes: 2_000_000,
   provider,
-  dishes,
+  catalogue,
   ...extra,
 });
 const throwing = (e: Error): VisionProvider => ({

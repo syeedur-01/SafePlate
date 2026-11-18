@@ -1,5 +1,5 @@
 import { serve } from '@hono/node-server';
-import { getDishes } from '@sp/knowledge';
+import { getCatalogue } from '@sp/knowledge';
 import { MemoryScanCache } from '@sp/ai';
 import { configFromEnv } from './config';
 import { createApp } from './app';
@@ -14,11 +14,12 @@ const provider = providerFromEnv(process.env);
 const app = createApp({
   ...configFromEnv(process.env),
   provider,
-  dishes: getDishes().map((dish) => ({
-    id: dish.id,
-    name_en: dish.name_en,
-    name_bn: dish.name_bn,
-    aliases: dish.aliases,
+  catalogue: getCatalogue().entries.map((entry) => ({
+    id: entry.id,
+    name_en: entry.name_en,
+    name_bn: entry.name_bn,
+    aliases: entry.aliases,
+    category: entry.category,
   })),
   cache: new MemoryScanCache(),
 });

@@ -2447,5 +2447,375 @@
       "fibre_g": 3.9,
       "sodium_mg": 5
     }
+  ],
+  "catalogue": [
+    {
+      "id": "kacchi-biryani",
+      "name_en": "Kacchi Biryani",
+      "name_bn": "কাচ্চি বিরিয়ানি",
+      "aliases": ["Kacchi", "Kachchi biryani"],
+      "category": "Rice & festive specialties",
+      "nutrition_dish_id": "kacchi-biryani"
+    },
+    {
+      "id": "bhuna-khichuri",
+      "name_en": "Bhuna Khichuri",
+      "name_bn": "ভুনা খিচুড়ি",
+      "aliases": ["Bhuna khichuri", "Bhuna khichuri with moong dal"],
+      "category": "Rice & festive specialties",
+      "nutrition_dish_id": "bhuna-khichuri"
+    },
+    {
+      "id": "beef-tehari",
+      "name_en": "Beef Tehari",
+      "name_bn": "গরুর মাংসের তেহারি",
+      "aliases": ["Tehari", "Beef tehari"],
+      "category": "Rice & festive specialties",
+      "nutrition_dish_id": "beef-tehari"
+    },
+    {
+      "id": "morog-polao",
+      "name_en": "Morog Polao",
+      "name_bn": "মোরগ পোলাও",
+      "aliases": ["Murg pulao", "Chicken pulao"],
+      "category": "Rice & festive specialties",
+      "nutrition_dish_id": "morog-polao"
+    },
+    {
+      "id": "panta-ilish",
+      "name_en": "Panta Ilish",
+      "name_bn": "পান্তা ইলিশ",
+      "aliases": ["Panta bhat with hilsa"],
+      "category": "Rice & festive specialties",
+      "nutrition_dish_id": "panta-ilish"
+    },
+    {
+      "id": "aloo-bhorta",
+      "name_en": "Aloo Bhorta",
+      "name_bn": "আলু ভর্তা",
+      "aliases": ["Alu bhorta", "Mashed potato bhorta"],
+      "category": "Traditional bhortas & bhajis",
+      "nutrition_dish_id": "aloo-bhorta"
+    },
+    {
+      "id": "begun-bhorta",
+      "name_en": "Begun Bhorta",
+      "name_bn": "বেগুন ভর্তা",
+      "aliases": ["Eggplant bhorta"],
+      "category": "Traditional bhortas & bhajis",
+      "nutrition_dish_id": "begun-bhorta"
+    },
+    {
+      "id": "shutki-bhorta",
+      "name_en": "Shutki Bhorta",
+      "name_bn": "শুঁটকি ভর্তা",
+      "aliases": ["Dried fish bhorta"],
+      "category": "Traditional bhortas & bhajis",
+      "nutrition_dish_id": "shutki-bhorta"
+    },
+    {
+      "id": "begun-bhaja",
+      "name_en": "Begun Bhaja",
+      "name_bn": "বেগুন ভাজা",
+      "aliases": ["Fried eggplant"],
+      "category": "Traditional bhortas & bhajis",
+      "nutrition_dish_id": "begun-bhaja"
+    },
+    {
+      "id": "shorshe-ilish",
+      "name_en": "Shorshe Ilish",
+      "name_bn": "সর্ষে ইলিশ",
+      "aliases": ["Hilsa in mustard gravy"],
+      "category": "Fish & seafood curries",
+      "nutrition_dish_id": "shorshe-ilish"
+    },
+    {
+      "id": "chingri-malai-curry",
+      "name_en": "Chingri Malai Curry",
+      "name_bn": "চিংড়ি মালাইকারি",
+      "aliases": ["Chingri malaikari", "Prawn coconut curry"],
+      "category": "Fish & seafood curries",
+      "nutrition_dish_id": "chingri-malai-curry"
+    },
+    {
+      "id": "rui-macher-jhol",
+      "name_en": "Rui Macher Jhol",
+      "name_bn": "রুই মাছের ঝোল",
+      "aliases": ["Rohu fish curry"],
+      "category": "Fish & seafood curries",
+      "nutrition_dish_id": "rui-macher-jhol"
+    },
+    {
+      "id": "ilish-bhaja",
+      "name_en": "Ilish Bhaja",
+      "name_bn": "ইলিশ ভাজা",
+      "aliases": ["Fried hilsa"],
+      "category": "Fish & seafood curries",
+      "nutrition_dish_id": "ilish-bhaja"
+    },
+    {
+      "id": "lau-chingri",
+      "name_en": "Lau Chingri",
+      "name_bn": "লাউ চিংড়ি",
+      "aliases": ["Bottle gourd with shrimp"],
+      "category": "Fish & seafood curries",
+      "nutrition_dish_id": "lau-chingri"
+    },
+    {
+      "id": "beef-kala-bhuna",
+      "name_en": "Beef Kala Bhuna",
+      "name_bn": "গরুর কালা ভুনা",
+      "aliases": ["Kala bhuna", "Beef kala bhuna"],
+      "category": "Meat & poultry curries",
+      "nutrition_dish_id": "beef-kala-bhuna"
+    },
+    {
+      "id": "bangladeshi-chicken-roast",
+      "name_en": "Bangladeshi Chicken Roast",
+      "name_bn": "বাংলাদেশি মুরগির রোস্ট",
+      "aliases": ["Chicken roast", "Bangladeshi-style chicken roast"],
+      "category": "Meat & poultry curries",
+      "nutrition_dish_id": "bangladeshi-chicken-roast"
+    },
+    {
+      "id": "mezbaner-gorur-mansho",
+      "name_en": "Mezbaner Gorur Mansho",
+      "name_bn": "মেজবানি গরুর মাংস",
+      "aliases": ["Mezbani beef"],
+      "category": "Regional specialties",
+      "nutrition_dish_id": "mezbaner-gorur-mansho"
+    },
+    {
+      "id": "patla-masoor-dal",
+      "name_en": "Patla Masoor Dal",
+      "name_bn": "পাতলা মসুর ডাল",
+      "aliases": ["Thin red lentil dal"],
+      "category": "Lentils, breads & accompaniments",
+      "nutrition_dish_id": "patla-masoor-dal"
+    },
+    {
+      "id": "cholar-dal",
+      "name_en": "Cholar Dal",
+      "name_bn": "ছোলার ডাল",
+      "aliases": ["Chana dal"],
+      "category": "Lentils, breads & accompaniments",
+      "nutrition_dish_id": "cholar-dal"
+    },
+    {
+      "id": "dhakaiya-bakarkhani",
+      "name_en": "Dhakaiya Bakarkhani",
+      "name_bn": "ঢাকাইয়া বাকরখানি",
+      "aliases": ["Bakarkhani"],
+      "category": "Lentils, breads & accompaniments",
+      "nutrition_dish_id": "dhakaiya-bakarkhani"
+    },
+    {
+      "id": "mughlai-paratha",
+      "name_en": "Mughlai Paratha",
+      "name_bn": "মোগলাই পরোটা",
+      "aliases": ["Moglai paratha"],
+      "category": "Lentils, breads & accompaniments",
+      "nutrition_dish_id": "mughlai-paratha"
+    },
+    {
+      "id": "chotpoti",
+      "name_en": "Chotpoti",
+      "name_bn": "চটপটি",
+      "aliases": ["Chotpoti with egg"],
+      "category": "Snacks, street food & sweets",
+      "nutrition_dish_id": "chotpoti"
+    },
+    {
+      "id": "fuchka",
+      "name_en": "Fuchka",
+      "name_bn": "ফুচকা",
+      "aliases": ["Puchka", "Fuska"],
+      "category": "Snacks, street food & sweets",
+      "nutrition_dish_id": "fuchka"
+    },
+    {
+      "id": "piyaju",
+      "name_en": "Piyaju",
+      "name_bn": "পিয়াজু",
+      "aliases": ["Peyaju", "Lentil fritters"],
+      "category": "Snacks, street food & sweets",
+      "nutrition_dish_id": "piyaju"
+    },
+    {
+      "id": "bhapa-pitha",
+      "name_en": "Bhapa Pitha",
+      "name_bn": "ভাপা পিঠা",
+      "aliases": ["Steamed rice pitha"],
+      "category": "Traditional pithe & desserts",
+      "nutrition_dish_id": "bhapa-pitha"
+    },
+    {
+      "id": "chitoi-pitha",
+      "name_en": "Chitoi Pitha",
+      "name_bn": "চিতই পিঠা",
+      "aliases": ["Chitoi", "Chitui pitha"],
+      "category": "Traditional pithe & desserts",
+      "nutrition_dish_id": "chitoi-pitha"
+    },
+    {
+      "id": "mishti-doi",
+      "name_en": "Mishti Doi",
+      "name_bn": "মিষ্টি দই",
+      "aliases": ["Sweetened yogurt", "Sweet curd"],
+      "category": "Traditional pithe & desserts",
+      "nutrition_dish_id": "mishti-doi"
+    },
+    {
+      "id": "rasmalai",
+      "name_en": "Rasmalai",
+      "name_bn": "রসমালাই",
+      "aliases": ["Ras malai"],
+      "category": "Traditional pithe & desserts",
+      "nutrition_dish_id": "rasmalai"
+    },
+    {
+      "id": "haleem",
+      "name_en": "Haleem",
+      "name_bn": "হালিম",
+      "aliases": ["Beef haleem"],
+      "category": "Rice, grain & meat specialties",
+      "nutrition_dish_id": "haleem"
+    },
+    {
+      "id": "shemai",
+      "name_en": "Shemai",
+      "name_bn": "সেমাই",
+      "aliases": ["Dudh shemai", "Vermicelli pudding"],
+      "category": "Traditional pithe & desserts",
+      "nutrition_dish_id": "shemai"
+    },
+    {
+      "id": "singara",
+      "name_en": "Singara",
+      "name_bn": "সিঙারা",
+      "aliases": ["Shingara"],
+      "category": "Snacks",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "jhalmuri",
+      "name_en": "Jhalmuri",
+      "name_bn": "ঝালমুড়ি",
+      "aliases": ["Jhal Muri"],
+      "category": "Snacks",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "kotkoti",
+      "name_en": "Kotkoti",
+      "name_bn": "কটকটি",
+      "aliases": ["Kotkoti"],
+      "category": "Sweets",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "chomchom",
+      "name_en": "Chomchom",
+      "name_bn": "চমচম",
+      "aliases": ["Cham Cham"],
+      "category": "Sweets",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "jalebi",
+      "name_en": "Jalebi",
+      "name_bn": "জিলাপি",
+      "aliases": ["Jilapi"],
+      "category": "Sweets",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "pera-sondesh",
+      "name_en": "Pera Sondesh",
+      "name_bn": "পরা সন্দেশ",
+      "aliases": ["Pera Sandesh"],
+      "category": "Sweets",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "shami-kabab",
+      "name_en": "Shami Kabab",
+      "name_bn": "শামি কাবাব",
+      "aliases": ["Shami Kebab"],
+      "category": "Snacks",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "egg-curry",
+      "name_en": "Egg Curry",
+      "name_bn": "ডিম কারি",
+      "aliases": ["Dim Curry"],
+      "category": "Curries",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "rupchanda-fry",
+      "name_en": "Rupchanda Fry",
+      "name_bn": "রুপচাঁদা ভাজা",
+      "aliases": ["Pomfret Fry"],
+      "category": "Fish dishes",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "puli-pitha",
+      "name_en": "Puli Pitha",
+      "name_bn": "পুলি পিথা",
+      "aliases": [],
+      "category": "Rice & festive specialties",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "chowmein",
+      "name_en": "Chowmein",
+      "name_bn": "চাউমিন",
+      "aliases": ["Chow Mein"],
+      "category": "International & fast food",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "french-fries",
+      "name_en": "French Fries",
+      "name_bn": "ফ্রেঞ্চ ফ্রাই",
+      "aliases": ["Fries"],
+      "category": "International & fast food",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "shawarma",
+      "name_en": "Shawarma",
+      "name_bn": "শাওয়ারমা",
+      "aliases": [],
+      "category": "International & fast food",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "pizza",
+      "name_en": "Pizza",
+      "name_bn": "পিৎজা",
+      "aliases": [],
+      "category": "International & fast food",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "burger",
+      "name_en": "Burger",
+      "name_bn": "বার্গার",
+      "aliases": [],
+      "category": "International & fast food",
+      "nutrition_dish_id": null
+    },
+    {
+      "id": "mutton-leg-roast",
+      "name_en": "Mutton Leg Roast",
+      "name_bn": null,
+      "aliases": [],
+      "category": "Curries",
+      "nutrition_dish_id": null
+    }
   ]
 }

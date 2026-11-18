@@ -11,7 +11,16 @@ const req: ScanRequest = {
   context: { place: 'home', storage: 'unknown', hoursSinceCooked: null },
 };
 const ctx = {
-  dishes: [{ id: 'kacchi-biryani', name_en: 'Kacchi Biryani', name_bn: '', aliases: [] }],
+  catalogue: [
+    {
+      id: 'kacchi-biryani',
+      name_en: 'Kacchi Biryani',
+      name_bn: null,
+      aliases: [],
+      category: 'Rice & festive specialties',
+    },
+    { id: 'singara', name_en: 'Singara', name_bn: null, aliases: [], category: 'Snacks' },
+  ],
 };
 const good = (id: string | null) => ({
   kind: 'dish',
@@ -54,6 +63,10 @@ describe('runScan', () => {
   it('replaces unknown dish ids with null', async () => {
     const r = await runScan(fake([good('made-up-dish')]).p, req, ctx);
     if (r.kind === 'dish') expect(r.candidates[0]?.dishId).toBeNull();
+  });
+  it('keeps a catalogue-only dish id even though it has no nutrition data', async () => {
+    const r = await runScan(fake([good('singara')]).p, req, ctx);
+    if (r.kind === 'dish') expect(r.candidates[0]?.dishId).toBe('singara');
   });
   it('does not retry when the provider itself throws', async () => {
     const state = { calls: 0 };

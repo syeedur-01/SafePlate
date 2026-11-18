@@ -9,7 +9,15 @@ const req = {
   context: { place: 'home' as const, storage: 'unknown' as const, hoursSinceCooked: null },
 };
 const ctx = {
-  dishes: [{ id: 'kacchi-biryani', name_en: 'Kacchi Biryani', name_bn: '', aliases: ['Kacchi'] }],
+  catalogue: [
+    {
+      id: 'kacchi-biryani',
+      name_en: 'Kacchi Biryani',
+      name_bn: null,
+      aliases: ['Kacchi'],
+      category: 'Rice & festive specialties',
+    },
+  ],
 };
 const reply =
   (text: string, status = 200, headers?: Record<string, string>) =>

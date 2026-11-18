@@ -8,8 +8,8 @@ export interface AppConfig {
   enableSpike?: boolean;
   /** Optional so the P1 tests still compile; the scan route answers 503 when it is missing. */
   provider?: VisionProvider;
-  /** Optional dish context for the vision provider; defaults to an empty list. */
-  dishes?: DishPromptEntry[];
+  /** Optional recognition-catalogue context for the vision provider; defaults to an empty list. */
+  catalogue?: DishPromptEntry[];
   /** Optional scan result cache; without it every request reaches the provider. */
   cache?: ScanCache;
   /** Optional daily AI call cap; without it the scan route applies the default cap. */
