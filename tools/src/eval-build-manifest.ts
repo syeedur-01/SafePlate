@@ -90,8 +90,11 @@ function main(): void {
     process.exitCode = 1;
     return;
   }
+  // Proposals are not approvals: only approved mappings reach the manifest.
   const map = new Map(
-    asLabelMapEntries(labelMapValue).map((e) => [e.datasetLabel, e.safePlateDishId]),
+    asLabelMapEntries(labelMapValue)
+      .filter((e) => e.status === 'approved')
+      .map((e) => [e.datasetLabel, e.safePlateDishId]),
   );
 
   const images = listImages(args.dataset);

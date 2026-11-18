@@ -11,14 +11,14 @@ and hashes come from the Mendeley public API (`/public-api/datasets/<id>/files`)
 
 ## Verified candidates
 
-### 1. BD-Food33 — approved for local evaluation use
+### 1. BD-Food33 — approved for local evaluation use; downloaded and verified
 
 | Field                    | Value                                                                                                                                                                                                          |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Source                   | [Mendeley Data, `8wt48bjmx3` v1](https://data.mendeley.com/datasets/8wt48bjmx3/1)                                                                                                                              |
 | Licence                  | **CC0 1.0** (Public Domain Dedication) — verified on the dataset page                                                                                                                                          |
 | Contents                 | 1,200+ images, 33 categories of Bangladeshi local food                                                                                                                                                         |
-| Files (per Mendeley API) | `local_food_pre.zip`, 139,862,419 bytes, SHA-256 `71801b8774e0c324366410f3e461b5fa3672df3dac275ed3945859ac9a5eeca7` — verify after download                                                                    |
+| Files (per Mendeley API) | `local_food_pre.zip`, 139,862,419 bytes, SHA-256 `71801b8774e0c324366410f3e461b5fa367d2f3dac275ed3945859ac9a5eeca7` **verified: downloaded copy SHA-256 matches on 2026-11-18**                                |
 | Attribution required     | No (CC0), but we still record the source DOI out of academic honesty                                                                                                                                           |
 | Provenance caveat        | The card describes images gathered from public websites, restaurant sites, blogs and manual capture; provenance is **per-dataset, not per-image**. Do not assume every image shows a distinct dish or setting. |
 | Redistribute metadata?   | Yes — CC0 places no restriction on the label/manifest metadata we commit                                                                                                                                       |

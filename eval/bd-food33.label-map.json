@@ -1,0 +1,200 @@
+[
+  {
+    "datasetLabel": "Alu Vorta",
+    "safePlateDishId": "aloo-bhorta",
+    "status": "proposed",
+    "reason": "Alu Vorta is the same dish as Aloo Bhorta (mashed potato); spelling variant only"
+  },
+  {
+    "datasetLabel": "Bakorkhani",
+    "safePlateDishId": "dhakaiya-bakarkhani",
+    "status": "proposed",
+    "reason": "Bakorkhani/Bakarkhani is the same Dhaka flatbread; spelling variant only"
+  },
+  {
+    "datasetLabel": "Chicken Roast",
+    "safePlateDishId": "bangladeshi-chicken-roast",
+    "status": "proposed",
+    "reason": "same dish family; confirm the dataset images show Bangladeshi-style roast, not western roast chicken, before approving"
+  },
+  {
+    "datasetLabel": "Fuchka",
+    "safePlateDishId": "fuchka",
+    "status": "proposed",
+    "reason": "exact dish match"
+  },
+  {
+    "datasetLabel": "Morog Polao",
+    "safePlateDishId": "morog-polao",
+    "status": "proposed",
+    "reason": "exact dish match"
+  },
+  {
+    "datasetLabel": "Peyaju",
+    "safePlateDishId": "piyaju",
+    "status": "proposed",
+    "reason": "same dish; spelling variant of Piyaju"
+  },
+  {
+    "datasetLabel": "Roshmalai",
+    "safePlateDishId": "rasmalai",
+    "status": "proposed",
+    "reason": "same sweet; spelling variant of Rasmalai"
+  },
+  {
+    "datasetLabel": "Shorshe Ilish",
+    "safePlateDishId": "shorshe-ilish",
+    "status": "proposed",
+    "reason": "exact dish match"
+  },
+  {
+    "datasetLabel": "Bhapa",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "ambiguous: could be Bhapa Pitha (rice cake) or Bhapa Ilish (steamed hilsa); distinct foods, needs image inspection"
+  },
+  {
+    "datasetLabel": "Chingri Vuna",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "prawn bhuna is a different preparation from Chingri Malai Curry; no catalogue match"
+  },
+  {
+    "datasetLabel": "Dal",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "ambiguous: Patla Masoor Dal and Cholar Dal are distinct catalogue dishes; cannot tell which the images show"
+  },
+  {
+    "datasetLabel": "Paratha",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "plain paratha is distinct from Mughlai Paratha (stuffed); no plain paratha in catalogue"
+  },
+  {
+    "datasetLabel": "Burger",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Chicken",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "ambiguous generic chicken dishes; no safe catalogue match"
+  },
+  {
+    "datasetLabel": "Chomchom",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Chowmein",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Egg Curry",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "French Fries",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Fried Chicken",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Jalebi",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Jhalmuri",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "distinct from Chotpoti; no jhalmuri in catalogue"
+  },
+  {
+    "datasetLabel": "Kotkoti",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Mutton Leg Roast",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Pera Sondesh",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Pizza",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Puli Pitha",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Rice",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "plain rice; no catalogue match"
+  },
+  {
+    "datasetLabel": "Rupchanda Fry",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "pomfret fry; no catalogue match"
+  },
+  {
+    "datasetLabel": "Shami Kabab",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Shawarma",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Singara",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  },
+  {
+    "datasetLabel": "Tea",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "beverage; no catalogue match"
+  },
+  {
+    "datasetLabel": "Tikka",
+    "safePlateDishId": null,
+    "status": "proposed",
+    "reason": "no catalogue match"
+  }
+]
