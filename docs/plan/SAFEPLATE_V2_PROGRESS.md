@@ -5,19 +5,19 @@ Branch: `improvement/development`
 Baseline tag: `v1.0.0` (remote tag → `a377f77`; local tag → `a38d74e` — see notes)
 Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 
-| Phase | Status      | Commit                     | Checks                                                                             | Notes / blockers                                                                                  |
-| ----- | ----------- | -------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| 0     | Complete    | `fc6b771` + Phase 0 commit | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                                  |
-| 1     | Complete    | `a60066d`                  | `pnpm check` green at commit                                                       | Honest doc status banners; status board reconciled; README cache claim corrected                  |
-| 2     | Complete    | `6dd7c5c`                  | `pnpm check` exit 0 (86 files / 815 tests), `pnpm verify` 0 problems               | KV binding + global budget enforcement remain approval-gated (see docs/PRODUCTION_RELIABILITY.md) |
-| 3     | In progress | `1396571`                  | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Scaffolding complete; real dataset download awaits user approval (docs/EVAL_DATASETS.md)          |
-| 4     | Not started |                            |                                                                                    | Depends on Phase 3 benchmark                                                                      |
-| 5     | Not started |                            |                                                                                    |                                                                                                   |
-| 6     | Not started |                            |                                                                                    | Human-review dependent                                                                            |
-| 7     | Not started |                            |                                                                                    |                                                                                                   |
-| 8     | Not started |                            |                                                                                    |                                                                                                   |
-| 9     | Not started |                            |                                                                                    |                                                                                                   |
-| 10    | Not started |                            |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                                       |
+| Phase | Status      | Commit                            | Checks                                                                             | Notes / blockers                                                                                  |
+| ----- | ----------- | --------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 0     | Complete    | `fc6b771` + Phase 0 commit        | `pnpm check` exit 0 (793 tests), `pnpm verify` 0 problems, web build within budget | Tag discrepancy documented below                                                                  |
+| 1     | Complete    | `a60066d`                         | `pnpm check` green at commit                                                       | Honest doc status banners; status board reconciled; README cache claim corrected                  |
+| 2     | Complete    | `6dd7c5c`                         | `pnpm check` exit 0 (86 files / 815 tests), `pnpm verify` 0 problems               | KV binding + global budget enforcement remain approval-gated (see docs/PRODUCTION_RELIABILITY.md) |
+| 3     | Complete    | `1396571` + `e5d14a4` + `0c53fa7` | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Real Gemini run deferred to Phase 4 (spend gate); dataset + approved mappings + harness in place  |
+| 4     | Not started |                                   |                                                                                    | Depends on Phase 3 benchmark                                                                      |
+| 5     | Not started |                                   |                                                                                    |                                                                                                   |
+| 6     | Not started |                                   |                                                                                    | Human-review dependent                                                                            |
+| 7     | Not started |                                   |                                                                                    |                                                                                                   |
+| 8     | Not started |                                   |                                                                                    |                                                                                                   |
+| 9     | Not started |                                   |                                                                                    |                                                                                                   |
+| 10    | Not started |                                   |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                                       |
 
 ## Current phase
 
@@ -68,4 +68,4 @@ Phase 2 — production AI reliability, privacy, cost control (complete at `6dd7c
 
 ## Next phase
 
-Finish Phase 3: download BD-Food33 (after user approval), verify its SHA-256, inspect categories, write the human-reviewable label map, build the real manifest, and — once the user approves paid Gemini calls — produce the first real recognition report. Phase 4 (hybrid cloud/local comparison) builds on the same benchmark.
+Phase 4 — hybrid model comparison (cloud Gemini vs local vision model) on the Phase 3 benchmark. Any real Gemini calls or local model downloads need the spend gate; the comparison runs on the BD-Food33 benchmark with approved mappings (263 scorable images).
