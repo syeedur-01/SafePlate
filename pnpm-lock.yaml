@@ -375,6 +375,9 @@ importers:
       '@sp/ai':
         specifier: workspace:*
         version: link:../packages/ai
+      '@sp/api':
+        specifier: workspace:*
+        version: link:../apps/api
       '@sp/contracts':
         specifier: workspace:*
         version: link:../packages/contracts

@@ -1,11 +1,41 @@
-# Evaluation report
+# Vision evaluation report
 
-> **Status (2026-11-18): there are no measured recognition results yet — nothing in this file is a performance claim.**
+**Status: no real-world evaluation has been run yet.** The numbers below are a
+pipeline validation against a tiny synthetic fixture and the deterministic
+mock provider. They are **not** recognition accuracy and must never be cited
+as evidence that SafePlate recognizes food correctly.
 
-The evaluation runner (`tools/src/eval-run.ts`) and its metrics (`tools/src/eval-lib.ts`) are implemented and unit-tested, but they have never been run against a real photo set:
+- run configuration: `--mode local` (in-process API app, no deployed endpoint)
+- provider: `mock` (`EVAL_PROVIDER=mock`) — deterministic fixture picker, not a vision model
+- data: 8 synthetic JPEG stubs under `eval/datasets/pipeline-demo/`
+  (gitignored, clearly labelled "Synthetic pipeline demo (NOT real-world data)")
+- date of pipeline validation: 2026-11-18
+- prompt/schema version: whatever `main` carried on that date
 
-- No licensed evaluation images are committed. `eval/` contains only `README.md` and `manifest.example.json`; `fixtures/mock-scan/*.json` are synthetic fixtures, **not** evidence of real-world accuracy.
-- The runner currently targets a deployed API; the v2 programme (Phase 3 of `SAFEPLATE_V2_IMPROVEMENT_PLAN.md`) is building a reproducible local benchmark with a licence-audited dataset.
-- Until a real run is recorded here, recognition accuracy (top-1/top-3, unknown rejection, spoilage-sign precision/recall, label OCR quality) is **unmeasured**.
+## What the validation proved
 
-This file will be filled only from completed, reproducible runs, including: dataset and licence identification, model/provider and version, prompt/schema versions, run configuration, per-class support counts, and stated limitations.
+The Phase 3 evaluation harness runs end to end offline:
+
+1. `eval-build-manifest` walks a dataset directory, hashes every image,
+   marks exact duplicates `unused`, and emits a licence-attributed manifest
+   (validated by `validateBenchmarkManifest`).
+2. `eval-run --mode local` evaluates a provider through the same in-process
+   app code the API deploys, without a network endpoint.
+3. Unmapped dataset labels are never scored; per-class support, macro-F1 and
+   a confusion matrix are reported; failures are listed per image.
+
+## Real-world results
+
+None. A real benchmark requires a licence-cleared real image dataset. The
+licence audit lives in `docs/EVAL_DATASETS.md` (BD-Food33, CC0 1.0, is the
+approved first candidate). Until that dataset is downloaded and a real
+provider is run, **no recognition claim exists**, in either direction.
+
+## Limitations
+
+- The mock provider cannot measure recognition quality.
+- The synthetic fixture cannot measure anything about real photos.
+- Near-duplicate detection is exact-byte only; visually similar photos across
+  sources still need manual review before splits are trusted.
+- Label-OCR and spoilage-sign evaluation tasks have no real labelled data yet;
+  their metrics will only be reported when valid labelled samples exist.
