@@ -1,8 +1,14 @@
 import { describe, it, expect } from 'vitest';
 import { providerFromEnv } from '../src/provider';
 describe('providerFromEnv', () => {
-  it('defaults to mock', () => {
-    expect(providerFromEnv({}).name).toBe('mock');
+  it('refuses to default to mock when AI_PROVIDER is unset', () => {
+    expect(() => providerFromEnv({})).toThrow('AI_PROVIDER must be set explicitly');
+    expect(() => providerFromEnv({ AI_PROVIDER: '' })).toThrow(
+      'AI_PROVIDER must be set explicitly',
+    );
+  });
+  it('uses mock only when explicitly selected', () => {
+    expect(providerFromEnv({ AI_PROVIDER: 'mock' }).name).toBe('mock');
   });
   it('requires key and model for gemini', () => {
     expect(() => providerFromEnv({ AI_PROVIDER: 'gemini' })).toThrow('GEMINI_API_KEY');

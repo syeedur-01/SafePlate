@@ -9,3 +9,11 @@ compatibility_date = "2025-09-01" # if wrangler warns, follow its suggestion
 AI_PROVIDER = "gemini"
 GEMINI_MODEL = "gemini-3.5-flash-lite" # current stable vision-capable model per ai.google.dev/docs/models (checked 2026-11-15)
 ALLOWED_ORIGIN = "https://safeplate-czd.pages.dev" # the deployed web app origin (Cloudflare Pages)
+
+# Optional durable scan cache. The Worker uses a KV binding named SCAN_CACHE_KV when it
+# exists and falls back to per-isolate memory otherwise. Creating the namespace and
+# uncommenting the binding below is a production change and needs explicit approval
+# (see docs/PRODUCTION_RELIABILITY.md):
+# [[kv_namespaces]]
+# binding = "SCAN_CACHE_KV"
+# id = "<namespace-id>"

@@ -14,6 +14,8 @@ export interface AppConfig {
   cache?: ScanCache;
   /** Optional daily AI call cap; without it the scan route applies the default cap. */
   budget?: BudgetGuard;
+  /** Set by the composition root when provider construction failed, so /api/health can report it. */
+  startupError?: string;
 }
 export type Env = Record<string, string | undefined>;
 

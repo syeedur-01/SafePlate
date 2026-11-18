@@ -29,6 +29,9 @@ const STORAGES: readonly ScanContext['storage'][] = [
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK === '1';
 
+const ALLOWED_IMAGE_TYPES = new Set(['image/jpeg', 'image/png', 'image/webp']);
+const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
+
 type Kind = ScanRequest['kind'];
 
 /** Returns the scan screen for picking a photo, context and analysis. */
@@ -45,8 +48,24 @@ export function Scan() {
   const slow = useSlowNotice(loading);
 
   function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
-    setFile(event.target.files?.[0] ?? null);
+    const selected = event.target.files?.[0] ?? null;
     setErrorKey(null);
+    if (selected === null) {
+      setFile(null);
+      return;
+    }
+    // Early, friendly client-side checks; the server remains the security boundary.
+    if (!ALLOWED_IMAGE_TYPES.has(selected.type)) {
+      setFile(null);
+      setErrorKey('error.file_type');
+      return;
+    }
+    if (selected.size > MAX_UPLOAD_BYTES) {
+      setFile(null);
+      setErrorKey('error.file_size');
+      return;
+    }
+    setFile(selected);
   }
 
   function handleKindChange(value: string) {
@@ -192,9 +211,11 @@ export function Scan() {
           {errorKey === null ? null : (
             <div role="alert" className="space-y-3 rounded-md border border-risk-high p-3">
               <p className="text-sm text-risk-high">{t(errorKey)}</p>
-              <Button variant="secondary" onClick={() => void analyze()} disabled={loading}>
-                {t('scan.retry')}
-              </Button>
+              {file === null ? null : (
+                <Button variant="secondary" onClick={() => void analyze()} disabled={loading}>
+                  {t('scan.retry')}
+                </Button>
+              )}
             </div>
           )}
 

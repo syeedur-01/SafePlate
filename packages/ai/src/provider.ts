@@ -11,5 +11,7 @@ export interface ProviderContext {
 }
 export interface VisionProvider {
   readonly name: string;
+  /** The provider's model id when it uses one; used to scope cache keys. */
+  readonly model?: string;
   analyze(req: ScanRequest, ctx: ProviderContext): Promise<unknown>;
 }

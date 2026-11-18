@@ -65,6 +65,37 @@ describe('Scan page', () => {
     expect(screen.queryByLabelText('Hours since cooked')).not.toBeInTheDocument();
   });
 
+  it('rejects a photo of an unsupported type before any request is made', async () => {
+    const user = userEvent.setup();
+    renderScan();
+
+    await user.upload(
+      screen.getByLabelText('Choose a photo'),
+      new File(['gif'], 'meal.gif', { type: 'image/gif' }),
+    );
+
+    expect(await screen.findByText('Please choose a JPG, PNG or WebP photo.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Analyze' })).toBeDisabled();
+    expect(scan).not.toHaveBeenCalled();
+    expect(downscaleToJpeg).not.toHaveBeenCalled();
+  });
+
+  it('rejects a photo larger than 10 MB with a size message', async () => {
+    const user = userEvent.setup();
+    renderScan();
+
+    await user.upload(
+      screen.getByLabelText('Choose a photo'),
+      new File([new Uint8Array(10 * 1024 * 1024 + 1)], 'big.png', { type: 'image/png' }),
+    );
+
+    expect(
+      await screen.findByText('That file is too large. Please choose a photo under 10 MB.'),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Analyze' })).toBeDisabled();
+    expect(scan).not.toHaveBeenCalled();
+  });
+
   it('shows an error message and Retry when the scan fails', async () => {
     const user = userEvent.setup();
     vi.mocked(scan).mockRejectedValue(new ApiClientError('ai_unavailable', 'x'));

@@ -51,7 +51,7 @@ async function scanThroughApi(stem: string) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
       kind: stem.startsWith('label') ? 'label' : 'dish',
-      imageBase64: 'Q'.repeat(300),
+      imageBase64: '/9j/4AAQ' + 'Q'.repeat(292),
       mimeType: 'image/jpeg',
       context: CONTEXT,
     }),

@@ -20,7 +20,7 @@ const fetchFn = ((url: string, init?: RequestInit) => {
 }) as unknown as typeof fetch;
 const req = (kind: 'dish' | 'label') => ({
   kind,
-  imageBase64: 'Q'.repeat(300),
+  imageBase64: '/9j/4AAQ' + 'Q'.repeat(293),
   mimeType: 'image/jpeg' as const,
   context: { place: 'home' as const, storage: 'unknown' as const, hoursSinceCooked: null },
 });

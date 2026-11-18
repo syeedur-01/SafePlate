@@ -11,6 +11,7 @@ import {
 } from '@sp/ai';
 import type { AppConfig } from './config';
 import { DEFAULT_DAILY_AI_BUDGET } from './config';
+import { hasValidImageSignature } from './image-signature';
 import { sanitizeLabelResult } from './sanitize';
 
 const CACHE_TTL_SECONDS = 24 * 60 * 60;
@@ -43,8 +44,20 @@ export function registerScanRoute(app: Hono, config: AppConfig): void {
         .join('; ');
       return c.json({ error: { code: 'bad_request', message } }, 400);
     }
+    if (!hasValidImageSignature(parsed.data.mimeType, parsed.data.imageBase64)) {
+      return c.json(
+        { error: { code: 'bad_request', message: 'image bytes do not match the declared type' } },
+        400,
+      );
+    }
 
-    const key = cache === undefined ? null : await imageCacheKey(parsed.data);
+    const key =
+      cache === undefined
+        ? null
+        : await imageCacheKey(parsed.data, {
+            provider: provider.name,
+            model: provider.model,
+          });
     if (cache !== undefined && key !== null) {
       const hit = await cache.get(key);
       if (hit !== null) {

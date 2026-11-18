@@ -12,7 +12,7 @@ import {
 import { createApp } from '../src/app';
 import type { AppConfig } from '../src/config';
 
-const IMG = 'Z'.repeat(300);
+const IMG = '/9j/4AAQ' + 'Z'.repeat(292);
 const body = (over: object = {}) =>
   JSON.stringify({
     kind: 'dish',
@@ -56,6 +56,16 @@ describe('POST /api/scan', () => {
     const text = await res.text();
     expect(ApiErrorSchema.safeParse(JSON.parse(text)).success).toBe(true);
     expect(text).not.toContain('diabetes');
+  });
+  it('rejects image bytes that do not match the declared MIME type with 400', async () => {
+    const app = createApp(cfg(new MockProvider()));
+    // PNG bytes declared as JPEG: the server checks magic bytes, not the declared type.
+    const pngBytes = Buffer.from([
+      0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0, 0, 0, 0,
+    ]).toString('base64');
+    const res = await post(app, body({ imageBase64: pngBytes + 'A'.repeat(200) }));
+    expect(res.status).toBe(400);
+    expect((await res.json()).error.code).toBe('bad_request');
   });
   it('never echoes the image', async () => {
     const res = await post(createApp(cfg(new MockProvider())), body());
@@ -111,7 +121,7 @@ describe('POST /api/scan cache and budget', () => {
       }),
     );
     expect((await post(app, body())).status).toBe(200);
-    const limited = await post(app, body({ imageBase64: 'Y'.repeat(300) }));
+    const limited = await post(app, body({ imageBase64: IMG + 'Y'.repeat(300) }));
     expect(limited.status).toBe(429);
     const limitJson = await limited.json();
     expect(limitJson.error.code).toBe('rate_limited');
