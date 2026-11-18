@@ -2,7 +2,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createApp } from '@sp/api/src/app';
-import { GeminiProvider, MockProvider, type VisionProvider } from '@sp/ai';
+import { GeminiProvider, MockProvider, OllamaProvider, type VisionProvider } from '@sp/ai';
 import { getDishes } from '@sp/knowledge';
 import type { AppConfig } from '@sp/api/src/config';
 import {
@@ -33,6 +33,8 @@ export interface EvalArgs {
   manifest: string | null;
   /** Dataset root that the benchmark manifest's imagePath entries are relative to. */
   dataset: string | null;
+  /** Minimum milliseconds between provider calls; keeps free-tier rate limits. */
+  paceMs: number;
 }
 
 /** Metrics and latency summaries that go into the report text. */
@@ -74,6 +76,7 @@ export function parseArgs(argv: string[]): EvalArgs {
     mode: 'api',
     manifest: null,
     dataset: null,
+    paceMs: 0,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i]!;
@@ -103,6 +106,13 @@ export function parseArgs(argv: string[]): EvalArgs {
       if (value === undefined || value === '') throw new Error('--dataset needs a value');
       args.dataset = value;
       i += 1;
+    } else if (arg === '--pace-ms') {
+      const value = Number(argv[i + 1]);
+      if (!Number.isInteger(value) || value < 0) {
+        throw new Error('--pace-ms must be a non-negative integer');
+      }
+      args.paceMs = value;
+      i += 1;
     } else {
       throw new Error(`unknown argument: ${arg}`);
     }
@@ -114,6 +124,13 @@ export function parseArgs(argv: string[]): EvalArgs {
 export function localProviderFromEnv(env: Record<string, string | undefined>): VisionProvider {
   const name = env['EVAL_PROVIDER'];
   if (name === 'mock') return new MockProvider();
+  if (name === 'ollama') {
+    const model = env['EVAL_MODEL'];
+    if (model === undefined || model === '') {
+      throw new Error('EVAL_PROVIDER=ollama needs EVAL_MODEL (the local Ollama model name)');
+    }
+    return new OllamaProvider({ model, baseUrl: env['EVAL_OLLAMA_BASE_URL'] });
+  }
   if (name === 'gemini') {
     const apiKey = env['GEMINI_API_KEY'];
     const model = env['GEMINI_MODEL'];
@@ -377,6 +394,7 @@ async function runBenchmark(
   datasetRoot: string,
   poster: Poster,
   maxCalls: number,
+  paceMs: number,
 ): Promise<BenchmarkOutcome> {
   const scorable = entries.filter((e) => e.kind === 'dish' && e.mappedDishId !== null);
   const split = 'dev';
@@ -391,6 +409,7 @@ async function runBenchmark(
   let top3 = 0;
   let unknown = 0;
   for (const entry of selected) {
+    if (paceMs > 0) await new Promise((resolve) => setTimeout(resolve, paceMs));
     const outcome = await scanOne(poster, entry.imagePath, 'dish', datasetRoot);
     if (outcome.latencyMs > 0) latencies.push(outcome.latencyMs);
     if (outcome.imageQualityPoor !== null) {
@@ -517,6 +536,7 @@ async function main(): Promise<void> {
       args.dataset,
       poster,
       args.maxCalls,
+      args.paceMs,
     );
   }
 

@@ -93,6 +93,7 @@ describe('parseArgs', () => {
       mode: 'api',
       manifest: null,
       dataset: null,
+      paceMs: 0,
     });
   });
 
@@ -103,6 +104,7 @@ describe('parseArgs', () => {
       mode: 'api',
       manifest: null,
       dataset: null,
+      paceMs: 0,
     });
   });
 
@@ -113,7 +115,13 @@ describe('parseArgs', () => {
       mode: 'local',
       manifest: 'm.json',
       dataset: 'd',
+      paceMs: 0,
     });
+  });
+
+  it('reads --pace-ms and rejects a negative value', () => {
+    expect(parseArgs(['--pace-ms', '4000']).paceMs).toBe(4000);
+    expect(() => parseArgs(['--pace-ms', '-1'])).toThrow();
   });
 
   it('rejects an unknown mode', () => {
@@ -149,6 +157,12 @@ describe('localProviderFromEnv', () => {
     expect(() => localProviderFromEnv({ EVAL_PROVIDER: 'gemini', GEMINI_API_KEY: 'K' })).toThrow(
       'GEMINI_MODEL',
     );
+  });
+
+  it('returns the ollama provider only with a model name', () => {
+    const provider = localProviderFromEnv({ EVAL_PROVIDER: 'ollama', EVAL_MODEL: 'm' });
+    expect(provider.name).toBe('ollama');
+    expect(() => localProviderFromEnv({ EVAL_PROVIDER: 'ollama' })).toThrow('EVAL_MODEL');
   });
 
   it('refuses to default: an unset EVAL_PROVIDER throws', () => {
