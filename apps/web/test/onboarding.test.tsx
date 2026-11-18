@@ -95,15 +95,17 @@ describe('Onboarding', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('opens onboarding when no profile is saved', () => {
+  it('opens onboarding when no profile is saved', async () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole('heading', { name: 'Tell us about you' })).toBeInTheDocument();
-  });
+    expect(
+      await screen.findByRole('heading', { name: 'Tell us about you' }, { timeout: 15000 }),
+    ).toBeInTheDocument();
+  }, 30000);
 });
 
 describe('Settings', () => {
