@@ -1,7 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { cleanup, render, screen } from '@testing-library/react';
+import { act, cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
+import type { ScanResult } from '@sp/contracts';
 import { I18nProvider } from '../src/i18n/i18n';
 import { Scan } from '../src/pages/Scan';
 import { scan, ApiClientError } from '../src/api/client';
@@ -111,5 +112,69 @@ describe('Scan page', () => {
       await screen.findByText('Could not analyze the photo. Please try again.'),
     ).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Retry' })).toBeInTheDocument();
+  });
+
+  it('offers a desktop drag-and-drop zone and a mobile camera/gallery split', () => {
+    renderScan();
+
+    expect(screen.getByText('Drag and drop your food image here')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Browse files' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Open Camera & Take Photo' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Choose from Gallery' })).toBeInTheDocument();
+    // Camera capture goes through a dedicated input, only after an explicit choice.
+    expect(screen.getByLabelText('Open Camera & Take Photo')).toHaveAttribute(
+      'capture',
+      'environment',
+    );
+  });
+
+  it('shows a real analyzing overlay and blocks duplicate submissions while the request runs', async () => {
+    const user = userEvent.setup();
+    let resolveScan: (value: ScanResult) => void = () => {};
+    vi.mocked(scan).mockImplementation(
+      () =>
+        new Promise<ScanResult>((resolve) => {
+          resolveScan = resolve;
+        }),
+    );
+    renderScan();
+
+    await user.upload(
+      screen.getByLabelText('Choose a photo'),
+      new File(['photo'], 'meal.jpg', { type: 'image/jpeg' }),
+    );
+    await user.click(screen.getByRole('button', { name: 'Analyze' }));
+
+    // The overlay reflects the real request state and never fakes success.
+    expect(await screen.findByText('Analyzing your food…')).toBeInTheDocument();
+    const analyzeButton = screen.getByRole('button', { name: 'Analyzing…' });
+    expect(analyzeButton).toBeDisabled();
+
+    await act(async () => {
+      resolveScan({
+        kind: 'dish',
+        candidates: [{ dishId: 'kacchi-biryani', label: 'Kacchi Biryani', confidence: 0.8 }],
+        observations: { spoilageSigns: [], imageQuality: 'good', notes: '' },
+        provider: 'mock',
+        cached: false,
+      });
+    });
+  });
+
+  it('removing the selected photo disables Analyze again', async () => {
+    const user = userEvent.setup();
+    renderScan();
+
+    await user.upload(
+      screen.getByLabelText('Choose a photo'),
+      new File(['photo'], 'meal.jpg', { type: 'image/jpeg' }),
+    );
+    expect(screen.getByRole('button', { name: 'Analyze' })).toBeEnabled();
+
+    await user.click(screen.getByRole('button', { name: 'Remove photo' }));
+
+    expect(screen.getByRole('button', { name: 'Analyze' })).toBeDisabled();
+    expect(screen.queryByRole('button', { name: 'Remove photo' })).not.toBeInTheDocument();
+    expect(scan).not.toHaveBeenCalled();
   });
 });
