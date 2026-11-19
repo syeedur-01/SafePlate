@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { AnalysisResult, Dish, ScanResult } from '@sp/contracts';
 import runtimeJson from '@sp/knowledge/data/runtime/runtime.json';
 import { Navigate, useLocation } from 'react-router-dom';
+import { UtensilsCrossed } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { ForYouCard } from '../components/ForYouCard';
 import { NutritionCard } from '../components/NutritionCard';
@@ -40,6 +41,10 @@ export interface ResultViewProps {
   hasProfile: boolean;
   servings: number;
   onServingsChange: (servings: number) => void;
+  title: string;
+  thumb: string | null;
+  /** Optional id for the title heading, so a caller can label a surrounding section with it. */
+  titleId?: string;
 }
 
 /** Returns the result tabs for an analysis with nutrition, swap suggestions and the shopping list. */
@@ -49,44 +54,68 @@ export function ResultView({
   hasProfile,
   servings,
   onServingsChange,
+  title,
+  thumb,
+  titleId,
 }: ResultViewProps) {
   const { t, lang } = useT();
 
   return (
-    <Tabs defaultValue="safety" className="space-y-4">
-      <TabsList className="w-full">
-        <TabsTrigger value="safety" className="flex-1">
-          {t('result.tab.safety')}
-        </TabsTrigger>
-        <TabsTrigger value="foryou" className="flex-1">
-          {t('result.tab.foryou')}
-        </TabsTrigger>
-        <TabsTrigger value="nutrition" className="flex-1">
-          {t('result.tab.nutrition')}
-        </TabsTrigger>
-        <TabsTrigger value="swap" className="flex-1">
-          {t('result.tab.swap')}
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value="safety">
-        <SafetyCard safety={analysis.safety} />
-      </TabsContent>
-      <TabsContent value="foryou">
-        <ForYouCard warnings={analysis.warnings} hasProfile={hasProfile} />
-      </TabsContent>
-      <TabsContent value="nutrition">
-        <NutritionCard nutrition={analysis.nutrition} dish={dish} />
-      </TabsContent>
-      <TabsContent value="swap" className="space-y-6">
-        <SwapList swaps={analysis.swaps} dishNames={DISH_NAMES[lang]} />
-        <ShoppingList
-          items={analysis.shoppingList}
-          ingredientNames={INGREDIENT_NAMES[lang]}
-          servings={servings}
-          onServingsChange={onServingsChange}
-        />
-      </TabsContent>
-    </Tabs>
+    <div className="space-y-4">
+      <header className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-card">
+        {thumb === null ? (
+          <span
+            aria-hidden="true"
+            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-mint text-primary"
+          >
+            <UtensilsCrossed className="h-6 w-6" />
+          </span>
+        ) : (
+          <img src={thumb} alt="" className="h-14 w-14 shrink-0 rounded-xl object-cover" />
+        )}
+        <div className="min-w-0">
+          <h2 id={titleId} className="truncate text-lg font-semibold text-heading">
+            {title}
+          </h2>
+          <p className="text-xs leading-relaxed text-muted-fg">{t('result.header.source')}</p>
+        </div>
+      </header>
+
+      <Tabs defaultValue="safety">
+        <TabsList className="w-full">
+          <TabsTrigger value="safety" className="flex-1">
+            {t('result.tab.safety')}
+          </TabsTrigger>
+          <TabsTrigger value="foryou" className="flex-1">
+            {t('result.tab.foryou')}
+          </TabsTrigger>
+          <TabsTrigger value="nutrition" className="flex-1">
+            {t('result.tab.nutrition')}
+          </TabsTrigger>
+          <TabsTrigger value="swap" className="flex-1">
+            {t('result.tab.swap')}
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="safety">
+          <SafetyCard safety={analysis.safety} />
+        </TabsContent>
+        <TabsContent value="foryou">
+          <ForYouCard warnings={analysis.warnings} hasProfile={hasProfile} />
+        </TabsContent>
+        <TabsContent value="nutrition">
+          <NutritionCard nutrition={analysis.nutrition} dish={dish} />
+        </TabsContent>
+        <TabsContent value="swap" className="space-y-6">
+          <SwapList swaps={analysis.swaps} dishNames={DISH_NAMES[lang]} />
+          <ShoppingList
+            items={analysis.shoppingList}
+            ingredientNames={INGREDIENT_NAMES[lang]}
+            servings={servings}
+            onServingsChange={onServingsChange}
+          />
+        </TabsContent>
+      </Tabs>
+    </div>
   );
 }
 
@@ -168,6 +197,13 @@ function ResultWithAnalysis({
   });
   const saved = useRef(false);
 
+  const headerTitle =
+    dish !== null
+      ? (DISH_NAMES[lang][dish.id] ?? dish.name_en)
+      : state.scanResult.kind === 'label'
+        ? (state.scanResult.productName ?? t('scan.tab.label'))
+        : (state.scanResult.candidates[0]?.label ?? t('confirm.noneOfThese'));
+
   useEffect(() => {
     if (saved.current) {
       return;
@@ -214,6 +250,8 @@ function ResultWithAnalysis({
       }
       servings={servings}
       onServingsChange={setServings}
+      title={headerTitle}
+      thumb={state.thumbDataUrl}
     />
   );
 }

@@ -84,6 +84,7 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
     'result.tab.foryou': 'For you',
     'result.tab.nutrition': 'Nutrition',
     'result.tab.swap': 'Swap and shopping',
+    'result.header.source': 'Estimated from the photo you scanned, on this device.',
     'result.noNutrition.title': 'Dish identified',
     'result.noNutrition.body':
       'We recognized this dish, but SafePlate does not have reviewed nutrition or safety data for it yet. No score or nutrition numbers are shown, and nothing is guessed.',
@@ -240,6 +241,7 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
     'result.tab.foryou': 'আপনার জন্য',
     'result.tab.nutrition': 'পুষ্টি',
     'result.tab.swap': 'বদল ও কেনাকাটা',
+    'result.header.source': 'আপনার তোলা ছবি থেকে এই ডিভাইসেই আনুমানিক হিসাব।',
     'result.noNutrition.title': 'খাবার শনাক্ত হয়েছে',
     'result.noNutrition.body':
       'এই খাবার আমরা চিনেছি, কিন্তু SafePlate-এ এখনো এর যাচাইকৃত পুষ্টি বা নিরাপত্তা তথ্য নেই। তাই কোনো স্কোর বা পুষ্টির সংখ্যা দেখানো হয় না, এবং কিছু অনুমান করা হয় না।',

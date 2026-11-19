@@ -53,9 +53,6 @@ export function Demo() {
 
       {active === null ? null : (
         <section aria-labelledby="demo-result-title" className="space-y-4">
-          <h2 id="demo-result-title" className="text-lg font-semibold">
-            {t(active.scenario.titleKey)}
-          </h2>
           <ResultView
             analysis={active.analysis}
             dish={getDish(active.scenario.dishId)}
@@ -65,6 +62,9 @@ export function Demo() {
             }
             servings={servings}
             onServingsChange={setServings}
+            title={t(active.scenario.titleKey)}
+            thumb={null}
+            titleId="demo-result-title"
           />
         </section>
       )}

@@ -107,6 +107,34 @@ describe('Result page', () => {
     expect(screen.queryByRole('tab')).not.toBeInTheDocument();
   });
 
+  it('shows the scanned photo and dish title in the result header', () => {
+    render(
+      <I18nProvider lang="en">
+        <MemoryRouter
+          initialEntries={[
+            {
+              pathname: '/result',
+              state: {
+                scanResult: KACCHI_SCAN,
+                dishId: 'kacchi-biryani',
+                thumbDataUrl: 'data:image/jpeg;base64,AAAA',
+              },
+            },
+          ]}
+        >
+          <Routes>
+            <Route path="/result" element={<Result />} />
+          </Routes>
+        </MemoryRouter>
+      </I18nProvider>,
+    );
+
+    expect(screen.getByRole('heading', { name: 'Kacchi Biryani' })).toBeInTheDocument();
+    const thumb = document.querySelector('header img');
+    expect(thumb).toHaveAttribute('src', 'data:image/jpeg;base64,AAAA');
+    expect(screen.getByText(/Estimated from the photo you scanned/)).toBeInTheDocument();
+  });
+
   it('shows the estimated badge on the Nutrition tab', async () => {
     const user = userEvent.setup();
     renderResultPage();
