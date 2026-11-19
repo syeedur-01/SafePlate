@@ -124,4 +124,23 @@ describe('verifyAll', () => {
     expect(text).toContain('missing review_provenance');
     expect(text).toContain('dish d2');
   });
+  it('reports a storage_hours safety rule as disabled', () => {
+    const i = ok();
+    i.sourceIds = new Set(['s']);
+    i.messages = { 'safety.r': { en: 'x', bn: 'y' } };
+    i.safetyRules = [
+      {
+        id: 'r',
+        trigger: { type: 'storage_hours', storage: 'room_temp', minHours: 4 },
+        points: 5,
+        labelKey: 'safety.r',
+        mitigationKeys: [],
+        sourceRef: 's',
+        status: 'draft',
+      },
+    ];
+    const text = verifyAll(i).join('\n');
+    expect(text).toContain('storage_hours triggers are disabled');
+    expect(text).toContain('r');
+  });
 });

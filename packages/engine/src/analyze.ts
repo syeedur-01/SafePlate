@@ -8,8 +8,8 @@ import type {
   SpoilageSign,
   UserProfile,
 } from '@sp/contracts';
-import type { AllergenKeywords, LabelInput } from './label';
-import { analyzeLabel } from './label';
+import type { AllergenKeywords, AllergenMatching, LabelInput } from './label';
+import { LABEL_UNREADABLE_NOTICE_KEY, analyzeLabel } from './label';
 import { computeNutrition } from './nutrition';
 import { scoreSafety } from './safety';
 import { buildShoppingList } from './shopping';
@@ -28,6 +28,7 @@ export interface AnalyzeInput {
   safetyRules: SafetyRule[];
   healthRules: HealthRule[];
   allergenKeywords: AllergenKeywords;
+  allergenMatching?: AllergenMatching;
   today: string;
   servings?: number; // default 1
 }
@@ -54,11 +55,17 @@ export function analyze(input: AnalyzeInput): AnalysisResult {
       profile: input.profile,
       rules: input.healthRules,
       keywords: input.allergenKeywords,
+      matching: input.allergenMatching,
     });
-    const safety = scoreSafety(
+    const base = scoreSafety(
       { ...shared, dishTags: [], label: { expiryDate: label.expiryDate } },
       input.safetyRules,
     );
+    // No detection from unreadable text is not an allergen-free verdict.
+    const safety =
+      label.ingredientsText === null
+        ? { ...base, notices: [...base.notices, LABEL_UNREADABLE_NOTICE_KEY] }
+        : base;
     return { dishId: null, safety, warnings, nutrition: null, swaps: [], shoppingList: [] };
   }
 

@@ -38,13 +38,13 @@ describe('detectAllergens', () => {
   });
   it('prefers declared over ingredient detection', () => {
     expect(detectAllergens({ ingredientsText: 'milk', declaredAllergens: ['milk'] }, kw)).toEqual([
-      { allergen: 'milk', via: 'declared' },
+      { allergen: 'milk', via: 'declared', uncertain: false },
     ]);
   });
   it('is conservative: soybean matches soy when soybean is listed as a keyword', () => {
     expect(
       detectAllergens({ ingredientsText: 'soybean oil', declaredAllergens: [] }, kw)[0],
-    ).toEqual({ allergen: 'soy', via: 'ingredients' });
+    ).toEqual({ allergen: 'soy', via: 'ingredients', uncertain: false });
   });
   it('matches words split by punctuation and casing', () => {
     expect(
@@ -80,7 +80,7 @@ describe('detectAllergens', () => {
     ).toEqual([]);
     expect(
       detectAllergens({ ingredientsText: 'মিক্সড বাদাম', declaredAllergens: [] }, nuts),
-    ).toEqual([{ allergen: 'tree_nuts', via: 'ingredients' }]);
+    ).toEqual([{ allergen: 'tree_nuts', via: 'ingredients', uncertain: false }]);
   });
   it('handles missing text', () => {
     expect(detectAllergens({ ingredientsText: null, declaredAllergens: [] }, kw)).toEqual([]);

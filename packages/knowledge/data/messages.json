@@ -178,5 +178,17 @@
   "nutrient.sodium_mg": {
     "en": "Sodium",
     "bn": "সোডিয়াম"
+  },
+  "warn.allergen_may_contain": {
+    "en": "This product may contain {allergen}. This comes from a may-contain statement or an uncertain match in the ingredient list, not a confirmed ingredient. Check the physical label to be sure.",
+    "bn": "এই পণ্যে {allergen} থাকতে পারে। এটি লেবেলের may-contain সতর্কতা বা উপাদান তালিকার অনিশ্চিত মিল থেকে আসা, নিশ্চিত উপাদান নয়। নিশ্চিত হতে মূল লেবেল দেখুন।"
+  },
+  "notice.visual_observation": {
+    "en": "Spoilage signs are visual observations from the photo only. They are not proof that the food is safe or unsafe.",
+    "bn": "নষ্ট হওয়ার লক্ষণগুলো শুধু ছবি থেকে পাওয়া ভিজ্যুয়াল পর্যবেক্ষণ। এগুলো খাবার ভালো বা নষ্ট — তার প্রমাণ নয়।"
+  },
+  "notice.label_unreadable": {
+    "en": "The ingredients text could not be read from the label. Nothing was detected, but that is not the same as allergen-free.",
+    "bn": "লেবেল থেকে উপাদানের লেখা পড়া যায়নি। কিছু ধরা পড়েনি, তবে এর অর্থ অ্যালার্জেনমুক্ত নয়।"
   }
 }

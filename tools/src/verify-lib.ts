@@ -86,8 +86,16 @@ export function verifyAll(input: VerifyInput): string[] {
       problems.push(`dish ${dish.id}: missing review_provenance`);
   }
 
-  // Safety rules: sources resolve, message keys resolve.
+  // Safety rules: sources resolve, message keys resolve. Storage-hour rules are rejected:
+  // no authoritative source supports an hour threshold and the UI never captures storage
+  // context, so such a rule could never fire honestly.
   for (const rule of input.safetyRules) {
+    if (rule.trigger.type === 'storage_hours') {
+      problems.push(
+        `safety rule ${rule.id}: storage_hours triggers are disabled (no sourced threshold; ` +
+          'the UI does not capture hours since cooking) - remove the rule or add a professionally sourced one',
+      );
+    }
     if (rule.sourceRef !== null && !input.sourceIds.has(rule.sourceRef)) {
       problems.push(`safety rule ${rule.id}: unknown sourceRef ${rule.sourceRef}`);
     }

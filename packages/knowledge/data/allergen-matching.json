@@ -1,0 +1,34 @@
+{
+  "uncertain": {
+    "milk": ["kheer", "payesh", "firni", "ক্ষীর", "পায়েস", "ফিরনি", "গুঁড়া"],
+    "wheat_gluten": ["flour"],
+    "tree_nuts": ["badam", "বাদাম"]
+  },
+  "suppress": {
+    "wheat_gluten": [
+      "rice flour",
+      "corn flour",
+      "maize flour",
+      "chickpea flour",
+      "gram flour",
+      "besan flour",
+      "lentil flour",
+      "dal flour",
+      "potato flour",
+      "tapioca flour",
+      "arrowroot flour",
+      "rice noodles",
+      "rice pasta",
+      "rice vermicelli"
+    ]
+  },
+  "advisoryPhrases": [
+    "may contain",
+    "may also contain",
+    "may be present",
+    "traces of",
+    "থাকতে পারে"
+  ],
+  "negationBefore": ["does not contain", "does not have", "free from", "made without", "without"],
+  "negationAfter": ["ছাড়া", "মুক্ত", "free"]
+}

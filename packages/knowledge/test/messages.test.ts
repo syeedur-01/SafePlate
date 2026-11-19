@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { MessagesFileSchema, SafetyRulesFileSchema, HealthRulesFileSchema } from '@sp/contracts';
-import { getMessages, getAllergenKeywords } from '../src';
+import { getMessages, getAllergenKeywords, getAllergenMatching } from '../src';
 import safety from '../data/proposals/safety-rules-proposals.json';
 import health from '../data/proposals/health-rules-proposals.json';
 
@@ -21,9 +21,12 @@ describe('messages', () => {
       ...rules.flatMap((r) => [r.labelKey, ...r.mitigationKeys]),
       ...hr.map((r) => r.messageKey),
       'warn.allergen_present',
+      'warn.allergen_may_contain',
       'warn.insufficient_data',
       'notice.chemical_limit',
       'notice.poor_image',
+      'notice.visual_observation',
+      'notice.label_unreadable',
     ];
     expect(keys.filter((k) => !m[k])).toEqual([]);
   });
@@ -58,5 +61,29 @@ describe('allergen keywords', () => {
         a,
       ).toBe(true);
     }
+  });
+  it('does not keep ambiguous broad terms as confident keywords', () => {
+    const k = getAllergenKeywords();
+    // These moved to the uncertain/suppress rules in allergen-matching.json: generic
+    // "flour" alone is not necessarily wheat, and bare "badam/বাদাম" can mean peanut.
+    expect(k.wheat_gluten).not.toContain('flour');
+    expect(k.tree_nuts).not.toContain('badam');
+    expect(k.tree_nuts).not.toContain('বাদাম');
+    expect(k.milk).not.toContain('kheer');
+  });
+});
+describe('allergen matching rules', () => {
+  it('validates and keeps every rule list non-empty', () => {
+    const m = getAllergenMatching();
+    expect(m.advisoryPhrases.length).toBeGreaterThan(0);
+    expect(m.negationBefore.length).toBeGreaterThan(0);
+    expect(m.negationAfter.length).toBeGreaterThan(0);
+    for (const [allergen, words] of Object.entries(m.uncertain)) {
+      expect(words?.length ?? 0, allergen).toBeGreaterThan(0);
+    }
+  });
+  it('has a suppress phrase for at least the generic wheat term', () => {
+    const m = getAllergenMatching();
+    expect(m.suppress.wheat_gluten).toContain('rice flour');
   });
 });
