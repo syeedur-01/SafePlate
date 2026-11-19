@@ -123,13 +123,17 @@ describe('accessibility', () => {
     expect(images.filter((img) => img.getAttribute('alt') === null)).toEqual([]);
   });
 
-  it('makes every form control in Onboarding reachable by its label', () => {
+  it('makes every form control in Onboarding reachable by its label', async () => {
+    const user = userEvent.setup();
     const store = new LocalProfileStore(mem());
     render(
       <I18nProvider lang="en">
         <Onboarding store={store} now={() => CLOCK} onDone={() => {}} />
       </I18nProvider>,
     );
+
+    // The form lives behind the landing's "Create Your Profile" choice.
+    await user.click(screen.getByRole('button', { name: /Create Your Profile/ }));
 
     const controls = Array.from(document.querySelectorAll('input'));
     expect(controls.length).toBeGreaterThan(5);

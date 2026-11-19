@@ -111,6 +111,22 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
       'I agree to store this health information only on this device. I can delete it at any time.',
     'onboarding.save': 'Save',
     'onboarding.skip': 'Skip',
+    'welcome.tagline': 'Understand your food. Make safer, smarter choices.',
+    'welcome.intro':
+      'Photograph a dish or a package label and SafePlate shows a transparent safety check, estimated nutrition, and warnings that fit you.',
+    'welcome.capability.scan': 'Scan a home-cooked dish or a packaged-food label in seconds.',
+    'welcome.capability.safety':
+      'See a safety score where every deducted point links to visible evidence.',
+    'welcome.capability.nutrition':
+      'Get estimated nutrition from approved food-composition data — never invented numbers.',
+    'welcome.capability.personal':
+      'Your health profile stays on this device and personalizes the warnings.',
+    'welcome.createTitle': 'Create Your Profile',
+    'welcome.createBody':
+      'Personalize food insights based on your health conditions and allergies.',
+    'welcome.skipTitle': 'Skip for Now',
+    'welcome.skipBody': 'Explore SafePlate without creating a personal profile.',
+    'welcome.back': 'Back',
     'settings.editTitle': 'Your profile',
     'settings.deleteBody': 'This removes your health profile from this device.',
     'settings.deleteData': 'Delete my data',
@@ -240,6 +256,22 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
       'এই স্বাস্থ্য তথ্য শুধু এই ডিভাইসে রাখতে আমি সম্মত। আমি যেকোনো সময় এটি মুছে ফেলতে পারি।',
     'onboarding.save': 'সংরক্ষণ করুন',
     'onboarding.skip': 'এড়িয়ে যান',
+    'welcome.tagline': 'আপনার খাবার বুঝুন। আরও নিরাপদ, স্মার্ট সিদ্ধান্ত নিন।',
+    'welcome.intro':
+      'খাবার বা প্যাকেটের লেবেলের ছবি তুললে SafePlate স্বচ্ছ নিরাপত্তা যাচাই, আনুমানিক পুষ্টি এবং আপনার জন্য প্রাসঙ্গিক সতর্কতা দেখায়।',
+    'welcome.capability.scan':
+      'বাড়ির রান্না বা প্যাকেটজাত খাবারের লেবেল কয়েক সেকেন্ডে স্ক্যান করুন।',
+    'welcome.capability.safety':
+      'এমন একটি নিরাপত্তা স্কোর দেখুন যেখানে প্রতিটি পয়েন্ট দৃশ্যমান প্রমাণের সঙ্গে যুক্ত।',
+    'welcome.capability.nutrition':
+      'অনুমোদিত খাদ্য-উপাদান তালিকা থেকে আনুমানিক পুষ্টি দেখুন — কোনো সংখ্যা বানানো হয় না।',
+    'welcome.capability.personal':
+      'আপনার স্বাস্থ্য প্রোফাইল শুধু এই ডিভাইসে থাকে এবং সতর্কতাগুলো ব্যক্তিগত করে।',
+    'welcome.createTitle': 'আপনার প্রোফাইল তৈরি করুন',
+    'welcome.createBody': 'স্বাস্থ্য অবস্থা ও অ্যালার্জির ভিত্তিতে খাবারের তথ্য আপনার মতো করে নিন।',
+    'welcome.skipTitle': 'এখন এড়িয়ে যান',
+    'welcome.skipBody': 'ব্যক্তিগত প্রোফাইল ছাড়াই SafePlate ঘুরে দেখুন।',
+    'welcome.back': 'ফিরে যান',
     'settings.editTitle': 'আপনার প্রোফাইল',
     'settings.deleteBody': 'এটি এই ডিভাইস থেকে আপনার স্বাস্থ্য প্রোফাইল মুছে ফেলবে।',
     'settings.deleteData': 'আমার তথ্য মুছে ফেলুন',
