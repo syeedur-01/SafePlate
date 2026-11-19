@@ -6,13 +6,21 @@ const ok = (): VerifyInput => ({
     makeDish({
       id: 'd',
       ingredients: [{ ingredient_id: 'x', grams_raw: 10, quantity_basis: 'ESTIMATE' }],
+      review_provenance: 'ai_assisted_review',
     }) as never,
   ],
-  ingredients: [makeIngredient({ id: 'x', energy_kcal: 100 })],
+  ingredients: [
+    makeIngredient({
+      id: 'x',
+      energy_kcal: 100,
+      review_provenance: 'source_verified',
+      nutrient_sources: { energy_kcal: { source_id: 'FCTB-2013', food_code: '01_0025' } },
+    }),
+  ],
   safetyRules: [],
   healthRules: [],
   messages: {},
-  sourceIds: new Set(),
+  sourceIds: new Set(['bd-fctb-2013']),
 });
 describe('verifyAll', () => {
   it('passes consistent data', () => {
@@ -65,5 +73,55 @@ describe('verifyAll', () => {
     const i = ok();
     i.dishes = [i.dishes[0]!, i.dishes[0]!];
     expect(verifyAll(i).join('\n')).toContain('d');
+  });
+  it('reports a nutrient value without a per-value source entry', () => {
+    const i = ok();
+    i.ingredients = [
+      makeIngredient({ id: 'x', energy_kcal: 100, review_provenance: 'source_verified' }),
+    ];
+    const text = verifyAll(i).join('\n');
+    expect(text).toContain('x');
+    expect(text).toContain('energy_kcal');
+  });
+  it('reports an unresolvable provenance source_id', () => {
+    const i = ok();
+    i.ingredients = [
+      makeIngredient({
+        id: 'x',
+        energy_kcal: 100,
+        review_provenance: 'source_verified',
+        nutrient_sources: { energy_kcal: { source_id: 'UNKNOWN-DB' } },
+      }),
+    ];
+    const text = verifyAll(i).join('\n');
+    expect(text).toContain('UNKNOWN-DB');
+    expect(text).toContain('source register');
+  });
+  it('passes a provenance source_id that is a register id directly', () => {
+    const i = ok();
+    i.sourceIds = new Set(['bd-fctb-2013', 'usda-fdc']);
+    i.ingredients = [
+      makeIngredient({
+        id: 'x',
+        energy_kcal: 100,
+        review_provenance: 'source_verified',
+        nutrient_sources: { energy_kcal: { source_id: 'usda-fdc', fdc_id: 123456 } },
+      }),
+    ];
+    expect(verifyAll(i)).toEqual([]);
+  });
+  it('reports an ingredient missing review_provenance', () => {
+    const i = ok();
+    i.ingredients = [makeIngredient({ id: 'x', energy_kcal: 100 })];
+    const text = verifyAll(i).join('\n');
+    expect(text).toContain('missing review_provenance');
+    expect(text).toContain('ingredient x');
+  });
+  it('reports a dish missing review_provenance', () => {
+    const i = ok();
+    i.dishes = [makeDish({ id: 'd2' }) as never];
+    const text = verifyAll(i).join('\n');
+    expect(text).toContain('missing review_provenance');
+    expect(text).toContain('dish d2');
   });
 });

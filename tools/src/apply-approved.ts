@@ -14,6 +14,7 @@ import {
   type GapApprovalRow,
   type UsdaApproval,
 } from './apply-lib';
+import { deriveIngredientReviewProvenance } from './review-provenance';
 
 const knowledgeDataUrl = new URL('../../packages/knowledge/data/', import.meta.url);
 
@@ -199,6 +200,10 @@ function main(): void {
   }
 
   const result = applyApprovals(ingredientsFile.ingredients, fctb, usda, gap);
+  const withProvenance = result.ingredients.map((i) => ({
+    ...i,
+    review_provenance: deriveIngredientReviewProvenance(i),
+  }));
   writeln(
     `approvals loaded: ${fctb.length} FCTB rows, ${usda.length} USDA records, ` +
       `${gap.length} gap entries; ingredients changed: ${result.applied.length}`,
@@ -210,7 +215,7 @@ function main(): void {
       source: 'data/source/ingredients.json (never edited)',
       generator: 'pnpm --filter @sp/tools apply-approved (tools/src/apply-approved.ts)',
     },
-    ingredients: result.ingredients,
+    ingredients: withProvenance,
   });
   writeFileSync(
     fileURLToPath(new URL('normalized/ingredients.json', knowledgeDataUrl)),

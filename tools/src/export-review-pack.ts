@@ -2,9 +2,11 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import {
   HealthRulesFileSchema,
+  NUTRIENT_KEYS,
   SafetyRulesFileSchema,
   type Dish,
   type HealthRule,
+  type Ingredient,
   type SafetyRule,
 } from '@sp/contracts';
 import { getDishes, getIngredients } from '@sp/knowledge';
@@ -38,6 +40,41 @@ function dishRows(dishes: Dish[], namesById: Map<string, string>): Array<Record<
         expert_decision: null,
       });
     }
+  }
+  return rows;
+}
+
+/**
+ * Returns the ingredients-review rows: present values, missing nutrients, review provenance,
+ * the source register ids already attached, and guidance for filling each gap. The
+ * proposed_value and expert_decision columns are left empty for a human to fill.
+ */
+function ingredientRows(ingredients: Ingredient[]): Array<Record<string, CsvValue>> {
+  const guidanceFor = (key: string): string =>
+    key === 'sat_fat_g' || key === 'sugars_g'
+      ? 'FCTB-2013 PDF tables have no sat_fat/sugars columns; try USDA FDC or IFCT 2017'
+      : 'fill only from a source registered in sources.json';
+  const rows: Array<Record<string, CsvValue>> = [];
+  for (const ingredient of ingredients) {
+    const missing: string[] = [];
+    const row: Record<string, CsvValue> = {
+      ingredient_id: ingredient.id,
+      name_en: ingredient.name_en,
+      name_bn: ingredient.name_bn,
+      basis: ingredient.basis,
+    };
+    for (const key of NUTRIENT_KEYS) {
+      row[key] = ingredient[key];
+      if (ingredient[key] === null) missing.push(key);
+    }
+    row.missing_nutrients = missing.length === 0 ? null : missing.join(', ');
+    row.review_provenance = ingredient.review_provenance ?? null;
+    row.registered_sources = [...new Set(ingredient.source.map((s) => s.source_id))].join(', ');
+    row.guidance = missing.length === 0 ? null : missing.map(guidanceFor).join(' | ');
+    row.proposed_value = null;
+    row.proposed_source_id = null;
+    row.expert_decision = null;
+    rows.push(row);
   }
   return rows;
 }
@@ -113,7 +150,8 @@ function readProposal(relativePath: string, what: string): unknown {
 
 function main(): void {
   const dishes = getDishes();
-  const namesById = new Map(getIngredients().map((i) => [i.id, i.name_en]));
+  const ingredients = getIngredients();
+  const namesById = new Map(ingredients.map((i) => [i.id, i.name_en]));
 
   const safety = SafetyRulesFileSchema.parse(
     readProposal('proposals/safety-rules-proposals.json', 'safety rule proposals'),
@@ -148,6 +186,25 @@ function main(): void {
   );
 
   writeFileSync(
+    fileURLToPath(new URL('ingredients-review.csv', reviewUrl)),
+    toCsv(ingredientRows(ingredients), [
+      'ingredient_id',
+      'name_en',
+      'name_bn',
+      'basis',
+      ...NUTRIENT_KEYS,
+      'missing_nutrients',
+      'review_provenance',
+      'registered_sources',
+      'guidance',
+      'proposed_value',
+      'proposed_source_id',
+      'expert_decision',
+    ]),
+    'utf8',
+  );
+
+  writeFileSync(
     fileURLToPath(new URL('rules-review.csv', reviewUrl)),
     toCsv(ruleRows(safety, health), [
       'rule_id',
@@ -170,7 +227,11 @@ function main(): void {
   writeln(
     `rules-review.csv: ${safety.length + health.length} rules (${safety.length} safety, ${health.length} health)`,
   );
-  writeln('done: packages/knowledge/data/review/dishes-review.csv, rules-review.csv');
+  const withGaps = ingredients.filter((i) => NUTRIENT_KEYS.some((k) => i[k] === null)).length;
+  writeln(`ingredients-review.csv: ${ingredients.length} rows (${withGaps} with nutrient gaps)`);
+  writeln(
+    'done: packages/knowledge/data/review/dishes-review.csv, ingredients-review.csv, rules-review.csv',
+  );
 }
 
 main();

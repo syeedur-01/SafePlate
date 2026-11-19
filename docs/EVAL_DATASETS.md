@@ -64,3 +64,6 @@ and hashes come from the Mendeley public API (`/public-api/datasets/<id>/files`)
 3. Every manifest entry records `source`, `licence`, and the original dataset DOI/URL.
 4. Any report built from these datasets credits the source in `docs/EVAL_REPORT.md`.
 5. Re-verify licences before any public redistribution of derived assets (release gate).
+6. FoodBD nutrition estimate fields are dataset annotations with their own provenance;
+   they are never promoted into `packages/knowledge` nutrition data and never presented
+   as SafePlate nutrient truth (Phase 6 rule).
