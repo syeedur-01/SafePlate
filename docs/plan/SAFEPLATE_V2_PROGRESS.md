@@ -1,6 +1,6 @@
 # SafePlate v2.0.0 Progress
 
-Updated: 2026-11-18
+Updated: 2026-11-19
 Branch: `improvement/development`
 Baseline tag: `v1.0.0` (remote tag → `a377f77`; local tag → `a38d74e` — see notes)
 Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
@@ -13,7 +13,7 @@ Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 | 3     | Complete    | `1396571` + `e5d14a4` + `0c53fa7`           | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Real Gemini run deferred to Phase 4 (spend gate); dataset + approved mappings + harness in place       |
 | 4     | Complete    | `7973d46` + `fb7daeb` + Phase 4 docs commit | Local run executed and documented (see notes)                                      | Gemini column spend-gated; recommendation option (a): cloud Gemini stays production primary            |
 | 5     | Complete    | `20d4d6a`                                   | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Recognition catalogue (46 entries) separate from nutrition; identified-unsupported UI state; see notes |
-| 6     | Not started |                                             |                                                                                    | Human-review dependent                                                                                 |
+| 6     | Complete    | `eead3f8`                                   | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Nutrient-level provenance + honest review statuses; remaining gaps queued for human review; see notes  |
 | 7     | Not started |                                             |                                                                                    |                                                                                                        |
 | 8     | Not started |                                             |                                                                                    |                                                                                                        |
 | 9     | Not started |                                             |                                                                                    |                                                                                                        |
@@ -21,7 +21,7 @@ Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 
 ## Current phase
 
-Phase 5 — separate recognition catalogue from approved nutrition knowledge (complete at `20d4d6a`).
+Phase 6 — nutrition knowledge provenance (implementation complete; human-review queue generated, no values invented).
 
 ## Baseline (recorded 2026-11-18, commit `fc6b771`)
 
@@ -62,6 +62,13 @@ Phase 5 — separate recognition catalogue from approved nutrition knowledge (co
   - Engine unchanged: `analyze` still throws for a dish id outside the approved nutrition set — the guard that keeps unapproved catalogue items out of deterministic nutrition/safety scoring.
   - Web: Confirm offers the full catalogue; Result shows a distinct "Dish identified / no reviewed nutrition or safety data" state (bilingual) for catalogue-only dishes, with no score, no nutrition card, and no history entry.
   - Data pipeline incident caught by tests: a plain `normalize` run reverted `data/normalized/ingredients.json` approved values (it is written by `apply-approved`, which must run after `normalize`); restored from Git and re-ran `apply-approved`; `pnpm verify` and engine sodium-anchor tests confirm data integrity.
+- Phase 6 (2026-11-19):
+  - Contracts (additive): `ProvenanceSchema` (registered or mapped source id plus record locator — food code, FDC id, PDF page, table, row name, description, basis, preparation; detail fields may be `null` when explicitly absent); `review_provenance` enum (`source_verified` / `ai_assisted_review` / `human_review_pending` / `human_reviewed`) added to ingredients and dishes; `SourceEntrySchema` gains optional `doi`, `licence`, `version`.
+  - Derivation (`tools/src/review-provenance.ts`): an ingredient is `source_verified` only when at least one value is present and every present value carries a per-nutrient source entry, otherwise `human_review_pending`; every dish is `ai_assisted_review` per the P2-DH01 approval record (AI-assisted stand-in panel, owner accepted, no human nutritionist involved) — never claimed as human expert review. Wired into `normalize` and `apply-approved`; normalized data re-generated in the documented pipeline order (normalize → apply-approved); no nutrient value changed (verified by diff).
+  - `verify` hardened: provenance source ids must resolve to the sources register directly or via the mapped provenance vocabulary (FCTB-2013/USDA-FDC/IFCT-2017); every present nutrient value must have a `nutrient_sources` entry; missing `review_provenance` is a problem. Real data: 0 problems.
+  - Human-review queue: `data/review/ingredients-review.csv` (56 rows, 31 with nutrient gaps; columns for present values, missing nutrients, review provenance, registered sources, per-gap guidance and empty expert-decision columns). The remaining real gaps stay `null`: sat_fat 21, sugars 31, energy 4 — the FCTB-2013 PDF tables have no sat_fat/sugars columns and the four unverified mixture ingredients need a verified source; no values invented.
+  - Sources register: `usda-fdc` licence recorded as CC0 1.0 (public domain, per the FoodData Central API guide, checked 2026-11-19). FCTB-2013 / IFCT-2017 licences are not yet verified and remain unrecorded rather than guessed.
+  - FoodBD rule made explicit in `docs/EVAL_DATASETS.md`: dataset nutrition estimate fields are annotations with their own provenance, never promoted into `packages/knowledge`.
 
 ## Decisions and evidence
 
@@ -75,6 +82,7 @@ Phase 5 — separate recognition catalogue from approved nutrition knowledge (co
 - **Gemini benchmark run (Phase 4, still open):** the 200-image Gemini column needs either a key confirmed to be on the free tier or explicit approval of a paid run (estimated well under $1); command recorded in `docs/MODEL_COMPARISON.md` §4. The Phase 4 recommendation does not depend on this run.
 - **KV cache provisioning (Phase 2 follow-up):** using `KvScanCache` in the deployed Worker requires creating the `SCAN_CACHE_KV` namespace and uncommenting the `[[kv_namespaces]]` block in `apps/api/wrangler.toml` — a Cloudflare resource creation, hence user-approved work.
 - **Global budget enforcement:** the daily AI budget is per-isolate in-memory; globally atomic enforcement needs Durable Objects (paid-tier feature on the free plan) — deferred behind the spend gate.
+- **Human nutrition review (Phase 6):** `data/review/ingredients-review.csv` is ready for a qualified reviewer (31 ingredients with nutrient gaps; sat_fat/sugars need USDA FDC or IFCT 2017 lookups). Filling those gaps is human-review work, not agent work.
 - Upcoming: production/deploy + public-release gates (Phase 10).
 
 ## Risks / known limitations
@@ -87,4 +95,4 @@ Phase 5 — separate recognition catalogue from approved nutrition knowledge (co
 
 ## Next phase
 
-Phase 6 — strengthen nutrition knowledge and provenance (human-review dependent). Open decisions for the user: (a) run the spend-gated Gemini benchmark column (command in `docs/MODEL_COMPARISON.md` §4); (b) approve proposed catalogue/eval label mappings beyond the current 8, so benchmark recognition can be scored against catalogue-only dishes too.
+Phase 7 — food safety and allergen correctness. Open decisions for the user: (a) run the spend-gated Gemini benchmark column (command in `docs/MODEL_COMPARISON.md` §4); (b) approve proposed catalogue/eval label mappings beyond the current 8, so benchmark recognition can be scored against catalogue-only dishes too.
