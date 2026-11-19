@@ -14,14 +14,14 @@ Governing spec: `SAFEPLATE_V2_IMPROVEMENT_PLAN.md` (repo root)
 | 4     | Complete    | `7973d46` + `fb7daeb` + Phase 4 docs commit | Local run executed and documented (see notes)                                      | Gemini column spend-gated; recommendation option (a): cloud Gemini stays production primary            |
 | 5     | Complete    | `20d4d6a`                                   | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Recognition catalogue (46 entries) separate from nutrition; identified-unsupported UI state; see notes |
 | 6     | Complete    | `eead3f8`                                   | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Nutrient-level provenance + honest review statuses; remaining gaps queued for human review; see notes  |
-| 7     | Not started |                                             |                                                                                    |                                                                                                        |
+| 7     | Complete    | `a30464e`                                   | `pnpm check` exit 0, `pnpm verify` 0 problems                                      | Honest allergen matching (uncertain/advisory/negation), new notices, storage-hours disabled; see notes |
 | 8     | Not started |                                             |                                                                                    |                                                                                                        |
 | 9     | Not started |                                             |                                                                                    |                                                                                                        |
 | 10    | Not started |                                             |                                                                                    | STOP: requires explicit user approval (release/deploy gate)                                            |
 
 ## Current phase
 
-Phase 6 — nutrition knowledge provenance (implementation complete; human-review queue generated, no values invented).
+Phase 7 — food safety and allergen correctness (complete at `a30464e`).
 
 ## Baseline (recorded 2026-11-18, commit `fc6b771`)
 
@@ -69,6 +69,13 @@ Phase 6 — nutrition knowledge provenance (implementation complete; human-revie
   - Human-review queue: `data/review/ingredients-review.csv` (56 rows, 31 with nutrient gaps; columns for present values, missing nutrients, review provenance, registered sources, per-gap guidance and empty expert-decision columns). The remaining real gaps stay `null`: sat_fat 21, sugars 31, energy 4 — the FCTB-2013 PDF tables have no sat_fat/sugars columns and the four unverified mixture ingredients need a verified source; no values invented.
   - Sources register: `usda-fdc` licence recorded as CC0 1.0 (public domain, per the FoodData Central API guide, checked 2026-11-19). FCTB-2013 / IFCT-2017 licences are not yet verified and remain unrecorded rather than guessed.
   - FoodBD rule made explicit in `docs/EVAL_DATASETS.md`: dataset nutrition estimate fields are annotations with their own provenance, never promoted into `packages/knowledge`.
+- Phase 7 (`a30464e`):
+  - Allergen matching reworked (`engine/label.ts`): three evidence classes — `declared` (manufacturer statement) and confident keyword matches → `avoid` / `warn.allergen_present`; uncertain generic-term matches and explicit "may contain"/"থাকতে পারে" advisories → `caution` / `warn.allergen_may_contain` (advisory is its own `via`, distinct from confirmed detection). Negation phrases ("does not contain", "free from", "দুধ ছাড়া", hyphenated "x-free") suppress matches; advisory zones are comma-bounded so "wheat flour, may contain milk" still confirms wheat. Unreadable label text adds `notice.label_unreadable` — no detection is never an allergen-free verdict.
+  - New data file `data/allergen-matching.json` (uncertain terms, suppress phrases for non-wheat flours, advisory and negation phrases) with a validated knowledge loader (`getAllergenMatching`); broad keywords (`flour`, bare `badam`/`বাদাম`, `kheer`/`payesh`/`firni`, generic `গুঁড়া`) moved out of the confident lists so rice flour and chinabadam no longer false-positive while qualified phrases ("wheat flour", "কাঠবাদাম") stay confirmed. Romanized inflection `chingrir` added.
+  - Label-phrase corpus tests (`engine/test/label-corpus.test.ts`, 17 cases) over the real keyword data: positives, negatives, ambiguous terms, Bangla script, romanized Bangla, negation, advisories, OCR-style noise. Unit examples only — no accuracy figure is claimed from synthetic tests.
+  - Spoilage signals now add `notice.visual_observation`: photo observations are not proof of safe or unsafe. All three new messages are bilingual in `messages.json`.
+  - Storage-duration path decided: disabled. No authoritative source supports an hour threshold and the scan UI never captures storage context; `verify` now rejects any safety rule with a `storage_hours` trigger (engine trigger handling kept for future sourced rules, with tests).
+  - `docs/TECH_DESIGN.md` §4.2 corrected: the safety point weights were never reviewed by a qualified professional (P2-DH01 records the AI-assisted stand-in panel) and stay labelled as heuristics; §4.3 documents the new matching classes.
 
 ## Decisions and evidence
 
@@ -95,4 +102,4 @@ Phase 6 — nutrition knowledge provenance (implementation complete; human-revie
 
 ## Next phase
 
-Phase 7 — food safety and allergen correctness. Open decisions for the user: (a) run the spend-gated Gemini benchmark column (command in `docs/MODEL_COMPARISON.md` §4); (b) approve proposed catalogue/eval label mappings beyond the current 8, so benchmark recognition can be scored against catalogue-only dishes too.
+Phase 8 — frontend journey, recovery and accessibility. Open decisions for the user: (a) run the spend-gated Gemini benchmark column (command in `docs/MODEL_COMPARISON.md` §4); (b) approve proposed catalogue/eval label mappings beyond the current 8, so benchmark recognition can be scored against catalogue-only dishes too.
