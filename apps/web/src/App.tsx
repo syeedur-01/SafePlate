@@ -1,8 +1,10 @@
-import { lazy, Suspense, useEffect } from 'react';
-import { History, Info, Languages, ScanLine, Settings } from 'lucide-react';
-import { Navigate, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { History, Info, Languages, Moon, ScanLine, Settings, Sun } from 'lucide-react';
+import { Link, Navigate, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useT } from './i18n/i18n';
 import { cn } from './lib/cn';
+import { applyTheme, effectiveTheme, loadTheme, saveTheme, type ThemeChoice } from './lib/theme';
+import { Logo } from './components/Logo';
 import { DEFAULT_PROFILE_STORE } from './state/profile-store';
 
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
@@ -23,13 +25,25 @@ const NAV_ITEMS = [
   { to: '/about', key: 'nav.about', Icon: Info, end: false },
 ] as const;
 
-/** Returns the app shell with top bar, routed content and mobile bottom navigation. */
+/** Returns the app shell with a branded top bar, routed content and mobile bottom navigation. */
 export function App() {
   const { t, lang, setLang } = useT();
   const location = useLocation();
   const navigate = useNavigate();
   const nextLang = lang === 'en' ? 'bn' : 'en';
   const needsOnboarding = location.pathname !== '/welcome' && !DEFAULT_PROFILE_STORE.hasSaved();
+  const [theme, setTheme] = useState<ThemeChoice | null>(() => loadTheme());
+  const currentTheme = effectiveTheme(theme);
+
+  function toggleTheme() {
+    const next: ThemeChoice = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    saveTheme(next);
+  }
+
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme]);
 
   useEffect(() => {
     if (!DEFAULT_PROFILE_STORE.hasSaved()) {
@@ -43,18 +57,63 @@ export function App() {
 
   return (
     <div className="flex min-h-screen flex-col bg-bg text-fg">
-      <header className="sticky top-0 z-10 border-b border-border bg-card">
-        <div className="mx-auto flex min-h-14 w-full max-w-3xl items-center justify-between gap-4 px-4">
-          <span className="text-lg font-bold tracking-tight">{t('app.name')}</span>
-          <button
-            type="button"
-            onClick={() => setLang(nextLang)}
-            aria-label={t('button.toggleLanguage')}
-            className="inline-flex min-h-11 items-center gap-2 rounded-md px-3 text-sm font-medium hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-          >
-            <Languages aria-hidden="true" className="h-4 w-4" />
-            {t('button.language')}
-          </button>
+      <header className="sticky top-0 z-10 border-b border-border bg-card/95 backdrop-blur">
+        <div className="mx-auto flex min-h-14 w-full max-w-3xl items-center justify-between gap-3 px-4">
+          <div className="flex min-w-0 items-center gap-6">
+            <Link
+              to="/"
+              aria-label={t('app.name')}
+              className="shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <Logo className="h-7" />
+            </Link>
+            <nav aria-label={t('nav.main')} className="hidden items-center gap-1 md:flex">
+              {NAV_ITEMS.map(({ to, key, Icon, end }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={end}
+                  className={({ isActive }) =>
+                    cn(
+                      'flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                      isActive
+                        ? 'bg-mint font-semibold text-primary'
+                        : 'text-fg hover:bg-muted hover:text-heading',
+                    )
+                  }
+                >
+                  <Icon aria-hidden="true" className="h-4 w-4" />
+                  {t(key)}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+          <div className="flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => setLang(nextLang)}
+              aria-label={t('button.toggleLanguage')}
+              className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-medium hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <Languages aria-hidden="true" className="h-4 w-4" />
+              {t('button.language')}
+            </button>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={
+                currentTheme === 'light' ? t('button.themeToDark') : t('button.themeToLight')
+              }
+              title={currentTheme === 'light' ? t('button.themeToDark') : t('button.themeToLight')}
+              className="inline-flex min-h-11 items-center justify-center rounded-full p-2.5 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              {currentTheme === 'light' ? (
+                <Moon aria-hidden="true" className="h-4 w-4" />
+              ) : (
+                <Sun aria-hidden="true" className="h-4 w-4" />
+              )}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -106,13 +165,22 @@ export function App() {
               end={end}
               className={({ isActive }) =>
                 cn(
-                  'flex min-h-11 flex-col items-center justify-center gap-1 px-1 py-2 text-xs font-medium',
+                  'flex min-h-14 flex-col items-center justify-center gap-1 px-1 py-2 text-xs font-medium',
                   isActive ? 'text-primary' : 'text-fg',
                 )
               }
             >
-              <Icon aria-hidden="true" className="h-5 w-5" />
-              {t(key)}
+              {({ isActive }) => (
+                <span
+                  className={cn(
+                    'flex flex-col items-center justify-center gap-1 rounded-full px-4 py-1',
+                    isActive && 'bg-mint text-primary',
+                  )}
+                >
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                  {t(key)}
+                </span>
+              )}
             </NavLink>
           ))}
         </div>
