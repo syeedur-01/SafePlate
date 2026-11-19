@@ -50,6 +50,8 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
     'scan.sample.mishtiDoi': 'Mishti Doi (spoiled)',
     'scan.sample.labelSnack': 'Label: snack',
     'scan.sample.unknown': 'Unknown dish',
+    'scan.sample.credits':
+      'Sample photos: “Basmati Kacchi Biryani (2)” by Nahian (CC BY 4.0) and “Mishti Doi” by Kirti Poddar (CC BY 2.0) via Wikimedia Commons; packaging photo in the public domain; Jhalmuri photo from BD-Food33 (CC0-1.0).',
     'demo.title': 'Demo scenarios',
     'demo.intro':
       'Four scripted scans that run the real engine right here on your device — no camera, no AI call. Each run uses a temporary profile and never changes your saved one.',
@@ -204,6 +206,8 @@ export const uiStrings: Record<Lang, Record<string, string>> = {
     'scan.sample.mishtiDoi': 'মিষ্টি দই (নষ্ট)',
     'scan.sample.labelSnack': 'লেবেল: স্ন্যাক',
     'scan.sample.unknown': 'অজানা খাবার',
+    'scan.sample.credits':
+      'নমুনার ছবি: “Basmati Kacchi Biryani (2)” — Nahian (CC BY 4.0) এবং “Mishti Doi” — Kirti Poddar (CC BY 2.0), Wikimedia Commons থেকে; প্যাকেজিংয়ের ছবি পাবলিক ডোমেইন; ঝালমুড়ির ছবি BD-Food33 (CC0-1.0) থেকে।',
     'demo.title': 'ডেমো পরিস্থিতি',
     'demo.intro':
       'চারটি স্ক্রিপ্টেড স্ক্যান যা আপনার ডিভাইসেই আসল ইঞ্জিন চালায় — ক্যামেরা ছাড়া, AI কল ছাড়া। প্রতিবার একটি অস্থায়ী প্রোফাইল ব্যবহার হয় এবং আপনার সংরক্ষিত প্রোফাইল বদলায় না।',
