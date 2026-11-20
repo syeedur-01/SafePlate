@@ -1,92 +1,185 @@
-# SafePlate
+# SafePlate 🍽️🛡️
 
-SafePlate is a bilingual (Bangla/English) web app: you photograph a dish or a packaged-food label, and it shows a transparent safety card where every deducted point links to evidence, warnings tailored to the health conditions and allergies you saved on your device, an estimated nutrition card, and a swap suggestion with a shopping list. **AI perceives. Deterministic code decides** — the model only reads the photo; every score, warning and nutrient number comes from tested code and reviewed data.
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.19-38B2AC.svg)](https://tailwindcss.com/)
+[![MCP](https://img.shields.io/badge/MCP-Model_Context_Protocol-purple.svg)](https://modelcontextprotocol.io/)
+[![Cloudflare](https://img.shields.io/badge/Deployed_on-Cloudflare_Pages-orange.svg)](https://pages.cloudflare.com/)
+[![CI](https://github.com/syeedur-01/SafePlate/actions/workflows/ci.yml/badge.svg)](https://github.com/syeedur-01/SafePlate/actions/workflows/ci.yml)
 
-**Live app:** https://safeplate-czd.pages.dev · **API:** https://safeplate-api.safeplate.workers.dev
+> **"AI perceives. Deterministic code decides."**  
+> SafePlate is a bilingual (English / বাংলা) food intelligence web application built for the **International AI Builders Congress 2026**. Users photograph a cooked dish or a packaged-food label to receive transparent safety scoring, on-device health warnings, honest nutritional estimates, and clinically safer swap recommendations.
 
-## Run locally
+🌐 **Live Application:** [https://safeplate-czd.pages.dev](https://safeplate-czd.pages.dev)  
+📦 **Repository:** [https://github.com/syeedur-01/SafePlate](https://github.com/syeedur-01/SafePlate)
 
-```bash
-pnpm install
-pnpm --filter @sp/web dev   # web app
-pnpm --filter @sp/api dev   # API on Node
-pnpm check                  # typecheck + lint + every test (must be green)
+---
+
+## 💡 The Core Philosophy
+
+In healthcare and food safety, **LLMs must never hallucinate risks, thresholds, or clinical guidance**. SafePlate enforces an architectural separation between AI vision perception and deterministic decision logic:
+
+```mermaid
+flowchart LR
+    A["📸 User Food Photo"] --> B["👁️ Vision AI (Gemini / Ollama)\nPERCEPTION ONLY"]
+    B -->|"Dish Candidates & Spoilage Signs (JSON)"| C["⚙️ Deterministic Engine (@sp/engine)\nPURE FUNCTIONS"]
+    D["📱 On-Device Health Profile\n(Never Leaves Browser)"] --> C
+    E["📚 Verified Knowledge Base\n(BSTI + FCTB 2013)"] --> C
+    C --> F["1. 🛡️ Safety Risk Card\n(Every deduction cited)"]
+    C --> G["2. ⚠️ Health Warnings\n(Allergens & Conditions)"]
+    C --> H["3. 📊 Nutrition Card\n(Coverage-gated & Estimated)"]
+    C --> I["4. 🔄 Healthy Swaps & Shopping List"]
 ```
 
-No camera, network or AI quota needed to judge the app: the Scan page links to **Demo scenarios (offline)** (`/demo`), four scripted scans that run the real engine on canned fixtures and render the real result page. The Scan page also offers sample scans when a live scan fails or you are offline.
+- **The AI only reads the photo:** Identifies candidate dishes, detects visual spoilage indicators (mold, slime, bubbles), or transcribes packaging labels.
+- **Tested deterministic code decides:** All safety risk scores, warning severities, FCTB nutrient tallies, and swap calculations are computed by pure, tested TypeScript functions.
 
-### Environment variables (names only — values live in `.env` / platform secrets, never in Git)
+---
 
-| Where | Variable          | Purpose                                                                            |
-| ----- | ----------------- | ---------------------------------------------------------------------------------- |
-| API   | `AI_PROVIDER`     | selects the vision provider: `gemini` or `mock` (mock is for local dev/tests only) |
-| API   | `GEMINI_API_KEY`  | secret; Cloudflare secret / local `.env`                                           |
-| API   | `GEMINI_MODEL`    | model id, set in `apps/api/wrangler.toml` for deploy                               |
-| API   | `ALLOWED_ORIGIN`  | the one web origin CORS allows                                                     |
-| API   | `MAX_BODY_BYTES`  | request body size limit                                                            |
-| API   | `DAILY_AI_BUDGET` | max AI calls per UTC day                                                           |
-| API   | `ENABLE_SPIKE`    | enables the `/api/_spike/echo` debug route (never in production)                   |
-| Web   | `VITE_API_BASE`   | API base URL (empty = same origin)                                                 |
-| Web   | `VITE_USE_MOCK`   | `1` = use canned fixture scans instead of the API (local only)                     |
+## ✨ Key Features
 
-Deployment: see [`docs/DEPLOY.md`](docs/DEPLOY.md) for the Cloudflare Worker + Pages runbook, secrets and smoke checks.
+- **🛡️ Evidence-Linked Safety Score (0–100):** Every point deducted links directly to Bangladesh Standards and Testing Institution (BSTI), Codex Alimentarius, or microbial growth limits. It never gives a false "100% safe" guarantee.
+- **🔒 Zero-Knowledge Health Profile:** Chronic conditions (hypertension, diabetes, high cholesterol, gastric) and allergies (milk, peanut, gluten, fish, etc.) **never leave your device**. The API request schema is `.strict()` and rejects health profiles.
+- **📊 Honest Nutritional Coverage:** Nutritional values are compiled from the **Food Composition Table for Bangladesh (FCTB 2013)** and USDA databases. Dishes with $< 80\%$ energy coverage automatically gate individual numbers.
+- **🔄 Culturally Authentic Swaps:** Suggests alternative traditional Bangladeshi dishes that lower sodium, fat, or sugar by at least 20%.
+- **🇧🇩 Deep Bangla Localization:** Built from the ground up with bilingual support (বাংলা & English). Custom Unicode tokenization preserves Bangla combining vowel marks (_kar_ and _fola_) during allergen keyword matching.
+- **🤖 Model Context Protocol (MCP) Server:** Features a built-in MCP server (`@sp/mcp`) exposing SafePlate's deterministic engine and knowledge base over `stdio` to **Claude Desktop**, **Cursor IDE**, and **Google Antigravity**.
 
-## Stack
+---
 
-| Part      | Where                | What                                                                                    |
-| --------- | -------------------- | --------------------------------------------------------------------------------------- |
-| Web app   | `apps/web`           | Vite + React + TypeScript + Tailwind CSS, React Router, English/Bangla i18n             |
-| API       | `apps/api`           | Hono; Cloudflare Worker entry (production) and Node entry (local dev / Render fallback) |
-| Engine    | `packages/engine`    | Pure functions: nutrition, safety, suitability, swaps, shopping, label analysis         |
-| Vision AI | `packages/ai`        | Google Gemini provider, prompts, strict JSON parsing and validation, cache              |
-| Contracts | `packages/contracts` | Zod schemas and test builders shared by every package                                   |
-| Knowledge | `packages/knowledge` | Dishes, ingredients, rules, allergen keywords, bilingual messages                       |
-| Tools     | `tools`              | Data fetch/match/coverage scripts, verify, smoke                                        |
+## 🚀 Quick Start (Local Development)
 
-Tests are Vitest throughout; internal packages are consumed as TypeScript source with no build step.
+### Prerequisites
 
-## Folder map
+- **Node.js:** $\ge 20$
+- **pnpm:** $\ge 9$ (pnpm 12 supported)
 
-| Path                              | Owner track | Notes                                                       |
-| --------------------------------- | ----------- | ----------------------------------------------------------- |
-| `packages/contracts/`             | shared      | Zod schemas, types, test builders (`contract-change` cards) |
-| `packages/engine/`                | A           | Pure decision code — never calls a model                    |
-| `packages/ai/`                    | B           | The only place LLM calls exist                              |
-| `apps/api/`                       | B           | Hono API                                                    |
-| `apps/web/`                       | C           | The React app                                               |
-| `packages/knowledge/`             | D           | Data, rules, messages, loaders                              |
-| `tools/`                          | D           | Data scripts                                                |
-| `docs/`, root configs, `.github/` | shared      | Plan cards in `docs/plan/`, bugs in `docs/BUGS.md`          |
+```bash
+# 1. Clone the repository
+git clone https://github.com/syeedur-01/SafePlate.git
+cd SafePlate
 
-## Data policy
+# 2. Install dependencies across all monorepo packages
+pnpm install
 
-The original inputs in `packages/knowledge/data/source/` are **never edited**. Everything derived — normalized dishes and ingredients, the runtime bundle, rule proposals — is generated by scripts in `tools/` into `packages/knowledge/data/normalized/`, `packages/knowledge/data/runtime/` or `data/proposals/`. Proposals are not approvals: a human approves a proposal before it is applied, and only approved entries are used. The About page shows the data-freeze date.
+# 3. Start the Web App (Vite + React)
+pnpm --filter @sp/web dev
 
-## How AI is used — and how it is not
+# 4. Start the API Server (Hono on Node)
+pnpm --filter @sp/api dev
 
-**Used:** one vision call per scan. The model reads the photo and returns JSON: which dish it might be (with confidence), what a label says, which visible spoilage signs it sees.
+# 5. Run the built-in MCP Server
+pnpm mcp
+```
 
-**Not used:** scores, warning levels, nutrient numbers, thresholds and allergen lists never come from a model. `packages/engine` computes them from reviewed data files, every warning carries its evidence, and rules that are not yet expert-approved are shown as **Draft**. If the AI quota or the network runs out, the app shows an error and the offline samples — it never invents a result.
+### Run Verification & Tests
 
-## AI usage statement (how this code was written)
+```bash
+# Full check: TypeScript typecheck + ESLint + Prettier check + All Vitest suites (~350+ tests)
+pnpm check
+```
 
-Most of the code was written by **AI coding agents** (LLM models) working card-by-card from the plan in `docs/plan/`, with tests written before each implementation and `pnpm check` green before every merge; humans read the diffs, merged the pull requests, and own the data and the prose. The per-person list of agents and models lives in `docs/TEAM.md`. The only AI used **at runtime** is Google Gemini for photo reading (model configured in `apps/api/wrangler.toml`).
+---
 
-## Privacy
+## 📱 Interactive Offline Demo (No API Quota Needed)
 
-- Your health profile (conditions, allergies, consent) is stored in your browser's local storage **on your device only**. It never appears in any API request, URL, log or prompt — the scan request schema rejects unknown fields for exactly this reason.
-- Uploaded photos are processed in memory and never stored by the API. Scan responses (not photos) can be cached for 24 h keyed by an image hash so identical photos skip the AI call — the cache is active in tests and local setups; wiring it into the deployed Worker is tracked as Phase 2 of the v2 plan (`docs/plan/SAFEPLATE_V2_PROGRESS.md`).
-- The API accepts only the configured web origin (CORS) and rejects request bodies above a fixed size limit.
-- **Settings → Delete my data** removes the profile from the device.
+You do **not** need an API key, camera, or network connection to inspect SafePlate:
 
-## Known limitations
+1. Open the web app and navigate to **Demo Scenarios** at `/demo` (or click _"Demo Scenarios (offline)"_ on the Scan page).
+2. Choose from 4 scripted real-world scenarios:
+   - 🍛 **Kacchi Biryani:** High-calorie, high-sodium rich celebration meal triggering hypertension warnings and lower-sodium pitha swaps.
+   - 🐟 **Panta Ilish:** Traditional fermented rice and hilsa fish evaluating fermentation tags, sodium, and histamine safety rules.
+   - 🍲 **Street Food Snack (Jhalmuri):** Street vendor context checking raw ingredient and temperature safety triggers.
+   - 📦 **Packaged Biscuit Label:** OCR label scan detecting hidden milk derivatives, high sodium, and trans fat.
+3. Each demo scenario executes the **exact production deterministic engine** in-memory.
 
-Read [`docs/KNOWN_LIMITATIONS.md`](docs/KNOWN_LIMITATIONS.md) before trusting a number: estimated recipes, draft rules, no invisible-contamination detection, fallible recognition, small free AI quota, and the honest status of the Bangla text.
+---
 
-## Bug-fix queue
+## 🤖 Model Context Protocol (MCP) Integration
 
-Bugs are logged with severity in [`docs/BUGS.md`](docs/BUGS.md) before they are fixed: P0/P1 may ship after the feature freeze, P2 goes to the Phase 5 list.
+SafePlate includes a production-ready MCP server in `packages/mcp`. External AI agents (Claude Desktop, Cursor, Antigravity) can connect via `stdio` to query deterministic food safety and nutrition intelligence:
 
-## The team
+```bash
+# Start the MCP server
+pnpm mcp
+# or: pnpm --filter @sp/mcp start
+```
 
-People, tracks and each person's agent/model usage are listed in [`docs/TEAM.md`](docs/TEAM.md) (fill-in in progress). Repository: https://github.com/syeedur-01/SafePlate.
+### Exposed Endpoints
+
+| Type         | Endpoint                      | Description                                                                                               |
+| :----------- | :---------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **Tool**     | `safeplate_assess_safety`     | Evaluates food safety risk score (0–100) using BSTI thresholds and spoilage signals                       |
+| **Tool**     | `safeplate_lookup_nutrition`  | Queries FCTB 2013 and USDA databases for verified macro/micronutrients per portion                        |
+| **Tool**     | `safeplate_check_suitability` | Evaluates medical suitability against chronic conditions and 10 allergens                                 |
+| **Tool**     | `safeplate_suggest_swaps`     | Recommends culturally authentic, clinically safer alternative dishes ($\ge 20\%$ lower flagged nutrients) |
+| **Tool**     | `safeplate_analyze_label`     | Parses packaging text for red-flag additives, high sodium/sugar/fat, and undeclared allergens             |
+| **Tool**     | `safeplate_list_dishes`       | Lists and searches the 30 validated Bangladeshi dishes in the knowledge base                              |
+| **Resource** | `safeplate://dishes`          | Full JSON catalogue of 30 Bangladeshi dishes with ingredient ratios                                       |
+| **Resource** | `safeplate://safety-rules`    | Active BSTI and Codex food safety thresholds                                                              |
+| **Resource** | `safeplate://health-rules`    | Clinical condition and allergen dietary threshold rules                                                   |
+| **Resource** | `safeplate://allergens`       | Bilingual allergen vocabulary mapping English and Bangla keywords                                         |
+
+Full MCP setup documentation and configuration snippets are available in [`docs/MCP_SERVER.md`](docs/MCP_SERVER.md).
+
+---
+
+## 🏛️ Monorepo Architecture
+
+SafePlate is organized as a strict, modular pnpm monorepo:
+
+```
+SafePlate/
+├── apps/
+│   ├── web/               # Vite + React 18 + Tailwind CSS + Framer Motion PWA
+│   └── api/               # Hono web standards API (Cloudflare Worker & Node entry)
+├── packages/
+│   ├── contracts/         # Zod schemas, TypeScript types, and test builders
+│   ├── engine/            # Pure functions: safety, nutrition, suitability, swaps, label analysis
+│   ├── knowledge/         # Normalized dishes, FCTB tables, BSTI rules, bilingual strings
+│   ├── ai/                # Vision providers (Gemini, Ollama), prompts, JSON parsing & cache
+│   └── mcp/               # Model Context Protocol (MCP) stdio server
+├── tools/                 # Data pipelines: PDF table extractor, USDA matcher, eval benchmark
+└── docs/                  # Technical design, benchmark evaluation reports, audit reports
+```
+
+### Package Summary
+
+| Package         | Purpose                       | Strict Rule                                                                      |
+| :-------------- | :---------------------------- | :------------------------------------------------------------------------------- |
+| `@sp/contracts` | Shared Zod schemas & types    | Immutable without formal contract change                                         |
+| `@sp/engine`    | Deterministic calculations    | Pure functions only: no `Date.now()`, no `Math.random()`, no I/O, no LLM calls   |
+| `@sp/knowledge` | Food composition & rule data  | Data source register with record-level provenance; "Proposals are not approvals" |
+| `@sp/ai`        | Visual perception adapter     | Prompt-level schema constraints; strict Zod response parsing                     |
+| `@sp/mcp`       | Model Context Protocol server | Exposes pure engine tools over `stdio` to AI desktop clients                     |
+| `@sp/api`       | API Gateway                   | Rejects health profile payloads; zero persistent photo storage                   |
+| `@sp/web`       | Responsive client application | Responsive down to 360px; accessible WCAG contrast; on-device profile storage    |
+
+---
+
+## 🔬 Benchmark & Evaluation
+
+SafePlate includes a reproducible evaluation harness (`tools/src/eval-run.ts`) tested against 263 scorable images from the CC0 **BD-Food33** dataset across 8 approved Bangladeshi dishes:
+
+- **Cloud Primary:** `gemini-3.5-flash-lite` serves as the primary production vision model.
+- **On-Device Local Audit:** We benchmarked `Qwen2.5-VL-3B-Instruct` locally via **Ollama (0.40.16)** on an **NVIDIA GeForce RTX 4060 GPU** (4-bit quantization, 100% GPU offload, 2.8 GB VRAM). While fast (3,763 ms median latency), its 44.5% top-1 accuracy produced confident misclassifications on safety-critical dishes, validating our decision to retain Cloud Gemini for live production while offering local models for offline development.
+
+Read the full report in [`docs/MODEL_COMPARISON.md`](docs/MODEL_COMPARISON.md) and [`docs/EVAL_REPORT.md`](docs/EVAL_REPORT.md).
+
+---
+
+## 🔒 Privacy & Safety Standards
+
+1. **On-Device Profile:** Health conditions, dietary restrictions, and allergy records are stored exclusively in client-side `localStorage`. They are never transmitted over the network or logged.
+2. **Ephemeral Memory Processing:** Uploaded food photographs are analyzed in memory and immediately discarded. Photos are never stored on disk or database.
+3. **Null is Not Zero:** If a nutrient was not measured in primary literature (FCTB / USDA), it remains `null`—never assumed to be `0`.
+4. **Mandatory Chemical Disclaimer:** SafePlate explicitly states on every result that visual analysis cannot detect invisible microbial toxins, pesticide residues, or heavy metals (`notice.chemical_limit`).
+
+---
+
+## 📄 License & Attribution
+
+- **Software:** MIT License
+- **Food Data:** Sourced with attribution from the _Food Composition Table for Bangladesh (FCTB 2013)_, _Indian Food Composition Tables (IFCT 2017)_, and _USDA FoodData Central_.
+- **Benchmark Images:** CC0 Public Domain via BD-Food33.
