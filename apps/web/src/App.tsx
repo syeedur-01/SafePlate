@@ -32,7 +32,8 @@ export function App() {
   const navigate = useNavigate();
   const nextLang = lang === 'en' ? 'bn' : 'en';
   const needsOnboarding = location.pathname !== '/welcome' && !DEFAULT_PROFILE_STORE.hasSaved();
-  const [theme, setTheme] = useState<ThemeChoice | null>(() => loadTheme());
+  // Light is the primary theme; the OS preference never overrides an unset choice.
+  const [theme, setTheme] = useState<ThemeChoice>(() => loadTheme() ?? 'light');
   const currentTheme = effectiveTheme(theme);
 
   function toggleTheme() {

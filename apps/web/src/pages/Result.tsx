@@ -88,16 +88,16 @@ export function ResultView({
 
       <Tabs defaultValue="safety">
         <TabsList className="w-full">
-          <TabsTrigger value="safety" className="flex-1">
+          <TabsTrigger value="safety" className="min-w-[46%] flex-1 sm:min-w-0">
             {t('result.tab.safety')}
           </TabsTrigger>
-          <TabsTrigger value="foryou" className="flex-1">
+          <TabsTrigger value="foryou" className="min-w-[46%] flex-1 sm:min-w-0">
             {t('result.tab.foryou')}
           </TabsTrigger>
-          <TabsTrigger value="nutrition" className="flex-1">
+          <TabsTrigger value="nutrition" className="min-w-[46%] flex-1 sm:min-w-0">
             {t('result.tab.nutrition')}
           </TabsTrigger>
-          <TabsTrigger value="swap" className="flex-1">
+          <TabsTrigger value="swap" className="min-w-[46%] flex-1 sm:min-w-0">
             {t('result.tab.swap')}
           </TabsTrigger>
         </TabsList>
