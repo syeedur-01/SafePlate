@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { AnalysisResult } from '@sp/contracts';
+import { MAX_SERVINGS, MIN_SERVINGS } from '../lib/servings';
 import { Button } from './ui/button';
 
 export interface ShoppingListProps {
@@ -8,9 +9,6 @@ export interface ShoppingListProps {
   servings: number;
   onServingsChange: (servings: number) => void;
 }
-
-const MIN_SERVINGS = 1;
-const MAX_SERVINGS = 10;
 
 /** Returns the shopping list with a servings stepper, checkable rows and a copy button. */
 export function ShoppingList({

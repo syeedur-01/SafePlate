@@ -1,8 +1,11 @@
 import { NUTRIENT_KEYS, type Dish, type NutritionResult } from '@sp/contracts';
+import { MIN_COVERAGE } from '@sp/engine';
 import { useT } from '../i18n/i18n';
+import { MAX_SERVINGS, MIN_SERVINGS } from '../lib/servings';
 import { NUTRIENT_DISPLAY, formatNutrient } from '../lib/nutrient-format';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 import { StatusBadge } from './StatusBadge';
 
 const HIDDEN_NUTRIENT: NutritionResult['perServing'][(typeof NUTRIENT_KEYS)[number]] = {
@@ -31,13 +34,20 @@ const EMPTY_NUTRITION: NutritionResult = {
 export interface NutritionCardProps {
   nutrition: NutritionResult | null;
   dish: Dish | null;
+  /** Selected portion count; the shown values are scaled from the per-serving estimate. */
+  servings: number;
+  /** Calls back when the portion stepper changes the count. */
+  onServingsChange: (servings: number) => void;
 }
 
 /** Returns the estimated nutrition card that hides individual numbers below the coverage gate. */
-export function NutritionCard({ nutrition, dish }: NutritionCardProps) {
+export function NutritionCard({ nutrition, dish, servings, onServingsChange }: NutritionCardProps) {
   const { t } = useT();
   const result = nutrition ?? EMPTY_NUTRITION;
   const coveragePercent = Math.round(result.overallCoverage * 100);
+  const minCoveragePercent = Math.round(MIN_COVERAGE * 100);
+  // The card scales the engine's per-serving estimate by the chosen portion count.
+  const scale = (value: number) => value * servings;
 
   return (
     <section className="space-y-4 rounded-md border border-border p-4">
@@ -55,13 +65,57 @@ export function NutritionCard({ nutrition, dish }: NutritionCardProps) {
       </header>
 
       <div
-        role="progressbar"
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={coveragePercent}
-        className="h-1.5 w-full overflow-hidden rounded-full bg-muted"
+        role="group"
+        aria-label={t('nutrition.servings_label')}
+        className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-surface-soft p-3"
       >
-        <div className="h-full rounded-full bg-primary" style={{ width: `${coveragePercent}%` }} />
+        <div className="min-w-0">
+          <p className="text-sm font-medium text-heading">{t('nutrition.servings_label')}</p>
+          <p className="text-xs leading-relaxed text-muted-fg">{t('nutrition.servings_hint')}</p>
+        </div>
+        <div className="flex items-center gap-3">
+          <Button
+            variant="secondary"
+            size="icon"
+            aria-label={t('nutrition.servings_less')}
+            disabled={servings <= MIN_SERVINGS}
+            onClick={() => onServingsChange(servings - 1)}
+          >
+            -
+          </Button>
+          <span aria-live="polite" className="min-w-6 text-center font-semibold">
+            {servings}
+          </span>
+          <Button
+            variant="secondary"
+            size="icon"
+            aria-label={t('nutrition.servings_more')}
+            disabled={servings >= MAX_SERVINGS}
+            onClick={() => onServingsChange(servings + 1)}
+          >
+            +
+          </Button>
+        </div>
+      </div>
+
+      <div className="space-y-1">
+        <div
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={coveragePercent}
+          aria-label={t('nutrition.coverage', { percent: coveragePercent })}
+          className="h-1.5 w-full overflow-hidden rounded-full bg-muted"
+        >
+          <div
+            className="h-full rounded-full bg-primary"
+            style={{ width: `${coveragePercent}%` }}
+          />
+        </div>
+        <p className="text-xs text-muted-fg">
+          {t('nutrition.coverage', { percent: coveragePercent })} ·{' '}
+          {t('nutrition.coverage_note', { min: minCoveragePercent })}
+        </p>
       </div>
 
       <ul className="divide-y divide-border">
@@ -73,7 +127,7 @@ export function NutritionCard({ nutrition, dish }: NutritionCardProps) {
               <span>{t(display.labelKey)}</span>
               {nutrient.shown && nutrient.value !== null ? (
                 <span className="flex items-center gap-2 font-semibold">
-                  <span>{formatNutrient(key, nutrient.value)}</span>
+                  <span>{formatNutrient(key, scale(nutrient.value))}</span>
                   <span className="font-normal text-muted-fg">{display.unit}</span>
                   {nutrient.origin === 'lab_scaled' ? (
                     <Badge variant="outline">{t('nutrition.from_lab_study')}</Badge>
@@ -87,7 +141,17 @@ export function NutritionCard({ nutrition, dish }: NutritionCardProps) {
         })}
       </ul>
 
+      <p className="text-xs font-medium text-heading">
+        {servings === 1
+          ? t('nutrition.basis_per_serving')
+          : t('nutrition.basis_for_servings', { servings })}
+      </p>
+
       <Accordion type="single" collapsible>
+        <AccordionItem value="about">
+          <AccordionTrigger>{t('nutrition.about')}</AccordionTrigger>
+          <AccordionContent>{t('nutrition.about_body')}</AccordionContent>
+        </AccordionItem>
         <AccordionItem value="why-missing">
           <AccordionTrigger>{t('nutrition.why_missing')}</AccordionTrigger>
           <AccordionContent>

@@ -179,6 +179,46 @@
     "en": "Why is some data missing?",
     "bn": "কিছু তথ্য কেন নেই?"
   },
+  "nutrition.servings_label": {
+    "en": "Portions",
+    "bn": "পরিবেশন"
+  },
+  "nutrition.servings_less": {
+    "en": "Fewer portions",
+    "bn": "কম পরিবেশন"
+  },
+  "nutrition.servings_more": {
+    "en": "More portions",
+    "bn": "বেশি পরিবেশন"
+  },
+  "nutrition.servings_hint": {
+    "en": "One portion is the recipe estimate for one plate. This count also scales your shopping list.",
+    "bn": "এক পরিবেশন মানে এক প্লেটের রেসিপি অনুমান। এই সংখ্যাটি আপনার শপিং লিস্টও বদলায়।"
+  },
+  "nutrition.basis_per_serving": {
+    "en": "Per serving (estimated)",
+    "bn": "প্রতি পরিবেশন (আনুমানিক)"
+  },
+  "nutrition.basis_for_servings": {
+    "en": "For {servings} servings (estimated)",
+    "bn": "{servings} পরিবেশনের জন্য (আনুমানিক)"
+  },
+  "nutrition.coverage": {
+    "en": "Data coverage: {percent}%",
+    "bn": "তথ্য কভারেজ: {percent}%"
+  },
+  "nutrition.coverage_note": {
+    "en": "A nutrient row appears only when at least {min}% of the dish weight has composition data; otherwise it reads not enough data, never zero.",
+    "bn": "যে পুষ্টি সারির জন্য খাবারের ওজনের অন্তত {min}% অংশে উপাদানের তথ্য আছে, শুধু তখনই সেটি দেখা যায়; নাহলে তথ্য নেই লেখা থাকে, শূন্য নয়।"
+  },
+  "nutrition.about": {
+    "en": "About these nutrition estimates",
+    "bn": "এই পুষ্টি অনুমানগুলো সম্পর্কে"
+  },
+  "nutrition.about_body": {
+    "en": "Every number here is an estimate, not a lab test of your plate. Ingredient values come from food-composition tables recorded per 100 g of raw ingredient and are scaled to the recipe amounts and to the portion you chose. Serving sizes and portion counts are estimates too. Rows with too little data are marked as not enough data instead of being shown as zero.",
+    "bn": "এখানের প্রতিটি সংখ্যা একটি অনুমান, আপনার প্লেটের ল্যাব পরীক্ষা নয়। উপাদানের মান খাদ্য-উপাদান তালিকা থেকে নেওয়া, যা প্রতি ১০০ গ্রাম কাঁচা উপাদান হিসেবে রেকর্ড করা; সেগুলো রেসিপির পরিমাণ ও আপনার বেছে নেওয়া পরিবেশন অনুযায়ী হিসাব করা হয়। পরিবেশনের পরিমাণও আনুমানিক। যে সারিতে তথ্য খুব কম, সেটি শূন্য না দেখিয়ে তথ্য নেই লেখা থাকে।"
+  },
   "badge.estimated": {
     "en": "Estimated",
     "bn": "আনুমানিক"

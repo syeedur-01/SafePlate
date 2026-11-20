@@ -113,7 +113,12 @@ export function ResultView({
           />
         </TabsContent>
         <TabsContent value="nutrition">
-          <NutritionCard nutrition={analysis.nutrition} dish={dish} />
+          <NutritionCard
+            nutrition={analysis.nutrition}
+            dish={dish}
+            servings={servings}
+            onServingsChange={onServingsChange}
+          />
         </TabsContent>
         <TabsContent value="swap" className="space-y-6">
           <SwapList swaps={analysis.swaps} dishNames={DISH_NAMES[lang]} />
