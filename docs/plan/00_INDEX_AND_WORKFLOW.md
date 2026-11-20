@@ -92,65 +92,70 @@ If nutrient coverage is poor by the end of Phase 2, show numbers only for dishes
 
 ## Status board (update as cards merge)
 
-| Card    | Track     | Title                                                 | Status |
-| ------- | --------- | ----------------------------------------------------- | ------ |
-| P0-H01  | human     | Repo, accounts, keys                                  | todo   |
-| P0-H02  | human     | Data files in place                                   | todo   |
-| P0-X01  | shared    | Scaffold monorepo                                     | todo   |
-| P0-X02  | shared    | Contracts: knowledge schemas                          | todo   |
-| P0-X03  | shared    | Contracts: profile, API, analysis, rules, builders    | todo   |
-| P0-X04  | shared    | Mock scans and knowledge loader                       | todo   |
-| P0-D01  | D         | Fetch raw sources or notify                           | todo   |
-| P1-A01  | A         | Nutrition computation                                 | todo   |
-| P1-A02  | A         | Allergen conflicts                                    | todo   |
-| P1-A03  | A         | Safety scoring                                        | todo   |
-| P1-A04  | A         | Suitability warnings                                  | todo   |
-| P1-B01  | B         | API skeleton                                          | todo   |
-| P1-B02  | B         | Provider interface, mock, JSON parsing                | todo   |
-| P1-B03  | B         | Gemini provider                                       | todo   |
-| P1-B04  | B         | Workers deploy spike                                  | todo   |
-| P1-C01  | C         | Web scaffold and design system                        | todo   |
-| P1-C02  | C         | Profile store and onboarding                          | todo   |
-| P1-C03  | C         | Image downscale, scan screen, API client              | todo   |
-| P1-C04  | C         | Risk gauge and evidence components                    | todo   |
-| P1-D01  | D         | Normalize data                                        | todo   |
-| P1-D02  | D         | FCTB match proposals                                  | todo   |
-| P1-D03  | D         | USDA gap proposals                                    | todo   |
-| P1-DH01 | human     | Approve proposals                                     | todo   |
-| P1-DH02 | human     | Gap-fill lookups and second approval round (inserted) | todo   |
-| P1-D04  | D         | Apply approved matches and coverage report            | todo   |
-| P2-A01  | A         | Swap suggestions                                      | todo   |
-| P2-A02  | A         | Shopping list                                         | todo   |
-| P2-A03  | A         | Label analysis                                        | todo   |
-| P2-A04  | A         | `analyze()` orchestrator and golden test              | todo   |
-| P2-B01  | B         | `/api/scan` for dishes                                | todo   |
-| P2-B02  | B         | `/api/scan` for labels                                | todo   |
-| P2-B03  | B         | Cache and guards                                      | todo   |
-| P2-B04  | B         | Worker config and deploy script                       | todo   |
-| P2-C01  | C         | Confirm-dish screen                                   | todo   |
-| P2-C02  | C         | Result: Safety and For you                            | todo   |
-| P2-C03  | C         | Result: Nutrition                                     | todo   |
-| P2-C04  | C         | Result: Swap and shopping                             | todo   |
-| P2-C05  | C         | History and settings                                  | todo   |
-| P2-C06  | C         | Bangla UI and About                                   | todo   |
-| P2-D01  | D         | Source register                                       | todo   |
-| P2-D02  | D         | Safety rules from sources                             | todo   |
-| P2-D03  | D         | Health rules from sources                             | todo   |
-| P2-D04  | D         | Allergen keywords and messages                        | todo   |
-| P2-D05  | D         | Evaluation manifest and checker                       | todo   |
-| P2-D07  | D         | Review pack export (CSV for the expert)               | todo   |
-| P2-DH01 | human     | Expert review session                                 | todo   |
-| P2-D06  | D         | Apply approvals and decide the coverage gate          | todo   |
-| P3-X01  | C         | Web connected to the real API                         | todo   |
-| P3-X02  | C+A       | End-to-end wiring of the engine                       | todo   |
-| P3-X03  | B         | End-to-end pipeline test                              | todo   |
-| P3-X04  | B+human   | Cloudflare deploy                                     | todo   |
-| P3-X05  | D+B       | Evaluation on real photos                             | todo   |
-| P3-X06  | C         | Low confidence, errors, waking state                  | todo   |
-| P3-X07  | C         | Responsive and accessibility pass                     | todo   |
-| P3-X08  | D         | Data freeze                                           | todo   |
-| P4-X01  | C         | Demo scenarios                                        | todo   |
-| P4-X02  | any       | Bug-fix queue                                         | todo   |
-| P4-X03  | D         | Final data consistency check                          | todo   |
-| P4-X04  | C         | Performance                                           | todo   |
-| P4-X05  | human+any | README, disclaimers, tag `mvp-demo`                   | todo   |
+| Card    | Track     | Title                                                 | Status  |
+| ------- | --------- | ----------------------------------------------------- | ------- |
+| P0-H01  | human     | Repo, accounts, keys                                  | done    |
+| P0-H02  | human     | Data files in place                                   | done    |
+| P0-X01  | shared    | Scaffold monorepo                                     | done    |
+| P0-X02  | shared    | Contracts: knowledge schemas                          | done    |
+| P0-X03  | shared    | Contracts: profile, API, analysis, rules, builders    | done    |
+| P0-X04  | shared    | Mock scans and knowledge loader                       | done    |
+| P0-D01  | D         | Fetch raw sources or notify                           | done    |
+| P1-A01  | A         | Nutrition computation                                 | done    |
+| P1-A02  | A         | Allergen conflicts                                    | done    |
+| P1-A03  | A         | Safety scoring                                        | done    |
+| P1-A04  | A         | Suitability warnings                                  | done    |
+| P1-B01  | B         | API skeleton                                          | done    |
+| P1-B02  | B         | Provider interface, mock, JSON parsing                | done    |
+| P1-B03  | B         | Gemini provider                                       | done    |
+| P1-B04  | B         | Workers deploy spike                                  | done    |
+| P1-C01  | C         | Web scaffold and design system                        | done    |
+| P1-C02  | C         | Profile store and onboarding                          | done    |
+| P1-C03  | C         | Image downscale, scan screen, API client              | done    |
+| P1-C04  | C         | Risk gauge and evidence components                    | done    |
+| P1-D01  | D         | Normalize data                                        | done    |
+| P1-D02  | D         | FCTB match proposals                                  | done    |
+| P1-D03  | D         | USDA gap proposals                                    | done    |
+| P1-DH01 | human     | Approve proposals                                     | done    |
+| P1-DH02 | human     | Gap-fill lookups and second approval round (inserted) | done    |
+| P1-D04  | D         | Apply approved matches and coverage report            | done    |
+| P2-A01  | A         | Swap suggestions                                      | done    |
+| P2-A02  | A         | Shopping list                                         | done    |
+| P2-A03  | A         | Label analysis                                        | done    |
+| P2-A04  | A         | `analyze()` orchestrator and golden test              | done    |
+| P2-B01  | B         | `/api/scan` for dishes                                | done    |
+| P2-B02  | B         | `/api/scan` for labels                                | done    |
+| P2-B03  | B         | Cache and guards                                      | done    |
+| P2-B04  | B         | Worker config and deploy script                       | done    |
+| P2-C01  | C         | Confirm-dish screen                                   | done    |
+| P2-C02  | C         | Result: Safety and For you                            | done    |
+| P2-C03  | C         | Result: Nutrition                                     | done    |
+| P2-C04  | C         | Result: Swap and shopping                             | done    |
+| P2-C05  | C         | History and settings                                  | done    |
+| P2-C06  | C         | Bangla UI and About                                   | done    |
+| P2-D01  | D         | Source register                                       | done    |
+| P2-D02  | D         | Safety rules from sources                             | done    |
+| P2-D03  | D         | Health rules from sources                             | done    |
+| P2-D04  | D         | Allergen keywords and messages                        | done    |
+| P2-D05  | D         | Evaluation manifest and checker                       | done    |
+| P2-D07  | D         | Review pack export (CSV for the expert)               | done    |
+| P2-DH01 | human     | Expert review session                                 | done    |
+| P2-D06  | D         | Apply approvals and decide the coverage gate          | done    |
+| P3-X01  | C         | Web connected to the real API                         | done    |
+| P3-X02  | C+A       | End-to-end wiring of the engine                       | done    |
+| P3-X03  | B         | End-to-end pipeline test                              | done    |
+| P3-X04  | B+human   | Cloudflare deploy                                     | done    |
+| P3-X05  | D+B       | Evaluation on real photos                             | partial |
+| P3-X06  | C         | Low confidence, errors, waking state                  | done    |
+| P3-X07  | C         | Responsive and accessibility pass                     | done    |
+| P3-X08  | D         | Data freeze                                           | done    |
+| P4-X01  | C         | Demo scenarios                                        | done    |
+| P4-X02  | any       | Bug-fix queue                                         | done    |
+| P4-X03  | D         | Final data consistency check                          | done    |
+| P4-X04  | C         | Performance                                           | done    |
+| P4-X05  | human+any | README, disclaimers, tag `mvp-demo`                   | partial |
+
+Status reconciled against Git history on 2026-11-18 (PRs #1–#77; every card above is merged). The two partial cards:
+
+- **P3-X05**: the evaluation runner, metrics and report scaffolding are merged (`tools/src/eval-run.ts`), but the evaluation was never run on real photos because no licensed image set was committed. This work continues as Phase 3 of `SAFEPLATE_V2_IMPROVEMENT_PLAN.md`.
+- **P4-X05**: `README.md` and `docs/KNOWN_LIMITATIONS.md` are merged (PR #76). The human release steps (tag `mvp-demo`, demo video, submission) were superseded by the v2 improvement programme; the repo now tags `v1.0.0` as the preserved pre-improvement baseline instead.

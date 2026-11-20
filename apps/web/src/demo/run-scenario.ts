@@ -9,8 +9,9 @@ import {
   AllergenSchema,
   type Allergen,
 } from '@sp/contracts';
-import { analyze, type AllergenKeywords } from '@sp/engine';
+import { analyze, type AllergenKeywords, type AllergenMatching } from '@sp/engine';
 import allergenKeywordsFile from '@sp/knowledge/data/allergen-keywords.json';
+import allergenMatchingFile from '@sp/knowledge/data/allergen-matching.json';
 import normalizedDishesFile from '@sp/knowledge/data/normalized/dishes.json';
 import normalizedIngredientsFile from '@sp/knowledge/data/normalized/ingredients.json';
 import healthRulesFile from '@sp/knowledge/data/rules/health-rules.json';
@@ -63,6 +64,24 @@ function buildAllergenKeywords(raw: unknown): AllergenKeywords {
 
 const ALLERGEN_KEYWORDS = buildAllergenKeywords(allergenKeywordsFile);
 
+const ALLERGEN_MATCHING: AllergenMatching = (() => {
+  const file = allergenMatchingFile as Record<string, unknown>;
+  const perAllergen = (value: unknown): Record<string, string[]> => {
+    const result: Record<string, string[]> = {};
+    if (typeof value === 'object' && value !== null) {
+      for (const [allergen, list] of Object.entries(value)) result[allergen] = list as string[];
+    }
+    return result;
+  };
+  return {
+    uncertain: perAllergen(file.uncertain) as AllergenMatching['uncertain'],
+    suppress: perAllergen(file.suppress) as AllergenMatching['suppress'],
+    advisoryPhrases: (file.advisoryPhrases ?? []) as string[],
+    negationBefore: (file.negationBefore ?? []) as string[],
+    negationAfter: (file.negationAfter ?? []) as string[],
+  };
+})();
+
 /** Runs the real engine on a scenario and returns the analysis. today is injected. */
 export function runScenario(s: Scenario, today: string): AnalysisResult {
   const scanResult = FIXTURES[s.fixture];
@@ -99,6 +118,7 @@ export function runScenario(s: Scenario, today: string): AnalysisResult {
     safetyRules: SAFETY_RULES,
     healthRules: HEALTH_RULES,
     allergenKeywords: ALLERGEN_KEYWORDS,
+    allergenMatching: ALLERGEN_MATCHING,
     today,
     servings: s.servings,
   });

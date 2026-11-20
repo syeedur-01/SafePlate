@@ -28,13 +28,12 @@ afterEach(() => {
 });
 
 describe('result components', () => {
-  it('gauge shows the score, the level word and an accessible label', () => {
+  it('gauge shows the score, the level word and an accessible label', async () => {
     wrap(<RiskGauge score={72} level="high" />);
-    expect(screen.getByText('72')).toBeInTheDocument();
+    // The number counts up; the accessible label carries the final score immediately.
+    expect(screen.getByRole('img').getAttribute('aria-label')).toBe('High: 72/100');
     expect(screen.getByText('High')).toBeInTheDocument();
-    const label = screen.getByRole('img').getAttribute('aria-label');
-    expect(label).toContain('72');
-    expect(label).toContain('High');
+    expect(await screen.findByText('72', {}, { timeout: 3000 })).toBeInTheDocument();
   });
 
   it('evidence list shows evidence, points, source, and a draft badge', async () => {

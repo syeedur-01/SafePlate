@@ -20,13 +20,15 @@
     "check-sources": "tsx src/check-sources.ts",
     "smoke": "tsx src/smoke.ts",
     "eval-run": "tsx src/eval-run.ts",
-    "verify": "tsx src/verify.ts"
+    "verify": "tsx src/verify.ts",
+    "eval-build-manifest": "tsx src/eval-build-manifest.ts"
   },
   "dependencies": {
     "@sp/ai": "workspace:*",
     "@sp/contracts": "workspace:*",
     "@sp/engine": "workspace:*",
     "@sp/knowledge": "workspace:*",
+    "@sp/api": "workspace:*",
     "adm-zip": "0.6.1",
     "csv-parse": "7.0.3",
     "pdfjs-dist": "5.4.149"

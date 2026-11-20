@@ -26,7 +26,18 @@ export function createApp(config: AppConfig): Hono {
     await next();
   });
 
-  app.get('/api/health', (c) => c.json({ ok: true, version: VERSION }));
+  app.get('/api/health', (c) =>
+    c.json({
+      ok: true,
+      version: VERSION,
+      provider: config.provider?.name ?? null,
+      providerConfigured: config.provider !== undefined,
+      cache: config.cache?.kind ?? 'none',
+      // In-memory counters are per isolate/restart; global enforcement requires a
+      // strongly consistent store (see docs/PRODUCTION_RELIABILITY.md).
+      budgetScope: 'in-memory',
+    }),
+  );
 
   registerScanRoute(app, config);
 

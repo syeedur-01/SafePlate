@@ -1,5 +1,5 @@
 import type { Dish, Ingredient } from '@sp/contracts';
-import { getDishes, getIngredients } from './index';
+import { getCatalogue, getDishes, getIngredients } from './index';
 
 type NutrientSubset = {
   energy_kcal: number | null;
@@ -61,15 +61,39 @@ function runtimeIngredient(i: Ingredient) {
   };
 }
 
+/** Returns the slim recognition-catalogue entry used in the browser. */
+function runtimeCatalogueEntry(entry: {
+  id: string;
+  name_en: string;
+  name_bn: string | null;
+  aliases: string[];
+  category: string;
+  nutrition_dish_id: string | null;
+}) {
+  return {
+    id: entry.id,
+    name_en: entry.name_en,
+    name_bn: entry.name_bn,
+    aliases: entry.aliases,
+    category: entry.category,
+    nutrition_dish_id: entry.nutrition_dish_id,
+  };
+}
+
 /**
  * Returns the in-memory browser runtime built from the normalized data files
  * (which carry the approved match values). `pnpm --filter @sp/tools normalize`
  * writes this object to data/runtime/runtime.json; the runtime-sync test fails
  * if the committed file drifts from it.
  */
-export function buildRuntime(): { dishes: unknown[]; ingredients: unknown[] } {
+export function buildRuntime(): {
+  dishes: unknown[];
+  ingredients: unknown[];
+  catalogue: unknown[];
+} {
   return {
     dishes: getDishes().map(runtimeDish),
     ingredients: getIngredients().map(runtimeIngredient),
+    catalogue: getCatalogue().entries.map(runtimeCatalogueEntry),
   };
 }

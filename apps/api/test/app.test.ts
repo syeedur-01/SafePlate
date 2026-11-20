@@ -5,10 +5,17 @@ import { createApp } from '../src/app';
 const app = createApp({ allowedOrigin: 'http://localhost:5173', maxBodyBytes: 1000 });
 
 describe('api skeleton', () => {
-  it('answers /api/health', async () => {
+  it('answers /api/health with process and configuration health, no provider call', async () => {
     const res = await app.request('/api/health');
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ ok: true, version: expect.any(String) });
+    expect(await res.json()).toEqual({
+      ok: true,
+      version: expect.any(String),
+      provider: null,
+      providerConfigured: false,
+      cache: 'none',
+      budgetScope: 'in-memory',
+    });
   });
   it('returns the standard error shape for unknown routes', async () => {
     const res = await app.request('/api/nope');

@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { buildRuntime, getRawDishes, getRawIngredients, normalizeDish } from '@sp/knowledge';
 import { NormalizedDishesFileSchema, RawIngredientsFileSchema } from '@sp/contracts';
+import { deriveDishReviewProvenance, deriveIngredientReviewProvenance } from './review-provenance';
 
 const NUTRIENT_KEYS = [
   'energy_kcal',
@@ -21,7 +22,14 @@ function writeln(line: string): void {
 function main(): void {
   const rawDishes = getRawDishes();
   const rawIngredients = getRawIngredients();
-  const normalizedDishes = rawDishes.map((d) => normalizeDish(d));
+  const normalizedDishes = rawDishes.map((d) => {
+    const dish = normalizeDish(d);
+    return { ...dish, review_provenance: deriveDishReviewProvenance() };
+  });
+  const normalizedIngredients = rawIngredients.map((i) => ({
+    ...i,
+    review_provenance: deriveIngredientReviewProvenance(i),
+  }));
 
   const normalizedDishesFile = NormalizedDishesFileSchema.parse({
     metadata: {
@@ -35,7 +43,7 @@ function main(): void {
       source: 'data/source/ingredients.json (never edited)',
       generator: 'pnpm --filter @sp/tools normalize (tools/src/normalize-data.ts)',
     },
-    ingredients: rawIngredients,
+    ingredients: normalizedIngredients,
   });
   const cookingClasses = rawDishes.map((d) => {
     const n = normalizedDishes.find((x) => x.id === d.id);

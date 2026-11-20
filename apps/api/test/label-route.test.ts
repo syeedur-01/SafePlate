@@ -3,7 +3,7 @@ import { ApiErrorSchema } from '@sp/contracts';
 import { MockProvider, type VisionProvider } from '@sp/ai';
 import { createApp } from '../src/app';
 
-const IMG = 'Z'.repeat(300);
+const IMG = '/9j/4AAQ' + 'Z'.repeat(292);
 const labelBody = JSON.stringify({
   kind: 'label',
   imageBase64: IMG,
@@ -20,7 +20,7 @@ const cfg = (provider: VisionProvider) => ({
   allowedOrigin: 'http://x',
   maxBodyBytes: 2_000_000,
   provider,
-  dishes: [],
+  catalogue: [],
 });
 const dishForLabel: VisionProvider = {
   name: 't',

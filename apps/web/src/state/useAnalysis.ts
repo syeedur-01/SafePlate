@@ -15,8 +15,9 @@ import {
   RawIngredientsFileSchema,
   SafetyRulesFileSchema,
 } from '@sp/contracts';
-import { analyze, type AllergenKeywords } from '@sp/engine';
+import { analyze, type AllergenKeywords, type AllergenMatching } from '@sp/engine';
 import allergenKeywordsFile from '@sp/knowledge/data/allergen-keywords.json';
+import allergenMatchingFile from '@sp/knowledge/data/allergen-matching.json';
 import normalizedDishesFile from '@sp/knowledge/data/normalized/dishes.json';
 import normalizedIngredientsFile from '@sp/knowledge/data/normalized/ingredients.json';
 import healthRulesFile from '@sp/knowledge/data/rules/health-rules.json';
@@ -33,6 +34,11 @@ const INGREDIENTS: Map<string, Ingredient> = new Map(
 );
 const SAFETY_RULES = SafetyRulesFileSchema.parse(safetyRulesFile).rules;
 const HEALTH_RULES = HealthRulesFileSchema.parse(healthRulesFile).rules;
+
+/** Returns the validated ingredient record for an id, or undefined when there is none. */
+export function getIngredient(id: string): Ingredient | undefined {
+  return INGREDIENTS.get(id);
+}
 
 const ALLERGENS = AllergenSchema.options as readonly Allergen[];
 
@@ -56,6 +62,27 @@ function buildAllergenKeywords(raw: unknown): AllergenKeywords {
 }
 
 const ALLERGEN_KEYWORDS = buildAllergenKeywords(allergenKeywordsFile);
+
+/** Returns the validated allergen matching context rules from the same file the knowledge loader uses. */
+function buildAllergenMatching(raw: unknown): AllergenMatching {
+  const file = raw as Record<string, unknown>;
+  const perAllergen = (value: unknown): Record<string, string[]> => {
+    const result: Record<string, string[]> = {};
+    if (typeof value === 'object' && value !== null) {
+      for (const [allergen, list] of Object.entries(value)) result[allergen] = list as string[];
+    }
+    return result;
+  };
+  return {
+    uncertain: perAllergen(file.uncertain) as AllergenMatching['uncertain'],
+    suppress: perAllergen(file.suppress) as AllergenMatching['suppress'],
+    advisoryPhrases: (file.advisoryPhrases ?? []) as string[],
+    negationBefore: (file.negationBefore ?? []) as string[],
+    negationAfter: (file.negationAfter ?? []) as string[],
+  };
+}
+
+const ALLERGEN_MATCHING = buildAllergenMatching(allergenMatchingFile);
 const DEFAULT_CONTEXT: ScanContext = {
   place: 'unknown',
   storage: 'unknown',
@@ -111,6 +138,7 @@ export function useAnalysis(args: UseAnalysisArgs): AnalysisResult {
       safetyRules: SAFETY_RULES,
       healthRules: HEALTH_RULES,
       allergenKeywords: ALLERGEN_KEYWORDS,
+      allergenMatching: ALLERGEN_MATCHING,
       today: utcDate(now()),
       servings,
     });

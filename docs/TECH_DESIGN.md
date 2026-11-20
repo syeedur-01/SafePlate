@@ -115,15 +115,16 @@ Input: `{ dish: Dish | null, label: LabelObservation | null, observations: { spo
 
 Rules (`safety-rules.json`) have a `trigger` of one of four types: `spoilage_sign`, `storage_hours`, `dish_tag`, `label_expired`. Each rule has `points` and `labelKey`, `mitigationKeys`, `sourceRef` and `status` (`draft` or `approved`).
 
-`score = min(100, sum of points of triggered rules)`. Levels: `low` if score < 25, `moderate` if < 60, otherwise `high` (constants in one place, `SAFETY_LEVEL_BOUNDS`). Every triggered rule becomes a `signal` with its own evidence text. **No rule triggered means a low score, not a "safe" claim.** `notices` must always contain `notice.chemical_limit` (the honest-limits text below). `rulesStatus` is `draft` if any triggered rule is draft.
+`score = min(100, sum of points of triggered rules)`. Levels: `low` if score < 25, `moderate` if < 60, otherwise `high` (constants in one place, `SAFETY_LEVEL_BOUNDS`). Every triggered rule becomes a `signal` with its own evidence text. **No rule triggered means a low score, not a "safe" claim.** `notices` must always contain `notice.chemical_limit` (the honest-limits text below); a triggered spoilage sign adds `notice.visual_observation` (photo observations are not proof of safe or unsafe). `rulesStatus` is `draft` if any triggered rule is draft.
 
-The point values are heuristic weights chosen by the team and reviewed by the expert. They are not medical thresholds. The rules' triggers (for example storage hours) must come from verified sources.
+The point values are heuristic weights chosen by the team. **No qualified professional has reviewed them yet** (the P2-DH01 approval record documents an AI-assisted stand-in panel whose output the owner accepted) - they are not medical thresholds and stay labelled as heuristics until a qualified person validates them. The rules' triggers must come from verified sources. `storage_hours` triggers are **disabled**: no sourced hour threshold exists and the scan UI never captures storage context, so the data verifier rejects any rule that uses one.
 
 ### 4.3 Suitability warnings
 
 `evaluateSuitability(profile, dish, nutrition, healthRules) → Warning[]`
 
 - **Allergen conflicts** come first: any overlap between `profile.allergies` and the dish's allergens gives level `avoid` (`kind: "allergen"`).
+- **Label allergen detection** (`detectAllergens`, engine `label.ts`) distinguishes three evidence classes: `declared` (manufacturer statement) and confident keyword matches give `avoid` (`warn.allergen_present`); uncertain keyword matches (generic terms such as bare "flour", "badam") and "may contain" advisory statements give `caution` with `warn.allergen_may_contain` - never a confirmed-ingredient verdict. Negation phrases ("does not contain", "দুধ ছাড়া") suppress a match. Unreadable ingredients text adds `notice.label_unreadable`: no detection is not allergen-free. Matching rules live in `data/allergen-matching.json` next to the keyword lists.
 - **Nutrient rules**: `fraction = nutrition[n].value / dailyLimit`, evaluated only for the user's conditions and only when `nutrition[n].shown`. `fraction >= avoidFraction` gives `avoid`; `fraction >= cautionFraction` gives `caution`. If the nutrient is **not shown**, emit an `info` warning `warn.insufficient_data` naming the nutrient. Never guess.
 - **Tag rules**: match on `cooking_class` or `safety_tag` for conditions without a numeric limit.
 - Order: allergen `avoid`, then `avoid`, `caution`, `info`.

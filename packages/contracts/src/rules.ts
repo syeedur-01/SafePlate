@@ -81,6 +81,12 @@ export const SourceEntrySchema = z.object({
   year: z.number().int().nullable(),
   edition: z.string().nullable(),
   url: z.string().url(),
+  /** DOI of the source document, when it has one and it is known; null is honest. */
+  doi: z.string().nullable().optional(),
+  /** Licence or terms under which the source may be used; null/absent means "not yet audited". */
+  licence: z.string().nullable().optional(),
+  /** Version/edition string of the data release, when known. */
+  version: z.string().nullable().optional(),
   tier: z.enum(['bangladesh', 'global', 'professional', 'data']),
   status: z.enum(['verified', 'unverified']),
   accessedOn: z

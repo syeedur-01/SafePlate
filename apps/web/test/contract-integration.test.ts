@@ -7,7 +7,7 @@ const app = createApp({
   allowedOrigin: 'http://localhost:5173',
   maxBodyBytes: 2_000_000,
   provider: new MockProvider(),
-  dishes: [],
+  catalogue: [],
 });
 // Route the client's fetch into the API app in-process: no network, same contract.
 // The signal is stripped because jsdom's AbortSignal and Node's Request come from
@@ -20,7 +20,7 @@ const fetchFn = ((url: string, init?: RequestInit) => {
 }) as unknown as typeof fetch;
 const req = (kind: 'dish' | 'label') => ({
   kind,
-  imageBase64: 'Q'.repeat(300),
+  imageBase64: '/9j/4AAQ' + 'Q'.repeat(293),
   mimeType: 'image/jpeg' as const,
   context: { place: 'home' as const, storage: 'unknown' as const, hoursSinceCooked: null },
 });

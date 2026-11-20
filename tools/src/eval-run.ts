@@ -1,6 +1,10 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createApp } from '@sp/api/src/app';
+import { GeminiProvider, MockProvider, OllamaProvider, type VisionProvider } from '@sp/ai';
+import { getCatalogue } from '@sp/knowledge';
+import type { AppConfig } from '@sp/api/src/config';
 import {
   dishMetrics,
   labelMetrics,
@@ -8,13 +12,29 @@ import {
   type EvalItem,
   type LabelPrediction,
 } from './eval-lib';
+import {
+  asBenchmarkEntries,
+  validateBenchmarkManifest,
+  type BenchmarkEntry,
+} from './eval-manifest';
+import { confusionMatrix, macroF1, perClassMetrics, type ClassMetric } from './eval-metrics';
 
 const DEFAULT_MAX_CALLS = 25;
+const MAX_CLASS_TABLE_ROWS = 25;
+const MAX_CONFUSION_LABELS = 12;
+const UNKNOWN_SENTINEL = 'unknown';
 
-/** Arguments of the eval runner: how many API calls to spend and which split to run. */
+/** Arguments of the eval runner: mode, how many calls to spend, which manifest and dataset. */
 export interface EvalArgs {
   maxCalls: number;
   holdout: boolean;
+  mode: 'api' | 'local';
+  /** Benchmark manifest path (new Phase 3 format); dish recognition runs only when given. */
+  manifest: string | null;
+  /** Dataset root that the benchmark manifest's imagePath entries are relative to. */
+  dataset: string | null;
+  /** Minimum milliseconds between provider calls; keeps free-tier rate limits. */
+  paceMs: number;
 }
 
 /** Metrics and latency summaries that go into the report text. */
@@ -23,6 +43,22 @@ export interface ReportMetrics {
   labels: { n: number; allergenPrecision: number; allergenRecall: number; expiryExact: number };
   poorImageQualityShare: number;
   medianLatencyMs: number;
+}
+
+/** Dish-recognition benchmark results from the Phase 3 manifest format. */
+export interface DishBenchmark {
+  source: string;
+  licence: string;
+  entriesTotal: number;
+  evaluated: number;
+  unmapped: number;
+  unusedDuplicates: number;
+  top1: number;
+  top3: number;
+  unknownRate: number;
+  macroF1: number;
+  perClass: Record<string, ClassMetric>;
+  confusion: { labels: string[]; matrix: number[][] } | null;
 }
 
 /** One failed item in the report: what was expected and what the API returned. */
@@ -34,7 +70,14 @@ export interface ReportFailure {
 
 /** Parses the CLI arguments; throws on anything unknown or invalid. */
 export function parseArgs(argv: string[]): EvalArgs {
-  const args: EvalArgs = { maxCalls: DEFAULT_MAX_CALLS, holdout: false };
+  const args: EvalArgs = {
+    maxCalls: DEFAULT_MAX_CALLS,
+    holdout: false,
+    mode: 'api',
+    manifest: null,
+    dataset: null,
+    paceMs: 0,
+  };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i]!;
     if (arg === '--max-calls') {
@@ -46,11 +89,57 @@ export function parseArgs(argv: string[]): EvalArgs {
       i += 1;
     } else if (arg === '--holdout') {
       args.holdout = true;
+    } else if (arg === '--mode') {
+      const value = argv[i + 1];
+      if (value !== 'api' && value !== 'local') {
+        throw new Error('--mode must be "api" or "local"');
+      }
+      args.mode = value;
+      i += 1;
+    } else if (arg === '--manifest') {
+      const value = argv[i + 1];
+      if (value === undefined || value === '') throw new Error('--manifest needs a value');
+      args.manifest = value;
+      i += 1;
+    } else if (arg === '--dataset') {
+      const value = argv[i + 1];
+      if (value === undefined || value === '') throw new Error('--dataset needs a value');
+      args.dataset = value;
+      i += 1;
+    } else if (arg === '--pace-ms') {
+      const value = Number(argv[i + 1]);
+      if (!Number.isInteger(value) || value < 0) {
+        throw new Error('--pace-ms must be a non-negative integer');
+      }
+      args.paceMs = value;
+      i += 1;
     } else {
       throw new Error(`unknown argument: ${arg}`);
     }
   }
   return args;
+}
+
+/** Returns the vision provider named by EVAL_PROVIDER; never defaults to mock. */
+export function localProviderFromEnv(env: Record<string, string | undefined>): VisionProvider {
+  const name = env['EVAL_PROVIDER'];
+  if (name === 'mock') return new MockProvider();
+  if (name === 'ollama') {
+    const model = env['EVAL_MODEL'];
+    if (model === undefined || model === '') {
+      throw new Error('EVAL_PROVIDER=ollama needs EVAL_MODEL (the local Ollama model name)');
+    }
+    return new OllamaProvider({ model, baseUrl: env['EVAL_OLLAMA_BASE_URL'] });
+  }
+  if (name === 'gemini') {
+    const apiKey = env['GEMINI_API_KEY'];
+    const model = env['GEMINI_MODEL'];
+    if (apiKey === undefined || apiKey === '' || model === undefined || model === '') {
+      throw new Error('EVAL_PROVIDER=gemini needs GEMINI_API_KEY and GEMINI_MODEL');
+    }
+    return new GeminiProvider({ apiKey, model });
+  }
+  throw new Error('EVAL_PROVIDER must be set explicitly to "mock" or "gemini"');
 }
 
 /** Formats a rate 0..1 as a percentage with one decimal; a non-finite rate renders as n/a. */
@@ -59,9 +148,63 @@ function pct(rate: number): string {
 }
 
 /** Renders the markdown report body; never prints NaN, whatever the metrics contain. */
-export function renderReport(metrics: ReportMetrics, failures: ReportFailure[]): string {
-  const lines: string[] = [
-    '## Dish recognition',
+export function renderReport(
+  metrics: ReportMetrics,
+  failures: ReportFailure[],
+  benchmark?: DishBenchmark,
+): string {
+  const lines: string[] = [];
+  if (benchmark !== undefined) {
+    lines.push(
+      '## Dataset',
+      '',
+      `- source: ${benchmark.source}`,
+      `- licence: ${benchmark.licence}`,
+      `- images in manifest: ${benchmark.entriesTotal} ` +
+        `(${benchmark.evaluated} evaluated, ${benchmark.unmapped} unmapped to the catalogue, ` +
+        `${benchmark.unusedDuplicates} exact duplicates marked unused)`,
+      '- class imbalance and support are shown per class below; unmapped labels are never scored.',
+      '',
+      '## Dish recognition (benchmark)',
+      '',
+      `- evaluated dishes: ${benchmark.evaluated}`,
+      `- top-1 accuracy: ${pct(benchmark.top1)}`,
+      `- top-3 accuracy: ${pct(benchmark.top3)}`,
+      `- unknown rate: ${pct(benchmark.unknownRate)}`,
+      `- macro-F1: ${Number.isFinite(benchmark.macroF1) ? benchmark.macroF1.toFixed(3) : 'n/a'}`,
+      '',
+    );
+    const classRows = Object.entries(benchmark.perClass).slice(0, MAX_CLASS_TABLE_ROWS);
+    if (classRows.length > 0) {
+      lines.push('### Per-class precision / recall (support shown)', '');
+      lines.push('| class | support | precision | recall | f1 |');
+      lines.push('| --- | --- | --- | --- | --- |');
+      for (const [label, m] of classRows) {
+        lines.push(
+          `| ${label} | ${m.support} | ${Number.isFinite(m.precision) ? m.precision.toFixed(2) : 'n/a'} | ${
+            Number.isFinite(m.recall) ? m.recall.toFixed(2) : 'n/a'
+          } | ${Number.isFinite(m.f1) ? m.f1.toFixed(2) : 'n/a'} |`,
+        );
+      }
+      lines.push('');
+    }
+    if (benchmark.confusion !== null && benchmark.confusion.labels.length <= MAX_CONFUSION_LABELS) {
+      lines.push('### Confusion matrix (rows = expected, columns = predicted)', '');
+      lines.push(`| ${['', ...benchmark.confusion.labels].join(' | ')} |`);
+      lines.push(`| ${benchmark.confusion.labels.map(() => '---').join(' | ')} |`);
+      for (let r = 0; r < benchmark.confusion.labels.length; r += 1) {
+        const row = benchmark.confusion.labels.map((l, c) =>
+          c === r
+            ? `**${benchmark.confusion!.matrix[r]![c]!}**`
+            : String(benchmark.confusion!.matrix[r]![c]!),
+        );
+        lines.push(`| ${benchmark.confusion.labels[r]!} | ${row.join(' | ')} |`);
+      }
+      lines.push('');
+    }
+  }
+  lines.push(
+    '## Dish recognition (legacy manifest)',
     '',
     `- evaluated dishes: ${metrics.dishes.n}`,
     `- top-1 accuracy: ${pct(metrics.dishes.top1)}`,
@@ -82,11 +225,13 @@ export function renderReport(metrics: ReportMetrics, failures: ReportFailure[]):
     '',
     '## Failures',
     '',
-  ];
+  );
   if (failures.length === 0) {
     lines.push('- none');
   } else {
-    for (const f of failures) lines.push(`- ${f.file} — expected: ${f.expected}, got: ${f.got}`);
+    for (const f of failures.slice(0, 50)) {
+      lines.push(`- ${f.file} — expected: ${f.expected}, got: ${f.got}`);
+    }
   }
   return lines.join('\n');
 }
@@ -106,6 +251,8 @@ function median(values: number[]): number {
   return sorted.length % 2 === 1 ? sorted[mid]! : (sorted[mid - 1]! + sorted[mid]!) / 2;
 }
 
+type Poster = (body: string) => Promise<{ status: number; text: string }>;
+
 interface ScanOutcome {
   prediction: DishPrediction | LabelPrediction | null;
   imageQualityPoor: boolean | null;
@@ -113,8 +260,13 @@ interface ScanOutcome {
   got: string;
 }
 
-async function scanOne(apiUrl: string, item: EvalItem, photoDir: string): Promise<ScanOutcome> {
-  const mime = mimeTypeFor(item.file);
+async function scanOne(
+  poster: Poster,
+  file: string,
+  kind: 'dish' | 'label',
+  photoDir: string,
+): Promise<ScanOutcome> {
+  const mime = mimeTypeFor(file);
   if (mime === null) {
     return {
       prediction: null,
@@ -125,21 +277,16 @@ async function scanOne(apiUrl: string, item: EvalItem, photoDir: string): Promis
   }
   let bytes: Buffer;
   try {
-    bytes = readFileSync(path.join(photoDir, item.file));
+    bytes = readFileSync(path.join(photoDir, file));
   } catch {
-    return {
-      prediction: null,
-      imageQualityPoor: null,
-      latencyMs: 0,
-      got: 'photo file missing in eval/photos/',
-    };
+    return { prediction: null, imageQualityPoor: null, latencyMs: 0, got: 'photo file missing' };
   }
   const body = JSON.stringify({
-    kind: item.kind,
+    kind,
     imageBase64: bytes.toString('base64'),
     mimeType: mime,
     context: {
-      place: item.kind === 'label' ? 'packaged' : 'home',
+      place: kind === 'label' ? 'packaged' : 'home',
       storage: 'unknown',
       hoursSinceCooked: null,
     },
@@ -147,15 +294,10 @@ async function scanOne(apiUrl: string, item: EvalItem, photoDir: string): Promis
   const started = Date.now();
   let parsed: unknown;
   try {
-    const res = await fetch(`${apiUrl.replace(/\/+$/, '')}/api/scan`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body,
-    });
+    const res = await poster(body);
     const latencyMs = Date.now() - started;
-    const text = await res.text();
     try {
-      parsed = JSON.parse(text);
+      parsed = JSON.parse(res.text);
     } catch {
       return {
         prediction: null,
@@ -174,26 +316,26 @@ async function scanOne(apiUrl: string, item: EvalItem, photoDir: string): Promis
         got: `API error ${typeof code === 'string' ? code : res.status}`,
       };
     }
-    const kind = asRecord['kind'];
-    if (kind === 'dish') {
+    const responseKind = asRecord['kind'];
+    if (responseKind === 'dish') {
       const candidates = (asRecord['candidates'] as Array<{ dishId: string | null }>) ?? [];
       const quality = (asRecord['observations'] as { imageQuality?: string } | undefined)?.[
         'imageQuality'
       ];
       return {
-        prediction: { file: item.file, candidates },
+        prediction: { file, candidates },
         imageQualityPoor: quality === 'poor',
         latencyMs,
         got: candidates[0]?.dishId ?? 'unknown',
       };
     }
-    if (kind === 'label') {
+    if (responseKind === 'label') {
       const quality = (asRecord['observations'] as { imageQuality?: string } | undefined)?.[
         'imageQuality'
       ];
       return {
         prediction: {
-          file: item.file,
+          file,
           declaredAllergens: (asRecord['declaredAllergens'] as EvalLabelPredictionAllergens) ?? [],
           expiryDate: (asRecord['expiryDate'] as string | null) ?? null,
         },
@@ -236,42 +378,185 @@ function isHit(item: EvalItem, prediction: DishPrediction | LabelPrediction | nu
   return labelPred.expiryDate === (item.expectedExpiry ?? null);
 }
 
-async function main(): Promise<void> {
-  const apiUrl = process.env['API_URL'] ?? '';
-  if (apiUrl === '') {
-    process.stderr.write(
-      'eval-run: set API_URL to the deployed worker URL (example: https://safeplate-api.<subdomain>.workers.dev)\n',
-    );
-    process.exitCode = 1;
-    return;
+interface BenchmarkOutcome {
+  benchmark: DishBenchmark;
+  failures: ReportFailure[];
+  latencies: number[];
+  poorShare: { counted: number; poor: number };
+}
+
+/**
+ * Runs the dish-recognition benchmark from the Phase 3 manifest against a poster.
+ * Images whose dataset label is unmapped or that are marked unused are never scored.
+ */
+async function runBenchmark(
+  entries: BenchmarkEntry[],
+  datasetRoot: string,
+  poster: Poster,
+  maxCalls: number,
+  paceMs: number,
+): Promise<BenchmarkOutcome> {
+  const scorable = entries.filter((e) => e.kind === 'dish' && e.mappedDishId !== null);
+  const split = 'dev';
+  const selected = scorable.filter((e) => e.split === split).slice(0, maxCalls);
+  const expected: string[] = [];
+  const predicted: string[] = [];
+  const failures: ReportFailure[] = [];
+  const latencies: number[] = [];
+  let poor = 0;
+  let counted = 0;
+  let top1 = 0;
+  let top3 = 0;
+  let unknown = 0;
+  for (const entry of selected) {
+    if (paceMs > 0) await new Promise((resolve) => setTimeout(resolve, paceMs));
+    const outcome = await scanOne(poster, entry.imagePath, 'dish', datasetRoot);
+    if (outcome.latencyMs > 0) latencies.push(outcome.latencyMs);
+    if (outcome.imageQualityPoor !== null) {
+      counted += 1;
+      if (outcome.imageQualityPoor) poor += 1;
+    }
+    const dishPred = outcome.prediction as DishPrediction | null;
+    expected.push(entry.mappedDishId!);
+    const first = dishPred?.candidates[0];
+    if (first === undefined) {
+      predicted.push(UNKNOWN_SENTINEL);
+    } else if (first.dishId === null) {
+      unknown += 1;
+      predicted.push(UNKNOWN_SENTINEL);
+    } else {
+      predicted.push(first.dishId);
+    }
+    const hitTop3 = dishPred?.candidates
+      .slice(0, 3)
+      .some((c) => c.dishId !== null && c.dishId === entry.mappedDishId);
+    if (first !== undefined && first.dishId === entry.mappedDishId) top1 += 1;
+    if (hitTop3 === true) top3 += 1;
+    failures.push({
+      file: entry.imagePath,
+      expected: entry.mappedDishId!,
+      got: outcome.got,
+    });
   }
+  const failuresOnly = failures.filter((f) => f.expected !== f.got);
+  const n = expected.length;
+  const perClass = perClassMetrics(expected, predicted);
+  const confusion = confusionMatrix(expected, predicted);
+  return {
+    benchmark: {
+      source: selected[0]?.source ?? entries[0]?.source ?? 'unknown',
+      licence: selected[0]?.licence ?? entries[0]?.licence ?? 'unknown',
+      entriesTotal: entries.length,
+      evaluated: n,
+      unmapped: entries.filter((e) => e.kind === 'dish' && e.mappedDishId === null).length,
+      unusedDuplicates: entries.filter((e) => e.split === 'unused').length,
+      top1: n === 0 ? 0 : top1 / n,
+      top3: n === 0 ? 0 : top3 / n,
+      unknownRate: n === 0 ? 0 : unknown / n,
+      macroF1: macroF1(perClass),
+      perClass,
+      confusion,
+    },
+    failures: failuresOnly,
+    latencies,
+    poorShare: { counted, poor },
+  };
+}
+
+function loadLegacyItems(evalDir: string): EvalItem[] {
+  const manifestPath = path.join(evalDir, 'manifest.json');
+  if (!existsSync(manifestPath)) return [];
+  return JSON.parse(readFileSync(manifestPath, 'utf8')) as EvalItem[];
+}
+
+async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
   const evalDir = fileURLToPath(new URL('../../eval', import.meta.url));
-  let items: EvalItem[];
-  try {
-    items = JSON.parse(readFileSync(path.join(evalDir, 'manifest.json'), 'utf8')) as EvalItem[];
-  } catch {
-    process.stderr.write(
-      'eval-run: eval/manifest.json not found or not JSON (see eval/README.md)\n',
-    );
-    process.exitCode = 1;
-    return;
+  let poster: Poster;
+  let target: string;
+  if (args.mode === 'local') {
+    // Local harness: the same app code the API deploys, in-process, no endpoint needed.
+    const config: AppConfig = {
+      allowedOrigin: 'http://eval.local',
+      maxBodyBytes: 20_000_000,
+      provider: localProviderFromEnv(process.env),
+      catalogue: getCatalogue().entries.map((entry) => ({
+        id: entry.id,
+        name_en: entry.name_en,
+        name_bn: entry.name_bn,
+        aliases: entry.aliases,
+        category: entry.category,
+      })),
+    };
+    const app = createApp(config);
+    target = `local app (provider: ${config.provider?.name ?? 'none'})`;
+    poster = async (body) => {
+      const res = await app.request('/api/scan', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body,
+      });
+      return { status: res.status, text: await res.text() };
+    };
+  } else {
+    target = process.env['API_URL'] ?? '';
+    if (target === '') {
+      process.stderr.write(
+        'eval-run: API mode needs API_URL, or use --mode local for the in-process harness\n',
+      );
+      process.exitCode = 1;
+      return;
+    }
+    const base = target.replace(/\/+$/, '');
+    poster = async (body) => {
+      const res = await fetch(`${base}/api/scan`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body,
+      });
+      return { status: res.status, text: await res.text() };
+    };
   }
+
+  let benchmarkOutcome: BenchmarkOutcome | null = null;
+  if (args.manifest !== null) {
+    const manifestValue: unknown = JSON.parse(readFileSync(args.manifest, 'utf8'));
+    const problems = validateBenchmarkManifest(manifestValue);
+    if (problems.length > 0) {
+      process.stderr.write(`eval-run: benchmark manifest is invalid:\n${problems.join('\n')}\n`);
+      process.exitCode = 1;
+      return;
+    }
+    if (args.dataset === null) {
+      process.stderr.write('eval-run: --dataset is required with --manifest\n');
+      process.exitCode = 1;
+      return;
+    }
+    benchmarkOutcome = await runBenchmark(
+      asBenchmarkEntries(manifestValue),
+      args.dataset,
+      poster,
+      args.maxCalls,
+      args.paceMs,
+    );
+  }
+
+  const items = loadLegacyItems(evalDir);
   const split = args.holdout ? 'holdout' : 'dev';
   const selected = items.filter((i) => i.split === split).slice(0, args.maxCalls);
   const capped = items.filter((i) => i.split === split).length > selected.length;
   process.stdout.write(
-    `eval-run: ${selected.length} ${split} item(s) against ${apiUrl}${capped ? ` (capped at --max-calls ${args.maxCalls})` : ''}\n`,
+    `eval-run: ${target}${capped ? ` (capped at --max-calls ${args.maxCalls})` : ''}\n`,
   );
 
   const dishPreds: DishPrediction[] = [];
   const labelPreds: LabelPrediction[] = [];
-  const failures: ReportFailure[] = [];
-  const latencies: number[] = [];
-  let poorCount = 0;
-  let responseCount = 0;
+  const failures: ReportFailure[] = benchmarkOutcome === null ? [] : [...benchmarkOutcome.failures];
+  const latencies: number[] = benchmarkOutcome === null ? [] : [...benchmarkOutcome.latencies];
+  let poorCount = benchmarkOutcome?.poorShare.poor ?? 0;
+  let responseCount = benchmarkOutcome?.poorShare.counted ?? 0;
   for (const item of selected) {
-    const outcome = await scanOne(apiUrl, item, path.join(evalDir, 'photos'));
+    const outcome = await scanOne(poster, item.file, item.kind, path.join(evalDir, 'photos'));
     if (outcome.latencyMs > 0) latencies.push(outcome.latencyMs);
     if (outcome.imageQualityPoor !== null) {
       responseCount += 1;
@@ -295,12 +580,12 @@ async function main(): Promise<void> {
   const meta = [
     '# Vision evaluation report',
     '',
-    `- API: ${apiUrl}`,
-    `- split: ${split}${capped ? ` (stopped after ${selected.length} calls, --max-calls ${args.maxCalls})` : ''}`,
-    '- generated by `pnpm --filter @sp/tools eval-run` (P3-X05); see eval/README.md',
+    `- target: ${target}`,
+    `- mode: ${args.mode}, split: ${split}${capped ? ` (stopped after ${selected.length} calls, --max-calls ${args.maxCalls})` : ''}`,
+    '- generated by `pnpm --filter @sp/tools eval-run`',
     '',
   ].join('\n');
-  const report = renderReport(metrics, failures);
+  const report = renderReport(metrics, failures, benchmarkOutcome?.benchmark);
   const outPath = fileURLToPath(new URL('../../docs/EVAL_REPORT.md', import.meta.url));
   writeFileSync(outPath, `${meta}${report}\n`);
   process.stdout.write(`${report}\n`);

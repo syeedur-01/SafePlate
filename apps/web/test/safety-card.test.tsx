@@ -28,9 +28,12 @@ afterEach(() => {
 });
 
 describe('SafetyCard', () => {
-  it('renders the risk score and the always-visible chemical notice', () => {
+  it('renders the risk score and the always-visible chemical notice', async () => {
     wrap(<SafetyCard safety={kacchiAnalysis.safety} />);
-    expect(screen.getByText(String(kacchiAnalysis.safety.score))).toBeInTheDocument();
+    // The gauge counts up to the final score, so the number settles asynchronously.
+    expect(
+      await screen.findByText(String(kacchiAnalysis.safety.score), {}, { timeout: 3000 }),
+    ).toBeInTheDocument();
     expect(screen.getByText('Moderate risk')).toBeInTheDocument();
     expect(screen.getByText(/cannot detect invisible chemical contamination/)).toBeInTheDocument();
   });

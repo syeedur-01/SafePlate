@@ -85,6 +85,7 @@
       "year": null,
       "edition": null,
       "url": "https://fdc.nal.usda.gov/",
+      "licence": "CC0 1.0 (public domain; per the FoodData Central API guide, checked 2026-11-19)",
       "tier": "data",
       "status": "verified",
       "accessedOn": "2026-11-11"

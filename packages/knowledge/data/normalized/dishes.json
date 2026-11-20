@@ -103,6 +103,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -199,6 +200,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -293,6 +295,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -403,6 +406,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -477,6 +481,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -541,6 +546,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -609,6 +615,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -677,6 +684,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -740,6 +748,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -813,6 +822,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -901,6 +911,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -989,6 +1000,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1047,6 +1059,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1130,6 +1143,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1223,6 +1237,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1344,6 +1359,7 @@
       ],
       "confidence": "medium",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1432,6 +1448,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1510,6 +1527,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1593,6 +1611,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1656,6 +1675,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1734,6 +1754,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1817,6 +1838,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1906,6 +1928,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -1980,6 +2003,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -2039,6 +2063,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -2092,6 +2117,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -2145,6 +2171,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -2208,6 +2235,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -2301,6 +2329,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",
@@ -2374,6 +2403,7 @@
       ],
       "confidence": "low",
       "needs_expert_review": true,
+      "review_provenance": "ai_assisted_review",
       "notes": [
         "Ingredient quantities per serving and cooked serving weight are ESTIMATES created for schema completion; they are not claimed to originate from FCTB or the INFS study.",
         "No dish-level nutrition totals have been calculated.",

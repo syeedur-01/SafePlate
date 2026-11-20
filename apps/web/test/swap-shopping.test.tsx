@@ -17,6 +17,10 @@ registerMessages({
     bn: 'কোনো বিকল্প খাবার পাওয়া যায়নি।',
   },
   'nutrient.sodium_mg': { en: 'Sodium', bn: 'সোডিয়াম' },
+  'shopping.copy': { en: 'Copy list', bn: 'তালিকা কপি করুন' },
+  'shopping.title': { en: 'Shopping list', bn: 'শপিং তালিকা' },
+  'shopping.select_all': { en: 'Select all', bn: 'সব নির্বাচন করুন' },
+  'shopping.deselect_all': { en: 'Deselect all', bn: 'সব বাতিল করুন' },
 });
 
 const wrap = (ui: ReactElement) => render(<I18nProvider lang="en">{ui}</I18nProvider>);
@@ -139,5 +143,65 @@ describe('ShoppingList', () => {
     expect(screen.getByRole('textbox', { name: 'Copy list' })).toHaveValue(
       'Mutton: 120g\nWhite rice: 100g',
     );
+  });
+
+  it('checks every row after Select all and clears them after Deselect all', async () => {
+    const user = userEvent.setup();
+    wrap(
+      <ShoppingList
+        items={items}
+        ingredientNames={ingredientNames}
+        servings={1}
+        onServingsChange={() => {}}
+      />,
+    );
+
+    const boxes = screen.getAllByRole('checkbox');
+    expect(boxes).toHaveLength(2);
+    expect(boxes.every((box) => !(box as HTMLInputElement).checked)).toBe(true);
+
+    await user.click(screen.getByRole('button', { name: 'Select all' }));
+    expect(boxes.every((box) => (box as HTMLInputElement).checked)).toBe(true);
+
+    await user.click(screen.getByRole('button', { name: 'Deselect all' }));
+    expect(boxes.every((box) => !(box as HTMLInputElement).checked)).toBe(true);
+  });
+
+  it('keeps the selection when the count changes but not across a different list', () => {
+    const { rerender } = wrap(
+      <ShoppingList
+        items={items}
+        ingredientNames={ingredientNames}
+        servings={1}
+        onServingsChange={() => {}}
+      />,
+    );
+
+    fireEvent.click(screen.getAllByRole('checkbox')[0]!);
+
+    rerender(
+      <I18nProvider lang="en">
+        <ShoppingList
+          items={items}
+          ingredientNames={ingredientNames}
+          servings={2}
+          onServingsChange={() => {}}
+        />
+      </I18nProvider>,
+    );
+    expect((screen.getAllByRole('checkbox')[0] as HTMLInputElement).checked).toBe(true);
+
+    rerender(
+      <I18nProvider lang="en">
+        <ShoppingList
+          items={[items[1]!]}
+          ingredientNames={ingredientNames}
+          servings={2}
+          onServingsChange={() => {}}
+        />
+      </I18nProvider>,
+    );
+    expect(screen.getAllByRole('checkbox')).toHaveLength(1);
+    expect((screen.getAllByRole('checkbox')[0] as HTMLInputElement).checked).toBe(false);
   });
 });

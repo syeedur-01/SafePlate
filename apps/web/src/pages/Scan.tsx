@@ -1,9 +1,10 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import type { ScanContext, ScanRequest } from '@sp/contracts';
 import { ApiClientError, mockScan, scan } from '../api/client';
+import { PhotoPicker } from '../components/PhotoPicker';
 import { SamplePicker } from '../components/SamplePicker';
-import { Button, buttonVariants } from '../components/ui/button';
+import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { useT } from '../i18n/i18n';
@@ -29,6 +30,9 @@ const STORAGES: readonly ScanContext['storage'][] = [
 
 const USE_MOCK = import.meta.env.VITE_USE_MOCK === '1';
 
+const ALLOWED_IMAGE_TYPES = new Set(['image/jpeg', 'image/png', 'image/webp']);
+const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
+
 type Kind = ScanRequest['kind'];
 
 /** Returns the scan screen for picking a photo, context and analysis. */
@@ -44,9 +48,24 @@ export function Scan() {
   const [errorKey, setErrorKey] = useState<string | null>(null);
   const slow = useSlowNotice(loading);
 
-  function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
-    setFile(event.target.files?.[0] ?? null);
+  function handleFileChange(selected: File | null) {
     setErrorKey(null);
+    if (selected === null) {
+      setFile(null);
+      return;
+    }
+    // Early, friendly client-side checks; the server remains the security boundary.
+    if (!ALLOWED_IMAGE_TYPES.has(selected.type)) {
+      setFile(null);
+      setErrorKey('error.file_type');
+      return;
+    }
+    if (selected.size > MAX_UPLOAD_BYTES) {
+      setFile(null);
+      setErrorKey('error.file_size');
+      return;
+    }
+    setFile(selected);
   }
 
   function handleKindChange(value: string) {
@@ -115,27 +134,10 @@ export function Scan() {
         </Tabs>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="space-y-2">
-            <label
-              className={cn(
-                buttonVariants({ variant: 'secondary' }),
-                'cursor-pointer focus-within:ring-2 focus-within:ring-primary',
-              )}
-            >
-              {t('scan.choosePhoto')}
-              <input
-                type="file"
-                accept="image/*"
-                capture="environment"
-                onChange={handleFileChange}
-                className="sr-only"
-              />
-            </label>
-            {file === null ? null : <p className="text-xs break-all">{file.name}</p>}
-          </div>
+          <PhotoPicker file={file} loading={loading} onFileChange={handleFileChange} />
 
           <fieldset className="space-y-2">
-            <legend className="text-sm font-semibold">{t('scan.place.label')}</legend>
+            <legend className="text-sm font-semibold text-heading">{t('scan.place.label')}</legend>
             <div className="flex flex-wrap gap-2">
               {PLACES.map((value) => (
                 <button
@@ -143,10 +145,7 @@ export function Scan() {
                   type="button"
                   aria-pressed={place === value}
                   onClick={() => setPlace(value)}
-                  className={cn(
-                    'min-h-11 rounded-full border px-3 text-sm',
-                    place === value ? 'border-primary bg-muted font-medium' : 'border-border',
-                  )}
+                  className={cn('sp-chip', place === value ? 'sp-chip-active' : 'sp-chip-idle')}
                 >
                   {t(`scan.place.${value}`)}
                 </button>
@@ -155,7 +154,9 @@ export function Scan() {
           </fieldset>
 
           <fieldset className="space-y-2">
-            <legend className="text-sm font-semibold">{t('scan.storage.label')}</legend>
+            <legend className="text-sm font-semibold text-heading">
+              {t('scan.storage.label')}
+            </legend>
             <div className="flex flex-wrap gap-2">
               {STORAGES.map((value) => (
                 <button
@@ -163,10 +164,7 @@ export function Scan() {
                   type="button"
                   aria-pressed={storage === value}
                   onClick={() => setStorage(value)}
-                  className={cn(
-                    'min-h-11 rounded-full border px-3 text-sm',
-                    storage === value ? 'border-primary bg-muted font-medium' : 'border-border',
-                  )}
+                  className={cn('sp-chip', storage === value ? 'sp-chip-active' : 'sp-chip-idle')}
                 >
                   {t(`scan.storage.${value}`)}
                 </button>
@@ -175,7 +173,7 @@ export function Scan() {
           </fieldset>
 
           {kind === 'dish' ? (
-            <label className="flex flex-col gap-1 text-sm font-semibold">
+            <label className="flex flex-col gap-1 text-sm font-semibold text-heading">
               {t('scan.hours')}
               <input
                 type="number"
@@ -184,27 +182,29 @@ export function Scan() {
                 step={1}
                 value={hours}
                 onChange={(event) => setHours(event.target.value)}
-                className="min-h-11 w-32 rounded-md border border-border bg-card px-3 text-base font-normal text-fg"
+                className="min-h-11 w-32 rounded-xl border border-border bg-card px-3 text-base font-normal text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               />
             </label>
           ) : null}
 
           {errorKey === null ? null : (
-            <div role="alert" className="space-y-3 rounded-md border border-risk-high p-3">
+            <div role="alert" className="space-y-3 rounded-xl border border-risk-high bg-card p-3">
               <p className="text-sm text-risk-high">{t(errorKey)}</p>
-              <Button variant="secondary" onClick={() => void analyze()} disabled={loading}>
-                {t('scan.retry')}
-              </Button>
+              {file === null ? null : (
+                <Button variant="secondary" onClick={() => void analyze()} disabled={loading}>
+                  {t('scan.retry')}
+                </Button>
+              )}
             </div>
           )}
 
           {slow ? (
-            <p role="status" className="text-sm text-fg/80">
+            <p role="status" className="text-sm text-muted-fg">
               {t('scan.slowNotice')}
             </p>
           ) : null}
 
-          <Button type="submit" disabled={file === null || loading}>
+          <Button type="submit" size="lg" className="w-full" disabled={file === null || loading}>
             {loading ? t('scan.analyzing') : t('scan.analyze')}
           </Button>
         </form>

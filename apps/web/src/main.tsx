@@ -5,10 +5,12 @@ import { MessagesFileSchema } from '@sp/contracts';
 import messagesFile from '@sp/knowledge/data/messages.json';
 import { App } from './App';
 import { I18nProvider, registerMessages } from './i18n/i18n';
+import { applyTheme, loadTheme } from './lib/theme';
 import { DEFAULT_PROFILE_STORE } from './state/profile-store';
 import './index.css';
 
 registerMessages(MessagesFileSchema.parse(messagesFile));
+applyTheme(loadTheme());
 
 const initialLang = DEFAULT_PROFILE_STORE.load().language;
 

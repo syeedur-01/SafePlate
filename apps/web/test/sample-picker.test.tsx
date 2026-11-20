@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { cleanup, render, screen } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Outlet, Route, Routes } from 'react-router-dom';
 import { I18nProvider } from '../src/i18n/i18n';
@@ -70,5 +70,32 @@ describe('SamplePicker', () => {
     }
 
     expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('shows each sample as a lazy-loaded licensed photo card', () => {
+    renderPicker();
+
+    const images = Array.from(document.querySelectorAll('img'));
+    expect(images).toHaveLength(4);
+    for (const img of images) {
+      expect(img.getAttribute('src')).toMatch(/^\/samples\/sample-.+\.jpg$/);
+      expect(img.getAttribute('loading')).toBe('lazy');
+      // The card label names the sample, so the photo itself stays decorative.
+      expect(img.getAttribute('alt')).toBe('');
+    }
+    // The photo licences are disclosed under the cards.
+    expect(screen.getByText(/CC BY 4\.0/)).toBeInTheDocument();
+  });
+
+  it('degrades a broken sample photo to a labelled placeholder', () => {
+    renderPicker();
+
+    const first = document.querySelector('img');
+    expect(first).not.toBeNull();
+    fireEvent.error(first!);
+
+    // The label now appears both as the card heading and inside the placeholder.
+    expect(screen.getAllByText('Kacchi Biryani')).toHaveLength(2);
+    expect(screen.getAllByText('Sample, no AI call')).toHaveLength(4);
   });
 });

@@ -20,63 +20,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "01_0025",
+          "pdf_page": 33,
+          "table": "Proximate composition",
+          "row_name": "Rice, white, sunned, polished, milled, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 33,
-          "food_code": "01_0025",
-          "row_name": "Rice, white, sunned, polished, milled, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "01_0025",
+          "pdf_page": 34,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Rice, white, sunned, polished, milled, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 34,
-          "food_code": "01_0025",
-          "row_name": "Rice, white, sunned, polished, milled, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0025",
           "pdf_page": 33,
-          "food_code": "01_0025"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0025",
           "pdf_page": 33,
-          "food_code": "01_0025"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0025",
           "pdf_page": 33,
-          "food_code": "01_0025"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0025",
           "pdf_page": 33,
-          "food_code": "01_0025"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0025",
           "pdf_page": 33,
-          "food_code": "01_0025"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "01_0025",
           "pdf_page": 34,
-          "food_code": "01_0025"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -86,7 +86,8 @@
       },
       "notes": "FCTB carbohydrates field is 'carbohydrate available', not total carbohydrate. Saturated fat and sugars were not populated because the approved FCTB tables cited here do not provide directly matching values.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 317,
@@ -104,63 +105,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "02_0008",
+          "pdf_page": 41,
+          "table": "Proximate composition",
+          "row_name": "Lentil, dried, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 41,
-          "food_code": "02_0008",
-          "row_name": "Lentil, dried, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "02_0008",
+          "pdf_page": 42,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Lentil, dried, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 42,
-          "food_code": "02_0008",
-          "row_name": "Lentil, dried, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0008",
           "pdf_page": 41,
-          "food_code": "02_0008"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0008",
           "pdf_page": 41,
-          "food_code": "02_0008"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0008",
           "pdf_page": 41,
-          "food_code": "02_0008"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0008",
           "pdf_page": 41,
-          "food_code": "02_0008"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0008",
           "pdf_page": 41,
-          "food_code": "02_0008"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "02_0008",
           "pdf_page": 42,
-          "food_code": "02_0008"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -175,7 +176,8 @@
       },
       "notes": "Generic FCTB lentil profile, used as an approximate raw lentil composition reference; it is not a tested profile of a particular commercial cultivar. Saturated fat and sugars are unavailable in this entry.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 375,
@@ -193,52 +195,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "02_0001",
+          "pdf_page": 41,
+          "table": "Proximate composition",
+          "row_name": "Bengal gram, split, dried, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 41,
-          "food_code": "02_0001",
-          "row_name": "Bengal gram, split, dried, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0001",
           "pdf_page": 41,
-          "food_code": "02_0001"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0001",
           "pdf_page": 41,
-          "food_code": "02_0001"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0001",
           "pdf_page": 41,
-          "food_code": "02_0001"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0001",
           "pdf_page": 41,
-          "food_code": "02_0001"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "02_0001",
           "pdf_page": 41,
-          "food_code": "02_0001"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "02_0001",
-          "table": "Mineral composition",
-          "pdf_page": 43
+          "pdf_page": 43,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -253,7 +255,8 @@
       },
       "notes": "FCTB reports dietary fibre as a bracketed value [1.2]; retained numerically but flagged as a qualified source value. Sodium was not verified in the extracted matching mineral row.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 66,
@@ -271,66 +274,67 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "05_0005",
+          "pdf_page": 72,
+          "table": "Proximate composition",
+          "row_name": "Potato, Diamond, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 72,
-          "food_code": "05_0005",
-          "row_name": "Potato, Diamond, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "05_0005",
+          "pdf_page": 73,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Potato, Diamond, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 73,
-          "food_code": "05_0005",
-          "row_name": "Potato, Diamond, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "05_0005",
           "pdf_page": 72,
-          "food_code": "05_0005"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "05_0005",
           "pdf_page": 72,
-          "food_code": "05_0005"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "05_0005",
           "pdf_page": 72,
-          "food_code": "05_0005"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "05_0005",
           "pdf_page": 72,
-          "food_code": "05_0005"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "05_0005",
           "pdf_page": 72,
-          "food_code": "05_0005"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "05_0005",
           "pdf_page": 73,
-          "food_code": "05_0005"
+          "table": "Mineral composition"
         }
       },
-      "notes": "Specific to the FCTB Diamond potato entry. Saturated fat and sugars were not available from the cited matching entry."
+      "notes": "Specific to the FCTB Diamond potato entry. Saturated fat and sugars were not available from the cited matching entry.",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 24,
@@ -348,52 +352,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0005",
+          "pdf_page": 49,
+          "table": "Proximate composition",
+          "row_name": "Eggplant, purple long, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 49,
-          "food_code": "03_0005",
-          "row_name": "Eggplant, purple long, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0005",
           "pdf_page": 49,
-          "food_code": "03_0005"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0005",
           "pdf_page": 49,
-          "food_code": "03_0005"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0005",
           "pdf_page": 49,
-          "food_code": "03_0005"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0005",
           "pdf_page": 49,
-          "food_code": "03_0005"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0005",
           "pdf_page": 49,
-          "food_code": "03_0005"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "03_0005",
-          "table": "Mineral composition",
-          "pdf_page": 51
+          "pdf_page": 51,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -408,7 +412,8 @@
       },
       "notes": "FCTB matching proximate row used. Sodium and saturated fat/sugars were not verified from a matching record in this pass.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 59,
@@ -426,63 +431,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0024",
+          "pdf_page": 52,
+          "table": "Proximate composition",
+          "row_name": "Onion, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 52,
-          "food_code": "03_0024",
-          "row_name": "Onion, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0024",
+          "pdf_page": 53,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Onion, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 53,
-          "food_code": "03_0024",
-          "row_name": "Onion, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0024",
           "pdf_page": 52,
-          "food_code": "03_0024"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0024",
           "pdf_page": 52,
-          "food_code": "03_0024"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0024",
           "pdf_page": 52,
-          "food_code": "03_0024"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0024",
           "pdf_page": 52,
-          "food_code": "03_0024"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0024",
           "pdf_page": 52,
-          "food_code": "03_0024"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "03_0024",
           "pdf_page": 53,
-          "food_code": "03_0024"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -497,7 +502,8 @@
       },
       "notes": "FCTB carbohydrate-available and total dietary fibre values used; sugars and saturated fat are not supplied in this entry.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 147,
@@ -515,63 +521,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0014",
+          "pdf_page": 52,
+          "table": "Proximate composition",
+          "row_name": "Garlic, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 52,
-          "food_code": "03_0014",
-          "row_name": "Garlic, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0014",
+          "pdf_page": 53,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Garlic, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 53,
-          "food_code": "03_0014",
-          "row_name": "Garlic, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0014",
           "pdf_page": 52,
-          "food_code": "03_0014"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0014",
           "pdf_page": 52,
-          "food_code": "03_0014"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0014",
           "pdf_page": 52,
-          "food_code": "03_0014"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0014",
           "pdf_page": 52,
-          "food_code": "03_0014"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0014",
           "pdf_page": 52,
-          "food_code": "03_0014"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "03_0014",
           "pdf_page": 53,
-          "food_code": "03_0014"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -586,7 +592,8 @@
       },
       "notes": "FCTB matching proximate and mineral entries used. Sugars and saturated fat not supplied.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 34,
@@ -604,52 +611,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0017",
+          "pdf_page": 52,
+          "table": "Proximate composition",
+          "row_name": "Bottle gourd, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 52,
-          "food_code": "03_0017",
-          "row_name": "Bottle gourd, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0017",
           "pdf_page": 52,
-          "food_code": "03_0017"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0017",
           "pdf_page": 52,
-          "food_code": "03_0017"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0017",
           "pdf_page": 52,
-          "food_code": "03_0017"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0017",
           "pdf_page": 52,
-          "food_code": "03_0017"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0017",
           "pdf_page": 52,
-          "food_code": "03_0017"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "03_0017",
-          "table": "Mineral composition",
-          "pdf_page": 54
+          "pdf_page": 54,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -659,7 +666,8 @@
       },
       "notes": "FCTB reports dietary fibre as a bracketed value [0.6]; retained as a qualified source value. Sodium not verified in this pass.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 16,
@@ -677,63 +685,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0031",
+          "pdf_page": 55,
+          "table": "Proximate composition",
+          "row_name": "Tomato, red ripe, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 55,
-          "food_code": "03_0031",
-          "row_name": "Tomato, red ripe, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0031",
+          "pdf_page": 56,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Tomato, red ripe, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 56,
-          "food_code": "03_0031",
-          "row_name": "Tomato, red ripe, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0031",
           "pdf_page": 55,
-          "food_code": "03_0031"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0031",
           "pdf_page": 55,
-          "food_code": "03_0031"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0031",
           "pdf_page": 55,
-          "food_code": "03_0031"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0031",
           "pdf_page": 55,
-          "food_code": "03_0031"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "03_0031",
           "pdf_page": 55,
-          "food_code": "03_0031"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "03_0031",
           "pdf_page": 56,
-          "food_code": "03_0031"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -748,7 +756,8 @@
       },
       "notes": "FCTB carbohydrate-available and fibre values; saturated fat and sugars unavailable.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 103,
@@ -766,56 +775,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "10_0002",
+          "pdf_page": 128,
+          "table": "Proximate composition",
+          "row_name": "Beef, meat, lean, boneless, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 128,
-          "food_code": "10_0002",
-          "row_name": "Beef, meat, lean, boneless, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0002",
           "pdf_page": 128,
-          "food_code": "10_0002"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0002",
           "pdf_page": 128,
-          "food_code": "10_0002"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0002",
           "pdf_page": 128,
-          "food_code": "10_0002"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0002",
           "pdf_page": 128,
-          "food_code": "10_0002"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0002",
           "pdf_page": 128,
-          "food_code": "10_0002"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "10_0002",
-          "table": "Mineral composition",
-          "pdf_page": 130
+          "pdf_page": 130,
+          "table": "Mineral composition"
         }
       },
       "notes": "FCTB raw lean boneless beef profile. Zero carbohydrate and fibre are the values shown in the matching row; sodium not verified here. Saturated fat/sugars unavailable.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 207,
@@ -833,56 +843,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "10_0003",
+          "pdf_page": 128,
+          "table": "Proximate composition",
+          "row_name": "Beef, meat, 15–20% fat, boneless, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 128,
-          "food_code": "10_0003",
-          "row_name": "Beef, meat, 15–20% fat, boneless, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0003",
           "pdf_page": 128,
-          "food_code": "10_0003"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0003",
           "pdf_page": 128,
-          "food_code": "10_0003"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0003",
           "pdf_page": 128,
-          "food_code": "10_0003"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0003",
           "pdf_page": 128,
-          "food_code": "10_0003"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0003",
           "pdf_page": 128,
-          "food_code": "10_0003"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "10_0003",
-          "table": "Mineral composition",
-          "pdf_page": 130
+          "pdf_page": 130,
+          "table": "Mineral composition"
         }
       },
       "notes": "FCTB matching raw beef row. Sodium, saturated fat and sugars were not populated from a verified matching entry.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 128,
@@ -900,63 +911,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "10_0007",
+          "pdf_page": 128,
+          "table": "Proximate composition",
+          "row_name": "Chicken leg, without skin, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 128,
-          "food_code": "10_0007",
-          "row_name": "Chicken leg, without skin, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "10_0007",
+          "pdf_page": 129,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Chicken leg, without skin, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 129,
-          "food_code": "10_0007",
-          "row_name": "Chicken leg, without skin, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0007",
           "pdf_page": 128,
-          "food_code": "10_0007"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0007",
           "pdf_page": 128,
-          "food_code": "10_0007"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0007",
           "pdf_page": 128,
-          "food_code": "10_0007"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0007",
           "pdf_page": 128,
-          "food_code": "10_0007"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0007",
           "pdf_page": 128,
-          "food_code": "10_0007"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "10_0007",
           "pdf_page": 129,
-          "food_code": "10_0007"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -971,7 +982,8 @@
       },
       "notes": "FCTB matching row; zero carbohydrate/fibre as listed. Saturated fat and sugars unavailable.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 196,
@@ -989,56 +1001,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "10_0012",
+          "pdf_page": 128,
+          "table": "Proximate composition",
+          "row_name": "Mutton, moderately fat, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 128,
-          "food_code": "10_0012",
-          "row_name": "Mutton, moderately fat, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0012",
           "pdf_page": 128,
-          "food_code": "10_0012"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0012",
           "pdf_page": 128,
-          "food_code": "10_0012"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0012",
           "pdf_page": 128,
-          "food_code": "10_0012"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0012",
           "pdf_page": 128,
-          "food_code": "10_0012"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "10_0012",
           "pdf_page": 128,
-          "food_code": "10_0012"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "10_0012",
-          "table": "Mineral composition",
-          "pdf_page": 130
+          "pdf_page": 130,
+          "table": "Mineral composition"
         }
       },
       "notes": "FCTB matching raw mutton row. Sodium was not verified from the matching mineral row; saturated fat and sugars are not reported.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 139,
@@ -1056,46 +1069,46 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "11_0001",
+          "pdf_page": 135,
+          "table": "Proximate composition",
+          "row_name": "Egg, chicken farmed, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 135,
-          "food_code": "11_0001",
-          "row_name": "Egg, chicken farmed, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "11_0001",
           "pdf_page": 135,
-          "food_code": "11_0001"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "11_0001",
           "pdf_page": 135,
-          "food_code": "11_0001"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "11_0001",
           "pdf_page": 135,
-          "food_code": "11_0001"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "11_0001",
           "pdf_page": 135,
-          "food_code": "11_0001"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "11_0001",
-          "table": "Mineral composition",
-          "pdf_page": 136
+          "pdf_page": 136,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1115,7 +1128,8 @@
       },
       "notes": "FCTB records available carbohydrate as 'Tr' (trace), not a numeric quantity; carbs_g is therefore null rather than falsely set to zero. Sodium, sugars and saturated fat not verified.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 63,
@@ -1133,63 +1147,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "12_0008",
+          "pdf_page": 139,
+          "table": "Proximate composition",
+          "row_name": "Milk, cow, whole fat (pasteurized, UTH)",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 139,
-          "food_code": "12_0008",
-          "row_name": "Milk, cow, whole fat (pasteurized, UTH)"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "12_0008",
+          "pdf_page": 140,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Milk, cow, whole fat (pasteurized, UTH)",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 140,
-          "food_code": "12_0008",
-          "row_name": "Milk, cow, whole fat (pasteurized, UTH)"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "12_0008",
           "pdf_page": 139,
-          "food_code": "12_0008"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "12_0008",
           "pdf_page": 139,
-          "food_code": "12_0008"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "12_0008",
           "pdf_page": 139,
-          "food_code": "12_0008"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "12_0008",
           "pdf_page": 139,
-          "food_code": "12_0008"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "12_0008",
           "pdf_page": 139,
-          "food_code": "12_0008"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "12_0008",
           "pdf_page": 140,
-          "food_code": "12_0008"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1204,7 +1218,8 @@
       },
       "notes": "FCTB matching whole milk entry. Available carbohydrate is used for carbs_g; sugars and saturated fat were not separately reported in this entry.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 213,
@@ -1222,52 +1237,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "06_0004",
+          "pdf_page": 79,
+          "table": "Proximate composition",
+          "row_name": "Coconut milk",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 79,
-          "food_code": "06_0004",
-          "row_name": "Coconut milk"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0004",
           "pdf_page": 79,
-          "food_code": "06_0004"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0004",
           "pdf_page": 79,
-          "food_code": "06_0004"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0004",
           "pdf_page": 79,
-          "food_code": "06_0004"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0004",
           "pdf_page": 79,
-          "food_code": "06_0004"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0004",
           "pdf_page": 79,
-          "food_code": "06_0004"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "06_0004",
-          "table": "Mineral composition",
-          "pdf_page": 81
+          "pdf_page": 81,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1282,7 +1297,8 @@
       },
       "notes": "FCTB coconut milk row. Saturated fat, sugars and sodium not populated from the selected matching entries.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 389,
@@ -1300,56 +1316,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "06_0006",
+          "pdf_page": 80,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Coconut, mature kernel",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 80,
-          "food_code": "06_0006",
-          "row_name": "Coconut, mature kernel"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "06_0006",
           "pdf_page": 80,
-          "food_code": "06_0006"
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "06_0006",
-          "table": "Proximate composition",
-          "pdf_page": 80
+          "pdf_page": 80,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "06_0006",
-          "table": "Proximate composition",
-          "pdf_page": 80
+          "pdf_page": 80,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "06_0006",
-          "table": "Proximate composition",
-          "pdf_page": 80
+          "pdf_page": 80,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "06_0006",
-          "table": "Proximate composition",
-          "pdf_page": 80
+          "pdf_page": 80,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "06_0006",
-          "table": "Proximate composition",
-          "pdf_page": 80
+          "pdf_page": 80,
+          "table": "Proximate composition"
         }
       },
       "notes": "Only sodium was populated from the verified mineral row. The matching proximate row was not verified in this pass, so all other nutrient values remain null.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 501,
@@ -1367,56 +1384,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "06_0012",
+          "pdf_page": 79,
+          "table": "Proximate composition",
+          "row_name": "Mustard seed, dried",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 79,
-          "food_code": "06_0012",
-          "row_name": "Mustard seed, dried"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0012",
           "pdf_page": 79,
-          "food_code": "06_0012"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0012",
           "pdf_page": 79,
-          "food_code": "06_0012"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0012",
           "pdf_page": 79,
-          "food_code": "06_0012"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0012",
           "pdf_page": 79,
-          "food_code": "06_0012"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0012",
           "pdf_page": 79,
-          "food_code": "06_0012"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "06_0012",
-          "table": "Mineral composition",
-          "pdf_page": 81
+          "pdf_page": 81,
+          "table": "Mineral composition"
         }
       },
       "notes": "FCTB proximate entry. Sodium, saturated fat and sugars not verified.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 595,
@@ -1434,56 +1452,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "06_0002",
+          "pdf_page": 79,
+          "table": "Proximate composition",
+          "row_name": "Cashew nuts, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 79,
-          "food_code": "06_0002",
-          "row_name": "Cashew nuts, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0002",
           "pdf_page": 79,
-          "food_code": "06_0002"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0002",
           "pdf_page": 79,
-          "food_code": "06_0002"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0002",
           "pdf_page": 79,
-          "food_code": "06_0002"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0002",
           "pdf_page": 79,
-          "food_code": "06_0002"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "06_0002",
           "pdf_page": 79,
-          "food_code": "06_0002"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "06_0002",
-          "table": "Mineral composition",
-          "pdf_page": 81
+          "pdf_page": 81,
+          "table": "Mineral composition"
         }
       },
       "notes": "FCTB cashew entry. Saturated fat, sugars and sodium not filled because not verified in the matching entry.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 261,
@@ -1501,63 +1520,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0002",
+          "pdf_page": 86,
+          "table": "Proximate composition",
+          "row_name": "Cardamom, dried",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 86,
-          "food_code": "07_0002",
-          "row_name": "Cardamom, dried"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0002",
+          "pdf_page": 87,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Cardamom, dried",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 87,
-          "food_code": "07_0002",
-          "row_name": "Cardamom, dried"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0002",
           "pdf_page": 86,
-          "food_code": "07_0002"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0002",
           "pdf_page": 86,
-          "food_code": "07_0002"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0002",
           "pdf_page": 86,
-          "food_code": "07_0002"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0002",
           "pdf_page": 86,
-          "food_code": "07_0002"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0002",
           "pdf_page": 86,
-          "food_code": "07_0002"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "07_0002",
           "pdf_page": 87,
-          "food_code": "07_0002"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1567,7 +1586,8 @@
       },
       "notes": "FCTB cardamom entry. Saturated fat and sugars not reported in matching table.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 313,
@@ -1585,66 +1605,67 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0003",
+          "pdf_page": 86,
+          "table": "Proximate composition",
+          "row_name": "Chilli, dry red",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 86,
-          "food_code": "07_0003",
-          "row_name": "Chilli, dry red"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0003",
+          "pdf_page": 87,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Chilli, dry red",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 87,
-          "food_code": "07_0003",
-          "row_name": "Chilli, dry red"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0003",
           "pdf_page": 86,
-          "food_code": "07_0003"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0003",
           "pdf_page": 86,
-          "food_code": "07_0003"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0003",
           "pdf_page": 86,
-          "food_code": "07_0003"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0003",
           "pdf_page": 86,
-          "food_code": "07_0003"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0003",
           "pdf_page": 86,
-          "food_code": "07_0003"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "07_0003",
           "pdf_page": 87,
-          "food_code": "07_0003"
+          "table": "Mineral composition"
         }
       },
-      "notes": "FCTB dried red chilli entry; not a separate nutrient profile for a specific commercial chilli powder."
+      "notes": "FCTB dried red chilli entry; not a separate nutrient profile for a specific commercial chilli powder.",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 243,
@@ -1662,46 +1683,46 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0004",
+          "pdf_page": 86,
+          "table": "Proximate composition",
+          "row_name": "Cinnamon, dried",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 86,
-          "food_code": "07_0004",
-          "row_name": "Cinnamon, dried"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0004",
           "pdf_page": 86,
-          "food_code": "07_0004"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0004",
           "pdf_page": 86,
-          "food_code": "07_0004"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0004",
           "pdf_page": 86,
-          "food_code": "07_0004"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0004",
           "pdf_page": 86,
-          "food_code": "07_0004"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0004",
           "pdf_page": 86,
-          "food_code": "07_0004"
+          "table": "Proximate composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1721,7 +1742,8 @@
       },
       "notes": "FCTB cinnamon entry. Sodium, saturated fat and sugars not verified in matching record.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 353,
@@ -1739,63 +1761,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0001",
+          "pdf_page": 86,
+          "table": "Proximate composition",
+          "row_name": "Bay leaf, dry",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 86,
-          "food_code": "07_0001",
-          "row_name": "Bay leaf, dry"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0001",
+          "pdf_page": 87,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Bay leaf, dry",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 87,
-          "food_code": "07_0001",
-          "row_name": "Bay leaf, dry"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0001",
           "pdf_page": 86,
-          "food_code": "07_0001"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0001",
           "pdf_page": 86,
-          "food_code": "07_0001"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0001",
           "pdf_page": 86,
-          "food_code": "07_0001"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0001",
           "pdf_page": 86,
-          "food_code": "07_0001"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0001",
           "pdf_page": 86,
-          "food_code": "07_0001"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "07_0001",
           "pdf_page": 87,
-          "food_code": "07_0001"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1805,7 +1827,8 @@
       },
       "notes": "FCTB dried bay leaf entry. Saturated fat and sugars not available in matching table.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 30,
@@ -1823,52 +1846,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "07_0006",
+          "pdf_page": 86,
+          "table": "Proximate composition",
+          "row_name": "Coriander leaves, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 86,
-          "food_code": "07_0006",
-          "row_name": "Coriander leaves, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0006",
           "pdf_page": 86,
-          "food_code": "07_0006"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0006",
           "pdf_page": 86,
-          "food_code": "07_0006"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0006",
           "pdf_page": 86,
-          "food_code": "07_0006"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0006",
           "pdf_page": 86,
-          "food_code": "07_0006"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "07_0006",
           "pdf_page": 86,
-          "food_code": "07_0006"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "07_0006",
-          "table": "Mineral composition",
-          "pdf_page": 88
+          "pdf_page": 88,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1883,7 +1906,8 @@
       },
       "notes": "FCTB coriander-leaf entry. Sodium, saturated fat and sugars not verified in matching record.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 900,
@@ -1901,63 +1925,63 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "13_0008",
+          "pdf_page": 146,
+          "table": "Proximate composition",
+          "row_name": "Mustard oil",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 146,
-          "food_code": "13_0008",
-          "row_name": "Mustard oil"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "13_0008",
+          "pdf_page": 147,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Mustard oil",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 147,
-          "food_code": "13_0008",
-          "row_name": "Mustard oil"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0008",
           "pdf_page": 146,
-          "food_code": "13_0008"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0008",
           "pdf_page": 146,
-          "food_code": "13_0008"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0008",
           "pdf_page": 146,
-          "food_code": "13_0008"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0008",
           "pdf_page": 146,
-          "food_code": "13_0008"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0008",
           "pdf_page": 146,
-          "food_code": "13_0008"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "13_0008",
           "pdf_page": 147,
-          "food_code": "13_0008"
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -1967,7 +1991,8 @@
       },
       "notes": "FCTB mustard-oil entry. Saturated fat and sugars not separately reported; carbohydrate/fibre reported as zero.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 898,
@@ -1985,52 +2010,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "13_0004",
+          "pdf_page": 146,
+          "table": "Proximate composition",
+          "row_name": "Ghee, cow",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 146,
-          "food_code": "13_0004",
-          "row_name": "Ghee, cow"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0004",
           "pdf_page": 146,
-          "food_code": "13_0004"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0004",
           "pdf_page": 146,
-          "food_code": "13_0004"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0004",
           "pdf_page": 146,
-          "food_code": "13_0004"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0004",
           "pdf_page": 146,
-          "food_code": "13_0004"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "13_0004",
           "pdf_page": 146,
-          "food_code": "13_0004"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "13_0004",
-          "table": "Mineral composition",
-          "pdf_page": 148
+          "pdf_page": 148,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -2045,7 +2070,8 @@
       },
       "notes": "FCTB ghee entry. Sodium not verified in the matching mineral row; saturated fat and sugars not given here.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 45,
@@ -2063,56 +2089,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "03_0010",
+          "pdf_page": 50,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Green chilli with seeds, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 50,
-          "food_code": "03_0010",
-          "row_name": "Green chilli with seeds, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "03_0010",
           "pdf_page": 50,
-          "food_code": "03_0010"
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "03_0010",
-          "table": "Proximate composition",
-          "pdf_page": 50
+          "pdf_page": 50,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "03_0010",
-          "table": "Proximate composition",
-          "pdf_page": 50
+          "pdf_page": 50,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "03_0010",
-          "table": "Proximate composition",
-          "pdf_page": 50
+          "pdf_page": 50,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "03_0010",
-          "table": "Proximate composition",
-          "pdf_page": 50
+          "pdf_page": 50,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "03_0010",
-          "table": "Proximate composition",
-          "pdf_page": 50
+          "pdf_page": 50,
+          "table": "Proximate composition"
         }
       },
       "notes": "Only sodium is included from the verified FCTB mineral row; the matching proximate row was not verified in this pass.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 398,
@@ -2130,46 +2157,46 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "15_0008",
+          "pdf_page": 158,
+          "table": "Proximate composition",
+          "row_name": "Sugar, white",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 158,
-          "food_code": "15_0008",
-          "row_name": "Sugar, white"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0008",
           "pdf_page": 158,
-          "food_code": "15_0008"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0008",
           "pdf_page": 158,
-          "food_code": "15_0008"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0008",
           "pdf_page": 158,
-          "food_code": "15_0008"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0008",
           "pdf_page": 158,
-          "food_code": "15_0008"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0008",
           "pdf_page": 158,
-          "food_code": "15_0008"
+          "table": "Proximate composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -2189,7 +2216,8 @@
       },
       "notes": "FCTB white sugar entry. Sugars_g is left null because the requested numeric sugar field was not separately reported in the cited composition row; no outside estimate was substituted. Sodium not verified.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 352,
@@ -2207,72 +2235,73 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "15_0005",
+          "pdf_page": 158,
+          "table": "Proximate composition",
+          "row_name": "Jaggery/panela, date palm",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 158,
-          "food_code": "15_0005",
-          "row_name": "Jaggery/panela, date palm"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0005",
           "pdf_page": 158,
-          "food_code": "15_0005"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0005",
           "pdf_page": 158,
-          "food_code": "15_0005"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0005",
           "pdf_page": 158,
-          "food_code": "15_0005"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0005",
           "pdf_page": 158,
-          "food_code": "15_0005"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0005",
           "pdf_page": 158,
-          "food_code": "15_0005"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "15_0004",
-          "table": "Mineral composition",
           "pdf_page": 159,
+          "table": "Mineral composition",
           "row_name": "Jaggery, sugarcane, solid (Gur, Akh)"
         },
         "sat_fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "I001",
-          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "pdf_page": 260,
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "row_name": "Jaggery, cane (Saccharum officinarum)"
         },
         "sugars_g": {
           "source_id": "IFCT-2017",
           "food_code": "I001",
-          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
           "pdf_page": 224,
+          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
           "row_name": "Jaggery, cane (Saccharum officinarum)"
         }
       },
       "notes": "FCTB reports fibre as bracketed [0.3], retained as a qualified source value. Sugars, saturated fat and sodium not reported in the matching entry.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 0,
@@ -2290,67 +2319,68 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "15_0007",
+          "pdf_page": 158,
+          "table": "Proximate composition",
+          "row_name": "Salt",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 158,
-          "food_code": "15_0007",
-          "row_name": "Salt"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "15_0007",
+          "pdf_page": 159,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Salt",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 159,
-          "food_code": "15_0007",
-          "row_name": "Salt"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0007",
           "pdf_page": 158,
-          "food_code": "15_0007"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0007",
           "pdf_page": 158,
-          "food_code": "15_0007"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0007",
           "pdf_page": 158,
-          "food_code": "15_0007"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "15_0007",
           "pdf_page": 158,
-          "food_code": "15_0007"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "15_0007",
           "pdf_page": 159,
-          "food_code": "15_0007"
+          "table": "Mineral composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "15_0007",
-          "table": "Proximate composition",
-          "pdf_page": 159
+          "pdf_page": 159,
+          "table": "Proximate composition"
         }
       },
       "notes": "FCTB records protein as trace (Tr), so protein_g is null, not zero. Sodium is from the FCTB mineral table. Saturated fat/sugars unavailable.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 0,
@@ -2368,46 +2398,46 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "14_0010",
+          "pdf_page": 154,
+          "table": "Proximate composition",
+          "row_name": "Water, drinking",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 154,
-          "food_code": "14_0010",
-          "row_name": "Water, drinking"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "14_0010",
           "pdf_page": 154,
-          "food_code": "14_0010"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "14_0010",
           "pdf_page": 154,
-          "food_code": "14_0010"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "14_0010",
           "pdf_page": 154,
-          "food_code": "14_0010"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "14_0010",
           "pdf_page": 154,
-          "food_code": "14_0010"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "14_0010",
           "pdf_page": 154,
-          "food_code": "14_0010"
+          "table": "Proximate composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -2427,7 +2457,8 @@
       },
       "notes": "Zero energy and macronutrient values reflect the FCTB drinking-water entry; sodium not populated because no matching mineral value was verified. Saturated fat and sugars are not separately reported.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 325.7,
@@ -2447,63 +2478,64 @@
         "energy_kcal": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "protein_g": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "carbs_g": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "fibre_g": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "sodium_mg": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 5. Minerals and Trace Elements (Na column)",
           "pdf_page": 154,
+          "table": "Table 5. Minerals and Trace Elements (Na column)",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "sat_fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "pdf_page": 230,
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "row_name": "Green gram, dal (Vigna radiata)"
         },
         "sugars_g": {
           "source_id": "IFCT-2017",
           "food_code": "B010",
-          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
           "pdf_page": 210,
+          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
           "row_name": "Green gram, dal (Vigna radiata)"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "direct",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 61,
@@ -2563,7 +2595,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 72,
@@ -2583,38 +2616,38 @@
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "07_0011",
-          "table": "Mineral composition",
-          "pdf_page": 88
+          "pdf_page": 88,
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "07_0011",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0011",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0011",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0011",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0011",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -2629,7 +2662,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 310,
@@ -2684,7 +2718,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 240,
@@ -2744,7 +2779,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": null,
@@ -2761,7 +2797,8 @@
       "basis": "per_100_g_raw_ingredient",
       "source": [],
       "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_provenance": "human_review_pending"
     },
     {
       "energy_kcal": 296,
@@ -2816,7 +2853,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 223,
@@ -2836,42 +2874,43 @@
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "09_0033",
-          "table": "Proximate composition",
-          "pdf_page": 116
+          "pdf_page": 116,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0033",
-          "table": "Proximate composition",
-          "pdf_page": 116
+          "pdf_page": 116,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0033",
-          "table": "Proximate composition",
-          "pdf_page": 116
+          "pdf_page": 116,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0033",
-          "table": "Proximate composition",
-          "pdf_page": 116
+          "pdf_page": 116,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0033",
-          "table": "Proximate composition",
-          "pdf_page": 116
+          "pdf_page": 116,
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "09_0033",
-          "table": "Mineral composition",
-          "pdf_page": 117
+          "pdf_page": 117,
+          "table": "Mineral composition"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": null,
@@ -2888,7 +2927,8 @@
       "basis": "per_100_g_raw_ingredient",
       "source": [],
       "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_provenance": "human_review_pending"
     },
     {
       "energy_kcal": 92,
@@ -2908,42 +2948,43 @@
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "09_0055",
-          "table": "Proximate composition",
-          "pdf_page": 119
+          "pdf_page": 119,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0055",
-          "table": "Proximate composition",
-          "pdf_page": 119
+          "pdf_page": 119,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0055",
-          "table": "Proximate composition",
-          "pdf_page": 119
+          "pdf_page": 119,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0055",
-          "table": "Proximate composition",
-          "pdf_page": 119
+          "pdf_page": 119,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "09_0055",
-          "table": "Proximate composition",
-          "pdf_page": 119
+          "pdf_page": 119,
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "09_0055",
-          "table": "Mineral composition",
-          "pdf_page": 120
+          "pdf_page": 120,
+          "table": "Mineral composition"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 402,
@@ -2963,38 +3004,38 @@
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "07_0008",
-          "table": "Mineral composition",
-          "pdf_page": 88
+          "pdf_page": 88,
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "07_0008",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0008",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0008",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0008",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "07_0008",
-          "table": "Proximate composition",
-          "pdf_page": 87
+          "pdf_page": 87,
+          "table": "Proximate composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -3009,7 +3050,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 346,
@@ -3027,56 +3069,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "01_0032",
+          "pdf_page": 34,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Wheat flour, white refined",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 34,
-          "food_code": "01_0032",
-          "row_name": "Wheat flour, white refined"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "01_0032",
           "pdf_page": 34,
-          "food_code": "01_0032"
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "01_0032",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0032",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0032",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0032",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0032",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         }
       },
       "notes": "Only sodium (10 mg/100 g) was populated from the FCTB mineral table, PDF page 34, food code 01_0032. Proximate nutrients were not verified from the matching row in this pass; all other fields are null.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 327,
@@ -3096,42 +3139,43 @@
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "02_0009",
-          "table": "Proximate composition",
-          "pdf_page": 42
+          "pdf_page": 42,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "02_0009",
-          "table": "Proximate composition",
-          "pdf_page": 42
+          "pdf_page": 42,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "02_0009",
-          "table": "Proximate composition",
-          "pdf_page": 42
+          "pdf_page": 42,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "02_0009",
-          "table": "Proximate composition",
-          "pdf_page": 42
+          "pdf_page": 42,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "02_0009",
-          "table": "Proximate composition",
-          "pdf_page": 42
+          "pdf_page": 42,
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "02_0009",
-          "table": "Mineral composition",
-          "pdf_page": 43
+          "pdf_page": 43,
+          "table": "Mineral composition"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 239,
@@ -3151,8 +3195,8 @@
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "08_0041",
-          "table": "Mineral composition",
-          "pdf_page": 104
+          "pdf_page": 104,
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "USDA-FDC",
@@ -3192,7 +3236,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 366,
@@ -3252,7 +3297,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 347,
@@ -3272,42 +3318,43 @@
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "01_0029",
-          "table": "Mineral composition",
-          "pdf_page": 35
+          "pdf_page": 35,
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "FCTB-2013",
           "food_code": "01_0029",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0029",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0029",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0029",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
           "food_code": "01_0029",
-          "table": "Proximate composition",
-          "pdf_page": 34
+          "pdf_page": 34,
+          "table": "Proximate composition"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 305.5,
@@ -3327,49 +3374,50 @@
         "energy_kcal": {
           "source_id": "IFCT-2017",
           "food_code": "L003",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 57,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Paneer (regional names: Chhena, Channa)"
         },
         "protein_g": {
           "source_id": "IFCT-2017",
           "food_code": "L003",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 57,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Paneer (regional names: Chhena, Channa)"
         },
         "fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "L003",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 57,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Paneer (regional names: Chhena, Channa)"
         },
         "carbs_g": {
           "source_id": "IFCT-2017",
           "food_code": "L003",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 57,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Paneer (regional names: Chhena, Channa)"
         },
         "sodium_mg": {
           "source_id": "IFCT-2017",
           "food_code": "L003",
-          "table": "Table 5. Minerals and Trace Elements (Na column)",
           "pdf_page": 184,
+          "table": "Table 5. Minerals and Trace Elements (Na column)",
           "row_name": "Paneer (regional names: Chhena, Channa)"
         },
         "sat_fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "L003",
-          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "pdf_page": 260,
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "row_name": "Paneer (regional names: Chhena, Channa)"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 341.8,
@@ -3389,63 +3437,64 @@
         "energy_kcal": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "protein_g": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "carbs_g": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "fibre_g": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "pdf_page": 42,
+          "table": "Table 1. Proximate Principles and Dietary Fibre",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "sodium_mg": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 5. Minerals and Trace Elements (Na column)",
           "pdf_page": 154,
+          "table": "Table 5. Minerals and Trace Elements (Na column)",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "sat_fat_g": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "pdf_page": 230,
+          "table": "Table 7. Fatty Acid Profile (TSFA, mg per 100 g)",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         },
         "sugars_g": {
           "source_id": "IFCT-2017",
           "food_code": "A021",
-          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
           "pdf_page": 210,
+          "table": "Table 6. Starch and Individual Sugars (total free sugars)",
           "row_name": "Wheat, bulgur (Triticum aestivum)"
         }
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 312,
@@ -3465,8 +3514,8 @@
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "07_0020",
-          "table": "Mineral composition",
-          "pdf_page": 90
+          "pdf_page": 90,
+          "table": "Mineral composition"
         },
         "energy_kcal": {
           "source_id": "USDA-FDC",
@@ -3506,7 +3555,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": null,
@@ -3523,7 +3573,8 @@
       "basis": "per_100_g_raw_ingredient",
       "source": [],
       "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_provenance": "human_review_pending"
     },
     {
       "energy_kcal": 298,
@@ -3578,7 +3629,8 @@
       },
       "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": null,
@@ -3595,7 +3647,8 @@
       "basis": "per_100_g_raw_ingredient",
       "source": [],
       "nutrient_sources": {},
-      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only."
+      "notes": "No directly matching nutrient entry was verified in the three allowed source types during this pass. All nutrient fields are null; no value was inferred from memory or an unapproved source. Recipe gram amount, if used in dishes.json, is an ESTIMATE only.",
+      "review_provenance": "human_review_pending"
     },
     {
       "energy_kcal": 90,
@@ -3613,56 +3666,57 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "09_0059",
+          "pdf_page": 121,
+          "table": "Proximate composition",
+          "row_name": "Rohu, river, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 121,
-          "food_code": "09_0059",
-          "row_name": "Rohu, river, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0059",
           "pdf_page": 121,
-          "food_code": "09_0059"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0059",
           "pdf_page": 121,
-          "food_code": "09_0059"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0059",
           "pdf_page": 121,
-          "food_code": "09_0059"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0059",
           "pdf_page": 121,
-          "food_code": "09_0059"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0059",
           "pdf_page": 121,
-          "food_code": "09_0059"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "09_0059",
-          "table": "Mineral composition",
-          "pdf_page": 123
+          "pdf_page": 123,
+          "table": "Mineral composition"
         }
       },
       "notes": "FCTB river rohu raw entry. Specific sodium, saturated fat and sugars not verified.",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 81,
@@ -3680,52 +3734,52 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "09_0061",
+          "pdf_page": 121,
+          "table": "Proximate composition",
+          "row_name": "Shrimp, speckled, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 121,
-          "food_code": "09_0061",
-          "row_name": "Shrimp, speckled, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0061",
           "pdf_page": 121,
-          "food_code": "09_0061"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0061",
           "pdf_page": 121,
-          "food_code": "09_0061"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0061",
           "pdf_page": 121,
-          "food_code": "09_0061"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0061",
           "pdf_page": 121,
-          "food_code": "09_0061"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "09_0061",
           "pdf_page": 121,
-          "food_code": "09_0061"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
           "food_code": "09_0061",
-          "table": "Mineral composition",
-          "pdf_page": 123
+          "pdf_page": 123,
+          "table": "Mineral composition"
         },
         "sat_fat_g": {
           "source_id": "USDA-FDC",
@@ -3735,7 +3789,8 @@
       },
       "notes": "This is the specific FCTB speckled-shrimp entry, not a universal profile for every shrimp species or prawn size. Sodium, saturated fat and sugars not verified.",
       "match_quality": "proxy",
-      "review_status": "approved"
+      "review_status": "approved",
+      "review_provenance": "source_verified"
     },
     {
       "energy_kcal": 346,
@@ -3753,66 +3808,67 @@
       "source": [
         {
           "source_id": "FCTB-2013",
+          "food_code": "01_0026",
+          "pdf_page": 33,
+          "table": "Proximate composition",
+          "row_name": "Semolina wheat, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Proximate composition",
-          "pdf_page": 33,
-          "food_code": "01_0026",
-          "row_name": "Semolina wheat, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         },
         {
           "source_id": "FCTB-2013",
+          "food_code": "01_0026",
+          "pdf_page": 34,
+          "table": "Mineral composition (sodium)",
+          "row_name": "Semolina wheat, raw",
           "source_name": "Food Composition Table for Bangladesh",
           "publisher": "FAO / Institute of Nutrition and Food Science, University of Dhaka",
           "year": 2013,
-          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
-          "table": "Mineral composition (sodium)",
-          "pdf_page": 34,
-          "food_code": "01_0026",
-          "row_name": "Semolina wheat, raw"
+          "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf"
         }
       ],
       "nutrient_sources": {
         "energy_kcal": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0026",
           "pdf_page": 33,
-          "food_code": "01_0026"
+          "table": "Proximate composition"
         },
         "protein_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0026",
           "pdf_page": 33,
-          "food_code": "01_0026"
+          "table": "Proximate composition"
         },
         "fat_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0026",
           "pdf_page": 33,
-          "food_code": "01_0026"
+          "table": "Proximate composition"
         },
         "carbs_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0026",
           "pdf_page": 33,
-          "food_code": "01_0026"
+          "table": "Proximate composition"
         },
         "fibre_g": {
           "source_id": "FCTB-2013",
-          "table": "Proximate composition",
+          "food_code": "01_0026",
           "pdf_page": 33,
-          "food_code": "01_0026"
+          "table": "Proximate composition"
         },
         "sodium_mg": {
           "source_id": "FCTB-2013",
-          "table": "Mineral composition",
+          "food_code": "01_0026",
           "pdf_page": 34,
-          "food_code": "01_0026"
+          "table": "Mineral composition"
         }
       },
-      "notes": "FCTB semolina-wheat raw entry. FCTB available carbohydrate is used for carbs_g; saturated fat and sugars not reported in this entry."
+      "notes": "FCTB semolina-wheat raw entry. FCTB available carbohydrate is used for carbs_g; saturated fat and sugars not reported in this entry.",
+      "review_provenance": "source_verified"
     }
   ]
 }

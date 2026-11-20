@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * SafePlate design system - light theme is the primary direction.
+ * Palette: warm-white canvas, pure-white surfaces, forest-green headings and
+ * actions, mint highlights, amber for estimates and warnings, charcoal text.
+ * Contrast of every required token pair is enforced by test/contrast.test.ts.
+ */
 :root {
-  --bg: #f6f8f5;
-  --fg: #142018;
+  --bg: #f8faf7;
+  --fg: #17211b;
   --card: #ffffff;
-  --muted: #e7ede8;
-  --primary: #167347;
+  --muted: #ecf3ee;
+  --primary: #166534;
   --primary-fg: #ffffff;
-  --border: #cfdad2;
-  --risk-low: #1a7f45;
-  --risk-moderate: #a16207;
+  --border: #d8e3db;
+  --risk-low: #15803d;
+  --risk-moderate: #b45309;
   --risk-high: #b42318;
+  --heading: #14532d;
+  --fresh: #22c55e;
+  --mint: #dcfce7;
+  --signal: #f59e0b;
+  --muted-fg: #4b5b51;
+  --surface-soft: #f1f7f2;
   color-scheme: light;
 }
 
+/*
+ * Follow the operating system preference until the user picks a theme;
+ * the explicit blocks below override it through attribute specificity.
+ * The two dark palettes must stay byte-identical (contrast.test.ts).
+ */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0d1410;
@@ -28,6 +45,12 @@
     --risk-low: #5fd394;
     --risk-moderate: #e2b04a;
     --risk-high: #ff8a80;
+    --heading: #b7f3d1;
+    --fresh: #4ade80;
+    --mint: #14361f;
+    --signal: #fbbf24;
+    --muted-fg: #9fb3a6;
+    --surface-soft: #18231d;
     color-scheme: dark;
   }
 }
@@ -43,7 +66,34 @@
   --risk-low: #5fd394;
   --risk-moderate: #e2b04a;
   --risk-high: #ff8a80;
+  --heading: #b7f3d1;
+  --fresh: #4ade80;
+  --mint: #14361f;
+  --signal: #fbbf24;
+  --muted-fg: #9fb3a6;
+  --surface-soft: #18231d;
   color-scheme: dark;
+}
+
+/* An explicit light choice always wins over the operating-system preference. */
+:root[data-theme='light'] {
+  --bg: #f8faf7;
+  --fg: #17211b;
+  --card: #ffffff;
+  --muted: #ecf3ee;
+  --primary: #166534;
+  --primary-fg: #ffffff;
+  --border: #d8e3db;
+  --risk-low: #15803d;
+  --risk-moderate: #b45309;
+  --risk-high: #b42318;
+  --heading: #14532d;
+  --fresh: #22c55e;
+  --mint: #dcfce7;
+  --signal: #f59e0b;
+  --muted-fg: #4b5b51;
+  --surface-soft: #f1f7f2;
+  color-scheme: light;
 }
 
 @layer base {
@@ -57,5 +107,101 @@
 
   a {
     @apply text-inherit;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-heading;
+  }
+}
+
+@layer components {
+  /* Shared chip look for context choices (place, storage). */
+  .sp-chip {
+    @apply min-h-11 rounded-full border px-4 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+
+  .sp-chip-active {
+    @apply border-primary bg-mint font-semibold text-primary;
+  }
+
+  .sp-chip-idle {
+    @apply border-border bg-card text-fg hover:border-primary;
+  }
+}
+
+/* Gentle welcome entrance: fade + slight rise + logo scale-in. */
+@keyframes sp-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sp-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scanner overlay: a line travelling over the photo while the request runs. */
+@keyframes sp-scan-line {
+  0% {
+    transform: translateY(-4%);
+  }
+
+  100% {
+    transform: translateY(104%);
+  }
+}
+
+@keyframes sp-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.sp-anim-fade-up {
+  animation: sp-fade-up 0.5s ease-out both;
+}
+
+.sp-anim-logo-in {
+  animation: sp-logo-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.sp-anim-scan-line {
+  animation: sp-scan-line 1.8s ease-in-out infinite alternate;
+}
+
+.sp-anim-pulse {
+  animation: sp-pulse 1.4s ease-in-out infinite;
+}
+
+/* Reduced motion: collapse every CSS animation instead of removing the content. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

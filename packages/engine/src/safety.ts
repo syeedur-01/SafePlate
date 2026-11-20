@@ -5,6 +5,7 @@ type SafetyTrigger = SafetyRule['trigger'];
 export const SAFETY_LEVEL_BOUNDS = { moderate: 25, high: 60 } as const;
 export const CHEMICAL_LIMIT_NOTICE_KEY = 'notice.chemical_limit';
 export const POOR_IMAGE_NOTICE_KEY = 'notice.poor_image';
+export const VISUAL_OBSERVATION_NOTICE_KEY = 'notice.visual_observation';
 
 export interface SafetyInput {
   dishTags: SafetyTag[];
@@ -54,9 +55,11 @@ function checkTrigger(
 export function scoreSafety(input: SafetyInput, rules: SafetyRule[]): SafetyResult {
   const signals: SafetySignal[] = [];
   const mitigationSeen = new Set<string>();
+  let spoilageSignal = false;
   for (const rule of rules) {
     const { evidence } = checkTrigger(rule.trigger, input);
     if (evidence === null) continue;
+    if (rule.trigger.type === 'spoilage_sign') spoilageSignal = true;
     signals.push({
       ruleId: rule.id,
       labelKey: rule.labelKey,
@@ -80,6 +83,7 @@ export function scoreSafety(input: SafetyInput, rules: SafetyRule[]): SafetyResu
         : 'high';
   const notices = [CHEMICAL_LIMIT_NOTICE_KEY];
   if (input.observations.imageQuality === 'poor') notices.push(POOR_IMAGE_NOTICE_KEY);
+  if (spoilageSignal) notices.push(VISUAL_OBSERVATION_NOTICE_KEY);
   const anyDraft = rules.some((rule) => rule.status === 'draft');
   return {
     score,

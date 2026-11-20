@@ -42,7 +42,7 @@ describe('Onboarding', () => {
       </I18nProvider>,
     );
 
-    await user.click(screen.getByRole('button', { name: 'Skip' }));
+    await user.click(screen.getByRole('button', { name: /Skip for Now/ }));
 
     expect(store.load()).toEqual({
       ...EMPTY_PROFILE,
@@ -62,6 +62,8 @@ describe('Onboarding', () => {
         <Onboarding store={store} now={() => CLOCK} onDone={() => {}} />
       </I18nProvider>,
     );
+
+    await user.click(screen.getByRole('button', { name: /Create Your Profile/ }));
 
     const saveButton = screen.getByRole('button', { name: 'Save' });
     await user.click(screen.getByRole('checkbox', { name: 'Diabetes' }));
@@ -88,6 +90,7 @@ describe('Onboarding', () => {
       </I18nProvider>,
     );
 
+    await user.click(screen.getByRole('button', { name: /Create Your Profile/ }));
     await user.click(screen.getByRole('checkbox', { name: 'Diabetes' }));
     await user.click(screen.getByRole('checkbox', { name: /only on this device/i }));
     await user.click(screen.getByRole('button', { name: 'Save' }));
@@ -95,12 +98,19 @@ describe('Onboarding', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('opens onboarding when no profile is saved', async () => {
+  it('opens the welcome landing when no profile is saved, then the profile form', async () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
       </MemoryRouter>,
     );
+
+    // The landing introduces the product before any form appears.
+    expect(
+      await screen.findByRole('heading', { name: /Understand your food/ }, { timeout: 15000 }),
+    ).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole('button', { name: /Create Your Profile/ }));
 
     expect(
       await screen.findByRole('heading', { name: 'Tell us about you' }, { timeout: 15000 }),

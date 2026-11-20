@@ -7,11 +7,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
 import { useT } from '../i18n/i18n';
 import { filterDishes, type DishOption } from '../lib/filter-dishes';
 
-const DISH_OPTIONS: DishOption[] = runtimeJson.dishes.map(({ id, name_en, name_bn, aliases }) => ({
-  id,
-  name_en,
-  name_bn,
-  aliases,
+// The confirm page offers the full recognition catalogue, including entries
+// without approved nutrition data; the result page explains that distinction.
+const DISH_OPTIONS: DishOption[] = runtimeJson.catalogue.map((entry) => ({
+  id: entry.id,
+  name_en: entry.name_en,
+  name_bn: entry.name_bn ?? entry.name_en,
+  aliases: entry.aliases,
 }));
 
 const MIN_CONFIDENCE = 0.5;

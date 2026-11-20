@@ -81,11 +81,24 @@ describe('Confirm page', () => {
     renderConfirm(scanState(dishResult));
 
     const list = screen.getByRole('list', { name: 'All dishes' });
-    expect(within(list).getAllByRole('button')).toHaveLength(30);
+    expect(within(list).getAllByRole('button')).toHaveLength(46);
 
     await user.type(screen.getByLabelText('Search dishes'), 'fuchka');
 
     expect(within(list).getAllByRole('button')).toHaveLength(1);
+  });
+
+  it('offers catalogue-only dishes that have no nutrition data', async () => {
+    const user = userEvent.setup();
+    renderConfirm(scanState(dishResult));
+
+    await user.type(screen.getByLabelText('Search dishes'), 'singara');
+
+    const list = screen.getByRole('list', { name: 'All dishes' });
+    expect(within(list).getAllByRole('button')).toHaveLength(1);
+    await user.click(within(list).getByRole('button', { name: 'Singara' }));
+
+    expect(await screen.findByTestId('result-stub')).toHaveTextContent('singara');
   });
 
   it('navigates to the result with the chosen dish', async () => {
