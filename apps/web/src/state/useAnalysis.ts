@@ -35,6 +35,11 @@ const INGREDIENTS: Map<string, Ingredient> = new Map(
 const SAFETY_RULES = SafetyRulesFileSchema.parse(safetyRulesFile).rules;
 const HEALTH_RULES = HealthRulesFileSchema.parse(healthRulesFile).rules;
 
+/** Returns the validated ingredient record for an id, or undefined when there is none. */
+export function getIngredient(id: string): Ingredient | undefined {
+  return INGREDIENTS.get(id);
+}
+
 const ALLERGENS = AllergenSchema.options as readonly Allergen[];
 
 /** Returns the validated allergen keyword lists from the same file the knowledge loader uses. */

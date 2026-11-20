@@ -1,4 +1,4 @@
-import { useId, useState, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import {
   AllergenSchema,
   ConditionSchema,
@@ -31,7 +31,6 @@ export interface ProfileFormProps {
  */
 export function ProfileForm({ initialProfile, now, onSave }: ProfileFormProps) {
   const { t } = useT();
-  const formId = useId();
   const [conditions, setConditions] = useState<Condition[]>(initialProfile.conditions);
   const [allergies, setAllergies] = useState<Allergen[]>(initialProfile.allergies);
   const [consent, setConsent] = useState(initialProfile.consentedAt !== null);

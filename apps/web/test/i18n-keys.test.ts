@@ -25,4 +25,15 @@ describe('i18n keys used in components', () => {
     );
     expect(missing).toEqual([]);
   });
+
+  // The regex above only sees literal t('key') calls, so template-built keys such as
+  // t(`warning.level.${level}`) need their own existence check.
+  it('has every warning level key in both languages', () => {
+    const messages = getMessages();
+    for (const level of ['avoid', 'caution', 'info'] as const) {
+      const key = `warning.level.${level}`;
+      expect(messages[key]?.en, `${key} (en)`).toBeTruthy();
+      expect(messages[key]?.bn, `${key} (bn)`).toBeTruthy();
+    }
+  });
 });

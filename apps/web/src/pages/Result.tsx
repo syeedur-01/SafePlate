@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import type { AnalysisResult, Dish, ScanResult } from '@sp/contracts';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { Allergen, AnalysisResult, Dish, ScanResult } from '@sp/contracts';
 import runtimeJson from '@sp/knowledge/data/runtime/runtime.json';
 import { Navigate, useLocation } from 'react-router-dom';
 import { UtensilsCrossed } from 'lucide-react';
@@ -11,9 +11,10 @@ import { ShoppingList } from '../components/ShoppingList';
 import { SwapList } from '../components/SwapList';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { useT } from '../i18n/i18n';
+import { buildIngredientBreakdown, type IngredientBreakdown } from '../lib/ingredient-breakdown';
 import { DEFAULT_HISTORY_STORE, type HistoryStore } from '../state/history-store';
 import type { ProfileStore } from '../state/profile-store';
-import { getDish, useAnalysis } from '../state/useAnalysis';
+import { getDish, getIngredient, useAnalysis } from '../state/useAnalysis';
 import { useProfile } from '../state/useProfile';
 
 const DISH_NAMES = {
@@ -45,6 +46,8 @@ export interface ResultViewProps {
   thumb: string | null;
   /** Optional id for the title heading, so a caller can label a surrounding section with it. */
   titleId?: string;
+  allergens?: Allergen[];
+  breakdown?: IngredientBreakdown | null;
 }
 
 /** Returns the result tabs for an analysis with nutrition, swap suggestions and the shopping list. */
@@ -57,6 +60,8 @@ export function ResultView({
   title,
   thumb,
   titleId,
+  allergens,
+  breakdown,
 }: ResultViewProps) {
   const { t, lang } = useT();
 
@@ -100,7 +105,12 @@ export function ResultView({
           <SafetyCard safety={analysis.safety} />
         </TabsContent>
         <TabsContent value="foryou">
-          <ForYouCard warnings={analysis.warnings} hasProfile={hasProfile} />
+          <ForYouCard
+            warnings={analysis.warnings}
+            hasProfile={hasProfile}
+            allergens={allergens}
+            breakdown={breakdown}
+          />
         </TabsContent>
         <TabsContent value="nutrition">
           <NutritionCard nutrition={analysis.nutrition} dish={dish} />
@@ -197,6 +207,16 @@ function ResultWithAnalysis({
   });
   const saved = useRef(false);
 
+  const breakdown = useMemo(
+    () => (dish === null ? null : buildIngredientBreakdown(dish.ingredients, lang, getIngredient)),
+    [dish, lang],
+  );
+
+  const allergens: Allergen[] | undefined =
+    state.scanResult.kind === 'label'
+      ? state.scanResult.declaredAllergens
+      : (dish?.allergens ?? []);
+
   const headerTitle =
     dish !== null
       ? (DISH_NAMES[lang][dish.id] ?? dish.name_en)
@@ -252,6 +272,8 @@ function ResultWithAnalysis({
       onServingsChange={setServings}
       title={headerTitle}
       thumb={state.thumbDataUrl}
+      allergens={allergens}
+      breakdown={breakdown}
     />
   );
 }
