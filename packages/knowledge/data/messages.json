@@ -179,6 +179,22 @@
     "en": "Why is some data missing?",
     "bn": "কিছু তথ্য কেন নেই?"
   },
+  "shopping.title": {
+    "en": "Shopping list",
+    "bn": "শপিং তালিকা"
+  },
+  "shopping.select_all": {
+    "en": "Select all",
+    "bn": "সব নির্বাচন করুন"
+  },
+  "shopping.deselect_all": {
+    "en": "Deselect all",
+    "bn": "সব বাতিল করুন"
+  },
+  "shopping.copy": {
+    "en": "Copy list",
+    "bn": "তালিকা কপি করুন"
+  },
   "nutrition.servings_label": {
     "en": "Portions",
     "bn": "পরিবেশন"
