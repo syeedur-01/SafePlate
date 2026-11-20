@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test",
+    "mcp": "pnpm --filter @sp/mcp start",
     "verify": "pnpm --filter @sp/tools verify"
   },
   "devDependencies": {

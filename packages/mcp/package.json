@@ -1,0 +1,23 @@
+{
+  "name": "@sp/mcp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "bin": {
+    "safeplate-mcp": "./bin/safeplate-mcp.js"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@sp/contracts": "workspace:*",
+    "@sp/engine": "workspace:*",
+    "@sp/knowledge": "workspace:*",
+    "zod": "3.25.76"
+  }
+}
